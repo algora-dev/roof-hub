@@ -10,6 +10,7 @@ Before producing code or changing UI:
 2. Inspect the canonical logo assets in `Design/Logo/`.
 3. Review `Design/Brand/Reference/` for visual intent.
 4. Read the relevant existing components/templates in the codebase before creating anything new.
+5. If working on the website build, review `Design/Website_Asset_Pack/v0_4/` and `Handoff/WEBSITE_V0_4_UPDATE.md`.
 
 ## Authority order
 

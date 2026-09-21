@@ -1,22 +1,37 @@
-# RoofHub v0.2 media notes
+# RoofHub v0.4 imagery rules
 
-## Purpose
-The v0.2 build adds a restrained provisional visual layer so the live preview can be judged as a real website rather than a wireframe.
+## Current position
 
-## Current imagery
-The images in `public/media/` are **provisional generated concept imagery** derived from the approved RoofHub visual direction. They are appropriate for a private/noindex preview build, but should not automatically be treated as final launch photography.
+The live v0.2/v0.3 reviews showed that poor generated roofing detail damages trust quickly. v0.4 deliberately reduces the visual asset set to two approved scenic architectural images.
 
-Before public indexing is enabled:
-- review each image for architectural realism and roofing accuracy;
-- replace any image that feels overly synthetic or misleading;
-- prefer licensed New Zealand photography or approved original project imagery where available;
-- never use imagery as evidence for technical roofing claims;
-- keep photography secondary to the information/tools experience.
+## Approved assets
 
-## Visual balance
-Target approximately:
-- 60–70% clean UI, typography, tools and data;
-- 20–30% restrained roofing/property photography;
-- 10% sage/terracotta graphic accents.
+- `hero-home.webp` — main homepage hero.
+- `hero-secondary.webp` — secondary scenic brand image, used for the NZ-conditions section and About hero.
 
-Avoid generic contractor-stock imagery, staged tradespeople, implausible luxury homes, or visuals that imply RoofHub performs installation work.
+Original copies are in `Design/Website_Asset_Pack/v0_4/`.
+
+## Non-negotiable image rule
+
+Roof imagery must look structurally credible at normal viewing size. Repetitive roof ribs, seams, flashings and edges draw attention immediately when they bend, warp, smear, change spacing or turn into invented detail.
+
+For future generated imagery:
+
+- prefer wide scenic compositions where the roof is one controlled element rather than the entire canvas;
+- keep long-run/standing-seam roof ribs straight and uniform;
+- keep geometry simple;
+- avoid close-up technical imagery unless it survives detailed review;
+- do not use an image simply because a page has an empty card/image slot;
+- typography-led and UI-led sections are preferred to weak decorative imagery.
+
+## Usage balance
+
+RoofHub should feel like a research and tools platform, not a real-estate gallery.
+
+Use photography primarily for:
+
+- a strong page/brand hero;
+- an occasional major section anchor;
+- genuine future project/case-study imagery when available.
+
+Most cards, calculators and knowledge sections should work without photography.
