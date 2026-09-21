@@ -27,3 +27,9 @@
 - `Handoff/AGENT_START_HERE.md`
 - `Handoff/WEBSITE_V0_1_BUILD_BRIEF.md`
 - `Handoff/FILE_MANIFEST.md`
+
+## Website v0.2
+- `Website/v0_2/` — current presentation-ready preview build
+- `Website/v0_2/public/media/` — provisional NZ-oriented visual assets
+- `Website/v0_2/docs/MEDIA_NOTES.md` — media review rules before public indexing
+- `Handoff/WEBSITE_V0_2_UPDATE.md` — v0.2 handoff summary

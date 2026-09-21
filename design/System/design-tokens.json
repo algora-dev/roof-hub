@@ -1,0 +1,34 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "name": "RoofHub Design Tokens",
+    "version": "1.0.0",
+    "note": "Written tokens are authoritative over AI-generated reference-board labels."
+  },
+  "color": {
+    "sage": {"50":"#EFF2EF","100":"#DEE3DE","200":"#C3CDC3","300":"#A9B6A9","400":"#92A392","500":"#7A8F7A","600":"#6E816E","700":"#627262","800":"#536153","900":"#434F43"},
+    "terracotta": {"50":"#F8EBE8","100":"#F0D6CE","200":"#E3B5A7","300":"#D79480","400":"#CC785F","500":"#C15A3C","600":"#AE5136","700":"#9A4830","800":"#833D29","900":"#6A3221"},
+    "charcoal": {"500":"#2E2E2E","600":"#292929","700":"#252525","800":"#1F1F1F","900":"#191919"},
+    "neutral": {"50":"#F2F4F5","100":"#E5E7EB","200":"#D5D7DA","300":"#A1A1A1","400":"#777777"},
+    "offWhite":"#F7F6F2",
+    "white":"#FFFFFF",
+    "status": {"info":"#366A91","success":"#52785B","warning":"#A66B22","error":"#B63B32"}
+  },
+  "semantic": {
+    "background":"{color.offWhite}",
+    "surface":"{color.white}",
+    "surfaceSubtle":"{color.sage.50}",
+    "text":"{color.charcoal.900}",
+    "border":"{color.neutral.100}",
+    "borderStrong":"{color.neutral.200}",
+    "primaryAction":"{color.terracotta.500}",
+    "secondaryAction":"{color.sage.600}"
+  },
+  "space": {"1":4,"2":8,"3":12,"4":16,"6":24,"8":32,"12":48,"16":64,"24":96,"32":128},
+  "radius": {"xs":4,"sm":8,"md":12,"lg":16,"xl":24,"pill":9999},
+  "layout": {"contentMax":1200,"contentWide":1360,"readingMax":768,"desktopGutter":24,"tabletGutter":20,"mobileGutter":16},
+  "typography": {
+    "family":"Plus Jakarta Sans, Inter, ui-sans-serif, system-ui, sans-serif",
+    "weights":{"regular":400,"medium":500,"semibold":600,"bold":700}
+  }
+}

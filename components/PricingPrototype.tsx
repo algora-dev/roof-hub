@@ -28,8 +28,8 @@ export function PricingPrototype() {
       </div>
       <div className="prototype-result">
         <p className="eyebrow">Prototype estimate layout</p>
-        <p className="result-number">${estimate.low.toLocaleString()}–${estimate.high.toLocaleString()}</p>
-        <p className="result-unit">Illustrative project range only</p>
+        <p className="result-number">NZ$ {estimate.low.toLocaleString()}–{estimate.high.toLocaleString()}</p>
+        <p className="result-unit">Illustrative NZD project range only · GST treatment not configured</p>
         <div className="notice notice--limitation"><strong>Demo data — not publishable pricing.</strong><span>This prototype exists to test the RoofHub result experience. Real formulas, GST treatment, regional factors, exclusions and evidence will replace it after the existing pricing tools are audited.</span></div>
         <dl className="result-meta"><div><dt>Area supplied</dt><dd>{area} m²</dd></div><div><dt>System</dt><dd>{material}</dd></div><div><dt>Complexity</dt><dd>{complexity}</dd></div></dl>
       </div>
