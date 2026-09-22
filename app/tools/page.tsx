@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 export const metadata: Metadata = { title: "Roofing tools" };
 
 const tools = [
-  { icon: Calculator, title: "Roof pricing", copy: "Prototype experience live now. Existing pricing logic will replace demo arithmetic.", status: "Prototype live", href: "/pricing", active: true },
+  { icon: Calculator, title: "Roof pricing", copy: "Detailed estimator: measure from a plan or enter quantities for a low/high cost range. Simple slider estimate also available.", status: "Preview live", href: "/tools/detailed-roof-estimator", active: true },
   { icon: Measure, title: "Roof measurement", copy: "Integration point for plan, satellite and dimension-based measurement workflows.", status: "Integration planned", href: "#", active: false },
   { icon: Camera, title: "Photo / plan analysis", copy: "Preliminary material and condition observations with confidence and limitations.", status: "Integration planned", href: "#", active: false },
   { icon: Layers, title: "Roof pitch & quantities", copy: "Small deterministic calculators that share the same approved roofing core.", status: "Integration planned", href: "#", active: false }
