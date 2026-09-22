@@ -1,20 +1,21 @@
-// Generates the RoofHub favicon: rounded black square with white mark.
-// Outputs: public/brand/roofhub-icon.png (512) + app/favicon.ico (48/32/16 PNG-entries).
+// Favicon v2: white rounded square, black mark, maximised (~92% width).
+// The black-bg version read optically small; white lets the mark own the space.
 import sharp from "sharp";
 import path from "node:path";
+import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const markSrc = path.join(root, "public/brand/roofhub-mark-white.png");
+const markSrc = path.join(root, "public/brand/roofhub-mark-black.png");
 const iconOut = path.join(root, "public/brand/roofhub-icon.png");
 const icoOut = path.join(root, "app/favicon.ico");
 
 const SIZE = 512;
-const RADIUS = 110; // ~21% rounded corners
-const MARK_WIDTH = 340; // mark occupies ~66% width
+const RADIUS = 92;
+const MARK_WIDTH = 470;
 
 const roundedSquare = Buffer.from(
-  `<svg width="${SIZE}" height="${SIZE}"><rect x="0" y="0" width="${SIZE}" height="${SIZE}" rx="${RADIUS}" ry="${RADIUS}" fill="#0A0A0A"/></svg>`
+  `<svg width="${SIZE}" height="${SIZE}"><rect x="0" y="0" width="${SIZE}" height="${SIZE}" rx="${RADIUS}" ry="${RADIUS}" fill="#FFFFFF"/></svg>`
 );
 
 const mark = await sharp(markSrc).resize({ width: MARK_WIDTH }).png().toBuffer();
@@ -25,7 +26,6 @@ await sharp(roundedSquare)
   .png()
   .toFile(iconOut);
 
-// .ico pack (Vista+ PNG-compressed entries)
 const sizes = [48, 32, 16];
 const frames = await Promise.all(
   sizes.map(async (s) => ({ s, png: await sharp(iconOut).resize(s, s).png().toBuffer() }))
@@ -49,6 +49,5 @@ for (const { s, png } of frames) {
   parts.push(e, png);
   offset += png.length;
 }
-import fs from "node:fs";
 fs.writeFileSync(icoOut, Buffer.concat(parts));
-console.log("favicon + ico written");
+console.log("favicon v2 written");
