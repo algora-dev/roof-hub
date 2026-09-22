@@ -26,7 +26,9 @@ for (const roof of ['corrugate','five-rib']) {
 }
 for (const roof of ['pressed-metal','tray']) for(const group of ['ridges','hips','valleys','barges','aprons']) add(missing(`${roof}.${group}`,`${roof==='tray'?'Tray':'Metal tile'} ${group}`,'lm'));
 add(split('common.underlay','Roof underlay','m2',R(3.4,4.5),R(3.5,4.5)));
-add(missing('common.fixings','Standard roof fixings','m2',R(0)));
+add(split('corrugate.fixings','Standard roof fixings','m2',R(2),R(0),'owner','Owner-supplied fixing allowance, materials only. Installation labour stays with the roof covering.'));
+add(split('five-rib.fixings','Standard roof fixings','m2',R(2.5),R(0),'owner','Owner-supplied fixing allowance, materials only. Installation labour stays with the roof covering.'));
+add(split('pressed-metal.fixings','Standard roof fixings','m2',R(1),R(0),'owner','Owner-supplied fixing allowance, materials only. Installation labour stays with the roof covering.'));
 add(missing('pressed-metal.battens','Tile batten materials','m2',R(0)));
 add(missing('common.spouting','Spouting','lm'));
 add(missing('common.downpipes','Downpipes','each'));

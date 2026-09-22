@@ -92,7 +92,7 @@ export function calculateEstimate(project,card=DEFAULT_RATE_CARD) {
     lineFor('common.underlay',area,'roof',{skipLabour:project.roofSystem==='pressed-metal'});
     if(project.roofSystem==='pressed-metal') notes.push('Underlay material is added, but underlay labour is not charged again: it is included in the pressed-tile installation labour.');
   } else notes.push('Underlay has been excluded by selection; this is a pricing choice, not confirmation that underlay is unnecessary.');
-  if(project.fixings && project.roofSystem!=='tray') lineFor('common.fixings',area,'roof');
+  if(project.fixings && project.roofSystem!=='tray') lineFor(`${project.roofSystem}.fixings`,area,'roof');
   else if(project.roofSystem!=='tray') notes.push('Roof fixing materials are excluded by selection.');
   if(project.roofSystem==='pressed-metal') {
     if(project.battenMaterials) lineFor('pressed-metal.battens',area,'roof');
