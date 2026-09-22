@@ -15,7 +15,7 @@ const paths={
 };
 export function icon(name,cls='') {
   const circle=['info','clock'].includes(name)?'<circle cx="12" cy="12" r="9"/>':'';
-  return `<svg class="rh-icon ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${circle}<path d="${paths[name]||paths.home}"/></svg>`;
+  return `<svg class="rh-icon ${cls}" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${circle}<path d="${paths[name]||paths.home}"/></svg>`;
 }
 export function roofProfile(id) {
   let drawing='';
@@ -28,8 +28,8 @@ export function roofProfile(id) {
   } else {
     drawing='<path d="m20 84 24-55h68L90 84z"/><path d="m39 84 24-55m1 55 24-55M44 29l2 4m17-4 2 4m23-4 2 4"/><path d="m42 84 24-55m1 55 24-55"/>';
   }
-  return `<svg class="rh-profile" viewBox="0 0 132 112" fill="none" aria-hidden="true"><path d="M10 98h112" stroke="currentColor" opacity=".1"/><g stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">${drawing}</g></svg>`;
+  return `<svg class="rh-profile" width="132" height="112" viewBox="0 0 132 112" fill="none" aria-hidden="true"><path d="M10 98h112" stroke="currentColor" opacity=".1"/><g stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">${drawing}</g></svg>`;
 }
 export function houseDrawing() {
-  return `<svg class="rh-house-drawing" viewBox="0 0 280 190" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="1.1"><path d="m29 104 92-62 130 49-91 64z" opacity=".18"/><path d="m29 104 48-64 93-22 81 73-91 64z"/><path d="m77 40 83 76 91-25M160 116v39M29 104v27l131 49 91-62V91M160 155v25"/><path d="m43 90 91 34M52 79l91 34M61 66l91 34M69 55l92 35M84 38l84 75m-66-80 80 70m-61-74 75 66m-56-70 69 62m-51-66 63 58" opacity=".3"/><path d="M64 118v21l26 10v-22zM194 142v-20l29-20v20" opacity=".5"/><path d="m24 155 126 48m35-2 74-49" stroke-dasharray="3 4" opacity=".35"/></g></svg>`;
+  return `<svg class="rh-house-drawing" width="280" height="190" viewBox="0 0 280 190" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="1.1"><path d="m29 104 92-62 130 49-91 64z" opacity=".18"/><path d="m29 104 48-64 93-22 81 73-91 64z"/><path d="m77 40 83 76 91-25M160 116v39M29 104v27l131 49 91-62V91M160 155v25"/><path d="m43 90 91 34M52 79l91 34M61 66l91 34M69 55l92 35M84 38l84 75m-66-80 80 70m-61-74 75 66m-56-70 69 62m-51-66 63 58" opacity=".3"/><path d="M64 118v21l26 10v-22zM194 142v-20l29-20v20" opacity=".5"/><path d="m24 155 126 48m35-2 74-49" stroke-dasharray="3 4" opacity=".35"/></g></svg>`;
 }
