@@ -377,3 +377,10 @@ h1,h2,h3,h4{color:var(--rh-ui-text);font-weight:600}
   .rh-step{display:none}
   .rh-step.active{display:flex;width:100%;min-height:48px;padding:8px 0 11px;border-bottom-color:var(--rh-ui-action);font-size:11px}
 }
+
+/* breadcrumb links + step transition */
+.rh-breadcrumb a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease}
+.rh-breadcrumb a:hover{color:var(--rh-action);border-bottom-color:currentColor}
+@keyframes rh-step-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.rh-main>.rh-panel{animation:rh-step-in .3s ease}
+@media (prefers-reduced-motion:reduce){.rh-main>.rh-panel{animation:none}}
