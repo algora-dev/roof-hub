@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "indexnow": "node scripts/submit-indexnow.mjs",
+    "og:image": "node scripts/gen-og-image.mjs"
   },
   "dependencies": {
     "next": "^15.2.4",

@@ -1,9 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calculator, Camera, Layers, Measure } from "@/components/Icons";
 import { SectionHeading } from "@/components/SectionHeading";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Roofing tools" };
+export const metadata = pageMetadata({
+  title: "Roofing tools",
+  description: "Roofing pricing, measurement and planning calculators with assumptions, inputs and limitations kept visible.",
+  path: "/tools"
+});
 
 const tools = [
   { icon: Calculator, title: "Roof pricing", copy: "Detailed estimator: measure from a plan or enter quantities for a low/high cost range. Simple slider estimate also available.", status: "Preview live", href: "/tools/detailed-roof-estimator", active: true },

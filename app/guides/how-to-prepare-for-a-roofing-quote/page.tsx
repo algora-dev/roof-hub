@@ -1,7 +1,11 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "How to prepare for a roofing quote" };
+export const metadata = pageMetadata({
+  title: "How to prepare for a roofing quote",
+  description: "What to gather, what to ask, and how to compare roofing quotes on scope, assumptions and exclusions — not just the bottom-line price.",
+  path: "/guides/how-to-prepare-for-a-roofing-quote"
+});
 
 export default function GuidePage() {
   return <>

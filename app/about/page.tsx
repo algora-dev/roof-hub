@@ -1,9 +1,13 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check } from "@/components/Icons";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "About RoofHub" };
+export const metadata = pageMetadata({
+  title: "About RoofHub",
+  description: "What RoofHub is, how it operates, and the standards this New Zealand roofing information platform holds itself to.",
+  path: "/about"
+});
 
 export default function AboutPage() {
   return <>

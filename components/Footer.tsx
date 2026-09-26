@@ -7,8 +7,8 @@ export function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand"><Logo inverse /><p>Practical roofing knowledge, planning tools and transparent project guidance for New Zealand.</p></div>
         <div><h3>Explore</h3><Link href="/pricing">Pricing</Link><Link href="/tools">Tools</Link><Link href="/guides">Guides</Link></div>
-        <div><h3>RoofHub</h3><Link href="/about">About</Link><Link href="/guides/how-to-prepare-for-a-roofing-quote">Quote guide</Link></div>
-        <div><h3>Preview status</h3><p>This v0.4 build is intentionally noindex while real tools, reviewed content and source data are integrated.</p></div>
+        <div><h3>RoofHub</h3><Link href="/about">About</Link><Link href="/methodology">Methodology</Link><Link href="/contact">Contact &amp; corrections</Link></div>
+        <div><h3>Standards</h3><Link href="/privacy">Privacy policy</Link><Link href="/terms">Terms &amp; disclaimer</Link><p>Estimates are information, not quotes. Assumptions stay visible.</p></div>
       </div>
       <div className="container footer-bottom"><span>© {new Date().getFullYear()} RoofHub NZ</span><span>Know more. Build brighter.</span></div>
     </footer>

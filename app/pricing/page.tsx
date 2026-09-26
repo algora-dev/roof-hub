@@ -1,10 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check } from "@/components/Icons";
 import { PricingPrototype } from "@/components/PricingPrototype";
 import { SectionHeading } from "@/components/SectionHeading";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Roofing pricing prototype" };
+// Intentionally noindex: demo arithmetic until the rate card is approved.
+export const metadata = pageMetadata({
+  title: "Roofing pricing prototype",
+  description: "Prototype pricing exploration: indicative range first, assumptions visible, and a clear boundary between an estimate and a formal quote.",
+  path: "/pricing",
+  noIndex: true
+});
 
 const costDrivers = [
   ["Roof area", "The amount of roof surface being covered, not just the floor area below it."],

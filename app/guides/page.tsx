@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Book, Calculator, Layers, Measure } from "@/components/Icons";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Roofing guides & research" };
+export const metadata = pageMetadata({
+  title: "Roofing guides & research",
+  description: "Roofing guides that answer real New Zealand roofing questions, connect to useful tools and end with a practical next step.",
+  path: "/guides"
+});
 
 const topics = [
   { icon: Calculator, title: "Pricing & scope", copy: "Costs, inclusions, exclusions and the variables that move a project." },

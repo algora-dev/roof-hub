@@ -2,6 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Book, Calculator, Camera, Check, Layers, Measure, Shield, Spark } from "@/components/Icons";
 import { SectionHeading } from "@/components/SectionHeading";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: { absolute: "RoofHub NZ — Roofing knowledge, pricing & tools" },
+  description: "Practical New Zealand roofing research, pricing, measurement and project-planning tools — useful before you ever contact a roofer.",
+  path: "/"
+});
 
 const fastPaths = [
   { icon: Calculator, title: "Price a roof", copy: "Understand the structure of a roofing estimate before you ask for a formal quote.", href: "/pricing", tone: "terracotta" },
