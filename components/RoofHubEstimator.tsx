@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import type { EstimatorHandle, MountOptions } from './roofhub-types';
+import type { EnquiryPayload, EstimatorHandle, MountOptions } from './roofhub-types';
 
 export type RoofHubEstimatorProps = {
   /** Same-origin directory containing src/ and assets/. */
@@ -36,7 +36,21 @@ export default function RoofHubEstimator({
         const moduleUrl = new URL('src/index.mjs', base).href;
         const module = await import(/* webpackIgnore: true */ moduleUrl);
         if (cancelled) return;
-        instance = module.mountRoofHub(element, latest.current.options) as EstimatorHandle;
+        const sendQuoteRequest = async (payload: EnquiryPayload) => {
+          const response = await fetch('/api/enquiry', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ kind: 'quote', payload })
+          });
+          const result = await response.json();
+          return { ok: response.ok && result.ok === true, reference: result.reference };
+        };
+        const mountOptions: MountOptions = {
+          ...latest.current.options,
+          privacyUrl: latest.current.options?.privacyUrl ?? '/privacy',
+          onQuoteRequest: latest.current.options?.onQuoteRequest ?? sendQuoteRequest
+        };
+        instance = module.mountRoofHub(element, mountOptions) as EstimatorHandle;
         latest.current.onReady?.(instance);
       } catch (cause) {
         if (!cancelled) setError(cause instanceof Error ? cause.message : 'The estimator could not be loaded.');

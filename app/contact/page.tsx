@@ -1,24 +1,25 @@
 import Link from "next/link";
-import { ArrowRight, Check } from "@/components/Icons";
-import { CONTACT_EMAIL, pageMetadata } from "@/lib/seo";
+import { Check } from "@/components/Icons";
+import { ContactForm } from "@/components/ContactForm";
+import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Contact & corrections",
-  description: "Report a correction, suggest a pricing source, or send a general enquiry to RoofHub.",
+  description: "Report a correction, suggest a roofing pricing source, send tool feedback or contact RoofHub through a private form.",
   path: "/contact"
 });
 
 const routes = [
-  { n: "01", t: "Report a correction", c: "A number that looks wrong, an outdated figure, a broken link or a claim that needs a source. Include the page URL and, if possible, a better source." },
-  { n: "02", t: "Suggest a source", c: "Manufacturer price lists, supplier pages, scaffolder rates or published project examples — public New Zealand sources we can record as observations." },
-  { n: "03", t: "General enquiry", c: "Feedback on the tools, questions about the methodology, or anything else useful." }
+  { n: "01", t: "Report a correction", c: "Tell us about an outdated figure, broken source, unclear claim or calculation that needs another look." },
+  { n: "02", t: "Suggest a source", c: "Send a manufacturer page, supplier price, scaffolding rate or published New Zealand project example." },
+  { n: "03", t: "General enquiry", c: "Questions about RoofHub, its tools, the methodology or a roofing estimate can all use the same form." }
 ];
 
 const usefulContext = [
-  "The page URL you are writing about",
-  "What looks wrong or unclear",
-  "A source link, if you have one",
-  "The region, if it is pricing-related"
+  "The RoofHub page you are writing about",
+  "What looks wrong, unclear or incomplete",
+  "A public source link, if you have one",
+  "The region if the issue is pricing-related"
 ];
 
 export default function ContactPage() {
@@ -26,7 +27,7 @@ export default function ContactPage() {
     <section className="page-intro page-intro--sage">
       <div className="container page-intro__grid">
         <div><p className="eyebrow">Contact</p><h1>Contact &amp; corrections.</h1></div>
-        <div className="page-intro__aside"><p>RoofHub is built on source-backed information. If something looks wrong, telling us is the most useful thing you can do — corrections are welcome, not awkward.</p></div>
+        <div className="page-intro__aside"><p>RoofHub is built on source-backed information. Corrections, stronger sources and practical feedback make the platform more useful for everyone.</p></div>
       </div>
     </section>
 
@@ -38,29 +39,17 @@ export default function ContactPage() {
 
     <section className="section section--sage"><div className="container feature-split">
       <div className="feature-copy">
-        <p className="eyebrow">Email</p>
-        <h2>One mailbox, answered by a human.</h2>
-        <p>Sending useful context with your message gets it fixed faster:</p>
-        <ul className="check-list">
-          {usefulContext.map((item) => <li key={item}><Check /> {item}</li>)}
-        </ul>
+        <p className="eyebrow">Useful context</p>
+        <h2>Send enough detail for us to check it properly.</h2>
+        <ul className="check-list">{usefulContext.map((item) => <li key={item}><Check /> {item}</li>)}</ul>
+        <p>Your message is sent privately to the RoofHub team. No public email address is displayed or required.</p>
       </div>
-      <div>
-        {CONTACT_EMAIL ? (
-          <>
-            <p className="eyebrow">Write to</p>
-            <p><a className="text-link text-link--sage" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
-            <p><a className="button button--primary button--large" href={`mailto:${CONTACT_EMAIL}`}>Send an email <ArrowRight /></a></p>
-          </>
-        ) : (
-          <div className="draft-notice"><strong>Corrections mailbox:</strong> a dedicated RoofHub mailbox is being configured. This page will carry the address as soon as it is live. In the meantime, the methodology page explains how published figures are reviewed.</div>
-        )}
-      </div>
+      <ContactForm />
     </div></section>
 
     <section className="section section--compact section--white"><div className="container cta-band">
-      <div><p className="eyebrow">Before you write</p><h2>How RoofHub handles corrections.</h2><p>Corrections are reviewed against the recorded observation, the source is re-checked, and the page is updated with a new review date if the number changes.</p></div>
-      <Link className="button button--secondary button--large" href="/methodology">Read the methodology <ArrowRight /></Link>
+      <div><p className="eyebrow">How corrections work</p><h2>Sources are re-checked before a figure changes.</h2><p>When a pricing observation changes, RoofHub keeps the source context and updates the review date rather than silently replacing the history.</p></div>
+      <Link className="button button--secondary button--large" href="/methodology">Read the methodology</Link>
     </div></section>
   </>;
 }

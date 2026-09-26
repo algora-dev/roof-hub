@@ -1,53 +1,18 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check } from "@/components/Icons";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
-  title: "About RoofHub",
-  description: "What RoofHub is, how it operates, and the standards this New Zealand roofing information platform holds itself to.",
-  path: "/about"
-});
-
-export default function AboutPage() {
-  return <>
-    <section className="photo-hero photo-hero--inner">
-      <Image className="photo-hero__image" src="/media/hero-secondary.webp" alt="Modern New Zealand home with a long-run metal roof above a mountain lake" fill priority sizes="100vw" />
-      <div className="photo-hero__shade photo-hero__shade--strong" aria-hidden="true" />
-      <div className="container photo-hero__content photo-hero__content--inner">
-        <div className="photo-hero__copy photo-hero__copy--wide">
-          <p className="eyebrow eyebrow--light">About RoofHub</p>
-          <h1>A roofing research and planning layer — not another roofing contractor website.</h1>
-          <p className="photo-hero__lede">The aim is to help New Zealand homeowners, property people and industry users understand a roofing project before they decide who to contact.</p>
-        </div>
-      </div>
-    </section>
-
-    <section className="section">
-      <div className="container feature-split">
-        <div className="feature-copy"><p className="eyebrow">The operating model</p><h2>Useful information first.</h2><p>RoofHub should remain useful even when someone never submits an enquiry. Pricing, measurements, guides and preliminary analysis should deliver their value before asking for personal details.</p></div>
-        <ol className="process-stack process-stack--numbered"><li><span>01</span><div><strong>Arrive with a question</strong><p>Cost, size, material, condition, scope or next step.</p></div></li><li><span>02</span><div><strong>Use information or tools</strong><p>Get a clearer answer with assumptions visible.</p></div></li><li><span>03</span><div><strong>Choose whether to ask for help</strong><p>RoofHub can eventually suggest the type of specialist worth contacting.</p></div></li></ol>
-      </div>
-    </section>
-
-    <section className="section section--sage">
-      <div className="container about-grid">
-        <div><p className="eyebrow">What RoofHub should be</p><ul className="check-list check-list--large"><li><Check/> Practical</li><li><Check/> Transparent</li><li><Check/> Evidence-aware</li><li><Check/> Nationally useful</li><li><Check/> Helpful before conversion</li></ul></div>
-        <div><p className="eyebrow">What RoofHub should not pretend to be</p><ul className="plain-list"><li>An independent regulator or industry body</li><li>A certified inspection when analysis is preliminary</li><li>A formal quote when a result is only an estimate</li><li>A roofing contractor carrying out every project</li></ul></div>
-      </div>
-    </section>
-
-    <section className="section">
-      <div className="container">
-        <div className="principle-grid">
-          <article><span>01</span><h3>Neutral information</h3><p>Editorial coverage should remain separate from provider relationships.</p></article>
-          <article><span>02</span><h3>Shared roofing core</h3><p>Pricing and measurement logic should be reusable across website tools, the assistant and future agent interfaces.</p></article>
-          <article><span>03</span><h3>Honest uncertainty</h3><p>Preliminary outputs should say what is known, inferred and still unresolved.</p></article>
-          <article><span>04</span><h3>NZ-specific evidence</h3><p>Technical claims should be grounded in appropriate New Zealand sources before public launch.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section className="section section--dark"><div className="container cta-band cta-band--dark"><div><p className="eyebrow">The practical next step</p><h2>Start with tools and useful questions.</h2><p>The current build is a foundation. The real value comes as the existing roofing calculations, measurement workflows and analysis tools are integrated.</p></div><Link className="button button--primary button--large" href="/tools">Explore tools <ArrowRight /></Link></div></section>
-  </>;
-}
+export const metadata=pageMetadata({title:"About RoofHub",description:"RoofHub is an independent New Zealand roofing information, pricing and calculation platform built around traceable evidence and useful tools.",path:"/about"});
+const principles=[
+  ["01","Useful before an enquiry","Pricing, guides and tools deliver value before RoofHub asks for contact details."],
+  ["02","Evidence stays attached","Important price observations keep their source, date, units, GST status and scope."],
+  ["03","Tools share the same logic","Measurement and pricing inputs are designed to flow through one roofing data model."],
+  ["04","Uncertainty stays visible","A preliminary estimate is labelled as an estimate, not dressed up as a quote."]
+] as const;
+export default function AboutPage(){return <>
+<section className="page-intro page-intro--sage"><div className="container page-intro__grid"><div><p className="eyebrow">About RoofHub</p><h1>An independent NZ roofing knowledge and calculation platform.</h1></div><div className="page-intro__aside"><p>RoofHub turns fragmented roofing prices, technical specifications and project information into source-backed guides, comparisons and tools that homeowners and roofing professionals can actually use.</p></div></div></section>
+<section className="section section--white"><div className="container about-grid"><div><p className="eyebrow">Why it exists</p><h2>Roofing information is useful only when the context survives the summary.</h2><p>A supplier may publish sheet pricing. A manufacturer publishes technical limits. A roofer publishes a project example. A regulator publishes safety or compliance guidance. RoofHub's job is to connect those pieces without pretending they are interchangeable.</p></div><ul className="check-list check-list--large"><li><Check/> NZ-specific pricing and terminology</li><li><Check/> Manufacturer-backed technical references</li><li><Check/> Published market observations with provenance</li><li><Check/> Measurement and estimating tools</li><li><Check/> Optional route to a proper site quote</li></ul></div></section>
+<section className="section"><div className="container"><div className="principle-grid">{principles.map(([n,t,c])=><article key={n}><span>{n}</span><h3>{t}</h3><p>{c}</p></article>)}</div></div></section>
+<section className="section section--sage"><div className="container feature-split"><div className="feature-copy"><p className="eyebrow">Commercial model</p><h2>Useful information and lead generation can coexist without confusing the two.</h2><p>RoofHub can help someone understand a roof even if they never submit an enquiry. If they do want a formal quote, the measurements and project context they choose to share can make that enquiry more useful to both sides.</p></div><div className="evidence-callout"><strong>Editorial independence:</strong> a provider relationship does not buy a favourable comparison or change how a technical source is represented. Pricing methodology is documented separately.</div></div></section>
+<section className="section section--dark"><div className="container cta-band cta-band--dark"><div><p className="eyebrow">See the method</p><h2>How RoofHub turns sources into ranges.</h2><p>The methodology explains the evidence tiers, pricing bases, GST treatment and review process behind the data-driven pages.</p></div><Link className="button button--primary button--large" href="/methodology">Read the methodology <ArrowRight/></Link></div></section>
+</>}

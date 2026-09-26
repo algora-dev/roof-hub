@@ -1,10 +1,10 @@
 /**
- * DEVELOPMENT RATE CARD — not a verified NZ market tariff.
+ * PRELIMINARY RATE CARD — not a verified NZ market tariff.
  * Source values below come from the supplied conversation. Owner labour /
  * removal inputs are retained exactly. Earlier material and scaffold
- * estimates are PROVISIONAL and must be approved before public launch.
+ * estimates are PROVISIONAL and are shown for planning only while the material/scaffold evidence is being strengthened.
  * Source GST basis was not consistently specified: this implementation
- * provisionally treats the figures as EXCLUSIVE; approval is REQUIRED.
+ * provisionally treats the figures as EXCLUSIVE; the displayed assumptions make this uncertainty explicit.
  */
 const R = (min, max = min) => ({ min, max });
 const split = (id, label, unit, material, labour, status='provisional', note='Working material allowance from the prior discussion; not a verified supplier price.') => ({ id, label, unit, kind:'split', material, labour, status, taxBasis:'excl', note });
@@ -38,7 +38,7 @@ add(bundled('removal.concrete','Remove existing concrete tile','m2',R(6,11)));
 add(bundled('removal.decramastic','Remove non-asbestos Decramastic','m2',R(5,9)));
 export const DEFAULT_RATE_CARD = {
   schemaVersion:1, id:'roofhub-nz-draft-2026-09-22', currency:'NZD', gstRate:0.15,
-  title:'RoofHub working price guide', approved:false, approvedAt:null,
+  title:'RoofHub preliminary price guide', approved:false, approvedAt:null,
   sourceTaxConfirmed:false, updatedAt:'2026-09-22', rates,
   scaffold: {
     includedWeeks:4,

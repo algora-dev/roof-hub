@@ -117,8 +117,8 @@ export function calculateEstimate(project,card=DEFAULT_RATE_CARD) {
   const subtotal=lines.reduce((s,l)=>add(s,l.amount),Z());
   const tax={min:moneyRound(subtotal.min*card.gstRate),max:moneyRound(subtotal.max*card.gstRate)};
   const total=add(subtotal,tax);
-  if(!card.sourceTaxConfirmed) assumptions.push('The discussion did not consistently specify GST. This development card assumes its source figures exclude GST; this must be approved before publishing.');
-  if(!card.approved) assumptions.push('Working rates, not an approved market price guide. Owner-supplied labour/removal rates are mixed with provisional material and scaffold allowances.');
+  if(!card.sourceTaxConfirmed) assumptions.push('The discussion did not consistently specify GST. This preliminary card assumes source figures exclude GST where the original discussion did not specify tax treatment; confirm GST treatment before relying on the result.');
+  if(!card.approved) assumptions.push('Preliminary planning rates, not a formal market tariff. Owner-supplied labour/removal rates are mixed with provisional material and scaffold allowances.');
   if(project.roofSystem==='pressed-metal' && !(project.pricingMode==='custom' && project.rateOverrides['pressed-metal.covering'])) assumptions.push('Pressed-metal-tile materials are an illustrative target, not a verified supply price.');
   if(project.wastePct) assumptions.push(`${project.wastePct}% waste is applied to split-price covering materials only. Labour, removal, underlay and bundled installed rates are not multiplied by waste.`);
   if(project.measurements.some(e=>e.basis==='plan')) assumptions.push('Plan measurements are converted once. Hip/valley conversion assumes a regular equal-pitch 45° plan intersection; irregular geometry requires actual lengths.');

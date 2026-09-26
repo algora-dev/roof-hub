@@ -11,19 +11,19 @@ const sections = [
     h: "What we collect",
     body: [
       "RoofHub does not require an account and does not run a newsletter. When analytics is enabled, we collect standard aggregate page-view analytics (pages viewed, referrer, approximate region, device type) with IP addresses anonymised. We do not build advertising profiles.",
-      "The roofing tools on this site run in your browser. The measurements you enter, the plans you look at and the estimates you generate stay on your device unless a feature explicitly says otherwise and you choose to submit them."
+      "The roofing tools on this site run primarily in your browser. Measurements, plan images and estimates stay on your device unless a feature explicitly says otherwise and you choose to submit an enquiry. Quote-enquiry payloads do not include uploaded plan-image bytes or private custom rate overrides."
     ]
   },
   {
     h: "When you contact us",
     body: [
-      "If you email us — for a correction, a source suggestion or a general enquiry — we keep your message and address only to handle that request. We do not add correspondents to marketing lists."
+      "If you use the contact or quote-enquiry form, we keep the details you submit only to handle that request and, where you explicitly ask for a quote, to pass the relevant project information to an appropriate roofing partner. We do not add correspondents to marketing lists."
     ]
   },
   {
     h: "Third parties",
     body: [
-      "This site is hosted on Vercel. When analytics is enabled, Google Analytics processes anonymised page-view data under Google's own terms. No other third-party trackers or advertising scripts run on this site."
+      "This site is hosted on Vercel. When analytics is enabled, Google Analytics processes aggregate usage data under Google's own terms. Contact and quote-enquiry submissions are delivered through a transactional email provider so the message can reach the RoofHub team. RoofHub does not use advertising trackers or sell form-submission data."
     ]
   },
   {

@@ -1,3 +1,5 @@
+> **Superseded for deployment:** this file is the original external-agent integration contract. Use `../PRODUCTION-READY-HANDOFF.md` for the current production/Vercel launch instructions.
+
 # RoofHub — External Agent Handoff Contract
 
 This document is the integration contract for page content/code produced outside this

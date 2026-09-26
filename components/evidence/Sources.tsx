@@ -15,7 +15,7 @@ export function Sources({ sources }: { sources: SourceEntry[] }) {
         <li key={`${s.url}-${i}`}>
           <span className={`tier tier--${s.tier}`}>{s.tier}</span>
           <span>
-            <a href={s.url} target="_blank" rel="noopener">{s.name}</a>
+            <a href={s.url} target="_blank" rel="noopener noreferrer">{s.name}</a>
             {s.date ? ` (${s.date})` : ""}
             {s.note ? <> — {s.note}</> : null}
             <span className="source-type"> · {s.type}</span>

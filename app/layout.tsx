@@ -12,12 +12,12 @@ const bingVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: `${SITE_NAME} — Roofing knowledge, pricing & tools`, template: `%s | ${SITE_NAME}` },
+  title: { default: `${SITE_NAME} — Roofing pricing, guides & tools`, template: `%s | ${SITE_NAME}` },
   description: DEFAULT_DESCRIPTION,
   icons: { icon: "/brand/roofhub-icon.png" },
-  ...(isIndexingEnabled()
-    ? { robots: { index: true, follow: true } }
-    : { robots: { index: false, follow: false, noarchive: true, nosnippet: true, nocache: true } }),
+  robots: isIndexingEnabled()
+    ? { index: true, follow: true }
+    : { index: false, follow: false, noarchive: true, nosnippet: true, nocache: true },
   openGraph: {
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description: DEFAULT_DESCRIPTION,
@@ -36,10 +36,31 @@ export const metadata: Metadata = {
     : {})
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "RoofHub NZ",
+  url: SITE_URL,
+  logo: `${SITE_URL}/brand/roofhub-mark-black.png`,
+  description: DEFAULT_DESCRIPTION
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "RoofHub NZ",
+  url: SITE_URL,
+  description: DEFAULT_DESCRIPTION,
+  inLanguage: "en-NZ",
+  publisher: { "@type": "Organization", name: "RoofHub NZ", url: SITE_URL }
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-NZ">
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
         <PreviewBanner />
         <Header />
         <main>{children}</main>

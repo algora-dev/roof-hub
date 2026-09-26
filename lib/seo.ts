@@ -1,29 +1,17 @@
 import type { Metadata } from "next";
+import {
+  DEFAULT_DESCRIPTION,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_URL,
+  isIndexingEnabled
+} from "@/lib/site";
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.roofhub.co.nz").replace(/\/+$/, "");
-export const SITE_NAME = "RoofHub NZ";
-export const SITE_TAGLINE = "Know more. Build brighter.";
-export const DEFAULT_DESCRIPTION =
-  "Practical New Zealand roofing knowledge, planning tools and transparent project guidance.";
-
-/** Public contact/corrections mailbox. */
-export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "insights@t3labs.co.uk";
-
-/**
- * Indexing is on for production deployments unless explicitly disabled,
- * and stays off for local/preview builds unless explicitly enabled.
- */
-export function isIndexingEnabled(): boolean {
-  if (process.env.ALLOW_INDEXING === "true") return true;
-  if (process.env.ALLOW_INDEXING === "false") return false;
-  return process.env.VERCEL_ENV === "production";
-}
+export { DEFAULT_DESCRIPTION, SITE_NAME, SITE_TAGLINE, SITE_URL, isIndexingEnabled };
 
 type PageMetaInput = {
-  /** Plain page title (template suffix applied) or an absolute title. */
   title: string | { absolute: string };
   description: string;
-  /** Canonical path, e.g. "/" or "/guides/some-guide". */
   path: string;
   noIndex?: boolean;
 };
@@ -35,10 +23,17 @@ function ogTitle(title: PageMetaInput["title"]): string {
 /** Standard page metadata: unique title/description, self-referencing canonical, OG card. */
 export function pageMetadata({ title, description, path, noIndex }: PageMetaInput): Metadata {
   const url = path === "/" ? SITE_URL : `${SITE_URL}${path}`;
+  const indexingEnabled = isIndexingEnabled();
+  const robots = !indexingEnabled
+    ? { index: false, follow: false, noarchive: true, nosnippet: true, nocache: true }
+    : noIndex
+      ? { index: false, follow: true, noarchive: true, nosnippet: true, nocache: true }
+      : { index: true, follow: true };
   return {
     title,
     description,
     alternates: { canonical: url },
+    robots,
     openGraph: {
       title: ogTitle(title),
       description,
@@ -46,7 +41,6 @@ export function pageMetadata({ title, description, path, noIndex }: PageMetaInpu
       siteName: SITE_NAME,
       type: "website",
       images: [{ url: "/brand/og-image.png", width: 1200, height: 630, alt: `${SITE_NAME} — ${SITE_TAGLINE}` }]
-    },
-    ...(noIndex ? { robots: { index: false, follow: false } } : {})
+    }
   };
 }

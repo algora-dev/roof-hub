@@ -1,62 +1,17 @@
 import Link from "next/link";
-import { ArrowRight, Calculator, Camera, Layers, Measure } from "@/components/Icons";
-import { SectionHeading } from "@/components/SectionHeading";
+import { ArrowRight, Calculator, Layers, Measure } from "@/components/Icons";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
-  title: "Roofing tools",
-  description: "Roofing pricing, measurement and planning calculators with assumptions, inputs and limitations kept visible.",
-  path: "/tools"
-});
-
-const tools = [
-  { icon: Calculator, title: "Roof pricing", copy: "Detailed estimator: measure from a plan or enter quantities for a low/high cost range. Simple slider estimate also available.", status: "Preview live", href: "/tools/detailed-roof-estimator", active: true },
-  { icon: Measure, title: "Roof measurement", copy: "Integration point for plan, satellite and dimension-based measurement workflows.", status: "Integration planned", href: "#", active: false },
-  { icon: Camera, title: "Photo / plan analysis", copy: "Preliminary material and condition observations with confidence and limitations.", status: "Integration planned", href: "#", active: false },
-  { icon: Layers, title: "Roof pitch & quantities", copy: "Small deterministic calculators that share the same approved roofing core.", status: "Integration planned", href: "#", active: false }
+export const metadata=pageMetadata({title:"Roofing calculators & tools",description:"RoofHub tools for detailed roof estimating, plan measurement, roof pitch, roof area and project pricing in New Zealand.",path:"/tools"});
+const tools=[
+  {icon:Calculator,title:"Detailed roof estimator",copy:"Enter known quantities or measure from a plan/image, choose a roofing system and build a preliminary low/high estimate.",status:"Available",href:"/tools/detailed-roof-estimator"},
+  {icon:Measure,title:"Roof area & measurement",copy:"Understand plan area, actual area and the component measurements that feed a roofing estimate.",status:"Guide + estimator",href:"/guides/roof-area"},
+  {icon:Layers,title:"Roof pitch & quantities",copy:"Convert plan area using pitch and see how roofing system minimum pitches differ.",status:"Guide live",href:"/guides/roof-pitch"},
+  {icon:Calculator,title:"NZ roofing cost guide",copy:"Compare public market observations before applying them to your own measured project.",status:"Data guide",href:"/pricing/roofing-costs"}
 ];
-
-export default function ToolsPage() {
-  return <>
-    <section className="page-intro">
-      <div className="container page-intro__grid">
-        <div><p className="eyebrow">RoofHub tools</p><h1>Useful calculations before the contact form.</h1></div>
-        <div className="page-intro__aside"><p>RoofHub already has substantial roofing tooling. This website should expose and orchestrate those capabilities without rebuilding mature logic just to fit a new interface.</p></div>
-      </div>
-    </section>
-
-    <section className="section section--compact section--white"><div className="container"><div className="tool-grid">{tools.map(({icon: Icon,title,copy,status,href,active}) => <article className={`tool-card ${active ? "tool-card--active" : ""}`} key={title}><div className="tool-card__head"><span className="icon-tile"><Icon/></span><span className={`status-pill ${active ? "status-pill--live" : ""}`}>{status}</span></div><h2>{title}</h2><p>{copy}</p>{active ? <Link className="text-link" href={href}>Open prototype <ArrowRight/></Link> : <span className="muted-link">Awaiting existing tool audit</span>}</article>)}</div></div></section>
-
-    <section className="section section--sage">
-      <div className="container feature-split">
-        <div className="feature-copy"><p className="eyebrow">One authoritative roofing core</p><h2>Website, assistant and future agents should use the same logic.</h2><p>Critical pricing formulas, measurement rules and technical constraints should live in approved shared functions or data — not be duplicated across page code and AI prompts.</p></div>
-        <div className="architecture-diagram"><span>Website</span><span>Smart assistant</span><span className="architecture-core">Approved roofing core</span><span>Future agent access</span><span>Reports / enquiries</span></div>
-      </div>
-    </section>
-
-    <section className="section">
-      <div className="container">
-        <SectionHeading eyebrow="Output discipline" title="Preliminary tools should say exactly what they are" copy={<p>RoofHub can be useful without overstating certainty.</p>} />
-        <div className="output-grid">
-          <article><span>Measurement</span><h3>Preliminary measured / estimated area</h3><p>Keep source imagery, supplied dimensions, inferred dimensions and unresolved inputs distinct.</p></article>
-          <article><span>Visual assessment</span><h3>Visual indicators suggest…</h3><p>Photo analysis can highlight visible features without pretending to be a certified diagnosis.</p></article>
-          <article><span>Material identification</span><h3>Likely / appears to be…</h3><p>Use confidence-aware wording where the image or supplied context cannot support certainty.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section className="section section--dark">
-      <div className="container">
-        <SectionHeading eyebrow="Integration sequence" title="Audit first. Connect the strongest vertical slice second." />
-        <ol className="horizontal-steps">
-          <li><span>1</span><strong>Audit existing code</strong><p>Map calculators, measurement logic, prompts, source data and duplicated rules.</p></li>
-          <li><span>2</span><strong>Identify shared functions</strong><p>Extract the source-of-truth logic that multiple interfaces should call.</p></li>
-          <li><span>3</span><strong>Integrate one tool properly</strong><p>Pricing or measurement should become the first complete public workflow.</p></li>
-          <li><span>4</span><strong>Expand from evidence</strong><p>Add tools and pages based on real search demand and actual usage.</p></li>
-        </ol>
-      </div>
-    </section>
-
-    <section className="section section--white"><div className="container cta-band"><div><p className="eyebrow">Current working example</p><h2>Start with the pricing interaction.</h2><p>The calculator is still demo-only, but it gives us a real UI to test before the approved pricing engine is connected.</p></div><Link className="button button--secondary button--large" href="/pricing">Open pricing prototype <ArrowRight/></Link></div></section>
-  </>;
-}
+export default function ToolsPage(){return <>
+<section className="page-intro"><div className="container page-intro__grid"><div><p className="eyebrow">RoofHub tools</p><h1>Calculations that keep the assumptions visible.</h1></div><div className="page-intro__aside"><p>Use RoofHub to move from a broad roofing question toward real quantities. The detailed estimator can work from your own measurements or a calibrated plan/image and keeps its result separate from a formal contractor quote.</p></div></div></section>
+<section className="section section--compact section--white"><div className="container"><div className="tool-grid">{tools.map(({icon:Icon,title,copy,status,href})=><article className="tool-card tool-card--active" key={title}><div className="tool-card__head"><span className="icon-tile"><Icon/></span><span className="status-pill status-pill--live">{status}</span></div><h2>{title}</h2><p>{copy}</p><Link className="text-link" href={href}>Open <ArrowRight/></Link></article>)}</div></div></section>
+<section className="section section--sage"><div className="container feature-split"><div className="feature-copy"><p className="eyebrow">One quantity model</p><h2>The same measurements should not need to be entered twice.</h2><p>Roof area, ridges, hips, valleys, barges, spouting and custom items can be carried from digital takeoff into pricing. Roof type then determines which compatible pricing components are applied.</p></div><div className="architecture-diagram"><span>Plan / image</span><span>Manual measurements</span><span className="architecture-core">Roof quantities</span><span>Roof system</span><span>Estimate range</span></div></div></section>
+<section className="section section--white"><div className="container cta-band"><div><p className="eyebrow">Detailed estimator</p><h2>Already know the measurements?</h2><p>Skip the broad questions. Enter actual quantities directly and use RoofHub as a measurement-to-price workflow.</p></div><Link className="button button--primary button--large" href="/tools/detailed-roof-estimator">Open detailed estimator <ArrowRight/></Link></div></section>
+</>}

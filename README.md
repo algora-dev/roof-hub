@@ -1,59 +1,65 @@
-# RoofHub NZ — Website v0.4
+# RoofHub NZ — production hardening candidate v0.5
 
-Current deployment candidate for RoofHub.co.nz.
+RoofHub is a Next.js 15 / React 19 website for independent New Zealand roofing pricing, guides and estimating tools.
 
-## What changed from v0.3
+## Current state
 
-This pass responds to the live-preview review rather than adding more decorative assets.
+This tree includes:
 
-- Removed all weak / rejected roof imagery from the website.
-- The website now uses only **two approved scenic hero assets**.
-- Rebuilt the homepage into a much longer, more complete experience with clear section rhythm.
-- Reworked Pricing, Tools, Guides and About so they rely on typography, UI, data blocks and brand colour rather than forcing photography into cards.
-- Removed body-scroll locking from the mobile navigation to reduce the risk of a page remaining unintentionally unscrollable.
-- Explicitly set normal document overflow/min-height behaviour in the global CSS.
-- Updated the representative guide page and all build-status wording to v0.4.
-- Preserved all noindex controls.
+- production crawl/index controls;
+- canonical `https://www.roofhub.co.nz` handling;
+- 10 cornerstone roofing/pricing/measurement resources;
+- shared evidence and pricing-observation architecture;
+- methodology, sources/corrections, privacy and terms surfaces;
+- hidden server-side contact/quote delivery endpoint;
+- the detailed roof estimator, intentionally `noindex` while its rate card remains provisional;
+- post-deploy production and IndexNow scripts.
 
-## Approved website imagery
+Read **`PRODUCTION-READY-HANDOFF.md` first** for Vercel variables and the launch order.
 
-Only these two images are used by the current code:
+## Local build
 
-- `public/media/hero-home.webp`
-- `public/media/hero-secondary.webp`
+```bash
+npm ci
+npm run typecheck
+npm run build
+npm run dev
+```
 
-Original PNG and WebP handoff copies are also stored in:
+## Canonical domain
 
-`Design/Website_Asset_Pack/v0_4/`
+The current Vercel configuration already has:
 
-Do not add generated roof images casually. New imagery should be created for a specific page/use case and reviewed before it is committed.
+- `roofhub.co.nz` → permanent redirect → `www.roofhub.co.nz`
+- `www.roofhub.co.nz` → Production
 
-## Noindex / preview mode
+Use:
 
-Keep:
+```text
+NEXT_PUBLIC_SITE_URL=https://www.roofhub.co.nz
+```
+
+## Indexing safety switch
+
+Keep this during staging:
 
 ```text
 ALLOW_INDEXING=false
 ```
 
-while the site is being built. This controls:
+When the production checklist passes, change it to `true` and redeploy. The same switch controls page metadata, middleware headers, robots and sitemap generation.
 
-- page robots metadata;
-- `robots.txt`;
-- the `X-Robots-Tag` HTTP response header;
-- the preview-build banner.
+## Enquiry delivery
 
-When launch is explicitly approved, set `ALLOW_INDEXING=true` in Vercel and redeploy.
+No recipient email address is rendered publicly. Contact and quote forms send to the server route `/api/enquiry` and then through the configured transactional email provider.
 
-## Deployment
+Required production secrets are documented in `PRODUCTION-READY-HANDOFF.md`.
 
-1. `npm install`
-2. `npm run build`
-3. Push/update the GitHub repo.
-4. Deploy through Vercel.
-5. Set `NEXT_PUBLIC_SITE_URL=https://roofhub.co.nz`.
-6. Keep `ALLOW_INDEXING=false` until launch approval.
+## Post-deploy checks
 
-## Important
+```bash
+npm run check:production
+npm run indexnow
+```
 
-The pricing calculator remains demo arithmetic and is clearly labelled as such. Replace it with the audited RoofHub pricing core before any public/indexed launch.
+Use `EXPECT_INDEXING=false npm run check:production` while the site is deliberately still noindex.

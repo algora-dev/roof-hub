@@ -34,7 +34,7 @@ export function Header() {
           <Logo />
           <nav className="desktop-nav" aria-label="Primary navigation">
             {links.map(([label, href]) => (
-              <Link key={href} className={pathname === href || (href === "/guides" && pathname.startsWith("/guides/")) ? "is-active" : ""} href={href}>{label}</Link>
+              <Link key={href} className={pathname === href || pathname.startsWith(`${href}/`) ? "is-active" : ""} href={href}>{label}</Link>
             ))}
           </nav>
           <div className="header-actions">

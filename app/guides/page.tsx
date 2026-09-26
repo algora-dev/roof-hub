@@ -2,64 +2,19 @@ import Link from "next/link";
 import { ArrowRight, Book, Calculator, Layers, Measure } from "@/components/Icons";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
-  title: "Roofing guides & research",
-  description: "Roofing guides that answer real New Zealand roofing questions, connect to useful tools and end with a practical next step.",
-  path: "/guides"
-});
-
-const topics = [
-  { icon: Calculator, title: "Pricing & scope", copy: "Costs, inclusions, exclusions and the variables that move a project." },
-  { icon: Measure, title: "Measurement", copy: "Area, pitch, plans, quantities and the difference between preliminary and surveyed values." },
-  { icon: Layers, title: "Materials & systems", copy: "Use-case driven comparisons with technical claims tied to appropriate evidence." },
-  { icon: Book, title: "Project planning", copy: "Quotes, timing, access, maintenance and practical preparation before work starts." }
-];
-
-const planned = [
-  ["Pricing", "What a reroof price should account for"],
-  ["Measurement", "How roof area and pitch affect a project"],
-  ["Materials", "Long-run steel: what to understand before choosing a profile"],
-  ["Decision", "Repair vs replacement: the questions that change the answer"],
-  ["Climate", "Roofing considerations for coastal New Zealand"],
-  ["Planning", "What should a roofing quote include?"]
-];
-
-export default function GuidesPage() {
-  return <>
-    <section className="page-intro page-intro--terracotta">
-      <div className="container page-intro__grid">
-        <div><p className="eyebrow">Guides & research</p><h1>Roofing information designed to help make a decision.</h1></div>
-        <div className="page-intro__aside"><p>Not a huge blog for its own sake. RoofHub guides should answer real questions, connect to useful tools, show evidence where it matters, and give the reader a practical next step.</p></div>
-      </div>
-    </section>
-
-    <section className="section section--white">
-      <div className="container featured-guide">
-        <div><p className="eyebrow">Featured guide · 5 min read</p><h2>How to prepare for a roofing quote</h2><p>What to gather, what to ask and how to make multiple roofing quotes easier to compare without pretending you need to become a roofer first.</p><Link className="button button--primary" href="/guides/how-to-prepare-for-a-roofing-quote">Read the guide <ArrowRight/></Link></div>
-        <div className="featured-guide__checklist"><span>Bring useful context</span><span>Compare scope, not only price</span><span>Keep assumptions visible</span><span>Know what happens next</span></div>
-      </div>
-    </section>
-
-    <section className="section section--sage">
-      <div className="container">
-        <div className="topic-grid">{topics.map(({icon: Icon,title,copy}) => <article key={title}><span className="icon-tile"><Icon/></span><h3>{title}</h3><p>{copy}</p></article>)}</div>
-      </div>
-    </section>
-
-    <section className="section">
-      <div className="container">
-        <div className="planned-guides-head"><div><p className="eyebrow">Planned authority pages</p><h2>Build depth where a real question deserves it.</h2></div><p>These are examples to research and validate — not a commitment to mass-produce thin pages.</p></div>
-        <div className="planned-guides-grid">{planned.map(([category,title]) => <article key={title}><span>{category}</span><h3>{title}</h3><small>Research / draft queue</small></article>)}</div>
-      </div>
-    </section>
-
-    <section className="section section--dark">
-      <div className="container editorial-standards">
-        <div><p className="eyebrow">Editorial rules</p><h2>Answer the roofing question first. Conversion comes second.</h2></div>
-        <div className="editorial-rules"><p><strong>Use evidence.</strong> Technical claims should be supported by appropriate NZ sources or manufacturer documentation.</p><p><strong>Separate market information from partners.</strong> A provider relationship should not buy a favourable comparison.</p><p><strong>Preserve uncertainty.</strong> Avoid turning a preliminary assessment into a definitive diagnosis.</p><p><strong>Avoid doorway content.</strong> Local pages should exist only where there is genuinely useful local information.</p></div>
-      </div>
-    </section>
-
-    <section className="section section--terracotta-soft"><div className="container cta-band"><div><p className="eyebrow">Prefer tools when tools are better</p><h2>Some roofing questions are calculations, not articles.</h2><p>Roof area, pitch, quantities and pricing should lead into interactive tools where that gives the user a better answer.</p></div><Link className="button button--primary button--large" href="/tools">Explore tools <ArrowRight/></Link></div></section>
-  </>;
-}
+export const metadata=pageMetadata({title:"Roofing guides & research",description:"Practical New Zealand roofing guides covering pricing, roof pitch, measurement, roof systems and how to prepare for a quote.",path:"/guides"});
+const guides=[
+  ["Pricing","Roofing costs in New Zealand","/pricing/roofing-costs"],
+  ["Re-roofing","What a reroof price needs to include","/pricing/reroof-cost"],
+  ["Measurement","How roof pitch changes area","/guides/roof-pitch"],
+  ["Measurement","How to measure roof area and components","/guides/roof-area"],
+  ["Materials","Long-run metal roofing explained","/roofing/long-run"],
+  ["Planning","How to prepare for a roofing quote","/guides/how-to-prepare-for-a-roofing-quote"]
+] as const;
+export default function GuidesPage(){return <>
+<section className="page-intro page-intro--terracotta"><div className="container page-intro__grid"><div><p className="eyebrow">Guides & research</p><h1>Roofing information built around the decision you need to make.</h1></div><div className="page-intro__aside"><p>RoofHub guides answer the question early, show evidence where it matters and connect to the calculator or measurement workflow when an article alone is not enough.</p></div></div></section>
+<section className="section section--white"><div className="container featured-guide"><div><p className="eyebrow">Start here</p><h2>How much does roofing cost in New Zealand?</h2><p>Compare current public market observations without confusing material-only, installed and complete reroof pricing.</p><Link className="button button--primary" href="/pricing/roofing-costs">Read the cost guide <ArrowRight/></Link></div><div className="featured-guide__checklist"><span>Published NZ price observations</span><span>GST and pricing basis kept visible</span><span>Worked 200m² example</span><span>Detailed estimator linked</span></div></div></section>
+<section className="section section--sage"><div className="container"><div className="topic-grid"><article><span className="icon-tile"><Calculator/></span><h3>Pricing & scope</h3><p>Costs, inclusions, exclusions and the variables that move a project.</p></article><article><span className="icon-tile"><Measure/></span><h3>Measurement</h3><p>Area, pitch, plans and the difference between plan and actual quantities.</p></article><article><span className="icon-tile"><Layers/></span><h3>Materials & systems</h3><p>Manufacturer-backed profile information connected to market pricing evidence.</p></article><article><span className="icon-tile"><Book/></span><h3>Project planning</h3><p>Quotes, access, scope and practical preparation before work begins.</p></article></div></div></section>
+<section className="section"><div className="container"><div className="planned-guides-head"><div><p className="eyebrow">Core RoofHub guides</p><h2>Useful depth, not content for content's sake.</h2></div><p>Each live page has a distinct job: explain a price, a roofing system or a measurement problem.</p></div><div className="planned-guides-grid">{guides.map(([category,title,href])=><Link href={href} key={title}><article><span>{category}</span><h3>{title}</h3><small>Read guide →</small></article></Link>)}</div></div></section>
+<section className="section section--dark"><div className="container editorial-standards"><div><p className="eyebrow">Editorial rules</p><h2>Answer first. Provenance stays attached.</h2></div><div className="editorial-rules"><p><strong>Use primary sources.</strong> Manufacturer/government evidence leads technical claims where available.</p><p><strong>Keep price bases separate.</strong> Material-only and complete-project observations answer different questions.</p><p><strong>Preserve uncertainty.</strong> A planning estimate is not a formal quote or site diagnosis.</p><p><strong>Build tools when tools are better.</strong> Geometry and quantity questions should lead into calculation, not filler prose.</p></div></div></section>
+</>}
