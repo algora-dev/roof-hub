@@ -6,8 +6,8 @@ export const SITE_TAGLINE = "Know more. Build brighter.";
 export const DEFAULT_DESCRIPTION =
   "Practical New Zealand roofing knowledge, planning tools and transparent project guidance.";
 
-/** Public contact/corrections mailbox. Empty until a mailbox is confirmed. */
-export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
+/** Public contact/corrections mailbox. */
+export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "insights@t3labs.co.uk";
 
 /**
  * Indexing is on for production deployments unless explicitly disabled,
