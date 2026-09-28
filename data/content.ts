@@ -42,8 +42,8 @@ export function formatObservationPrice(o: PricingObservation): string {
   const money = (n: number) => `$${n.toLocaleString("en-NZ", { maximumFractionDigits: 2 })}`;
   const low = o.amountLow ?? o.amountExact;
   const high = o.amountHigh ?? o.amountExact;
-  const range = low != null && high != null && low !== high ? `${money(low)}–${money(high)}` : low != null ? money(low) : high != null ? money(high) : "—";
-  const unit = o.unit === "m2" ? "/m²" : o.unit === "lm" ? "/lm" : o.unit === "week" ? "/week" : o.unit === "each" ? "/item" : "/job";
+  const range = low != null && high != null && low !== high ? `${money(low)}–${money(high)}` : low != null ? money(low) : high != null ? money(high) : "Not stated";
+  const unit = o.unit === "m2" ? "/m²" : o.unit === "lm" ? "/lm" : o.unit === "week" ? "/week" : o.unit === "hour" ? "/hour" : o.unit === "m2-week" ? "/m²/week" : o.unit === "each" ? "/item" : "/job";
   return `${range}${unit}`;
 }
 
@@ -56,6 +56,11 @@ export function evidenceRows(ids: string[]) {
     label: o.item,
     range: formatObservationPrice(o),
     basis: `${o.priceBasis.replaceAll("-", " ")} · ${gstLabel(o)}`,
-    notes: `${o.region} · ${o.sourceName}`
+    notes: [o.region, o.areaBasis && o.areaBasis !== "unknown" ? `Area basis: ${o.areaBasis}` : o.unit === "m2" ? "Area basis not specified" : "", o.notes].filter(Boolean).join(". "),
+    sourceUrl: o.sourceUrl,
+    sourceLabel: o.sourceName,
+    sourceDate: o.sourceDate,
+    lastCheckedAt: o.lastCheckedAt,
+    historical: o.priceContext === "historical-guide"
   }));
 }

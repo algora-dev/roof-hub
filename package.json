@@ -10,8 +10,10 @@
     "indexnow": "node scripts/submit-indexnow.mjs",
     "og:image": "node scripts/gen-og-image.mjs",
     "check:production": "node scripts/check-production.mjs",
-    "check:content": "node scripts/check-content.mjs",
-    "test": "npm run check:content"
+    "check:content": "node scripts/check-content.mjs && npm run check:research",
+    "test": "npm run check:content && npm run check:math",
+    "check:research": "node scripts/check-research.mjs",
+    "check:math": "node scripts/check-math.cjs"
   },
   "dependencies": {
     "next": "^15.2.4",

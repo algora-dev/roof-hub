@@ -1,5 +1,5 @@
 /**
- * PRELIMINARY RATE CARD — not a verified NZ market tariff.
+ * PRELIMINARY RATE CARD - not a verified NZ market tariff.
  * Source values below come from the supplied conversation. Owner labour /
  * removal inputs are retained exactly. Earlier material and scaffold
  * estimates are PROVISIONAL and are shown for planning only while the material/scaffold evidence is being strengthened.

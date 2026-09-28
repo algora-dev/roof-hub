@@ -9,7 +9,8 @@ import { CloseIcon, MenuIcon } from "@/components/Icons";
 const links = [
   ["Pricing", "/pricing"],
   ["Tools", "/tools"],
-  ["Guides", "/guides"],
+  ["Answers", "/guides"],
+  ["Roofing", "/roofing"],
   ["About", "/about"]
 ] as const;
 

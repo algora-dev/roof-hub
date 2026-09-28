@@ -23,7 +23,7 @@ const sections = [
   {
     h: "Accuracy and limitations",
     body: [
-      "We work to keep information accurate, sourced and dated, but roofing pricing varies by region, access, geometry, material availability and site condition. Figures may be out of date or may not reflect your situation. Tools state their assumptions and limitations on the page where they appear — read them alongside any result."
+      "We work to keep information accurate, sourced and dated, but roofing pricing varies by region, access, geometry, material availability and site condition. Figures may be out of date or may not reflect your situation. Tools state their assumptions and limitations on the page where they appear - read them alongside any result."
     ]
   },
   {

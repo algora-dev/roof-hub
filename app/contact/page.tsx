@@ -42,7 +42,7 @@ export default function ContactPage() {
         <p className="eyebrow">Useful context</p>
         <h2>Send enough detail for us to check it properly.</h2>
         <ul className="check-list">{usefulContext.map((item) => <li key={item}><Check /> {item}</li>)}</ul>
-        <p>Your message is sent privately to the RoofHub team. No public email address is displayed or required.</p>
+        <p>Your message is sent privately to the RoofHub team. Your email address is used so the team can respond. See the privacy policy for how your details are handled.</p>
       </div>
       <ContactForm />
     </div></section>

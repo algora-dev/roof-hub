@@ -40,7 +40,7 @@ export function pageMetadata({ title, description, path, noIndex }: PageMetaInpu
       url,
       siteName: SITE_NAME,
       type: "website",
-      images: [{ url: "/brand/og-image.png", width: 1200, height: 630, alt: `${SITE_NAME} — ${SITE_TAGLINE}` }]
+      images: [{ url: "/brand/og-image.png", width: 1200, height: 630, alt: `${SITE_NAME} - ${SITE_TAGLINE}` }]
     }
   };
 }

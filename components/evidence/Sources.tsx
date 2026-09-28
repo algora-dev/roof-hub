@@ -17,7 +17,7 @@ export function Sources({ sources }: { sources: SourceEntry[] }) {
           <span>
             <a href={s.url} target="_blank" rel="noopener noreferrer">{s.name}</a>
             {s.date ? ` (${s.date})` : ""}
-            {s.note ? <> — {s.note}</> : null}
+            {s.note ? <> - {s.note}</> : null}
             <span className="source-type"> · {s.type}</span>
           </span>
         </li>

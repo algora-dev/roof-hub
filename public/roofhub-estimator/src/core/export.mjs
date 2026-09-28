@@ -4,7 +4,7 @@ export const numericFormat = value => Number(value).toLocaleString('en-NZ',{maxi
 export const formatMoney = (value, decimals=0) => new Intl.NumberFormat('en-NZ',{style:'currency',currency:'NZD',minimumFractionDigits:decimals,maximumFractionDigits:decimals}).format(value);
 export function shownRange(estimate,tax='incl') {return tax==='incl'?estimate.total:estimate.subtotal;}
 export function formatRange(range,roundOutward=false) {
-  if(!range) return '—';
+  if(!range) return '-';
   const low=roundOutward?Math.floor(range.min/100)*100:range.min;
   const high=roundOutward?Math.ceil(range.max/100)*100:range.max;
   return `${formatMoney(low)} – ${formatMoney(high)}`;
@@ -20,7 +20,7 @@ function cell(value) {
   return `"${text.replaceAll('"','""')}"`;
 }
 export function estimateCsv(project,estimate) {
-  const rows=[['RoofHub detailed estimate — not a quote'],['Project',project.name||'Untitled project'],['Rate card',estimate.rateCardId],['Status',estimate.complete?'Priced scope':'Partial estimate — unpriced items remain'],['All line amounts below exclude GST'],[],
+  const rows=[['RoofHub detailed estimate - not a quote'],['Project',project.name||'Untitled project'],['Rate card',estimate.rateCardId],['Status',estimate.complete?'Priced scope':'Partial estimate - unpriced items remain'],['All line amounts below exclude GST'],[],
     ['Section','Item','Quantity','Unit','Low NZD excl GST','High NZD excl GST','Status','Notes']];
   for(const l of estimate.lines) rows.push([l.section,l.label,Number(l.quantity.toFixed(4)),unitLabel(l.unit),l.amount.min.toFixed(2),l.amount.max.toFixed(2),l.missing.length?'Partial':l.status,l.note]);
   rows.push([],['Subtotal excl GST','','','',estimate.subtotal.min.toFixed(2),estimate.subtotal.max.toFixed(2)],['GST','','','',estimate.tax.min.toFixed(2),estimate.tax.max.toFixed(2)],['Total incl GST','','','',estimate.total.min.toFixed(2),estimate.total.max.toFixed(2)],[],['Unpriced items']);

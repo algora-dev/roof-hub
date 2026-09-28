@@ -1,0 +1,3294 @@
+{
+  "corrugate-vs-five": {
+    "id": "corrugate-vs-five",
+    "path": "/guides/corrugated-vs-five-rib",
+    "title": "Corrugated vs five-rib roofing: what changes the choice?",
+    "description": "Compare NZ corrugated and five-rib roof profiles, minimum pitches, cover widths, installation scope and material pricing without confusing profile with coating.",
+    "answer": "Corrugate and five-rib are shapes, not competing steel brands. Choose the exact profile for your roof pitch and design first, then compare the same metal, coating, thickness and installed scope. Neither shape is universally cheaper, and a per-metre sheet price is not a finished-roof price.",
+    "answerSources": [
+      "mc-corr",
+      "mc760"
+    ],
+    "category": "Comparisons",
+    "publishedAt": "2026-09-28",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "comparison",
+        "title": "What is actually different?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Corrugated and five-rib roofing comparison",
+            "heads": [
+              "Question",
+              "Corrugate",
+              "Five-rib / trapezoidal"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Appearance",
+                  "Repeated rounded waves",
+                  "Raised angular ribs with flatter pans"
+                ],
+                "sources": [
+                  "mc-corr",
+                  "mc760"
+                ]
+              },
+              {
+                "cells": [
+                  "Published pitch examples",
+                  "Metalcraft Corrugate: 8°",
+                  "Metalcraft MC760: 3°"
+                ],
+                "sources": [
+                  "mc-corr",
+                  "mc760"
+                ]
+              },
+              {
+                "cells": [
+                  "Effective cover in these examples",
+                  "760 mm",
+                  "760 mm"
+                ],
+                "sources": [
+                  "mc-corr",
+                  "mc760"
+                ]
+              },
+              {
+                "cells": [
+                  "What to compare on a quote",
+                  "Named profile, metal, coating, thickness and accessories",
+                  "The same specification and scope"
+                ],
+                "sources": []
+              }
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "Published minima are product starting points, not approval for your roof. Sheet length, drainage, wind design and installation details still need checking against the current manufacturer manual.",
+            "sources": [
+              "mc-corr",
+              "mc760"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Think of the specification as four separate decisions: shape, base metal, protective coating and installed system. Asking only for “COLORSTEEL” does not identify the shape; asking only for “five-rib” does not identify its coating or gauge. A useful quote names all four.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "naming",
+        "title": "Which NZ product names mean five-rib?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Metalcraft MC760 and T-Rib are trapezoidal choices. Dimond calls its five-rib profile Hi Five. Similar-looking profiles are not interchangeable order codes. Confirm the local branch, exact cover and matching ridge, hip and valley details.",
+            "sources": [
+              "mc760",
+              "t-rib",
+              "hi-five"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "A useful source check: Dimond’s Hi Five page currently shows 765 mm cover in its overview and 755 mm in its performance section. We have not silently selected one. Ask Dimond to confirm the current ordering width before using it for a takeoff.",
+            "sources": [
+              "hi-five"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "price",
+        "title": "Does five-rib cost more?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "One public retail listing offers both steel profiles at $17.49 per lineal metre including GST. It describes 0.5 mm gauge steel but does not establish that it is the same specification as a locally quoted branded roof. This is a material listing, not installation evidence.",
+            "sources": [
+              "bitz"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "On the same effective cover, an identical lineal price produces an identical sheet-area cost. Where covers differ, compare price divided by effective cover in metres. Do not use the overall sheet width, because side laps would then be counted as usable roof.",
+            "sources": []
+          },
+          {
+            "type": "table",
+            "caption": "Hypothetical example: same lineal price, different usable cover",
+            "heads": [
+              "Input",
+              "Sheet A",
+              "Sheet B"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Price used for the example, not a supplier offer",
+                  "$25/lm",
+                  "$25/lm"
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Assumed effective cover",
+                  "0.760 m",
+                  "0.840 m"
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Calculated sheet-only cost",
+                  "$32.89/m²",
+                  "$29.76/m²"
+                ],
+                "sources": []
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The arithmetic shows why a material ranking should not be forced to match an expected installed ranking. It says nothing about whether these two hypothetical sheets have equivalent coatings, warranties or structural performance.",
+            "sources": []
+          },
+          {
+            "type": "calculator",
+            "mode": "sheet"
+          }
+        ]
+      },
+      {
+        "id": "labour",
+        "title": "Where can the installed difference come from?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Installation differences should be explained in the quote rather than assumed from a profile name. Ask whether angled cuts and profile-matched ridge and hip work change the labour on your particular roof. The useful comparison is the finished scope, not a universal five-rib surcharge.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "Ask the roofer where the additional work is priced. If cut sheets, notched flashings and complex junctions are already priced as separate components, adding another blanket “complex roof” allowance for the same tasks can double-count them.",
+            "sources": []
+          },
+          {
+            "type": "checklist",
+            "items": [
+              "Compare the same roof area and the same plan-versus-slope basis.",
+              "List ridge, hip, valley and barge lengths separately.",
+              "Confirm underlay, fixings, delivery and wastage.",
+              "Separate old-roof removal and access from the new covering."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "examples",
+        "title": "What do real projects tell us?",
+        "blocks": [
+          {
+            "type": "projects",
+            "ids": [
+              "herne-bay",
+              "hibiscus-coast"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These two jobs illustrate design constraints and scope. Neither publisher supplies enough cost and area information to calculate a defensible price difference between profiles.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "decision",
+        "title": "What should you ask for next?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "For an existing roof, start with its pitch, condition and junctions. For a new design, compare the desired appearance alongside drainage and support requirements. Then request two like-for-like specifications rather than two vague “metal roof” totals.",
+            "sources": []
+          },
+          {
+            "type": "checklist",
+            "items": [
+              "Write down the exact manufacturer and profile.",
+              "Ask for base metal thickness and coating name, not just colour.",
+              "Confirm suitability for the site and the roof’s lowest-pitch section.",
+              "Ask the contractor to explain any difference in labour or accessory cost."
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      "corrugated",
+      "five-rib",
+      "roofing-costs",
+      "roof-area"
+    ],
+    "faqs": [
+      {
+        "q": "Is five-rib the same as COLORSTEEL?",
+        "a": "No. Five-rib describes a profile family. COLORSTEEL names a material range; the exact profile and coating product still need to be specified.",
+        "sources": [
+          "mc760",
+          "colorsteel"
+        ]
+      }
+    ],
+    "editor": "RoofHub editorial team"
+  },
+  "cost-200": {
+    "id": "cost-200",
+    "path": "/pricing/200m2-roof-cost",
+    "title": "How much does a 200m² roof cost in New Zealand?",
+    "description": "Work through 200m² roof cost examples with explicit area, GST, source dates, new-roof versus reroof scope and a calculator for your own quoted rates.",
+    "answer": "First establish whether 200m² means sloping roof surface, horizontal roof projection or total house floor area. Those are different quantities. For a 200m² sloping roof, a hypothetical $150–$200/m² rate gives $30,000–$40,000 on that rate’s stated GST and scope basis. This is arithmetic, not a RoofHub market quote.",
+    "answerSources": [],
+    "category": "Pricing",
+    "publishedAt": "2026-09-28",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "area",
+        "title": "Is your 200m² figure the right area?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Three different meanings of 200 square metres",
+            "heads": [
+              "Measurement supplied",
+              "What to do",
+              "Common mistake"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Actual sloping roof area",
+                  "Use 200m² for covering and removal before any separate order allowance.",
+                  "Applying pitch again."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Horizontal projection of the roof, including eaves",
+                  "Convert each roof plane using its pitch.",
+                  "Treating it as sloping surface area."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Total house floor area",
+                  "Establish the footprint and roof geometry first.",
+                  "Using both storeys as roof area."
+                ],
+                "sources": []
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "For a single-pitch 200m² roof projection at 25°, surface area is 200 ÷ cos(25°) = 220.7m². At a hypothetical $150–$200/m², that changes the covering-related total to about $33,100–$44,100. If the starting figure excludes eaves, add their projected area before the conversion.",
+            "sources": []
+          },
+          {
+            "type": "calculator",
+            "mode": "area"
+          }
+        ]
+      },
+      {
+        "id": "rate-examples",
+        "title": "What do different quoted rates produce?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "RoofHub arithmetic examples, not current market offers",
+            "heads": [
+              "Assumed quoted rate",
+              "200m² total",
+              "250m² total"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "$100/m²",
+                  "$20,000",
+                  "$25,000"
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "$150/m²",
+                  "$30,000",
+                  "$37,500"
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "$200/m²",
+                  "$40,000",
+                  "$50,000"
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "$250/m²",
+                  "$50,000",
+                  "$62,500"
+                ],
+                "sources": []
+              }
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "All rows inherit the input rate’s GST and inclusions. These are hypothetical rates, not a prediction that a particular roof system can be bought at that price. Use an actual written rate for a meaningful comparison.",
+            "sources": []
+          },
+          {
+            "type": "calculator",
+            "mode": "budget"
+          }
+        ]
+      },
+      {
+        "id": "published-context",
+        "title": "How do published NZ prices help?",
+        "blocks": [
+          {
+            "type": "prices",
+            "ids": [
+              "bm-01",
+              "bm-02",
+              "rr-04"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The whole-job observations do not state that every roof is exactly 200m². Do not divide their endpoints by 200 and call the result a measured square-metre rate. The historical per-m² example can be scaled only on an explicitly assumed compatible area basis.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "A good comparison keeps three layers apart: what the source actually published, any RoofHub arithmetic derived from it, and the supplier’s current written offer. A review date confirms that a page was checked; it does not make a 2025 rate a 2026 quote.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "scope",
+        "title": "What belongs in the total?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "New covering, matching flashings and fasteners.",
+              "Underlay and any required substrate or batten work.",
+              "Removal, transport and disposal for a reroof.",
+              "Site safety/access and the included hire period.",
+              "Gutters, downpipes, insulation or repairs only where expressly included.",
+              "GST shown on the complete total, with exclusions listed."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Compare inclusions line by line before comparing the final number. A quote with scaffold already included should not receive the estimator’s scaffold allowance again. Likewise, do not add roof removal to a published complete-reroof rate that already includes it.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "cost-drivers",
+        "title": "Why can two 200m² roofs cost different amounts?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Area measures quantity, not all the work. Two roofs can share an area while one has much longer ridges, several valleys, restricted delivery access and more flashings. Record those quantities instead of assuming every difference can be explained by a flat percentage.",
+            "sources": []
+          },
+          {
+            "type": "projects",
+            "ids": [
+              "tauranga-reroof",
+              "whitby-access"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "For a roof with unresolved substrate condition, ask for a written process for opening-up discoveries: what is included, what is a provisional allowance, and what requires approval as a variation.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "quote",
+        "title": "What information makes the estimate useful?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Bring a plan or measured roof area, material preference, existing roof type, storeys, pitch and access notes. The detailed estimator accepts component lengths as well as area. A contractor still needs to verify measurements and site conditions before issuing a quote.",
+            "sources": []
+          }
+        ]
+      }
+    ],
+    "related": [
+      "roofing-costs",
+      "reroof-cost",
+      "roof-area",
+      "scaffolding"
+    ],
+    "faqs": [
+      {
+        "q": "Is the example a quote for my home?",
+        "a": "No. It demonstrates area multiplied by a stated rate. Site conditions, scope, product and current prices must still be confirmed.",
+        "sources": []
+      }
+    ],
+    "editor": "RoofHub editorial team"
+  },
+  "lifespan": {
+    "id": "lifespan",
+    "path": "/guides/how-long-does-a-metal-roof-last",
+    "title": "How long does a metal roof last in New Zealand?",
+    "description": "Understand the difference between roof lifespan, product warranty and Building Code durability, with maintenance and reroof decision questions for NZ homes.",
+    "answer": "There is no single supported expiry age for every NZ metal roof. Actual service life depends on the product, exposure, detailing, maintenance and condition. A warranty term or Building Code durability requirement is not a prediction of how long your particular roof will remain serviceable.",
+    "answerSources": [
+      "durability",
+      "maintenance",
+      "zincalume"
+    ],
+    "category": "Guides",
+    "publishedAt": "2026-09-28",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "three-numbers",
+        "title": "Which lifespan number are you looking at?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Do not confuse these three measures",
+            "heads": [
+              "Measure",
+              "What it describes",
+              "What it does not prove"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Building Code durability requirement",
+                  "Required performance period under the applicable conditions.",
+                  "The roof needs replacement when that period ends."
+                ],
+                "sources": [
+                  "durability"
+                ]
+              },
+              {
+                "cells": [
+                  "Manufacturer warranty",
+                  "A remedy for defined failures, subject to exclusions and maintenance.",
+                  "Every component or every cause of a leak is covered."
+                ],
+                "sources": [
+                  "zincalume"
+                ]
+              },
+              {
+                "cells": [
+                  "Condition-based service life",
+                  "Whether the installed assembly remains fit for use.",
+                  "A fixed national average applying to all metal roofs."
+                ],
+                "sources": [
+                  "maintenance"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The NZ Metal Roofing Manufacturers’ discussion of B2 describes the 15-year requirement for relevant accessible cladding applications and distinguishes it from longer durability requirements for some building elements. It should not be reworded as “metal roofs last 15 years”.",
+            "sources": [
+              "durability"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "warranties",
+        "title": "What do current manufacturer examples show?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "New Zealand Steel lists 20-year ZINCALUME roofing warranty cover in moderate environments and 25 years in mild environments. Those are warranty periods, not roof-expiry dates. The same page excludes more severe exposures from its recommendations, so site classification belongs in product selection.",
+            "sources": [
+              "zincalume"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "COLORSTEEL’s newer MAXAM material replaced Endura and Maxx in its range. A warranty statement about an older product cannot simply be pasted onto a new specification, or vice versa. Match the exact product and applicable warranty document.",
+            "sources": [
+              "colorsteel"
+            ]
+          },
+          {
+            "type": "checklist",
+            "items": [
+              "Which product and manufacturing period does the warranty apply to?",
+              "Does it cover perforation, paint performance, workmanship or something else?",
+              "What maintenance records are required?",
+              "Which flashings, fasteners and rainwater components are included?",
+              "Does the warranty transfer to a new owner? Ask for the written terms."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "condition",
+        "title": "What information helps decide between maintenance and reroofing?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Ask for a condition report that distinguishes isolated repairable details from widespread deterioration. It should identify the affected roof planes and components, describe the findings, and explain why the recommended scope addresses them. A useful report is more specific than an age estimate or a sales claim.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "Record the roof’s approximate age if known, past repairs, current leaks, coating, coastal or industrial exposure, and any inaccessible or unwashed areas. Manufacturer maintenance requirements are relevant to both performance and warranty compliance.",
+            "sources": [
+              "maintenance"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "A photo or this guide cannot diagnose concealed corrosion, structural condition or asbestos. Do not climb onto a roof to investigate. Use existing documents and obtain a competent assessment.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "maintenance",
+        "title": "Does maintenance mean replacing the roof?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Not necessarily. Treat inspection, maintenance, local repair and whole-roof replacement as separate options to be evaluated. Ask for the remaining uncertainties and the expected purpose of each recommendation, rather than assuming that a coating refresh automatically renews the whole roofing system.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "NZMRM guidance explains that maintenance must reflect the material, environment and manufacturer instructions. Areas not naturally rain-washed can need different attention. Do not substitute a generic cleaning frequency for the instructions for the installed product.",
+            "sources": [
+              "maintenance"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "real-roof",
+        "title": "Why age alone is an incomplete answer",
+        "blocks": [
+          {
+            "type": "projects",
+            "ids": [
+              "tamahere-house"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The lesson is not that every old roof has the same concealed damage. It is that a visual age estimate cannot establish the state of everything beneath the covering. Budget decisions should account for the evidence available and the work needed to confirm it.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "next-step",
+        "title": "What should you request from a roofer?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "A roof-specific condition report, ideally with annotated photographs taken safely.",
+              "Separate options for urgent work, planned repairs and replacement where appropriate.",
+              "Clear identification of the product and site exposure.",
+              "A scope for flashings, fixings and substrate, not just the visible sheets.",
+              "A written explanation of warranties and exclusions."
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      "colorsteel-zincalume",
+      "reroof-cost",
+      "decramastic",
+      "corrugated"
+    ],
+    "faqs": [],
+    "editor": "RoofHub editorial team"
+  },
+  "tile-to-metal": {
+    "id": "tile-to-metal",
+    "path": "/guides/replacing-concrete-tiles-with-metal-roofing",
+    "title": "Can you replace a concrete tile roof with metal roofing?",
+    "description": "NZ concrete-tile-to-metal reroof guidance: scope, consent checks, uplift, battens, hidden repairs and comparing complete replacement quotes.",
+    "answer": "Yes, a tile-to-metal replacement can be feasible, but it is not simply a matter of ordering lighter sheets. The roof’s support, fixings, uplift resistance, geometry and proposed details need assessment. Whether the work is exempt from building consent depends on the actual work, not just the fact that the new covering is metal.",
+    "answerSources": [
+      "mbie"
+    ],
+    "category": "Guides",
+    "publishedAt": "2026-09-28",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "consent",
+        "title": "Does changing the material always need building consent?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "MBIE’s exemption guidance includes an example of replacing old clay tiles with profiled metal in the same position, while noting the need to consider increased wind uplift. It is an example under defined conditions, not automatic approval for every concrete-tile conversion. Confirm your scope with the designer and council where necessary.",
+            "sources": [
+              "mbie"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "Do not rely on either blanket statement: “all reroofs need consent” or “lighter roofing never needs consent”. Structural changes, the condition of the existing system and the details of the replacement can change the answer.",
+            "sources": [
+              "mbie"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "scope",
+        "title": "What changes in the quote?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Tile-to-metal scope comparison",
+            "heads": [
+              "Work item",
+              "What to establish before comparing prices"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Removal and disposal",
+                  "Existing material, access, disposal destination and whether the quoted rate covers the whole operation."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Support and fixings",
+                  "Whether existing support can be retained, or purlins/battens, connections or strengthening need work."
+                ],
+                "sources": [
+                  "mbie"
+                ]
+              },
+              {
+                "cells": [
+                  "Underlay and flashings",
+                  "The proposed build-up and junction details, including penetrations."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Roof edges and rainwater",
+                  "How the new covering meets eaves, barges, gutters and existing features."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Hidden work",
+                  "An opening-up allowance and agreed variation process for discoveries."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Safety and protection",
+                  "Access system, property protection, weather plan and hire duration."
+                ],
+                "sources": [
+                  "scaffold-safety"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A lower cladding weight does not remove the need for the roof assembly to resist wind. Ask the contractor or designer to explain the complete system rather than accepting “it is lighter” as a structural assessment.",
+            "sources": [
+              "mbie"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "alternatives",
+        "title": "Which metal system should you compare?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Request options that are compatible with the measured pitch and roof layout. The appearance of long-run corrugate, a trapezoidal sheet and a pressed metal tile is different, but so are their component schedules. A tray option may require a different support build-up again.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "Gerard Bond, for example, is a panel-based product with a stated 12° minimum. Metalcraft MC760 is a long-run profile with a published 3° starting minimum. Those figures are not enough to select a product without the manufacturer’s complete design requirements.",
+            "sources": [
+              "bond",
+              "mc760"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cost",
+        "title": "How should you estimate the conversion cost?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Use: new roofing system + old-covering removal/disposal + access + separately defined repairs and extras. When comparing an all-in reroof quote, first identify which of these it already contains. Do not layer the same allowances on again.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "RoofHub’s detailed estimator uses a separate removal line. Its working rates are planning inputs, not a supplier promise or a hazardous-materials quote. For a tile-to-metal conversion, unresolved support work can be more important than a small difference in sheet price.",
+            "sources": []
+          },
+          {
+            "type": "prices",
+            "ids": [
+              "bm-01"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "examples",
+        "title": "What can published reroofs teach us?",
+        "blocks": [
+          {
+            "type": "projects",
+            "ids": [
+              "tauranga-reroof",
+              "tamahere-house"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These are examples of associated upgrades and concealed work, not documented concrete-tile-to-metal price samples. We do not relabel them to make the evidence appear more complete.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "old-material",
+        "title": "What if you are not sure which tile you have?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Concrete tiles, older textured metal tiles and asbestos-cement products should not be treated as the same material. A visual guess should not select a non-asbestos removal rate. Obtain appropriate identification before work that might disturb suspect material.",
+            "sources": [
+              "asbestos-trades"
+            ]
+          },
+          {
+            "type": "checklist",
+            "items": [
+              "Keep any old installation or product paperwork.",
+              "Describe what is known and what is uncertain to the contractor.",
+              "Do not break, drill, scrape or pressure-wash suspect roofing to identify it.",
+              "Request a scope-specific assessment before agreeing to a removal price."
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      "reroof-cost",
+      "decramastic",
+      "pressed-tile",
+      "roof-pitch"
+    ],
+    "faqs": [],
+    "editor": "RoofHub editorial team"
+  },
+  "colorsteel-zincalume": {
+    "id": "colorsteel-zincalume",
+    "path": "/guides/colorsteel-vs-zincalume",
+    "title": "COLORSTEEL vs ZINCALUME: what are you comparing?",
+    "description": "Compare current NZ COLORSTEEL and ZINCALUME terminology, coatings, site exposure and roof specifications, including changes to products since 2025.",
+    "answer": "COLORSTEEL is a prepainted steel roofing and cladding range; ZINCALUME is a metallic-coated steel product. Neither name identifies a roof profile. Compare the current product, exposure suitability and warranty as well as the colour and installed price. Older AZ-coating and Endura/Maxx descriptions need dating.",
+    "answerSources": [
+      "colorsteel",
+      "zincalume"
+    ],
+    "category": "Comparisons",
+    "publishedAt": "2026-09-28",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "difference",
+        "title": "What do the names tell you?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Separate material, finish and shape",
+            "heads": [
+              "Term",
+              "What it identifies",
+              "Still to specify"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "COLORSTEEL",
+                  "Prepainted steel product range.",
+                  "Current product grade, profile, thickness, colour and site suitability."
+                ],
+                "sources": [
+                  "colorsteel"
+                ]
+              },
+              {
+                "cells": [
+                  "ZINCALUME",
+                  "Metallic-coated steel product.",
+                  "Product generation, profile, thickness and exposure suitability."
+                ],
+                "sources": [
+                  "zincalume"
+                ]
+              },
+              {
+                "cells": [
+                  "Corrugate / five-rib / tray",
+                  "Roof profile or system family.",
+                  "Base material, coating, support and fixing details."
+                ],
+                "sources": [
+                  "mc-corr",
+                  "mc760",
+                  "espan"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A meaningful comparison is not “COLORSTEEL versus corrugate”. One is a material brand and the other is a shape. Ask suppliers to quote the same shape and complete installation scope in the candidate materials.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "current-products",
+        "title": "Why older articles can now be misleading",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "COLORSTEEL states that MAXAM replaced Endura and Maxx. Historical pricing tables using the old names remain evidence of what was published at the time, not current product recommendations.",
+            "sources": [
+              "colorsteel"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "New Zealand Steel’s current ZINCALUME page describes the move in 2025 from the previous AZ coating to an aluminium/zinc/magnesium AM125 coating using ACTIVATE technology. A comparison that describes every current ZINCALUME sheet using the old alloy alone is out of date.",
+            "sources": [
+              "zincalume"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "Existing roofs and new orders are different questions. Identify the installed product from records where possible. Do not assume an older roof has the current coating or that a new product inherits an old warranty unchanged.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "coastal",
+        "title": "Which one suits a coastal property?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Use the manufacturer’s exposure assessment, not a single generic distance-from-sea rule. New Zealand Steel does not recommend ZINCALUME for severe and more aggressive exposure categories on its current product page. Ask the supplier to confirm suitability in writing for the actual location.",
+            "sources": [
+              "zincalume"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Get the same assessment for the proposed prepainted product. A colour selection is not confirmation of corrosion suitability. The complete specification should also address compatible flashings, fasteners and any special details.",
+            "sources": []
+          },
+          {
+            "type": "checklist",
+            "items": [
+              "Provide the actual site and known exposure conditions.",
+              "Ask for the exact current product name on the quote.",
+              "Get the applicable warranty and maintenance requirements.",
+              "Confirm the specification covers the whole assembly, not just the visible roof sheets."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cost",
+        "title": "Can RoofHub publish a reliable price premium?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Not yet as one national percentage. A matched pair would need the same supplier, profile, thickness, length, order date, freight and GST treatment. A material-only quote also cannot be compared directly with an installed package.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "Our source register keeps historical mixed-scope cost guides separate from current specifications. It does not treat a supplier’s broad price range across several coatings as the cost difference between two named coatings.",
+            "sources": []
+          },
+          {
+            "type": "calculator",
+            "mode": "sheet"
+          }
+        ]
+      },
+      {
+        "id": "life",
+        "title": "Which lasts longer?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "A general durability ranking needs comparable exposure, maintenance and failure definitions. We do not use a maximum advertised warranty as an average roof life. Read the actual terms, including what is covered and which conditions apply.",
+            "sources": [
+              "durability",
+              "maintenance"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "For an existing roof, a condition assessment is more useful than a brand-only lifespan estimate. For a new roof, the first question is whether the product is appropriate for the site, followed by the detailing and maintenance needed to keep it performing.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "compare-quotes",
+        "title": "A better way to ask for two quotes",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Use one drawing and measurement basis for both options.",
+              "Keep the roof profile, thickness and accessory scope the same where technically appropriate.",
+              "Show material, installation, removal and access scope clearly.",
+              "Ask each supplier to identify any specification change needed for site suitability.",
+              "Compare the final GST-inclusive totals only after aligning the scope."
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      "lifespan",
+      "corrugate-vs-five",
+      "roofing-costs",
+      "long-run"
+    ],
+    "faqs": [],
+    "editor": "RoofHub editorial team"
+  },
+  "timeline": {
+    "id": "timeline",
+    "path": "/guides/how-long-does-a-reroof-take",
+    "title": "How long does a reroof take in New Zealand?",
+    "description": "Compare published NZ reroof durations, distinguish installation time from booking and scaffold hire, and plan for weather, hidden work and occupied homes.",
+    "answer": "Published NZ contractor examples range from a two-day long-run job to work taking roughly a week, while general provider guidance extends further for complex projects. Do not confuse days on the roof with the time from enquiry to completion. Design, procurement, access and weather belong in the programme too.",
+    "answerSources": [
+      "hibiscus",
+      "tauranga",
+      "tauranga-faq"
+    ],
+    "category": "Guides",
+    "publishedAt": "2026-09-28",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "examples",
+        "title": "What do different businesses actually publish?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Reported projects and general guidance are different evidence",
+            "heads": [
+              "Publisher",
+              "Published timing",
+              "Evidence and limitation"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "HDK Longrun Roofing",
+                  "Two days",
+                  "Hibiscus Coast project report. Area and price not published."
+                ],
+                "sources": [
+                  "hibiscus"
+                ]
+              },
+              {
+                "cells": [
+                  "Coldrick Roofing",
+                  "Roughly one week",
+                  "Tauranga project including associated upgrades."
+                ],
+                "sources": [
+                  "tauranga"
+                ]
+              },
+              {
+                "cells": [
+                  "Tauranga Roofing Services",
+                  "Typically 3–7 days",
+                  "General FAQ, not a sample average."
+                ],
+                "sources": [
+                  "tauranga-faq"
+                ]
+              },
+              {
+                "cells": [
+                  "Superior Renovations",
+                  "3–5 working days for straightforward projects; longer for complex work",
+                  "Provider planning guidance, not a guaranteed deadline."
+                ],
+                "sources": [
+                  "superior-time"
+                ]
+              },
+              {
+                "cells": [
+                  "Artisans Roofing",
+                  "Two-week completion guarantee",
+                  "Provider-specific offer with conditions, not a market standard."
+                ],
+                "sources": [
+                  "artisans"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These observations are not five equivalent experiments. Project size, crew, weather and scope are not standardised, so taking their mean would create false precision. They are useful prompts for discussing a programme with your chosen roofer.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "programme",
+        "title": "Which clock is being quoted?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Break the project into stages",
+            "heads": [
+              "Stage",
+              "What to confirm"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Before a start date",
+                  "Survey, scope, product availability, design or consent checks where relevant."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Site establishment",
+                  "Access, storage, deliveries and protection of occupied areas."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Roofing work",
+                  "How the old covering is removed and how temporary weather protection is managed."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Associated work",
+                  "Repairs, insulation, rainwater work and other trades."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Completion",
+                  "Checks, cleaning, documentation and scaffold dismantling."
+                ],
+                "sources": []
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Request the roofing start date, expected on-site duration and likely scaffold removal date separately. A roof can be finished while access remains for painting or windows, and an early scaffold installation does not mean the roof work has started.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "weather",
+        "title": "What should the weather plan cover?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Ask who decides whether work proceeds, how forecasts are considered, how partially completed work is protected, and how a delay changes the programme. Those practical details are more useful than a promise to finish within a fixed number of days regardless of conditions.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "Do not assume an occupied home must be completely uncovered at once. Ask the contractor to explain the sequence and protection plan for your building, rather than applying a generic installation sequence from an article.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "hidden-work",
+        "title": "Why do some replacements take longer?",
+        "blocks": [
+          {
+            "type": "projects",
+            "ids": [
+              "tamahere-house",
+              "whitby-access"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The examples show two different causes: previously hidden work and several trades sharing access. Neither should be treated as ordinary roofing labour silently included in every per-m² figure.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "hire",
+        "title": "How does timing affect scaffold cost?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Read the hire period in the scaffold quote. RoofHub’s detailed estimator models four included weeks and additional weekly hire, but that is a planning convention, not a standard offer from every scaffolder. Confirm when hire starts, minimum periods and who authorises extensions.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "The number of roofing days cannot by itself determine rental cost. If access is erected before roofing, or retained for other work, its hire clock can be longer.",
+            "sources": []
+          },
+          {
+            "type": "checklist",
+            "items": [
+              "Is there a separate setup and dismantling price?",
+              "How much hire is included?",
+              "What is the extra weekly rate and GST basis?",
+              "Who pays when another trade needs the scaffold longer?",
+              "What notice is required for dismantling?"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "homeowner",
+        "title": "What should an occupied household know?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Daily access arrangements and safe exclusion areas.",
+              "Whether pets, vehicles, outdoor furniture or garden areas need moving.",
+              "Who communicates delays or unexpected work.",
+              "How any services, penetrations or insulation work affect occupants.",
+              "The emergency contact and temporary-weather-protection plan."
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      "reroof-cost",
+      "scaffolding",
+      "tile-to-metal",
+      "roof-area"
+    ],
+    "faqs": [],
+    "editor": "RoofHub editorial team"
+  },
+  "decramastic": {
+    "id": "decramastic",
+    "path": "/guides/does-decramastic-contain-asbestos",
+    "title": "Does Decramastic roofing contain asbestos?",
+    "description": "What NZ homeowners should do before repairing, cleaning or removing older textured roofing, with current WorkSafe sources and clear estimate exclusions.",
+    "answer": "Some older textured metal roofing can contain asbestos. The name, appearance or a photograph cannot reliably establish that a particular roof is asbestos-free. Before work that could disturb suspect material, arrange appropriate identification and assessment. Do not pressure-wash, scrape or break it to investigate.",
+    "answerSources": [
+      "asbestos",
+      "asbestos-trades"
+    ],
+    "category": "Guides",
+    "publishedAt": "2026-09-28",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "why-it-matters",
+        "title": "Why does this need checking before quoting?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "WorkSafe’s August 2026 safety alert describes asbestos contamination after high-pressure washing of an older Decramastic roof. Its message is to check before this work, not to assume every textured roof has the same composition.",
+            "sources": [
+              "asbestos"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A routine roof-removal allowance is not an asbestos-removal quote. Identification can change the required work method, people involved, containment, cleanup and disposal arrangements. Those decisions need to be made before the roof is disturbed.",
+            "sources": [
+              "asbestos-trades"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "identification",
+        "title": "How should uncertainty be handled?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Tell the contractor that the material is unknown or suspected.",
+              "Look for product and installation records without disturbing the roof.",
+              "Ask a competent asbestos professional how identification or testing should be arranged.",
+              "Do not take a DIY sample based on instructions from a general roofing article.",
+              "Keep the result and the agreed removal scope with your project documents."
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "This page is not an identification service. Selecting “Decramastic” or “unknown” in an estimator must not silently produce a confirmed non-asbestos removal price.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "prices",
+        "title": "What should a roofing estimate include or exclude?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Keep ordinary removal separate from unresolved hazardous work",
+            "heads": [
+              "Situation",
+              "Appropriate estimate treatment"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Material confirmed suitable for ordinary removal",
+                  "Use a contractor-confirmed removal/disposal scope."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Material uncertain",
+                  "Show assessment as unresolved; label any ordinary roofing total as excluding that unresolved work."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Asbestos confirmed",
+                  "Obtain a specialist scope-specific assessment and quote."
+                ],
+                "sources": [
+                  "asbestos-trades"
+                ]
+              },
+              {
+                "cells": [
+                  "Roof already disturbed or contamination suspected",
+                  "Stop the affected work and obtain professional advice; do not use a normal cleaning allowance."
+                ],
+                "sources": [
+                  "asbestos"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A useful budget can still show the proposed new roof separately. It must make clear that the replacement-covering number is not the cost of safely removing the old material. An unpriced item is not a zero-cost item.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "cleaning",
+        "title": "Is cleaning a harmless way to check the roof?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "No. WorkSafe warns against high-pressure water and compressed air on asbestos-containing materials. Do not treat cleaning as an identification test or a way to postpone assessment.",
+            "sources": [
+              "asbestos"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Where the product is uncertain, provide the contractor with that uncertainty rather than choosing the cheapest cleaning or removal option. Photographs taken from a safe place can help describe the roof, but cannot certify its composition.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "questions",
+        "title": "What should you ask the contractor?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Who will identify the material, and how will the result be documented?",
+              "Does the quote assume a negative result, or include specialist work?",
+              "What changes if the result is positive?",
+              "Who is responsible for the safe work and disposal arrangements?",
+              "What evidence of completion and any required clearance will be supplied?"
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      "pressed-tile",
+      "reroof-cost",
+      "tile-to-metal",
+      "lifespan"
+    ],
+    "faqs": [
+      {
+        "q": "Can you tell from a roof photo whether it contains asbestos?",
+        "a": "No. A photograph is not a reliable asbestos identification result. Arrange appropriate assessment before disturbing suspect material.",
+        "sources": [
+          "asbestos-trades"
+        ]
+      }
+    ],
+    "editor": "RoofHub editorial team"
+  },
+  "roofing-costs": {
+    "id": "roofing-costs",
+    "path": "/pricing/roofing-costs",
+    "title": "How much does roofing cost in New Zealand?",
+    "description": "Compare NZ roof prices by scope, with dated supplier and contractor observations, visible GST, roof-area examples and practical quoting tools.",
+    "answer": "For broad planning, Edwards & Hardy’s March 2026 NZ guide lists long-run roof replacement at $15,000–$35,000 per job and metal tile at $17,000–$45,000. These are publisher estimates, not prices for one fixed roof size, and GST treatment is not stated. A new-build roof or a sheet-only price has a different scope: compare area, products, removal and access before comparing totals.",
+    "answerSources": [
+      "eh"
+    ],
+    "category": "Pricing",
+    "publishedAt": "2026-09-26",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "market",
+        "title": "What prices have NZ businesses actually published?",
+        "blocks": [
+          {
+            "type": "prices",
+            "ids": [
+              "bm-01",
+              "bm-02",
+              "rr-02",
+              "rr-04"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These observations are not directly interchangeable. The Edwards & Hardy figures are whole-job estimates without a single fixed roof size or stated GST treatment. Delta’s figures are from a 2025 guide and include a wider reroof scope. We retain the date rather than relabel them as this year’s price list.",
+            "sources": []
+          },
+          {
+            "type": "notice",
+            "text": "A source can be correctly recorded and still be too broad or old for your quote. “Checked” means the quoted information was found, not that RoofHub independently verified the cost of a completed job.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "scope",
+        "title": "What does “roofing cost per m²” include?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Choose the right pricing basis",
+            "heads": [
+              "Price basis",
+              "What it means",
+              "What to check"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Material only",
+                  "The purchased sheet, tile or component.",
+                  "Cover width, gauge, finish, tax, freight and accessories."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Labour only",
+                  "Work covered by the installer’s rate.",
+                  "Which preparation, underlay and flashing tasks are included."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Supply and install",
+                  "A stated combination of products and labour.",
+                  "Whether battens, substrate, underlay, fixings and flashings are in the scope."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Complete reroof",
+                  "Replacement work with specified removal and project costs.",
+                  "Access, hazardous materials, hidden repairs and rainwater work."
+                ],
+                "sources": []
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A cheap material rate and a complete-project quote answer different questions. Compare them only after identifying the missing work. The arithmetic can be perfectly correct while the scope comparison is wrong.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "materials",
+        "title": "Which metal roof is cheapest?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "There is not enough like-for-like evidence here to declare one system universally cheapest. Pressed metal tile, corrugate and five-rib should be compared on the same building with the same inclusions. An estimated price comparison is not a measured national ranking.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "Architectural tray is also a family, not one build-up. A system fixed over purlins and a curved aluminium roof over plywood do not have the same components. Ask for the named system and its support requirements.",
+            "sources": [
+              "espan",
+              "eel"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Historical low-end pressed-tile figures in older guides are not current wholesale material prices. They should not be used to force a new installed-price hierarchy.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "worked-example",
+        "title": "How do you turn a rate into a useful budget?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "For an actual 200m² sloping roof and a hypothetical all-in rate of $150–$200/m² including GST, the arithmetic is $30,000–$40,000 including GST. If the rate already includes scaffold and removal, adding them again overstates the budget. If it excludes them, leaving them out understates it.",
+            "sources": []
+          },
+          {
+            "type": "calculator",
+            "mode": "budget"
+          },
+          {
+            "type": "paragraph",
+            "text": "A whole-house figure can be useful for planning, but the detailed estimator separates measured components. Ridge, hip, valley and barge lengths are not determined by area alone.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "project-evidence",
+        "title": "What can completed projects explain?",
+        "blocks": [
+          {
+            "type": "projects",
+            "ids": [
+              "herne-bay",
+              "hibiscus-coast",
+              "tauranga-reroof",
+              "tamahere-house",
+              "eel-house",
+              "whitby-access"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These six published examples cover different constraints. None supplies a comparable final bill and roof area together, so they support scope explanations rather than a price-per-m² dataset. Follow the original project links for the publishers’ photography and full accounts.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "comparison-checklist",
+        "title": "How do you compare two quotes fairly?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Use the same actual roof area and a consistent wastage policy.",
+              "Match product, coating, thickness and accessory specification.",
+              "Identify what is included for underlay, battens or substrate.",
+              "Keep removal, disposal and access visible.",
+              "Record exclusions and the process for unforeseen work.",
+              "Compare the complete totals on the same GST basis."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Before accepting a low figure, ask what would cause it to change. An estimate becomes more useful when its exclusions are explicit, not when they are hidden in a smaller headline number.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "coverage",
+        "title": "What is still missing from this evidence?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Public sources rarely provide all of area, pitch, final paid price, GST, specification and inclusions. The current collection is not a representative survey and does not support precise city premiums, national medians or advertised percentage savings. RoofHub will add those comparisons only when the underlying sample supports them.",
+            "sources": []
+          }
+        ]
+      }
+    ],
+    "related": [
+      "cost-200",
+      "reroof-cost",
+      "corrugate-vs-five",
+      "scaffolding"
+    ],
+    "faqs": [
+      {
+        "q": "Does RoofHub quote the cheapest roof in NZ?",
+        "a": "No. The current evidence does not establish a universally cheapest system. Compare the same building, product specification, tax basis and installed scope.",
+        "sources": []
+      },
+      {
+        "q": "Are source prices guaranteed offers?",
+        "a": "No. Some are dated published guides and some are retail listings. Check the source date, unit, GST and current availability before relying on any figure.",
+        "sources": []
+      }
+    ],
+    "editor": "RoofHub editorial team"
+  },
+  "reroof-cost": {
+    "id": "reroof-cost",
+    "path": "/pricing/reroof-cost",
+    "title": "What does a reroof cost in New Zealand?",
+    "description": "Understand reroof pricing as replacement plus removal, access and defined extras, with NZ project examples, asbestos cautions and a like-for-like quote checklist.",
+    "answer": "Published reroof guides give useful starting points, not fixed offers. Delta’s 2025 guide puts corrugated replacements for a 150–200m² home at $18,000–$28,000 including GST, scaffold, old-roof removal, materials and labour. Keep that date and scope attached to the figure. Your budget still needs the existing material, actual roof area and any separately identified repairs or upgrades.",
+    "answerSources": [
+      "delta"
+    ],
+    "category": "Pricing",
+    "publishedAt": "2026-09-26",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "cost-evidence",
+        "title": "What does the published pricing cover?",
+        "blocks": [
+          {
+            "type": "prices",
+            "ids": [
+              "bm-01",
+              "bm-02",
+              "rr-02"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These are contractor guide figures, not anonymised invoices. Compare their dates and GST treatment as carefully as their endpoints. A complete-reroof rate should not be used as a sheet-and-labour rate and then have removal and scaffold added a second time.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "existing-roof",
+        "title": "How does the old roof change the job?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Existing roof and estimating implications",
+            "heads": [
+              "Existing roof",
+              "What needs establishing"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Long-run metal",
+                  "Removal and handling scope, existing support condition and new profile compatibility."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Pressed metal tile",
+                  "Panel and batten work, underlay condition and the chosen replacement system."
+                ],
+                "sources": [
+                  "tiles-cop"
+                ]
+              },
+              {
+                "cells": [
+                  "Concrete tile",
+                  "Handling/disposal and the design implications of the proposed new covering."
+                ],
+                "sources": [
+                  "mbie"
+                ]
+              },
+              {
+                "cells": [
+                  "Older textured or unidentified roofing",
+                  "Material identification before assuming ordinary removal."
+                ],
+                "sources": [
+                  "asbestos-trades"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Do not use roof area plus a single “reroof premium” where the included work remains unknown. A separate removal line makes the assumptions visible and makes it possible to replace an allowance with a real contractor quote.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "model",
+        "title": "What is the cleanest estimating structure?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Use one set of roof quantities for the new system. Add the removal/disposal scope against the actual area being stripped, without adding a new-sheet waste allowance to that area. Add measured or separately estimated access. List repairs, hazardous work and optional upgrades distinctly.",
+            "sources": []
+          },
+          {
+            "type": "checklist",
+            "items": [
+              "New covering and compatible flashings.",
+              "Underlay, fixings and support work appropriate to that system.",
+              "Removal, disposal and transport.",
+              "Scaffold or other assessed safe access.",
+              "Insulation, gutters, downpipes and repairs only where selected or required.",
+              "A clear unresolved-items allowance or exclusion, not a zero."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "case-studies",
+        "title": "Why do similar-looking reroofs have different scopes?",
+        "blocks": [
+          {
+            "type": "projects",
+            "ids": [
+              "hibiscus-coast",
+              "tauranga-reroof",
+              "tamahere-house"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The useful comparison is what the work included. These accounts do not supply enough comparable cost data to establish a normal price, but they show why timing and associated repairs cannot be inferred from roofing material alone.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "asbestos",
+        "title": "What if the roof could contain asbestos?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "WorkSafe identifies roofing among products that can contain asbestos. Uncertain older material should be assessed before disturbance, not assumed negative because a price calculator needs a number.",
+            "sources": [
+              "asbestos-trades"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "For suspect material, the ordinary replacement estimate excludes unresolved asbestos assessment/removal. Obtain the appropriate professional advice before agreeing a complete project scope.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "consent",
+        "title": "Does a reroof need consent?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "MBIE provides examples of replacement work that can fall within an exemption and explains limitations. The answer depends on your work, including any structural changes and the condition being remedied. Do not rely on a contractor blog’s blanket yes or no.",
+            "sources": [
+              "mbie"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "quote",
+        "title": "What should the written quote settle?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Which dimensions and specification have been verified.",
+              "Who provides access and how long hire is included.",
+              "What happens if damage is uncovered.",
+              "What is excluded from the price and who approves variations.",
+              "The installation programme, weather plan and completion documents."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Use the detailed estimator to organise quantities, then ask the roofer to confirm them. A well-documented starting point helps you compare quotes without turning a preliminary model into a binding price.",
+            "sources": []
+          }
+        ]
+      }
+    ],
+    "related": [
+      "tile-to-metal",
+      "decramastic",
+      "timeline",
+      "cost-200"
+    ],
+    "faqs": [],
+    "editor": "RoofHub editorial team"
+  },
+  "long-run": {
+    "id": "long-run",
+    "path": "/roofing/long-run",
+    "title": "What is long-run roofing, and which profile do you need?",
+    "description": "NZ long-run roofing explained through corrugate, trapezoidal and architectural profiles, current product specifications, price units and project examples.",
+    "answer": "Long-run roofing uses sheets formed to the required lengths rather than small individual tiles. Corrugate and five-rib are familiar profile families, but a complete specification must also identify the base material, coating, thickness, fixing and support system. Start with the roof’s design constraints, then compare price on a matched scope.",
+    "answerSources": [
+      "mc-corr",
+      "mc760",
+      "espan"
+    ],
+    "category": "Roofing systems",
+    "publishedAt": "2026-09-26",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "families",
+        "title": "Which profile families should you compare?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Long-run profile families and examples",
+            "heads": [
+              "Family",
+              "Examples",
+              "What changes the decision"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Corrugated",
+                  "Metalcraft Corrugate, Dimond Corrugate",
+                  "Rounded appearance and exact product pitch requirements."
+                ],
+                "sources": [
+                  "mc-corr",
+                  "dim-corr"
+                ]
+              },
+              {
+                "cells": [
+                  "Trapezoidal",
+                  "MC760, T-Rib, Hi Five",
+                  "Rib geometry, cover, support and drainage requirements."
+                ],
+                "sources": [
+                  "mc760",
+                  "t-rib",
+                  "hi-five"
+                ]
+              },
+              {
+                "cells": [
+                  "Architectural tray",
+                  "Espan 470, Eurotray variants",
+                  "Concealed fixing, support build-up and seam detailing."
+                ],
+                "sources": [
+                  "espan",
+                  "eurotray"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The word “long-run” does not mean every product can be laid at the same pitch. Nor does “standing seam” identify one universal construction method. Ask for the exact product details before making a material takeoff.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "specification",
+        "title": "What needs to be on the specification?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Manufacturer and full profile name.",
+              "Effective cover, sheet lengths and base metal thickness where specified.",
+              "Base metal, coating product and colour.",
+              "Roof pitch, local exposure and design loads assessed by the responsible professional.",
+              "Compatible supports, underlay, fasteners, flashings and penetrations.",
+              "Warranty, maintenance instructions and any transport/access restrictions."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A project can fail a budget comparison before anyone does arithmetic: two “metal roof” prices might include different coatings, thicknesses and edge details. A shared specification makes comparison useful.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "price-unit",
+        "title": "Why do lineal and square-metre prices differ?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "A lineal metre is one metre along a sheet. Its usable area is that length multiplied by the effective cover width. Divide the per-lineal-metre price by effective cover in metres to get sheet-only cost per square metre. Installation, cutting, laps at sheet ends and accessories remain separate.",
+            "sources": []
+          },
+          {
+            "type": "calculator",
+            "mode": "sheet"
+          }
+        ]
+      },
+      {
+        "id": "pitch",
+        "title": "What minimum pitch applies?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Published starting minima include 8° for Metalcraft Corrugate and 3° for MC760. These are tied to those products; sheet length and other design conditions can raise the requirement. A general “metal roofing minimum” is not a safe specification.",
+            "sources": [
+              "mc-corr",
+              "mc760"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Your plan’s roof pitch also changes surface area. A horizontal measurement needs conversion; an actual sloping measurement does not. Use separate inputs for roof planes with different pitches.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "projects",
+        "title": "How is long-run used on actual roofs?",
+        "blocks": [
+          {
+            "type": "projects",
+            "ids": [
+              "herne-bay",
+              "hibiscus-coast",
+              "eel-house"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The examples range from a villa replacement to angular sheets and a curved architectural roof. This is why one long-run price band cannot describe every system and detail.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "cost",
+        "title": "What pricing evidence is useful?",
+        "blocks": [
+          {
+            "type": "prices",
+            "ids": [
+              "lr-18"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "That retail sheet listing does not describe a complete local roll-formed COLORSTEEL installation. For a project budget, use a written matched specification or the separate scope-based observations in the roofing-cost guide.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "next",
+        "title": "What should you decide before asking for a price?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "First settle the suitable profile and material with the supplier or designer. Then establish area, component lengths and site access. Comparing complete quotes becomes much easier when the same roof geometry and scope are used by everyone.",
+            "sources": []
+          }
+        ]
+      }
+    ],
+    "related": [
+      "corrugate-vs-five",
+      "colorsteel-zincalume",
+      "roof-pitch",
+      "roofing-costs"
+    ],
+    "faqs": [],
+    "editor": "RoofHub editorial team"
+  },
+  "corrugated": {
+    "id": "corrugated",
+    "path": "/roofing/corrugated",
+    "title": "Corrugated roofing NZ: specifications, costs and examples",
+    "description": "Compare NZ corrugated roof products, effective cover, minimum pitch, material versus installed prices and real reroof examples with original sources.",
+    "answer": "Corrugated roofing has repeated rounded ribs. In NZ product ranges, similarly named sheets can have different effective covers and design requirements. A useful comparison identifies the manufacturer and exact profile, then separates the sheet price from underlay, flashings, fixings, installation and any reroof work.",
+    "answerSources": [
+      "mc-corr",
+      "dim-corr"
+    ],
+    "category": "Roofing systems",
+    "publishedAt": "2026-09-26",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "profiles",
+        "title": "Are all corrugated sheets the same?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Published corrugated product dimensions",
+            "heads": [
+              "Product",
+              "Effective cover",
+              "Published starting minimum pitch"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Metalcraft Corrugate",
+                  "760 mm",
+                  "8°"
+                ],
+                "sources": [
+                  "mc-corr"
+                ]
+              },
+              {
+                "cells": [
+                  "Dimond Corrugate",
+                  "762 mm",
+                  "8°"
+                ],
+                "sources": [
+                  "dim-corr"
+                ]
+              },
+              {
+                "cells": [
+                  "Steel & Tube Custom Orb, Roof Crowd listing",
+                  "762 mm",
+                  "8°"
+                ],
+                "sources": [
+                  "roofcrowd"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These dimensions are product-specific references, not fabrication instructions. Confirm current product information and ordering tolerances with the supplying branch. Effective cover excludes the side-lap portion; overall sheet width does not.",
+            "sources": []
+          },
+          {
+            "type": "notice",
+            "text": "Not every corrugated product shares the same pitch limit. The Herne Bay True Oak case study illustrates a different profile-specific solution. Do not substitute a general “corrugate” label for the actual specification.",
+            "sources": [
+              "herne"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "price",
+        "title": "What does the public material price tell you?",
+        "blocks": [
+          {
+            "type": "prices",
+            "ids": [
+              "lr-18"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The supplier describes a gauge but does not establish that this is BMT or the same product as another manufacturer’s offering. Its steel listing and polycarbonate listing also share a price: select the steel line when recording material evidence.",
+            "sources": [
+              "bitz"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Before converting a price to square metres, obtain the effective cover for that exact sheet. We have not borrowed a manufacturer’s cover dimension for an unrelated retailer’s product.",
+            "sources": []
+          },
+          {
+            "type": "calculator",
+            "mode": "sheet"
+          }
+        ]
+      },
+      {
+        "id": "installed",
+        "title": "How do you get to a supply-and-install cost?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Specify sheet material, thickness, coating and lengths.",
+              "Measure actual roof area, not total house floor area.",
+              "Include compatible ridges, hips, valleys, barges and penetration flashings.",
+              "Include underlay and fixing scope without double counting labour.",
+              "Add removal and site access only if not already in the rate."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The detailed estimator uses a separate rate card for planning. These public listings do not automatically overwrite it: doing so would mix retail and trade assumptions and could change the meaning of its installed range.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "examples",
+        "title": "What can we learn from real corrugated reroofs?",
+        "blocks": [
+          {
+            "type": "projects",
+            "ids": [
+              "herne-bay",
+              "tauranga-reroof"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "One example centres on a roofline constraint; the other includes associated upgrades. Neither contains a usable billed cost per square metre. The evidence helps define the work, not manufacture a universal installed rate.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "alternatives",
+        "title": "When should you compare five-rib or tray?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Where the geometry, pitch or desired appearance suggests another profile, compare exact products rather than categories. Some trapezoidal and tray profiles have lower stated starting minima than the corrugated examples above, but suitability still needs product-level assessment.",
+            "sources": [
+              "mc760",
+              "espan"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "For the same roof, ask for the reason behind any installed-price difference. It may come from accessories and detailing rather than the sheet price alone.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "purchase",
+        "title": "What should be confirmed before ordering?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Approved profile for the lowest-pitch section.",
+              "Current coating suited to the actual site.",
+              "Effective cover and order lengths confirmed by the supplier.",
+              "Consistent colours and compatible flashing/fixing specification.",
+              "Delivery, unloading and safe access arrangements.",
+              "Who verifies quantities before sheets are cut to length."
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      "corrugate-vs-five",
+      "colorsteel-zincalume",
+      "roof-area",
+      "lifespan"
+    ],
+    "faqs": [],
+    "editor": "RoofHub editorial team"
+  },
+  "five-rib": {
+    "id": "five-rib",
+    "path": "/roofing/five-rib",
+    "title": "Five-rib roofing NZ: names, costs and specifications",
+    "description": "Understand MC760, T-Rib and Hi Five, resolve effective-cover differences and compare five-rib roofing material and installation costs on a consistent scope.",
+    "answer": "Five-rib or trapezoidal roofing uses raised angular ribs with flatter pans between them. NZ manufacturers use different product names, so a quote should name the actual profile. Do not assume that every five-rib sheet has the same cover, pitch requirements or locally available specification.",
+    "answerSources": [
+      "mc760",
+      "t-rib",
+      "hi-five"
+    ],
+    "category": "Roofing systems",
+    "publishedAt": "2026-09-26",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "names",
+        "title": "What are common NZ five-rib names?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Manufacturer naming and ordering context",
+            "heads": [
+              "Manufacturer / profile",
+              "Cover reference",
+              "Published pitch reference"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Metalcraft MC760",
+                  "760 mm effective cover",
+                  "3° starting minimum"
+                ],
+                "sources": [
+                  "mc760"
+                ]
+              },
+              {
+                "cells": [
+                  "Metalcraft T-Rib",
+                  "760 mm effective cover",
+                  "3° starting minimum"
+                ],
+                "sources": [
+                  "t-rib"
+                ]
+              },
+              {
+                "cells": [
+                  "Dimond Hi Five",
+                  "Page conflict: 765 mm overview, 755 mm performance table",
+                  "3° starting minimum"
+                ],
+                "sources": [
+                  "hi-five"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "Ask Dimond to resolve its Hi Five cover discrepancy before ordering. Picking whichever figure gives the lower price would create false precision. Manufacturing location and delivery availability also need checking.",
+            "sources": [
+              "hi-five"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "labour",
+        "title": "Is the installation more expensive than corrugate?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "RoofHub’s contributor-supplied labour model allows a small difference, especially in detailed ridge/hip work. That is a model input, not proof of a fixed national surcharge. Your roof’s edge lengths and junctions determine how much of that work exists.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "For a simple roof with few junctions, a small difference per square metre can mean only a modest total difference. For a cut-up roof, compare the separately priced flashings and cut details. Do not charge the same complexity in both a flashing rate and an unexplained blanket multiplier.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "material",
+        "title": "Are the sheets themselves necessarily dearer?",
+        "blocks": [
+          {
+            "type": "prices",
+            "ids": [
+              "lr-18"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The retail observation offers corrugated and five-rib steel at one lineal rate. A meaningful comparison still needs the exact cover and specification. A wider covering sheet can reduce material cost per square metre without proving the entire installed roof is cheaper.",
+            "sources": []
+          },
+          {
+            "type": "calculator",
+            "mode": "sheet"
+          }
+        ]
+      },
+      {
+        "id": "pitch",
+        "title": "Can it be used on a low-pitch roof?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The named examples publish 3° starting minima. They are not permission to use any five-rib product on any 3° roof. Check the length-dependent and design conditions in the current manual, including the actual finished pitch.",
+            "sources": [
+              "mc760",
+              "t-rib"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "If your roof has several slopes, record the lowest pitch and each plane separately. A house described as “low pitch” is not precise enough to order a roof.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "project",
+        "title": "What does a real five-rib-type reroof involve?",
+        "blocks": [
+          {
+            "type": "projects",
+            "ids": [
+              "hibiscus-coast"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Trim Rib is the profile named in this contractor’s account. We do not relabel it as a specific competitor’s five-rib product or assume that its two-day duration applies to another geometry.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "quote",
+        "title": "What makes a comparison quote useful?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Full manufacturer/profile name and confirmed cover.",
+              "Metal, coating and thickness basis.",
+              "Roof-plane areas and ridge, hip, valley and barge lengths.",
+              "Underlay, fixings and flashing scope.",
+              "Any labour premium explained as actual work.",
+              "Removal, access and GST shown consistently."
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      "corrugate-vs-five",
+      "long-run",
+      "roof-pitch",
+      "roofing-costs"
+    ],
+    "faqs": [],
+    "editor": "RoofHub editorial team"
+  },
+  "pressed-tile": {
+    "id": "pressed-tile",
+    "path": "/roofing/pressed-metal-tile",
+    "title": "Pressed metal tile roofing NZ: cost, build-up and examples",
+    "description": "Understand pressed steel roof tiles, battens, product-specific cover and pitch, historical pricing and the distinction from older suspect textured roofing.",
+    "answer": "Pressed metal tile roofing uses formed metal panels rather than long-run sheets or heavy concrete tiles. Compare it as a complete system, including the support, underlay, accessories and labour. Historical low installed prices do not establish a current material rate or prove that pressed tile is always the cheapest metal roof.",
+    "answerSources": [
+      "tiles-cop"
+    ],
+    "category": "Roofing systems",
+    "publishedAt": "2026-09-26",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "system",
+        "title": "How does the system differ from long-run?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "NZMRM’s Code of Practice describes pressed metal tiles as a panel roofing system with product-specific support and fixing requirements. The panel covering, batten layout and installation method need to be considered together.",
+            "sources": [
+              "tiles-cop"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "In RoofHub’s current labour model, pressed-tile installation includes tasks that may sit elsewhere in a long-run quote. Make the scope explicit before comparing the labour endpoints. Underlay installation must not be added a second time when it is already included.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "example-product",
+        "title": "What are the dimensions of a real product?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Gerard Bond manufacturer example",
+            "heads": [
+              "Specification",
+              "Published value"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Cover length × cover width",
+                  "1265 × 368 mm"
+                ],
+                "sources": [
+                  "bond"
+                ]
+              },
+              {
+                "cells": [
+                  "Stated coverage",
+                  "0.47m² per panel; 2.15 panels/m²"
+                ],
+                "sources": [
+                  "bond"
+                ]
+              },
+              {
+                "cells": [
+                  "Minimum pitch",
+                  "12°"
+                ],
+                "sources": [
+                  "bond"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Use the manufacturer’s panel-per-area schedule and installation details for ordering. Rounded published panel coverage is not an exact wastage-free ordering quantity. Cut pieces, roof geometry and accessory quantities still matter.",
+            "sources": []
+          },
+          {
+            "type": "notice",
+            "text": "This is one product example. It is not a universal pitch or cover specification for every pressed metal tile.",
+            "sources": [
+              "tiles-cop"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cost",
+        "title": "Why do online pressed-tile prices differ so much?",
+        "blocks": [
+          {
+            "type": "prices",
+            "ids": [
+              "tt-02",
+              "tt-03",
+              "rr-05"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The lower figures are from Arcline’s February 2024 budgeting article, with GST unspecified. Delta’s 2025 reroof guide uses a broader scope. Those observations do not support subtracting RoofHub labour from one figure to infer a verified current wholesale tile price.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "Ask for a matched contemporary quote for the same roof. Retain any historical comparison as context, not as the rate you promise a visitor can buy today.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "unknowns",
+        "title": "What must a complete tile quote include?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Exact panel, finish and applicable warranty.",
+              "Batten/support and underlay scope.",
+              "Ridge, hip, valley, barge and penetration details.",
+              "Panel cutting/order allowance and fixings.",
+              "Removal and access for a reroof.",
+              "Any work required because of the existing structure."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Do not hide missing tile-specific accessory prices inside a complete-looking total. If a component is unpriced, identify it as unresolved and make clear that the shown figure is only a subtotal.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "project",
+        "title": "What does an actual replacement example show?",
+        "blocks": [
+          {
+            "type": "projects",
+            "ids": [
+              "tamahere-house"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The project provides evidence about the replacement process and hidden work. Its publisher does not provide a final price or measured area, so RoofHub does not use it to claim a typical installed tile rate.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "old-roof",
+        "title": "Are new metal tiles the same as older Decramastic?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Do not conflate a current specified tile product with unidentified older textured material. Older roofing can require asbestos identification before disturbance. Keep that uncertainty separate from selecting a new metal-tile roof.",
+            "sources": [
+              "asbestos-trades"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A homeowner who cannot identify the existing product should be able to select “unknown”, obtain an estimate for the proposed new covering, and see the unresolved removal issue clearly.",
+            "sources": []
+          }
+        ]
+      }
+    ],
+    "related": [
+      "decramastic",
+      "tile-to-metal",
+      "roofing-costs",
+      "corrugate-vs-five"
+    ],
+    "faqs": [],
+    "editor": "RoofHub editorial team"
+  },
+  "tray": {
+    "id": "tray",
+    "path": "/roofing/tray-standing-seam",
+    "title": "Tray and standing-seam roofing NZ: what changes the cost?",
+    "description": "Compare NZ architectural tray systems, pan widths, support requirements, historical installed costs and documented architectural projects.",
+    "answer": "Tray and standing-seam roofing describe a group of architectural systems, not a single product. The fixing method, seam detail, base metal and support build-up can differ. Price the exact system with its substrate, clips and flashings rather than comparing pan prices alone.",
+    "answerSources": [
+      "espan",
+      "eurotray"
+    ],
+    "category": "Roofing systems",
+    "publishedAt": "2026-09-26",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "systems",
+        "title": "Which system differences matter?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Two different architectural system examples",
+            "heads": [
+              "Example",
+              "What the source establishes",
+              "Why it matters to a quote"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Metalcraft Espan 470",
+                  "470 mm nominal cover, concealed clips, published 3° starting minimum.",
+                  "Its support approach can avoid a full substrate where designed to the manufacturer’s requirements."
+                ],
+                "sources": [
+                  "espan"
+                ]
+              },
+              {
+                "cells": [
+                  "Dimond Eurotray systems",
+                  "Product-specific seam and installation details.",
+                  "Choose the actual Eurotray variant and build-up, not the family name alone."
+                ],
+                "sources": [
+                  "eurotray",
+                  "roll-cap"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Do not treat “standing seam” as a guarantee that the seams are all formed or installed in the same way. The name on the quote should lead to an exact specification and compatible detail set.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "support",
+        "title": "Why can substrate change the price?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Support is part of the roof system. A quote that includes plywood and associated preparation is not comparable to a pan-only price. Conversely, applying a blanket plywood allowance to a system designed without it can overstate the cost.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "Metalcraft describes Espan’s clip system as fixing to purlins at specified spans. In Dimond’s Eel House case, the curved aluminium Eurotray roofing was installed over plywood. These are distinct documented build-ups, not proof that every tray needs or avoids plywood.",
+            "sources": [
+              "espan",
+              "eel"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cost",
+        "title": "What installed pricing has been published?",
+        "blocks": [
+          {
+            "type": "prices",
+            "ids": [
+              "rr-03",
+              "rr-04",
+              "tt-04"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These are historical guide observations with different scopes and tax information. They are not three independent current quotes for the same tray system. The broad architectural allowance in the detailed estimator remains a planning input, not a manufacturer tariff.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "projects",
+        "title": "What do architectural projects reveal?",
+        "blocks": [
+          {
+            "type": "projects",
+            "ids": [
+              "eel-house",
+              "ebbinge-house"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Curved geometry, roof-to-wall alignment and integrated rainwater detailing can be part of the architectural brief. Price those requirements explicitly. Neither example has a published roof-only bill suitable for extracting a national per-m² rate.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "detailing",
+        "title": "What should be itemised before comparing quotes?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Exact profile/variant, pan width, base metal, coating and thickness.",
+              "Seaming/clip system and required support or substrate.",
+              "Underlay and any separating or ventilation layers in the specified build-up.",
+              "Valleys, penetrations, transitions and integrated gutters.",
+              "Fabrication, curved work, transport and lifting where required.",
+              "Installer scope, maintenance documents and warranty responsibilities."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A visually simple wide pan can still be part of a detailed assembly. Ask for the cost difference in the actual specification, rather than an unexplained “premium roof” percentage.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "choice",
+        "title": "How do you compare with corrugate or five-rib?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Keep the same roof geometry and environmental requirements in the comparison, then allow the support and accessory scope to change where the chosen system requires it. A cheap pan that needs more associated work may not produce the cheapest completed assembly.",
+            "sources": []
+          },
+          {
+            "type": "notice",
+            "text": "Minimum pitch is only one design constraint. This guide and the estimator do not certify a system for a roof. Use the current manufacturer details and the responsible designer’s assessment.",
+            "sources": [
+              "eurotray",
+              "espan"
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      "long-run",
+      "colorsteel-zincalume",
+      "roofing-costs",
+      "roof-area"
+    ],
+    "faqs": [],
+    "editor": "RoofHub editorial team"
+  },
+  "roof-pitch": {
+    "id": "roof-pitch",
+    "path": "/guides/roof-pitch",
+    "title": "How do you calculate roof pitch and its effect on area?",
+    "description": "Calculate NZ roof pitch from rise and run, convert plan area to sloping roof area and understand product-specific pitch limits without climbing onto a roof.",
+    "answer": "Roof pitch is the slope of a roof plane, usually expressed in degrees. From drawings, pitch = arctan(vertical rise ÷ horizontal run). To convert that plane’s horizontal projected area to its sloping area, divide by cos(pitch). Do not apply the conversion again to an actual sloping measurement.",
+    "answerSources": [],
+    "category": "Guides",
+    "publishedAt": "2026-09-26",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "pitch-calculator",
+        "title": "How do you find pitch from rise and run?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Rise is the vertical change; run is the horizontal distance over that same change. Use matching units. On a simple symmetrical gable, the run to the ridge is half the wall-to-wall span, before considering the particular dimension you are measuring. Do not confuse full span with run.",
+            "sources": []
+          },
+          {
+            "type": "calculator",
+            "mode": "pitch"
+          },
+          {
+            "type": "paragraph",
+            "text": "Worked example: a rise of 1.5 m over a horizontal run of 3 m gives arctan(1.5 ÷ 3) = 26.57°. The sloping length over that run is √(3² + 1.5²) = 3.354 m. These are geometry calculations, not structural design advice.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "area-factors",
+        "title": "How much does pitch add to roof area?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Calculated surface area for a 150m² horizontal roof projection",
+            "heads": [
+              "Pitch",
+              "Area multiplier, rounded",
+              "Calculated surface area"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "0°",
+                  "1.0000",
+                  "150.0m²"
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "5°",
+                  "1.0038",
+                  "150.6m²"
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "15°",
+                  "1.0353",
+                  "155.3m²"
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "25°",
+                  "1.1034",
+                  "165.5m²"
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "35°",
+                  "1.2208",
+                  "183.1m²"
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "45°",
+                  "1.4142",
+                  "212.1m²"
+                ],
+                "sources": []
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The table assumes every part of the projected roof has the stated pitch and that eaves are already included. A flat result at 0° is a mathematical example, not permission to install the profiles discussed here on a flat roof.",
+            "sources": []
+          },
+          {
+            "type": "calculator",
+            "mode": "area"
+          }
+        ]
+      },
+      {
+        "id": "product-choice",
+        "title": "What pitch does the roof covering require?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Examples, not a universal design schedule",
+            "heads": [
+              "Named product",
+              "Published starting minimum",
+              "Important qualification"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Metalcraft Corrugate",
+                  "8°",
+                  "Check sheet-length and design conditions."
+                ],
+                "sources": [
+                  "mc-corr"
+                ]
+              },
+              {
+                "cells": [
+                  "Metalcraft MC760",
+                  "3°",
+                  "Check the current product manual."
+                ],
+                "sources": [
+                  "mc760"
+                ]
+              },
+              {
+                "cells": [
+                  "Gerard Bond",
+                  "12°",
+                  "Product-specific panel system."
+                ],
+                "sources": [
+                  "bond"
+                ]
+              },
+              {
+                "cells": [
+                  "Metalcraft Espan 470",
+                  "3°",
+                  "Minimum can increase with sheet length."
+                ],
+                "sources": [
+                  "espan"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "Do not choose a roof from the minimum-pitch column alone. The designer or supplier must confirm the complete specification. Existing sag, local low spots and junctions are not assessed by this calculator.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "other-lines",
+        "title": "Do all lineal measurements use the same multiplier?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "No. A line that follows the roof’s steepest slope uses the rafter factor, while a level ridge normally does not change. Hips and valleys depend on their direction and the intersecting roof planes. Applying the area multiplier blindly to every line is wrong.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "For the special case of equal-pitch planes meeting at a 45° plan diagonal, the hip or valley multiplier from its plan length is √(1 + tan²(pitch) ÷ 2). That simplification is not valid for arbitrary intersections or unequal pitches. Use measured three-dimensional geometry or appropriate design calculations for those cases.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "safe-inputs",
+        "title": "How can you obtain useful measurements safely?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Use architectural drawings, existing measured information or a competent survey. An aerial image normally supplies plan-view geometry, not reliable pitch by itself. Do not climb onto a roof to use a consumer angle app.",
+            "sources": []
+          },
+          {
+            "type": "checklist",
+            "items": [
+              "Record whether each input is projected or sloping.",
+              "Calibrate a plan or image using a known dimension.",
+              "Check that the image is not perspective-distorted.",
+              "Separate roof planes with different pitches.",
+              "Keep unknown pitch visible instead of silently treating it as zero."
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      "roof-area",
+      "cost-200",
+      "corrugate-vs-five",
+      "tray"
+    ],
+    "faqs": [],
+    "editor": "RoofHub editorial team"
+  },
+  "roof-area": {
+    "id": "roof-area",
+    "path": "/guides/roof-area",
+    "title": "How do you calculate the area of a roof?",
+    "description": "Calculate roof area from plans or actual measurements, understand eaves and pitch, and keep roof covering, material waste, removal and scaffold quantities separate.",
+    "answer": "Calculate each roof plane’s area, convert projected areas for pitch where needed, then add the planes. Keep eaves within the roof outline, and add material-order allowances separately. A house’s total floor area is not automatically its roof area, especially on a two-storey building.",
+    "answerSources": [],
+    "category": "Guides",
+    "publishedAt": "2026-09-26",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "which-area",
+        "title": "Which area have you been given?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Area types used in a roofing estimate",
+            "heads": [
+              "Input",
+              "Meaning",
+              "Use"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Floor area",
+                  "Internal or gross floor area, possibly across multiple storeys.",
+                  "Starting context only; establish the roof outline."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Roof plan area",
+                  "Horizontal projection of the roof outline.",
+                  "Apply pitch plane by plane."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Actual roof area",
+                  "Area measured along the sloping planes.",
+                  "Do not apply pitch again."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Ordered roofing area",
+                  "Material quantity after layout, laps and cutting allowance.",
+                  "Use for supply quantities, not automatically for removal."
+                ],
+                "sources": []
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "If a listing says a house is 200m², ask what that figure includes. Halving a two-storey floor area is only a rough guess where floors overlap exactly. Garages, lower roofs, decks and offsets can make it misleading.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "calculator",
+        "title": "Convert a roof projection to sloping area",
+        "blocks": [
+          {
+            "type": "calculator",
+            "mode": "area"
+          },
+          {
+            "type": "paragraph",
+            "text": "The calculator assumes one pitch, or multiple planes all at the same pitch. For mixed pitches, calculate each plane separately and sum the results. If a plan area is 150m² at 25°, the sloping area is 165.5m², before any material-order allowance.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "eaves",
+        "title": "How do eaves and overhangs affect the result?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Use the roof outline rather than just the outside walls. For a simple 10 m × 15 m rectangular building with a uniform 0.45 m horizontal overhang on all sides, the projected roof rectangle is 10.9 m × 15.9 m = 173.31m². At a uniform 25° pitch, that is about 191.2m² of sloping area.",
+            "sources": []
+          },
+          {
+            "type": "notice",
+            "text": "This example is deliberately a simple geometry. Do not use its percentage uplift for another building. Gables, different overhangs, porches and intersecting roofs need their own dimensions.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "components",
+        "title": "Which other measurements do you need?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Area alone does not describe the entire roof",
+            "heads": [
+              "Component",
+              "Useful unit",
+              "Measurement note"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Roof covering and underlay",
+                  "m²",
+                  "Keep the relevant coverage/lap allowance explicit."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Ridges, hips, valleys and barges",
+                  "Lineal metres",
+                  "Record each type and whether measurements are plan or actual."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Spouting",
+                  "Lineal metres",
+                  "Measure the intended gutter runs."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Downpipes and penetrations",
+                  "Count or specified length",
+                  "Record size and detail requirements separately."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Scaffold / edge protection",
+                  "Perimeter or scaffold area, depending on quote",
+                  "Do not substitute roof area."
+                ],
+                "sources": [
+                  "upwell"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A rectangle and a heavily cut-up roof can share the same area but have different edge lengths. This is why the detailed estimator asks for those components rather than inventing them from m² alone.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "ordering",
+        "title": "Should you add wastage before calculating everything?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "No. Keep net roof geometry and material ordering quantities separate. Cutting allowances belong to the relevant product layout; removal normally relates to the actual existing area removed. Adding the new sheet’s waste percentage to disposal or scaffold quantities is not justified.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "For long-run sheets, effective cover and cut lengths control ordering. For tiles, panel coverage and the manufacturer’s layout matter. Do not use one universal percentage as a substitute for a measured takeoff.",
+            "sources": [
+              "mc-corr",
+              "bond"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "digital",
+        "title": "Can a satellite image or plan give an accurate result?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "A calibrated drawing can give useful quantities. Accuracy still depends on scale, resolution, distortion, roof-outline visibility and correct pitch inputs. An oblique satellite image is not a flat plan merely because it looks clear. Confirm a known dimension and inspect the geometry before trusting the result.",
+            "sources": []
+          },
+          {
+            "type": "checklist",
+            "items": [
+              "Use a scale or known distance, not an assumed paper size.",
+              "Check at least a second dimension where possible.",
+              "Trace roof outlines rather than external walls.",
+              "Separate planes and pitches.",
+              "Review the quantities before applying a product rate.",
+              "Have ordering quantities verified before purchase."
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      "roof-pitch",
+      "cost-200",
+      "scaffolding",
+      "corrugate-vs-five"
+    ],
+    "faqs": [
+      {
+        "q": "Is roof area the same as floor area?",
+        "a": "No. Floor area can include multiple storeys and need not include the roof overhangs. Establish the roof projection and pitch or use measured sloping roof planes.",
+        "sources": []
+      },
+      {
+        "q": "Do I add pitch to measured sloping lengths?",
+        "a": "No. Apply a plan-to-slope conversion only to projected measurements. The same geometry must not be converted twice.",
+        "sources": []
+      }
+    ],
+    "editor": "RoofHub editorial team"
+  },
+  "scaffolding": {
+    "id": "scaffolding",
+    "path": "/pricing/scaffolding-cost",
+    "title": "What does roof scaffolding cost in New Zealand?",
+    "description": "Compare scaffold price units, edge protection, setup and weekly hire with NZ supplier examples, clear scope limits and roof-access planning questions.",
+    "answer": "Roof access prices depend on the system, height, perimeter, ground, working platforms and hire period. There is no single comparable “per-metre scaffold” price without those details. Full working scaffold and edge protection are different scopes, and scaffold elevation area is not roof area.",
+    "answerSources": [
+      "upwell",
+      "sk",
+      "scaffold-safety"
+    ],
+    "category": "Pricing",
+    "publishedAt": "2026-09-26",
+    "updatedAt": "2026-09-28",
+    "sections": [
+      {
+        "id": "public-prices",
+        "title": "What do NZ providers publish?",
+        "blocks": [
+          {
+            "type": "prices",
+            "ids": [
+              "access-sk-20260928",
+              "access-upwell-setup-20260928",
+              "access-upwell-hire-20260928"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "ScaffoldMe also reports a builder’s rental example: $4,000 setup/dismantle plus $190 per week, in the context of a 65 lm single-level package. The GST basis of that rental example is not explicit. It is not a current four-plank hire quotation.",
+            "sources": [
+              "scaffoldme"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "We do not convert a three-plank supplier example into a verified four-plank rate. Upwell’s layout totals also differ from its headline rates and some example arithmetic is inconsistent. Confirm the actual quote; RoofHub does not copy those totals into the estimator.",
+            "sources": [
+              "upwell"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "unit",
+        "title": "Is “per metre” length or area?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "A lineal rate uses the measured run around the building. An elevation-area rate typically uses length × scaffold height, summed for the relevant faces. A roof-area rate is a third unit and cannot be substituted. Upwell explicitly describes the elevation-area approach.",
+            "sources": [
+              "upwell"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "For illustration only, a 60 m run at an assumed 3 m scaffold height is 180m² of elevation. At $18.50/m² setup and $1.50/m²/week, the arithmetic is $3,330 setup plus $270/week, excluding GST. It is not a four-plank quote, a design, or permission to assume that every single-storey building needs a 3 m scaffold.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "That is also why simply multiplying a roof’s 200m² by a scaffolder’s m² rate can produce a wrong answer even though both numbers appear to use square metres.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "safety",
+        "title": "Can edge protection be used for a reroof?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Edge protection is a recognised risk-control approach, but it is not equivalent to a full working platform and it does not by itself address every roof-work hazard. A competent assessment must select suitable protection for the work and site.",
+            "sources": [
+              "scaffold-safety",
+              "roof-safety"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "RoofHub only offers the edge-protection planning option for eligible single-storey inputs. That is a product limitation, not a statement that NZ law bans it at two storeys. Selecting or excluding a cost estimate never waives the need for safe access.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "WorkSafe’s older roof-work guide carries a notice about outdated legislation. We link it for the distinction between roof-edge and through-roof risks, not as a current compliance certificate.",
+            "sources": [
+              "roof-safety"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "model",
+        "title": "What does the RoofHub calculator assume?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Its working scaffold card separates one- and two-storey options, flat and difficult sites, and additional hire after four included weeks. Those ranges are project-planning allowances developed for this tool. They have not been converted into independently verified national tariffs.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "A hillside can change the height, component quantities and work required. It may affect hire as well as setup, so the estimator’s simple rate should not be treated as a final sloping-site quote. Three-storey and unusual access remain site-specific.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "duration",
+        "title": "How long will the access be needed?",
+        "blocks": [
+          {
+            "type": "projects",
+            "ids": [
+              "whitby-access"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Coordinate the hire period with all trades. Roofing may finish before painting, cladding or window work. Confirm the starting event for rental, any minimum hire and the dismantling notice period.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "quote",
+        "title": "What should you request from a scaffolder?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "A marked-up coverage plan and working heights.",
+              "Platform width and intended users/trades.",
+              "Edge protection, gates, stairs and loading requirements included.",
+              "Flat, sloping or restricted-access assumptions.",
+              "Delivery, erection, inspection, alteration and dismantling scope.",
+              "Included hire, extra weekly rate, GST and any permissions or engineering exclusions."
+            ]
+          }
+        ]
+      }
+    ],
+    "related": [
+      "reroof-cost",
+      "timeline",
+      "roof-area",
+      "cost-200"
+    ],
+    "faqs": [
+      {
+        "q": "Is the estimator’s four-week hire period an industry rule?",
+        "a": "No. It is the tool’s planning assumption. A scaffolder’s actual quote may use a different included or minimum period.",
+        "sources": []
+      }
+    ],
+    "editor": "RoofHub editorial team"
+  }
+}

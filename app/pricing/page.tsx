@@ -5,10 +5,12 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({ title: "Roofing pricing NZ", description: "RoofHub NZ pricing guides for roofing costs, reroofing, scaffold/access and specific metal roofing systems.", path: "/pricing" });
 
 const cards = [
+  ["200m² roof cost", "Worked examples that distinguish actual roof area, footprint, quoted rate and GST.", "/pricing/200m2-roof-cost"],
   ["Roofing costs NZ", "Compare published NZ market observations and understand material-only, supply/install and complete-project price bases.", "/pricing/roofing-costs"],
   ["Re-roof cost NZ", "Add removal, disposal, scaffold/access and existing-roof risk to the new-roof calculation.", "/pricing/reroof-cost"],
   ["Scaffolding costs", "Single-storey, two-storey, edge protection, weekly hire and difficult-site considerations.", "/pricing/scaffolding-cost"],
   ["Corrugated roofing", "Public material and complete-project observations for the classic long-run profile.", "/roofing/corrugated"],
+  ["Pressed metal tile", "Panel systems, historical price context and batten/underlay scope.", "/roofing/pressed-metal-tile"],
   ["Five-rib roofing", "Trapezoidal profile pricing with the installation difference kept visible.", "/roofing/five-rib"],
   ["Tray & standing seam", "Premium concealed-fix and architectural roof systems with separate pricing evidence.", "/roofing/tray-standing-seam"]
 ] as const;

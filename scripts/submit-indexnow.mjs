@@ -21,7 +21,7 @@ if (!res.ok) {
 const xml = await res.text();
 const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 if (!urls.length) {
-  console.error("Sitemap is empty — indexing is probably disabled or there is nothing to submit.");
+  console.error("Sitemap is empty - indexing is probably disabled or there is nothing to submit.");
   process.exit(1);
 }
 const wrongHost = urls.find((url) => new URL(url).host !== HOST);

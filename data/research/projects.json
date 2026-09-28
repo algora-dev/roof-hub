@@ -1,0 +1,93 @@
+{
+  "herne-bay": {
+    "id": "herne-bay",
+    "sourceId": "herne",
+    "title": "Keeping a villa roofline",
+    "location": "Herne Bay, Auckland",
+    "system": "True Oak corrugate",
+    "summary": "Roofing Industries describes a Lowndes reroof using its corrugated profile on a low-pitch section.",
+    "lesson": "A profile-specific solution can matter more than a generic material category. This case does not establish a minimum pitch for every corrugated roof.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "hibiscus-coast": {
+    "id": "hibiscus-coast",
+    "sourceId": "hibiscus",
+    "title": "A two-day long-run replacement",
+    "location": "Hibiscus Coast, Auckland",
+    "system": "Trim Rib",
+    "summary": "HDK reports a two-day reroof with Trim Rib, new flashings and timber strengthening.",
+    "lesson": "This is one reported job duration, not a promise for a different house.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "tauranga-reroof": {
+    "id": "tauranga-reroof",
+    "sourceId": "tauranga",
+    "title": "Replacement with associated upgrades",
+    "location": "Tauranga",
+    "system": "Custom Orb",
+    "summary": "Coldrick describes roughly a week of roofing work, with sarking, insulation and rainwater upgrades.",
+    "lesson": "Two reroof totals are not comparable until the associated work is matched.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "tamahere-house": {
+    "id": "tamahere-house",
+    "sourceId": "tamahere",
+    "title": "Damage uncovered under the old roof",
+    "location": "Tamahere, Waikato",
+    "system": "Gerard CF Shake",
+    "summary": "Gerard describes replacing asphalt roofing and dealing with damaged plywood and framing beneath it.",
+    "lesson": "Hidden substrate work belongs in a contingency and variation process, not an assumed fixed removal rate.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "eel-house": {
+    "id": "eel-house",
+    "sourceId": "eel",
+    "title": "Curved architectural roofing",
+    "location": "Dunedin",
+    "system": "Eurotray Roll Cap",
+    "summary": "Dimond describes curved aluminium roofing over plywood, installed by The Roofing Smiths.",
+    "lesson": "Metal choice, curve geometry and support build-up all need to be specified before comparing tray prices.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "ebbinge-house": {
+    "id": "ebbinge-house",
+    "sourceId": "queenstown",
+    "title": "Roof and cladding designed together",
+    "location": "Queenstown",
+    "system": "Eurotray Angle Seam",
+    "summary": "Dimond documents coordinated roof and wall detailing, including recessed openings and integrated gutters.",
+    "lesson": "Architectural pricing can include detailing far beyond laying roof pans.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "whitby-access": {
+    "id": "whitby-access",
+    "sourceId": "whitby",
+    "title": "One scaffold serving several trades",
+    "location": "Whitby, Wellington",
+    "system": "Scaffolding",
+    "summary": "Erect It describes access for roofing, recladding and window work on the same property.",
+    "lesson": "Hire duration should follow all trades using the scaffold, not just the roofing crew.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  }
+}

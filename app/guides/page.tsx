@@ -1,20 +1,15 @@
-import Link from "next/link";
-import { ArrowRight, Book, Calculator, Layers, Measure } from "@/components/Icons";
-import { pageMetadata } from "@/lib/seo";
-
-export const metadata=pageMetadata({title:"Roofing guides & research",description:"Practical New Zealand roofing guides covering pricing, roof pitch, measurement, roof systems and how to prepare for a quote.",path:"/guides"});
-const guides=[
-  ["Pricing","Roofing costs in New Zealand","/pricing/roofing-costs"],
-  ["Re-roofing","What a reroof price needs to include","/pricing/reroof-cost"],
-  ["Measurement","How roof pitch changes area","/guides/roof-pitch"],
-  ["Measurement","How to measure roof area and components","/guides/roof-area"],
-  ["Materials","Long-run metal roofing explained","/roofing/long-run"],
-  ["Planning","How to prepare for a roofing quote","/guides/how-to-prepare-for-a-roofing-quote"]
-] as const;
+import Link from 'next/link';
+import { pageMetadata } from '@/lib/seo';
+import { QuestionLinks } from '@/components/content/QuestionLinks';
+export const metadata = pageMetadata({title: 'NZ roofing questions, comparisons and practical answers', description: 'Find answers about roof costs, materials, lifespan, reroofing, asbestos, pitch and measurements, with NZ evidence and useful calculation tools.', path: '/guides'});
+const groups = [
+  {id:'costs', title:'What will it cost?', articles:['roofing-costs','cost-200','reroof-cost','scaffolding']},
+  {id:'compare', title:'Which roof should I compare?', articles:['corrugate-vs-five','colorsteel-zincalume','long-run','pressed-tile','tray']},
+  {id:'replace', title:'What does replacing a roof involve?', articles:['tile-to-metal','timeline','decramastic','lifespan']},
+  {id:'measure', title:'How do I measure it?', articles:['roof-area','roof-pitch']}
+];
 export default function GuidesPage(){return <>
-<section className="page-intro page-intro--terracotta"><div className="container page-intro__grid"><div><p className="eyebrow">Guides & research</p><h1>Roofing information built around the decision you need to make.</h1></div><div className="page-intro__aside"><p>RoofHub guides answer the question early, show evidence where it matters and connect to the calculator or measurement workflow when an article alone is not enough.</p></div></div></section>
-<section className="section section--white"><div className="container featured-guide"><div><p className="eyebrow">Start here</p><h2>How much does roofing cost in New Zealand?</h2><p>Compare current public market observations without confusing material-only, installed and complete reroof pricing.</p><Link className="button button--primary" href="/pricing/roofing-costs">Read the cost guide <ArrowRight/></Link></div><div className="featured-guide__checklist"><span>Published NZ price observations</span><span>GST and pricing basis kept visible</span><span>Worked 200m² example</span><span>Detailed estimator linked</span></div></div></section>
-<section className="section section--sage"><div className="container"><div className="topic-grid"><article><span className="icon-tile"><Calculator/></span><h3>Pricing & scope</h3><p>Costs, inclusions, exclusions and the variables that move a project.</p></article><article><span className="icon-tile"><Measure/></span><h3>Measurement</h3><p>Area, pitch, plans and the difference between plan and actual quantities.</p></article><article><span className="icon-tile"><Layers/></span><h3>Materials & systems</h3><p>Manufacturer-backed profile information connected to market pricing evidence.</p></article><article><span className="icon-tile"><Book/></span><h3>Project planning</h3><p>Quotes, access, scope and practical preparation before work begins.</p></article></div></div></section>
-<section className="section"><div className="container"><div className="planned-guides-head"><div><p className="eyebrow">Core RoofHub guides</p><h2>Useful depth, not content for content's sake.</h2></div><p>Each live page has a distinct job: explain a price, a roofing system or a measurement problem.</p></div><div className="planned-guides-grid">{guides.map(([category,title,href])=><Link href={href} key={title}><article><span>{category}</span><h3>{title}</h3><small>Read guide →</small></article></Link>)}</div></div></section>
-<section className="section section--dark"><div className="container editorial-standards"><div><p className="eyebrow">Editorial rules</p><h2>Answer first. Provenance stays attached.</h2></div><div className="editorial-rules"><p><strong>Use primary sources.</strong> Manufacturer/government evidence leads technical claims where available.</p><p><strong>Keep price bases separate.</strong> Material-only and complete-project observations answer different questions.</p><p><strong>Preserve uncertainty.</strong> A planning estimate is not a formal quote or site diagnosis.</p><p><strong>Build tools when tools are better.</strong> Geometry and quantity questions should lead into calculation, not filler prose.</p></div></div></section>
+  <section className="page-intro page-intro--sage"><div className="container page-intro__grid"><div><p className="eyebrow">Guides & answers</p><h1>Start with the question on your mind.</h1></div><div className="page-intro__aside"><p>Compare products, understand a quote, check a measurement or plan a reroof. Each guide connects a direct answer with source evidence, worked examples and the next useful step.</p></div></div></section>
+  <section className="section section--white"><div className="container"><nav className="rh-question-links" aria-label="Browse questions by topic">{groups.map(g=><a key={g.id} href={`#${g.id}`}>{g.title}</a>)}</nav>{groups.map(g=><section className="rh-question-group" id={g.id} key={g.id}><h2>{g.title}</h2><QuestionLinks ids={g.articles}/></section>)}<section className="rh-question-group"><h2>Ready to speak to a roofer?</h2><p>Use the <Link className="text-link" href="/guides/how-to-prepare-for-a-roofing-quote">quote preparation checklist</Link> to organise your scope and measurements before requesting a written price.</p></section></div></section>
+  <section className="section section--sage"><div className="container cta-band"><div><p className="eyebrow">Your roof, your measurements</p><h2>Move from a general answer to your own quantities.</h2><p>Enter measurements or use a plan in the detailed estimator. Its output is a planning estimate, not a site inspection or a binding quote.</p></div><Link className="button button--primary" href="/tools/detailed-roof-estimator">Open detailed estimator</Link></div></section>
 </>}

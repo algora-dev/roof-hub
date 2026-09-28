@@ -7,10 +7,8 @@ const fail = (message) => { failures += 1; console.error(`✗ ${message}`); };
 const pass = (message) => console.log(`✓ ${message}`);
 
 const observationsText = readFileSync("data/observations.ts", "utf8");
-const statusById = new Map();
-for (const match of observationsText.matchAll(/"id":\s*"([^"]+)"[\s\S]*?"status":\s*"([^"]+)"/g)) {
-  statusById.set(match[1], match[2]);
-}
+const rawObservations = JSON.parse(observationsText.slice(observationsText.indexOf("= [") + 2, observationsText.lastIndexOf("]") + 1));
+const statusById = new Map(rawObservations.map(o => [o.id, o.status]));
 
 function filesUnder(dir) {
   const out = [];
@@ -33,6 +31,13 @@ for (const file of pageFiles) {
       if (!status) fail(`${file} references unknown observation ${idMatch[1]}`);
       else if (status !== "verified") fail(`${file} publishes ${idMatch[1]} with status ${status}`);
     }
+  }
+}
+if (existsSync("data/research/articles.json")) {
+  const articles = JSON.parse(readFileSync("data/research/articles.json", "utf8"));
+  for (const article of Object.values(articles)) for (const section of article.sections) for (const block of section.blocks) {
+    if (block.type !== "prices") continue;
+    for (const id of block.ids) { evidenceRefs++; if (statusById.get(id) !== "verified") fail(`${article.path} publishes unverified ${id}`); }
   }
 }
 if (!failures) pass(`${evidenceRefs} published observation references are verified`);

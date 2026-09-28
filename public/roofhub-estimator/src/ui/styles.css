@@ -1,4 +1,4 @@
-/* RoofHub Detailed Estimator — presentation layer
+/* RoofHub Detailed Estimator - presentation layer
    Defaults are mapped to the supplied RoofHub design system. The component is
    Shadow DOM scoped, so host pages can safely override the official --rh-*
    semantic tokens on the mount element without leaking estimator styles. */

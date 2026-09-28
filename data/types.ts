@@ -12,7 +12,7 @@ export type ObservationCategory =
 
 export type RoofSystem = "pressed-metal-tile" | "corrugate" | "five-rib" | "tray-standing-seam";
 
-export type PriceUnit = "m2" | "lm" | "each" | "week" | "job";
+export type PriceUnit = "m2" | "lm" | "each" | "week" | "job" | "hour" | "m2-week";
 export type PriceBasis = "material-only" | "labour-only" | "supply-install" | "complete-project";
 export type GstBasis = "incl" | "excl" | "unknown";
 export type SourceType =
@@ -48,6 +48,11 @@ export type PricingObservation = {
   sourceType: SourceType;
   evidenceTier: EvidenceTier;
   status: ObservationStatus;
+  /** Date this particular observation was checked; distinct from publication date. */
+  lastCheckedAt?: string;
+  areaBasis?: "plan" | "sloping" | "scaffold-elevation" | "unknown";
+  priceContext?: "historical-guide" | "published-guide" | "retail-listing" | "research-only";
+  rangeEligible?: boolean;
   notes?: string;
 };
 

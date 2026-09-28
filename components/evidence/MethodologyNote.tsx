@@ -17,7 +17,7 @@ export function MethodologyNote({
       <span>
         RoofHub methodology <strong>v{version}</strong> · last reviewed <strong>{reviewedAt}</strong> ·{" "}
         {evidenceCount} recorded {evidenceCount === 1 ? "source" : "sources"} · GST basis: <strong>{gstBasis}</strong>.
-        Ranges are derived, not quoted —{" "}
+        Ranges are derived, not quoted -{" "}
         <Link className="text-link" href="/methodology">read the full methodology</Link>.
       </span>
     </p>

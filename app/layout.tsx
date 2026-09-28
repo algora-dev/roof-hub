@@ -12,19 +12,19 @@ const bingVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: `${SITE_NAME} — Roofing pricing, guides & tools`, template: `%s | ${SITE_NAME}` },
+  title: { default: `${SITE_NAME} - Roofing pricing, guides & tools`, template: `%s | ${SITE_NAME}` },
   description: DEFAULT_DESCRIPTION,
   icons: { icon: "/brand/roofhub-icon.png" },
   robots: isIndexingEnabled()
     ? { index: true, follow: true }
     : { index: false, follow: false, noarchive: true, nosnippet: true, nocache: true },
   openGraph: {
-    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    title: `${SITE_NAME} - ${SITE_TAGLINE}`,
     description: DEFAULT_DESCRIPTION,
     type: "website",
     url: SITE_URL,
     siteName: SITE_NAME,
-    images: [{ url: "/brand/og-image.png", width: 1200, height: 630, alt: `${SITE_NAME} — ${SITE_TAGLINE}` }]
+    images: [{ url: "/brand/og-image.png", width: 1200, height: 630, alt: `${SITE_NAME} - ${SITE_TAGLINE}` }]
   },
   ...(googleVerification || bingVerification
     ? {
@@ -61,9 +61,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
+        <a className="skip-link" href="#main-content">Skip to content</a>
         <PreviewBanner />
         <Header />
-        <main>{children}</main>
+        <main id="main-content" tabIndex={-1}>{children}</main>
         <Footer />
         <Analytics />
       </body>

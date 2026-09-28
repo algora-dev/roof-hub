@@ -1,0 +1,401 @@
+{
+  "mc-corr": {
+    "id": "mc-corr",
+    "publisher": "Metalcraft",
+    "title": "Corrugate product specifications",
+    "url": "https://www.metalcraftgroup.co.nz/products/roofing-and-cladding/products/corrugate/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "Metalcraft Corrugate"
+  },
+  "mc760": {
+    "id": "mc760",
+    "publisher": "Metalcraft",
+    "title": "MC760 product specifications",
+    "url": "https://www.metalcraftgroup.co.nz/products/roofing-and-cladding/products/mc760/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "Metalcraft MC760"
+  },
+  "t-rib": {
+    "id": "t-rib",
+    "publisher": "Metalcraft",
+    "title": "T-Rib product specifications",
+    "url": "https://www.metalcraftgroup.co.nz/products/roofing-and-cladding/products/t-rib/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "Metalcraft T-Rib"
+  },
+  "dim-corr": {
+    "id": "dim-corr",
+    "publisher": "Dimond",
+    "title": "Corrugate product specifications",
+    "url": "https://www.dimond.co.nz/products/corrugate",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "Dimond Corrugate"
+  },
+  "hi-five": {
+    "id": "hi-five",
+    "publisher": "Dimond",
+    "title": "Hi Five product specifications",
+    "url": "https://www.dimond.co.nz/products/hi-five",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "The overview states 765 mm cover, while the performance section states 755 mm. RoofHub flags this conflict rather than choosing an ordering width.",
+    "shortLabel": "Dimond Hi Five"
+  },
+  "bond": {
+    "id": "bond",
+    "publisher": "Gerard",
+    "title": "Bond steel roofing tile",
+    "url": "https://www.gerardroofs.co.nz/our-products/bond/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "Gerard Bond"
+  },
+  "espan": {
+    "id": "espan",
+    "publisher": "Metalcraft",
+    "title": "Espan 470 specifications and support system",
+    "url": "https://www.metalcraftgroup.co.nz/products/roofing-and-cladding/products/espan-470/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "Metalcraft Espan"
+  },
+  "eurotray": {
+    "id": "eurotray",
+    "publisher": "Dimond",
+    "title": "Eurotray Angle Seam",
+    "url": "https://www.dimond.co.nz/products/eurotray-angle-seam",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "Dimond Angle Seam"
+  },
+  "roll-cap": {
+    "id": "roll-cap",
+    "publisher": "Dimond",
+    "title": "Eurotray Roll Cap",
+    "url": "https://www.dimond.co.nz/products/eurotray-roll-cap",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "Dimond Roll Cap"
+  },
+  "bitz": {
+    "id": "bitz",
+    "publisher": "Bitz & Piecez",
+    "title": "Roofing products and public prices",
+    "url": "https://www.bitzandpiecez.co.nz/products/",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Retail listing, not a like-for-like COLORSTEEL specification. Thickness is described as gauge, not confirmed BMT. Effective cover must be confirmed before converting to square metres."
+  },
+  "roofcrowd": {
+    "id": "roofcrowd",
+    "publisher": "Roof Crowd",
+    "title": "Custom Orb profile, materials and dimensions",
+    "url": "https://roofcrowd.co.nz/product/custom-orb-corrugated-iron/",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Used for specifications. The category price range is not used as a verified per-metre cash price without a confirmed unit and variant."
+  },
+  "delta": {
+    "id": "delta",
+    "publisher": "Delta Roofing",
+    "title": "Roof replacement cost NZ, 2025 guide",
+    "url": "https://deltaroofing.co.nz/articles/roof-replacement-cost-nz.html",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": "2025",
+    "note": "Historical budgeting guide, not a 2026 quotation. It names older coating products. Its price table includes GST, scaffolding and removal/disposal."
+  },
+  "arcline": {
+    "id": "arcline",
+    "publisher": "Arcline Architecture",
+    "title": "Roofing types and prices",
+    "url": "https://arcline.co.nz/roofing-types-prices/",
+    "kind": "designer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": "2024-02-10",
+    "note": "Historical budgeting guide. Long-run rate is explicitly based on plan area. GST is not stated. Rates are not current supplier offers."
+  },
+  "eh": {
+    "id": "eh",
+    "publisher": "Edwards & Hardy",
+    "title": "New roof cost NZ: 2026 price guide",
+    "url": "https://www.edwardsandhardy.co.nz/blog/new-roof-cost-nz",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": "2026-03-16",
+    "note": "Broad whole-job estimates, not documented billed projects; GST is not specified."
+  },
+  "superior": {
+    "id": "superior",
+    "publisher": "Superior Renovations",
+    "title": "COLORSTEEL roofing cost NZ",
+    "url": "https://superiorrenovations.co.nz/colorsteel-roofing-cost-nz/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Provider guide rather than an invoice dataset. Scope and access exclusions need checking in any actual quote."
+  },
+  "upwell": {
+    "id": "upwell",
+    "publisher": "Upwell Scaffolding",
+    "title": "Published scaffolding hire rate",
+    "url": "https://www.upwellscaffolding.co.nz/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "The quoted square-metre unit is scaffold area, not roof area."
+  },
+  "sk": {
+    "id": "sk",
+    "publisher": "SK Scaffold",
+    "title": "Edge protection listing",
+    "url": "https://skscaffold.co.nz/products/edge-protection-scaffolding",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Single-storey listing. Confirm GST, hire period, delivery and establishment inclusions before comparison."
+  },
+  "scaffoldme": {
+    "id": "scaffoldme",
+    "publisher": "ScaffoldMe",
+    "title": "65 lm single-level house lot",
+    "url": "https://scaffoldme.co.nz/product/house-lot-65m-single-level/",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Equipment seller recounting a builder rental example. This is not a nationwide four-plank hire tariff."
+  },
+  "colorsteel": {
+    "id": "colorsteel",
+    "publisher": "COLORSTEEL",
+    "title": "The evolution of COLORSTEEL",
+    "url": "https://www.colorsteel.co.nz/resources/articles/the-evolution-of-colorsteel/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": ""
+  },
+  "zincalume": {
+    "id": "zincalume",
+    "publisher": "New Zealand Steel",
+    "title": "ZINCALUME product information",
+    "url": "https://www.nzsteel.co.nz/products/zincalume/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Describes the 2025 transition to the AM125 aluminium/zinc/magnesium coating. Historical AZ specifications are not treated as current."
+  },
+  "durability": {
+    "id": "durability",
+    "publisher": "NZ Metal Roofing Manufacturers",
+    "title": "NZ Building Code clause B2 and durability",
+    "url": "https://www.metalroofing.org.nz/cop/durability/nzbc-clause-b2",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "NZMRM durability guidance"
+  },
+  "maintenance": {
+    "id": "maintenance",
+    "publisher": "NZ Metal Roofing Manufacturers",
+    "title": "Maintenance compliance",
+    "url": "https://www.metalroofing.org.nz/maintenance-compliance",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "NZMRM maintenance guidance"
+  },
+  "tiles-cop": {
+    "id": "tiles-cop",
+    "publisher": "NZ Metal Roofing Manufacturers",
+    "title": "Pressed metal tiles, Code of Practice",
+    "url": "https://www.metalroofing.org.nz/cop/other-products/pressed-metal-tiles",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "NZMRM tile guidance"
+  },
+  "mbie": {
+    "id": "mbie",
+    "publisher": "MBIE Building Performance",
+    "title": "Exemption 1.1: general repair, maintenance and replacement",
+    "url": "https://www.building.govt.nz/projects-and-consents/planning-a-successful-build/scope-and-design/check-if-you-need-consents/building-work-that-doesnt-need-a-building-consent/technical-requirements-for-exempt-building-work/1-general-alterations-maintenance-and-removal/1-1-general-repair-maintenance-and-replacement",
+    "kind": "government",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Examples explain the exemption; they do not determine consent requirements for an individual property."
+  },
+  "asbestos": {
+    "id": "asbestos",
+    "publisher": "WorkSafe New Zealand",
+    "title": "Check for asbestos before high-pressure spraying on roofs",
+    "url": "https://www.worksafe.govt.nz/about-us/news-and-media/check-for-asbestos-before-undertaking-high-pressure-spraying-on-roofs/",
+    "kind": "government",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": "2026-08-20",
+    "note": "",
+    "shortLabel": "WorkSafe roof warning"
+  },
+  "asbestos-trades": {
+    "id": "asbestos-trades",
+    "publisher": "WorkSafe New Zealand",
+    "title": "Working with or near asbestos",
+    "url": "https://www.worksafe.govt.nz/topic-and-industry/asbestos/asbestos-information-for-tradespeople/working-with-or-near-asbestos/",
+    "kind": "government",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "WorkSafe asbestos guidance"
+  },
+  "scaffold-safety": {
+    "id": "scaffold-safety",
+    "publisher": "WorkSafe New Zealand",
+    "title": "Scaffolding in New Zealand",
+    "url": "https://www.worksafe.govt.nz/topic-and-industry/working-at-height/scaffolding-in-new-zealand/",
+    "kind": "government",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "WorkSafe scaffold guidance"
+  },
+  "roof-safety": {
+    "id": "roof-safety",
+    "publisher": "WorkSafe New Zealand",
+    "title": "Working on roofs: good practice guidelines",
+    "url": "https://www.worksafe.govt.nz/topic-and-industry/working-at-height/roofs/working-on-roofs-gpg/",
+    "kind": "government",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "The page explicitly warns that it has not been updated for current legislation. Used only for the distinction between edge falls and falls through roofing, not as a current compliance certificate.",
+    "shortLabel": "WorkSafe legacy roof guide"
+  },
+  "herne": {
+    "id": "herne",
+    "publisher": "Roofing Industries",
+    "title": "Herne Bay villa with True Oak corrugate",
+    "url": "https://www.roof.co.nz/blog/herne-bay-villa-and-true-oak-r-corrugate",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Manufacturer-reported project, not an independently audited result or published quote."
+  },
+  "hibiscus": {
+    "id": "hibiscus",
+    "publisher": "HDK Longrun Roofing",
+    "title": "Long-run reroof, Hibiscus Coast",
+    "url": "https://www.hdklongrunroofing.co.nz/project/long-run-reroof-hibiscus-coast/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": ""
+  },
+  "tauranga": {
+    "id": "tauranga",
+    "publisher": "Coldrick Roofing",
+    "title": "Re-roof in Tauranga",
+    "url": "https://www.coldrickroofing.co.nz/re-roof-tauranga/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": ""
+  },
+  "tamahere": {
+    "id": "tamahere",
+    "publisher": "Gerard",
+    "title": "Tamahere transformation with CF Shake",
+    "url": "https://www.gerardroofs.co.nz/news-blogs/tamahere-transformation-with-cf-shake/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": "2022-03-03",
+    "note": "",
+    "shortLabel": "Gerard Tamahere project"
+  },
+  "eel": {
+    "id": "eel",
+    "publisher": "Dimond",
+    "title": "Eurotray curved roofing: Eel House",
+    "url": "https://www.dimond.co.nz/case-studies/eurotray-curved-roofing-case-study",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "Dimond Eel House"
+  },
+  "queenstown": {
+    "id": "queenstown",
+    "publisher": "Dimond",
+    "title": "Ebbinge Eurotray project",
+    "url": "https://www.dimond.co.nz/case-studies/ebbinge-eurotray",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "",
+    "shortLabel": "Dimond Ebbinge project"
+  },
+  "whitby": {
+    "id": "whitby",
+    "publisher": "Erect It Scaffolding",
+    "title": "Whitby reroof, recladding and window installation",
+    "url": "https://erectitscaffolding.co.nz/blog/scaffolding-whitby-reroof-recladding-window-installation/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": "2026-08-24",
+    "note": ""
+  },
+  "tauranga-faq": {
+    "id": "tauranga-faq",
+    "publisher": "Tauranga Roofing Services",
+    "title": "Roofing FAQs",
+    "url": "https://taurangaroofingservices.co.nz/faqs",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "General scheduling estimate, not a measured sample of completed jobs."
+  },
+  "superior-time": {
+    "id": "superior-time",
+    "publisher": "Superior Renovations",
+    "title": "Reroofing costs and project timing",
+    "url": "https://superiorrenovations.co.nz/reroofing-cost-auckland/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Provider planning guidance. RoofHub does not adopt this page as a source of regulatory advice."
+  },
+  "artisans": {
+    "id": "artisans",
+    "publisher": "Artisans Roofing",
+    "title": "Roofing services and completion guarantee",
+    "url": "https://artisansroofing.co.nz/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "A provider-specific guarantee with conditions, not an industry-wide timeframe."
+  }
+}
