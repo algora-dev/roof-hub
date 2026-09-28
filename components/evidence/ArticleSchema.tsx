@@ -5,13 +5,15 @@ export function ArticleSchema({
   description,
   path,
   datePublished = "2026-09-26",
-  dateModified = "2026-09-26"
+  dateModified = "2026-09-26",
+  citations
 }: {
   headline: string;
   description: string;
   path: string;
   datePublished?: string;
   dateModified?: string;
+  citations?: string[];
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -20,6 +22,7 @@ export function ArticleSchema({
     description,
     datePublished,
     dateModified,
+    ...(citations?.length ? { citation: citations } : {}),
     inLanguage: "en-NZ",
     mainEntityOfPage: path === "/" ? SITE_URL : `${SITE_URL}${path}`,
     author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
@@ -30,5 +33,5 @@ export function ArticleSchema({
       logo: { "@type": "ImageObject", url: `${SITE_URL}/brand/roofhub-mark-black.png` }
     }
   };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />;
 }

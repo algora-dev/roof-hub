@@ -14,10 +14,14 @@ export type TableBlock = { type: 'table'; caption: string; heads: string[]; rows
 export type ResearchBlock = ParagraphBlock | TableBlock
   | { type: 'checklist'; items: string[] }
   | { type: 'prices' | 'projects'; ids: string[] }
-  | { type: 'calculator'; mode: 'area' | 'pitch' | 'sheet' | 'budget' };
+  | { type: 'calculator'; mode: 'area' | 'pitch' | 'sheet' | 'budget' }
+  | { type: 'details'; title: string; blocks: ResearchBlock[] }
+  | { type: 'action'; title: string; text: string; label: string; href: string }
+  | { type: 'corrugated-prices' | 'corrugated-examples'; ids: string[]; sources: string[] }
+  | { type: 'corrugated-budget' | 'corrugated-cover'; sources: string[] };
 export type ResearchArticle = {
   id: string; path: string; title: string; description: string; answer: string;
   answerSources: string[]; category: string; publishedAt: string; updatedAt: string;
-  editor: string; sections: { id: string; title: string; blocks: ResearchBlock[] }[];
+  editor: string; presentation?: 'reference-guide'; sections: { id: string; title: string; blocks: ResearchBlock[] }[];
   related: string[]; faqs: { q: string; a: string; sources: string[] }[];
 };

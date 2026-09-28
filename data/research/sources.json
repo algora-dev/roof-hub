@@ -397,5 +397,245 @@
     "reviewedAt": "2026-09-28",
     "publishedAt": null,
     "note": "A provider-specific guarantee with conditions, not an industry-wide timeframe."
+  },
+  "freeman-corr": {
+    "id": "freeman-corr",
+    "publisher": "Freeman Roofing",
+    "title": "Corrugate profile and pitch guidance",
+    "url": "https://www.freemanroofing.co.nz/roofing-profiles/corrugate/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Approximate dimensions; distinguishes continuous sheets from end-lapped roofs."
+  },
+  "trs-corr": {
+    "id": "trs-corr",
+    "publisher": "The Roofing Store",
+    "title": "TRS Corrugate specifications",
+    "url": "https://www.theroofingstore.co.nz/steel-roofing-cladding-products/longrun-profile/corrugate/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Published spans and fasteners have design conditions; they are not a universal fixing schedule."
+  },
+  "st-corr": {
+    "id": "st-corr",
+    "publisher": "Steel & Tube",
+    "title": "Custom Orb specification overview",
+    "url": "https://steelandtube.co.nz/specifiers/custom-orb",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Eight-degree roof pitch is stated. Confirm the current product drawing before ordering cover-dependent quantities."
+  },
+  "ri-trueoak": {
+    "id": "ri-trueoak",
+    "publisher": "Roofing Industries",
+    "title": "True Oak Corrugate",
+    "url": "https://www.roof.co.nz/product/true-oak-corrugate",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Special deeper corrugate. The fetched page also contains unrelated tray-profile blocks; those were not used as True Oak specifications."
+  },
+  "mrm-profiles": {
+    "id": "mrm-profiles",
+    "publisher": "NZ Metal Roofing Manufacturers",
+    "title": "Code of Practice: profiles, grades and thickness",
+    "url": "https://www.metalroofing.org.nz/cop/structure/profiles",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Thickness, steel grade, profile and loading need to be considered together. Consult the current code for design."
+  },
+  "mrm-pitch": {
+    "id": "mrm-pitch",
+    "publisher": "NZ Metal Roofing Manufacturers",
+    "title": "Code of Practice: roof pitch and runoff capacity",
+    "url": "https://www.metalroofing.org.nz/cop/roofing/roof-pitch",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Generic minimum pitches are conditional, not approval of any individual product or roof. Online access may request registration."
+  },
+  "mrm-underlay": {
+    "id": "mrm-underlay",
+    "publisher": "NZ Metal Roofing Manufacturers",
+    "title": "Code of Practice: underlay and internal moisture",
+    "url": "https://www.metalroofing.org.nz/cop/internal-moisture/underlay",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Explains moisture absorption, support and ventilation. Not reproduced as an installation specification."
+  },
+  "maxam": {
+    "id": "maxam",
+    "publisher": "COLORSTEEL",
+    "title": "COLORSTEEL MAXAM product information",
+    "url": "https://www.colorsteel.co.nz/products/solutions/colorsteel-maxam/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Site exposure, details and maintenance affect suitability and warranty. Not a universal coastal clearance rule."
+  },
+  "cs-care": {
+    "id": "cs-care",
+    "publisher": "COLORSTEEL",
+    "title": "Care and maintenance guidance",
+    "url": "https://www.colorsteel.co.nz/resources/colorsteel-care/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Refer to the current maintenance schedule for the actual product and site; cleaning requires safe access."
+  },
+  "ird-gst": {
+    "id": "ird-gst",
+    "publisher": "Inland Revenue",
+    "title": "Charging GST",
+    "url": "https://www.ird.govt.nz/gst/charging-gst",
+    "kind": "government",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "15% standard GST conversion is applied only where the source expressly identifies its tax basis."
+  },
+  "bitz-cover": {
+    "id": "bitz-cover",
+    "publisher": "Bitz & Piecez",
+    "title": "Seller specification: corrugate effective cover",
+    "url": "https://www.trademe.co.nz/a/marketplace/building-renovation/building-supplies/roofing/roofing-iron/listing/6123939424",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Archived seller listing, closed September 2026. Used only to cross-check 780 mm cover, not as an active price offer. Confirm the same profile on the current order."
+  },
+  "rc-maxam": {
+    "id": "rc-maxam",
+    "publisher": "Residential & Commercial Roofing",
+    "title": "MAXAM corrugated sheets, 0.55 stated gauge",
+    "url": "https://residentialroofing.co.nz/product/colorsteel-maxam-corrugated-sheets-strong-0-55-gauge/",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Description states NZD 27.80/lm plus GST, about 760 mm cover and a 50 lm minimum. The headline total is a minimum-order amount, not a metre rate."
+  },
+  "bunnings-corr-painted": {
+    "id": "bunnings-corr-painted",
+    "publisher": "Bunnings New Zealand",
+    "title": "Armorsteel 0.4 mm Ironsand corrugated roofing, per metre",
+    "url": "https://www.bunnings.co.nz/armorsteel-845-x-0-4mm-ironsand-corrugated-roofing-steel-l-m_p0065120",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Fetched listing shows NZD 30.35/lm. Effective cover and GST wording were not established in the retrieved product text. 845 mm is not assumed to be effective cover."
+  },
+  "bunnings-corr-zinc": {
+    "id": "bunnings-corr-zinc",
+    "publisher": "Bunnings New Zealand",
+    "title": "Armorsteel 0.4 mm zinc corrugated sheet, 3 m",
+    "url": "https://www.bunnings.co.nz/armorsteel-845-x-3000mm-zinc-0-4-corrugated-roofing-steel_p0116969",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "NZD 64.94 per 3 m sheet. GST and effective cover not established in retrieved product text; no tax-inclusive area conversion is published."
+  },
+  "bunnings-corr-galv": {
+    "id": "bunnings-corr-galv",
+    "publisher": "Bunnings New Zealand",
+    "title": "Armorsteel 0.4 mm galvanised corrugated sheet, 3 m",
+    "url": "https://www.bunnings.co.nz/armorsteel-845-x-3000mm-galvanised-0-4-corrugated-roofing-steel_p0116971",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "NZD 67.93 per 3 m sheet. Same retailer as the zinc and painted observations, not independent market quotes."
+  },
+  "mitre-corr": {
+    "id": "mitre-corr",
+    "publisher": "Mitre 10",
+    "title": "Roofing Industries Slimline corrugated iron, colour",
+    "url": "https://www.mitre10.co.nz/shop/roofing-industries-slimline-corrugated-iron-762mm-colour/p/166973",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "NZD 29.97/lm. Product title says 762 mm but the retrieved width field is inconsistent. Thickness and confirmed usable cover are not established here."
+  },
+  "mitre-gst": {
+    "id": "mitre-gst",
+    "publisher": "Mitre 10",
+    "title": "Payment and pricing policy",
+    "url": "https://www.mitre10.co.nz/payment",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "States quoted prices include GST. This policy establishes tax basis, not effective cover or product gauge."
+  },
+  "wbs-corr": {
+    "id": "wbs-corr",
+    "publisher": "WBS Henderson",
+    "title": "Steel & Tube Custom Orb ZINCALUME, 3 m",
+    "url": "https://wbshenderson.co.nz/shop/p0037980-3000-s-t-custom-orb-corrugated-iron-roofing-cladding-851mm-x-3000mm-zincalume-30825",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Fetched page shows NZD 68.85 and 88.08, both tax-inclusive, without an unambiguous active-price distinction. Kept out of the priced ledger pending confirmation."
+  },
+  "roofcrowd-catalog": {
+    "id": "roofcrowd-catalog",
+    "publisher": "Roof Crowd",
+    "title": "Roofing profile catalogue",
+    "url": "https://roofcrowd.co.nz/our-products/roofing-profiles/",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Custom Orb catalogue range is NZD 16.41 to 26.40 excluding GST. The retrieved catalogue does not establish the charging unit or variant at each endpoint, so this is not treated as a per-metre quote."
+  },
+  "kennedys-orb": {
+    "id": "kennedys-orb",
+    "publisher": "Steel & Tube",
+    "title": "Custom Orb on a Kennedys Bush home",
+    "url": "https://promos.steelandtube.co.nz/custom-orb-award-winning-home",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": "2026-08-28",
+    "note": "Publisher-reported project. Corrugated pitched areas and membrane flat areas belong to one home, not one universal roof specification."
+  },
+  "kings-brooklyn": {
+    "id": "kings-brooklyn",
+    "publisher": "Kings Roofing",
+    "title": "Brooklyn re-roof project",
+    "url": "https://kingsroofing.co.nz/project/re-roof-project/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Publisher reports completion in June 2025. Work account and photographs, not a published invoice or independent inspection."
+  },
+  "element-island": {
+    "id": "element-island",
+    "publisher": "Element Roofing",
+    "title": "Coastal Island Bay project",
+    "url": "https://elementroofing.co.nz/projects/coastal-island-bay/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": "2021",
+    "note": "2021 project using a legacy MAXX specification. Not evidence that the same named product is the current choice for every coastal roof."
+  },
+  "element-brooklyn": {
+    "id": "element-brooklyn",
+    "publisher": "Element Roofing",
+    "title": "Suburban Brooklyn reroof",
+    "url": "https://elementroofing.co.nz/projects/suburban-brooklyn/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": "2021",
+    "note": "2021 project includes asbestos-cement removal and different profiles on upper and lower roofs. Historical ENDURA terminology retained as attribution."
+  },
+  "wlr-kelburn": {
+    "id": "wlr-kelburn",
+    "publisher": "Wellington Long Run Roofing",
+    "title": "Central Terrace, Kelburn project account",
+    "url": "https://www.wellingtonroof.co.nz/our-projects/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Multiple projects share this page. Only the named Central Terrace account is used; no price or measured roof area is disclosed."
   }
 }

@@ -121,3 +121,83 @@
 @media(max-width:1000px){.rh-reading-layout{grid-template-columns:190px minmax(0,1fr);gap:30px}.rh-project-grid{grid-template-columns:1fr}.rh-question-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.rh-reading-layout{grid-template-columns:minmax(0,1fr);padding-top:24px;gap:26px}.rh-toc{position:static;background:var(--sage-50);border:1px solid var(--sage-200);border-radius:12px;padding:16px}.rh-toc p,.rh-toc>.text-link{display:none}.rh-toc ol{margin-bottom:4px}.rh-reading-body{font-size:1rem}.rh-project-grid,.rh-related-grid,.rh-question-grid{grid-template-columns:1fr}.rh-quantity{padding:18px}.rh-quantity__fields{grid-template-columns:1fr}.rh-answer-cta{padding:22px}.rh-reading-body .source-list li{display:block}.rh-reading-body .source-list .tier{margin-bottom:6px}.rh-answer-cta .button-row{align-items:stretch}.rh-answer-cta .button{width:100%;text-align:center}}
 .rh-reading-body .evidence-table{min-width:600px}
+
+/* Reference-guide additions. Brand tokens and other article layouts are unchanged. */
+.rh-reference-guide .page-intro{padding-top:38px;padding-bottom:36px}
+.rh-reference-guide .page-intro h1{font-size:clamp(2.25rem,4.2vw,3.7rem);max-width:18ch}
+.rh-reference-guide .section--compact{padding-top:24px;padding-bottom:24px}
+.rh-guide-start{padding-top:28px}
+.rh-guide-shortcuts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.rh-guide-shortcuts>a{padding:20px;background:var(--white);border:1px solid var(--neutral-200);border-radius:14px;display:flex;flex-direction:column;gap:9px;line-height:1.45}
+.rh-guide-shortcuts>a:hover{border-color:var(--sage-600);background:var(--sage-50)}
+.rh-guide-shortcuts span{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--sage-800)}
+.rh-guide-shortcuts strong{font-size:1rem;line-height:1.4}
+.rh-guide-shortcuts small{font-size:.78rem;color:var(--sage-900)}
+.rh-guide-signature{font-size:.82rem;line-height:1.7;padding:18px 0;margin:0;border-bottom:1px solid var(--neutral-200);color:var(--sage-900)}
+.rh-guide-signature a{text-decoration:underline;text-underline-offset:3px}
+.rh-reference-guide .rh-reading-layout{padding-top:32px}
+.rh-reference-guide .rh-toc{max-height:calc(100vh - 120px);overflow-y:auto;scrollbar-width:thin}
+.rh-evidence-detail{border:1px solid var(--sage-200);border-radius:12px;background:var(--white);margin:20px 0}
+.rh-evidence-detail>summary{cursor:pointer;font-size:.98rem;line-height:1.55;font-weight:650;padding:19px 42px 19px 20px;position:relative;list-style:none;color:var(--sage-900)}
+.rh-evidence-detail>summary::-webkit-details-marker{display:none}
+.rh-evidence-detail>summary:after{content:'+';position:absolute;right:18px;top:17px;font-size:1.25rem;font-weight:500}
+.rh-evidence-detail[open]>summary:after{content:'-'}
+.rh-evidence-detail[open]>summary{border-bottom:1px solid var(--sage-100);background:var(--sage-50);border-radius:12px 12px 0 0}
+.rh-evidence-detail>div{padding:20px;min-width:0}
+.rh-evidence-detail>div>:last-child{margin-bottom:0}
+.rh-evidence-detail--nested{border-color:var(--neutral-200)}
+.rh-evidence-detail--nested>summary{font-size:.88rem}
+.rh-inline-action{display:grid;gap:10px;grid-template-columns:1fr;align-items:center;border-left:3px solid var(--terra-500);background:var(--terra-50);padding:20px 24px;border-radius:0 12px 12px 0;margin:24px 0}
+.rh-inline-action h3{font-size:1rem;margin:0 0 8px}
+.rh-inline-action p{font-size:.9rem;line-height:1.65;margin:0}
+.rh-inline-action .text-link{font-size:.9rem;text-decoration:underline;text-underline-offset:4px}
+.rh-table-help{font-size:.8rem;color:var(--sage-900)}
+.rh-supply-table{min-width:650px;line-height:1.6}
+.rh-supply-table th,.rh-supply-table td{min-width:125px}
+.rh-supply-table th:first-child{min-width:195px}
+.rh-supply-table small,.rh-supply-table tbody th span{display:block;margin-top:6px;font-size:.78rem;font-weight:400;color:var(--sage-900)}
+.rh-supply-table a{color:var(--sage-900);text-decoration:underline;text-underline-offset:3px}
+.rh-supply-table caption,.rh-reference-guide .evidence-table caption{text-align:left;background:var(--sage-50);padding:14px;font-size:.83rem;line-height:1.65;color:var(--sage-900)}
+.rh-reference-guide .evidence-table{font-size:.88rem;line-height:1.65}
+.rh-reference-guide .evidence-table thead th{color:var(--sage-900);font-size:.68rem;letter-spacing:.045em}
+.rh-reference-guide .rh-project .eyebrow{letter-spacing:.06em}
+.rh-cover-diagram{margin:20px 0;padding:22px;background:var(--sage-50);border:1px solid var(--sage-200);border-radius:12px;font-size:.9rem}
+.rh-cover-diagram figcaption{line-height:1.65;margin-bottom:22px}
+.rh-cover-diagram__row{margin:18px 0;font-size:.84rem}
+.rh-cover-diagram__overall{margin-top:8px;width:100%;height:14px;background:var(--sage-200);border:1px solid var(--sage-700);border-radius:4px}
+.rh-cover-diagram__effective{margin-top:8px;width:89.307873%;height:14px;background:var(--sage-700);border-radius:4px}
+.rh-cover-diagram p{font-size:.85rem;margin:22px 0 0}
+.rh-cover-diagram .text-link{margin-top:14px}
+.rh-sheet-tool{margin:24px 0;border:1px solid var(--sage-300);background:var(--white);border-radius:16px;padding:26px}
+.rh-sheet-tool__heading h3{font-size:1.4rem;margin-bottom:12px}
+.rh-sheet-tool__heading p:not(.eyebrow){font-size:.9rem;line-height:1.65}
+.rh-sheet-tool label{display:flex;flex-direction:column;gap:7px;min-width:0;font-size:.84rem;font-weight:650;line-height:1.5}
+.rh-sheet-tool input,.rh-sheet-tool select{width:100%;min-width:0;max-width:100%;min-height:48px;border:1px solid var(--neutral-300);border-radius:8px;background:var(--white);color:var(--charcoal-900);padding:11px 10px;font-size:1rem}
+.rh-sheet-tool__source select{font-size:.9rem;white-space:normal}
+.rh-sheet-tool__fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
+.rh-sheet-source-note{padding:14px 0;border-bottom:1px solid var(--neutral-100);font-size:.8rem;line-height:1.65}
+.rh-sheet-source-note strong{display:block;margin-bottom:6px}
+.rh-sheet-source-note a{text-decoration:underline;color:var(--sage-900);text-underline-offset:3px}
+.rh-sheet-input-help{font-size:.8rem;line-height:1.6;margin:16px 0;color:var(--sage-900)}
+.rh-sheet-result{border:1px solid var(--sage-200);border-radius:12px;background:var(--sage-50);padding:22px;margin:22px 0}
+.rh-sheet-result>p{font-size:.83rem;font-weight:600;margin:0 0 4px}
+.rh-sheet-result>strong{display:block;color:var(--sage-900);font-size:clamp(2rem,4vw,2.6rem);letter-spacing:-.04em;line-height:1.2;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.rh-sheet-result>span{font-size:.82rem;color:var(--sage-900)}
+.rh-sheet-result dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0 0;padding-top:16px;border-top:1px solid var(--sage-200);font-size:.82rem}
+.rh-sheet-result dt{color:var(--sage-900)}.rh-sheet-result dd{margin:0;font-weight:650;font-variant-numeric:tabular-nums}
+.rh-sheet-result .rh-input-error{color:var(--error)}
+.rh-sheet-result .rh-sheet-minimum{margin-top:12px;font-size:.83rem}
+.rh-sheet-exclusions{font-size:.84rem;line-height:1.65}
+.rh-sheet-tool .button{font-size:.85rem;line-height:1.4;min-height:48px;padding-block:10px}
+.rh-sheet-tool button:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.rh-sheet-tool noscript{display:block;font-size:.8rem;margin-top:16px}
+.rh-reference-guide a:focus-visible,.rh-reference-guide summary:focus-visible,.rh-reference-guide input:focus-visible,.rh-reference-guide select:focus-visible,.rh-reference-guide button:focus-visible,.rh-reference-guide [tabindex]:focus-visible{outline:3px solid var(--sage-800);outline-offset:3px}
+@media(max-width:1000px){.rh-guide-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}.rh-reference-guide .rh-toc{position:static;max-height:none;overflow:visible}}
+@media(max-width:600px){.rh-guide-shortcuts>a{padding:16px}.rh-guide-shortcuts strong{font-size:.92rem}.rh-guide-shortcuts small{font-size:.73rem}.rh-sheet-tool{padding:18px}.rh-sheet-tool__fields{grid-template-columns:1fr}.rh-evidence-detail>div{padding:15px}.rh-evidence-detail>summary{font-size:.9rem;padding-left:16px}.rh-inline-action{padding:18px}.rh-sheet-tool .button-row{flex-direction:column}.rh-sheet-tool .button{width:100%}.rh-reference-guide .source-list li{display:block}.rh-reference-guide .source-list .tier{margin-bottom:7px}.rh-reference-guide .page-intro h1{max-width:22ch;font-size:2.2rem}.rh-cover-diagram{padding:16px}}
+@media(prefers-reduced-motion:reduce){html:has(.rh-reference-guide){scroll-behavior:auto}.rh-reference-guide *{transition:none!important}}
+@media print{.rh-guide-shortcuts,.rh-inline-action,.rh-sheet-tool .button-row{display:none!important}.rh-reference-guide .rh-toc{display:none}.rh-reference-guide .rh-reading-layout{display:block}.rh-evidence-detail>div{display:block!important}.rh-evidence-detail{break-inside:auto}.rh-project{break-inside:avoid}.rh-reference-guide .table-wrap{overflow:visible}.rh-reference-guide table{min-width:0!important;font-size:9pt}}
+
+/* Keep long contents lists out of the way on a phone, while retaining HTML links. */
+.rh-reference-guide .rh-toc-mobile{display:none}
+.rh-reference-guide .rh-toc-desktop>strong{font-size:.95rem}
+@media(max-width:760px){.rh-reference-guide .rh-toc-mobile{display:block}.rh-reference-guide .rh-toc-desktop{display:none}}

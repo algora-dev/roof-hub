@@ -1,0 +1,117 @@
+{
+  "reviewedAt": "2026-09-28",
+  "methodologyVersion": "corrugated-observations-1",
+  "retail": [
+    {
+      "observationId": "lr-18",
+      "supplierKey": "bitz",
+      "sourceIds": [
+        "bitz",
+        "bitz-cover"
+      ],
+      "thickness": "0.5 mm stated gauge; BMT not established",
+      "finish": "Painted steel, not identified as COLORSTEEL",
+      "coverMm": 780,
+      "coverBasis": "archived-seller",
+      "coverNote": "780 mm from the seller’s closed Trade Me listing. Confirm the current stock is the same profile.",
+      "minimumOrderLm": null,
+      "fixedLengthM": null,
+      "note": "Stock lengths 1.8 to 5.8 m. Product certification, exposure suitability and delivery require confirmation."
+    },
+    {
+      "observationId": "corr-rc-maxam-20260928",
+      "supplierKey": "rc-roofing",
+      "sourceIds": [
+        "rc-maxam"
+      ],
+      "thickness": "0.55 mm stated gauge",
+      "finish": "COLORSTEEL MAXAM",
+      "coverMm": 760,
+      "coverBasis": "approximate",
+      "coverNote": "Supplier describes cover as approximately 760 mm. Area rate is therefore approximate.",
+      "minimumOrderLm": 50,
+      "fixedLengthM": null,
+      "note": "Minimum 50 lm. Custom lengths and freight must be confirmed. No other components or labour included."
+    },
+    {
+      "observationId": "corr-bunnings-painted-20260928",
+      "supplierKey": "bunnings",
+      "sourceIds": [
+        "bunnings-corr-painted"
+      ],
+      "thickness": "0.4 mm stated gauge",
+      "finish": "Armorsteel Ironsand",
+      "coverMm": null,
+      "coverBasis": "unknown",
+      "coverNote": "845 mm product width is not confirmed effective cover.",
+      "minimumOrderLm": null,
+      "fixedLengthM": null,
+      "note": "GST wording not established in the retrieved listing. No tax-inclusive area rate is calculated. The price was visible in the public indexed listing; confirm the current selected product price before ordering."
+    },
+    {
+      "observationId": "corr-bunnings-zinc3-20260928",
+      "supplierKey": "bunnings",
+      "sourceIds": [
+        "bunnings-corr-zinc"
+      ],
+      "thickness": "0.4 mm stated gauge",
+      "finish": "Zinc-labelled finish",
+      "coverMm": null,
+      "coverBasis": "unknown",
+      "coverNote": "Effective cover not established.",
+      "minimumOrderLm": null,
+      "fixedLengthM": 3,
+      "note": "Fixed 3 m sheet. Divide the listed sheet price by 3 for the metre equivalent; GST remains unconfirmed. The price was visible in the public indexed listing; confirm the current selected product price before ordering."
+    },
+    {
+      "observationId": "corr-bunnings-galv3-20260928",
+      "supplierKey": "bunnings",
+      "sourceIds": [
+        "bunnings-corr-galv"
+      ],
+      "thickness": "0.4 mm stated gauge",
+      "finish": "Galvanised",
+      "coverMm": null,
+      "coverBasis": "unknown",
+      "coverNote": "Effective cover not established.",
+      "minimumOrderLm": null,
+      "fixedLengthM": 3,
+      "note": "Fixed 3 m sheet. Not interchangeable with the zinc-labelled or painted observation. The price was visible in the public indexed listing; confirm the current selected product price before ordering."
+    },
+    {
+      "observationId": "corr-mitre-slimline-20260928",
+      "supplierKey": "mitre10",
+      "sourceIds": [
+        "mitre-corr",
+        "mitre-gst"
+      ],
+      "thickness": "Not established in fetched listing",
+      "finish": "Colour listing; exact coating unconfirmed",
+      "coverMm": null,
+      "coverBasis": "unknown",
+      "coverNote": "762 mm appears in the title but the width field is inconsistent. Confirm effective cover before converting.",
+      "minimumOrderLm": null,
+      "fixedLengthM": null,
+      "note": "GST established by retailer payment policy. No assumed gauge or m² rate. The price was visible in the public indexed listing; confirm the current selected product price before ordering."
+    }
+  ],
+  "held": [
+    {
+      "supplierKey": "roofcrowd",
+      "name": "Roof Crowd Custom Orb",
+      "sourceIds": [
+        "roofcrowd",
+        "roofcrowd-catalog"
+      ],
+      "reason": "Catalogue shows $16.41 to $26.40 excluding GST across variants. The retrieved price display does not establish the charging unit or which specification each endpoint buys. No per-lm rate is inferred."
+    },
+    {
+      "supplierKey": "wbs",
+      "name": "WBS Henderson Custom Orb",
+      "sourceIds": [
+        "wbs-corr"
+      ],
+      "reason": "The retrieved 3 m sheet page shows both $68.85 and $88.08 including GST. The active price is not unambiguous, so neither is selected for a conversion."
+    }
+  ]
+}

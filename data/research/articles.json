@@ -2004,9 +2004,9 @@
   "corrugated": {
     "id": "corrugated",
     "path": "/roofing/corrugated",
-    "title": "Corrugated roofing NZ: specifications, costs and examples",
-    "description": "Compare NZ corrugated roof products, effective cover, minimum pitch, material versus installed prices and real reroof examples with original sources.",
-    "answer": "Corrugated roofing has repeated rounded ribs. In NZ product ranges, similarly named sheets can have different effective covers and design requirements. A useful comparison identifies the manufacturer and exact profile, then separates the sheet price from underlay, flashings, fixings, installation and any reroof work.",
+    "title": "Corrugated roofing NZ: prices, profiles and real projects",
+    "description": "Compare NZ corrugated roofing prices, effective cover, 0.40 and 0.55 mm steel, pitch and coatings. Check supplier evidence, seven projects and your own roof budget.",
+    "answer": "Corrugated roofing is long-run metal sheeting with a rounded wave profile. Price depends on the exact profile, metal thickness, coating and job scope. This guide compares named NZ supplier prices, six manufacturers and seven published projects, then helps you calculate a sheet budget or estimate a complete roof.",
     "answerSources": [
       "mc-corr",
       "dim-corr"
@@ -2014,25 +2014,189 @@
     "category": "Roofing systems",
     "publishedAt": "2026-09-26",
     "updatedAt": "2026-09-28",
+    "editor": "RoofHub editorial team",
+    "presentation": "reference-guide",
     "sections": [
       {
-        "id": "profiles",
-        "title": "Are all corrugated sheets the same?",
+        "id": "prices",
+        "title": "How much does corrugated roofing cost?",
         "blocks": [
           {
+            "type": "paragraph",
+            "text": "There are three different questions: what a sheet costs, what a new roof costs to supply and fit, and what an existing roof costs to replace. Start with the scope, not the lowest number. The current listing review below is a set of named offers, not a survey establishing one typical New Zealand price.",
+            "sources": []
+          },
+          {
             "type": "table",
-            "caption": "Published corrugated product dimensions",
+            "caption": "Price context: different scopes, not interchangeable quotations",
             "heads": [
-              "Product",
-              "Effective cover",
-              "Published starting minimum pitch"
+              "Scope",
+              "Published evidence",
+              "How to use it"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Sheets only",
+                  "See the current listing ledger below. Prices are preserved in the supplier’s original unit.",
+                  "No installation, flashings, underlay, fixings, freight or removal is implied."
+                ],
+                "sources": [
+                  "bitz",
+                  "rc-maxam",
+                  "mitre-corr"
+                ]
+              },
+              {
+                "cells": [
+                  "New-build supply and install",
+                  "Arcline: $80-$100/m² in its February 2024 guide; measured as a flat plan. GST not stated.",
+                  "Historical long-run guidance, not a current corrugate-only rate. Do not multiply by pitched area as if it were the same basis."
+                ],
+                "sources": [
+                  "arcline"
+                ]
+              },
+              {
+                "cells": [
+                  "Complete corrugated reroof",
+                  "Delta: $110-$145/m² in its 2025 ENDURA corrugate example, including GST, scaffold and removal.",
+                  "A dated contractor guide, not a 2026 invoice or a roof-sheet price. Product naming is historical."
+                ],
+                "sources": [
+                  "delta"
+                ]
+              },
+              {
+                "cells": [
+                  "Whole-job long-run replacement",
+                  "Edwards & Hardy: $15,000-$35,000 in its March 2026 guide. GST and a matched job area are not given.",
+                  "Useful context only. Do not divide by an assumed 200 m² or treat every long-run profile as corrugate."
+                ],
+                "sources": [
+                  "eh"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Need a whole-roof estimate, not just sheet prices?",
+            "text": "Use the detailed estimator to include roof area, flashings, removal and optional access. Its preliminary rate card is separate from this source review.",
+            "label": "Estimate your roof",
+            "href": "/tools/detailed-roof-estimator"
+          },
+          {
+            "type": "details",
+            "title": "See the supplier price ledger, conversions and missing information",
+            "blocks": [
+              {
+                "type": "corrugated-prices",
+                "ids": [
+                  "lr-18",
+                  "corr-rc-maxam-20260928",
+                  "corr-bunnings-painted-20260928",
+                  "corr-bunnings-zinc3-20260928",
+                  "corr-bunnings-galv3-20260928",
+                  "corr-mitre-slimline-20260928"
+                ],
+                "sources": [
+                  "bitz",
+                  "bitz-cover",
+                  "rc-maxam",
+                  "bunnings-corr-painted",
+                  "bunnings-corr-zinc",
+                  "bunnings-corr-galv",
+                  "mitre-corr",
+                  "mitre-gst",
+                  "roofcrowd",
+                  "roofcrowd-catalog",
+                  "wbs-corr",
+                  "ird-gst"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "No median or national “typical material range” is calculated here. The products differ in specification and order conditions, and some lack a confirmed tax basis or usable cover. Several listings from one shop are still only one supplier.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "your-budget",
+        "title": "Turn a sheet price into your own budget",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Choose a source-specific example or enter a quote you already have. The calculation uses actual roof area, effective cover and any allowance you explicitly choose. A sheet subtotal is deliberately kept separate from a complete roof estimate.",
+            "sources": []
+          },
+          {
+            "type": "corrugated-budget",
+            "sources": [
+              "rc-maxam",
+              "bitz",
+              "bitz-cover",
+              "ird-gst"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "Compare 100, 150, 200 and 250 m² examples",
+            "blocks": [
+              {
+                "type": "corrugated-examples",
+                "ids": [
+                  "lr-18",
+                  "corr-rc-maxam-20260928",
+                  "rr-02"
+                ],
+                "sources": [
+                  "bitz",
+                  "bitz-cover",
+                  "rc-maxam",
+                  "delta"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "These examples hold area constant to expose the scope difference. They are not four completed jobs. Real sheet orders need roof-plane widths, cut lengths and waste; a contractor quote also needs the other components. A 200 m² floor area is not automatically a 200 m² roof.",
+                "sources": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "profiles",
+        "title": "Are all corrugated profiles the same?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "No. “Corrugate” describes a shape family, not a single specification. “Long-run” describes the sheet format; COLORSTEEL and ZINCALUME describe branded steel products, not the wave shape. A quote should identify the rollformer, profile, thickness and coating, rather than simply saying “corrugated iron”.",
+            "sources": [
+              "st-corr",
+              "zincalume"
+            ]
+          },
+          {
+            "type": "table",
+            "caption": "NZ manufacturer comparison: check the current drawing for the specified product",
+            "heads": [
+              "Manufacturer / profile",
+              "Published effective cover",
+              "Published pitch guidance",
+              "Important distinction"
             ],
             "rows": [
               {
                 "cells": [
                   "Metalcraft Corrugate",
                   "760 mm",
-                  "8°"
+                  "8° under stated conditions",
+                  "Sheet width is 851 mm. Its guide increases the pitch requirement for longer sheets and states a rainfall assumption."
                 ],
                 "sources": [
                   "mc-corr"
@@ -2042,7 +2206,8 @@
                 "cells": [
                   "Dimond Corrugate",
                   "762 mm",
-                  "8°"
+                  "8° minimum",
+                  "Sheet width is 851 mm. Check its material-specific span and fixing tables."
                 ],
                 "sources": [
                   "dim-corr"
@@ -2050,129 +2215,554 @@
               },
               {
                 "cells": [
-                  "Steel & Tube Custom Orb, Roof Crowd listing",
-                  "762 mm",
-                  "8°"
+                  "Freeman Corrugate",
+                  "Approximately 762 mm",
+                  "8°; separate guidance for end laps",
+                  "Approximate dimensions are not a guarantee that another maker’s sheet will lap correctly."
                 ],
                 "sources": [
+                  "freeman-corr"
+                ]
+              },
+              {
+                "cells": [
+                  "TRS Corrugate",
+                  "762 mm",
+                  "8° minimum",
+                  "The Roofing Store specifies 0.40 and 0.55 mm BMT G550 options and different design conditions."
+                ],
+                "sources": [
+                  "trs-corr"
+                ]
+              },
+              {
+                "cells": [
+                  "Steel & Tube Custom Orb",
+                  "Confirm current drawing; Roof Crowd quotes 762 mm",
+                  "8° minimum",
+                  "Retailer cover information is identified as retailer information, not silently promoted to a checked manufacturer drawing."
+                ],
+                "sources": [
+                  "st-corr",
                   "roofcrowd"
+                ]
+              },
+              {
+                "cells": [
+                  "Roofing Industries True Oak",
+                  "Confirm the selected product drawing",
+                  "Special deeper profile; see the Herne Bay account",
+                  "Not ordinary shallow corrugate. Do not transfer its low-pitch claims to a generic sheet."
+                ],
+                "sources": [
+                  "ri-trueoak",
+                  "herne"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "details",
+            "title": "Why effective cover changes the price and quantity",
+            "blocks": [
+              {
+                "type": "corrugated-cover",
+                "sources": [
+                  "mc-corr",
+                  "dim-corr"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "One metre of a sheet with 760 mm usable cover covers 0.760 m², not one square metre. At 762 mm, it covers 0.762 m². Effective cover already allows for the designed side lap: do not deduct the side lap a second time. Cut lengths, end laps and offcuts still require a separate takeoff.",
+                "sources": []
+              },
+              {
+                "type": "paragraph",
+                "text": "For a simple rectangular plane 10 m wide across the corrugations, 760 mm cover requires 14 full sheets across: round 10 ÷ 0.760 up, not down. That is a geometric example, not a cutting plan or an approved installation detail. A width-only calculation cannot price hips and valleys.",
+                "sources": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "thickness-pitch",
+        "title": "Which thickness and roof pitch do I need?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Treat thickness, profile and pitch as design inputs, not an upgrade menu. NZMRM explains that load performance also depends on steel grade and profile shape. More thickness does not cancel an unsuitable roof pitch, an underspecified fixing pattern or an incompatible coating.",
+            "sources": [
+              "mrm-profiles"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "0.40 versus 0.55 mm: what to ask for",
+            "blocks": [
+              {
+                "type": "table",
+                "caption": "Thickness comparison, not a substitute for structural design",
+                "heads": [
+                  "Question",
+                  "0.40 mm BMT",
+                  "0.55 mm BMT"
+                ],
+                "rows": [
+                  {
+                    "cells": [
+                      "Where does it appear?",
+                      "A standard option in residential corrugate ranges.",
+                      "Also offered for corrugate where the design calls for it."
+                    ],
+                    "sources": [
+                      "trs-corr"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "What changes?",
+                      "More vulnerable to foot-traffic damage according to NZMRM.",
+                      "Greater robustness can be useful where maintenance access or loads justify it."
+                    ],
+                    "sources": [
+                      "mrm-profiles"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "What must still be checked?",
+                      "Span, grade, wind load, fasteners, coating and safe access.",
+                      "The same factors. A thicker sheet is not permission to walk on an unassessed roof."
+                    ],
+                    "sources": [
+                      "mrm-profiles",
+                      "scaffold-safety"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "BMT means base metal thickness, before metallic and paint coatings. A merchant description saying only “0.5 mm gauge” has not necessarily confirmed BMT. Request the product specification rather than treating 0.5 mm, 0.40 BMT and 0.55 BMT as directly interchangeable.",
+                "sources": [
+                  "trs-corr",
+                  "bitz"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Price comparisons should match grade as well as thickness. NZMRM specifically warns against replacing specified 0.55 mm G550 with G300 for straight corrugate. We have not derived a “0.55 premium” by comparing different shops and coatings.",
+                "sources": [
+                  "mrm-profiles"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "details",
+            "title": "Minimum pitch: why 8° is common but not universal",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Ordinary NZ corrugate product pages commonly state 8°. The current NZMRM generic table distinguishes shallow corrugate from deeper profiles and requires runoff checks. Its minimum refers to the installed cladding pitch, not just the angle drawn on a plan. Roof run, rainfall, deflection and junctions still matter.",
+                "sources": [
+                  "mrm-pitch",
+                  "dim-corr"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "For example, Metalcraft describes 8° after deflection for sheets up to 30 m and 9° for longer sheets below 50 m, under its stated rainfall assumption. Freeman separately calls for at least 10° where its corrugate is end-lapped. These conditions are precisely why the shortest headline specification is not enough.",
+                "sources": [
+                  "mc-corr",
+                  "freeman-corr"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "The Herne Bay project attributes a 4° capability to the special True Oak product used there. That is evidence of a profile-specific solution, not permission to use any corrugated sheet at 4°. Have the current product, pitch and water-carrying capacity checked for the actual roof.",
+                "sources": [
+                  "herne"
+                ]
+              },
+              {
+                "type": "action",
+                "title": "Not sure whether you have plan or actual measurements?",
+                "text": "Work out the pitch and area basis before comparing quotes. Use plans or safely obtained measurements; do not climb onto the roof to supply an input.",
+                "label": "Understand roof pitch",
+                "href": "/guides/roof-pitch"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "coatings",
+        "title": "COLORSTEEL, ZINCALUME and coastal roofs",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Corrugated is the shape. The substrate, metallic coating and paint system are separate choices. New Zealand Steel describes a change to ZINCALUME’s coating technology in 2025, so old articles about its composition should not be treated as the current specification.",
+            "sources": [
+              "zincalume"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "Choose a coating for the site, not just a colour",
+            "blocks": [
+              {
+                "type": "table",
+                "caption": "Specification questions for your supplier",
+                "heads": [
+                  "Choice",
+                  "What to check",
+                  "Why the distinction matters"
+                ],
+                "rows": [
+                  {
+                    "cells": [
+                      "Painted branded steel",
+                      "Exact current product and warranty conditions, not just “Colorsteel colour”.",
+                      "A colour description does not identify the substrate or coating system."
+                    ],
+                    "sources": [
+                      "maxam"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Unpainted coated steel",
+                      "Exact metallic coating and the environments approved by its supplier.",
+                      "ZINCALUME is a branded material specification; a listing saying “zinc” may not establish the same product."
+                    ],
+                    "sources": [
+                      "zincalume",
+                      "bunnings-corr-zinc"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Coastal or unusually corrosive site",
+                      "Exposure category, sheltered areas, runoff and incompatible materials.",
+                      "Distance from the sea alone is not enough to promise suitability or a warranty."
+                    ],
+                    "sources": [
+                      "maxam",
+                      "cs-care"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Historic project names",
+                      "Distinguish the product used then from what is supplied now.",
+                      "An old ENDURA or MAXX project is not a current warranty recommendation."
+                    ],
+                    "sources": [
+                      "element-island",
+                      "element-brooklyn"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Request written confirmation of suitability for the address and the selected accessories. The coating decision should include flashings and fasteners, not just the roof sheets. Use the current supplier details for incompatible contacts and runoff.",
+                "sources": [
+                  "maxam"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Comparing the two names on your quotes?",
+            "text": "Read the material comparison before comparing their totals.",
+            "label": "COLORSTEEL vs ZINCALUME",
+            "href": "/guides/colorsteel-vs-zincalume"
+          }
+        ]
+      },
+      {
+        "id": "roof-system",
+        "title": "What should a corrugated roof quote include?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Ask for a roof system and a defined scope, not a sheet rate multiplied by floor area. The following is RoofHub’s comparison checklist. Whether an item is included, excluded, retained or a provisional allowance should be explicit.",
+            "sources": []
+          },
+          {
+            "type": "checklist",
+            "items": [
+              "Named profile, coating, colour, BMT and steel grade, with measured roof-plane areas and a stated waste or cutting allowance.",
+              "Ridges, hips, valleys, barges, aprons and penetration flashings, with lengths or a clearly defined inclusion.",
+              "Compatible fixings, underlay and any required support, plus agreed ventilation details.",
+              "For a reroof: existing material, removal, disposal and the process for suspected hazardous material.",
+              "Access, scaffold or edge protection: assessed scope, hire duration and any additional weekly cost.",
+              "Timber repairs, insulation, guttering, downpipes and skylights: included, excluded or provisional.",
+              "Delivery, lifting, site protection, clean-up, GST, payment stages and product/workmanship warranty terms."
+            ]
+          },
+          {
+            "type": "details",
+            "title": "Underlay, ventilation and flashings are not optional details",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "NZMRM describes absorbent underlay as a way to hold condensation temporarily until it can evaporate. It explicitly cautions against treating underlay as a reliable second roof or using it to compensate for poor weatherproofing. Support and product selection depend on the assembly.",
+                "sources": [
+                  "mrm-underlay"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "For reroofing, the code recommends no more than one compliant layer, apart from laps. An old layer should not automatically be left in place with another laid over it. Excess moisture also needs its cause addressed, including moisture entering the cavity and ventilation, rather than simply adding more underlay.",
+                "sources": [
+                  "mrm-underlay"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "A standard $/m² covering allowance cannot count the actual hips, valleys or roof-to-wall junctions. Measure those lineal items separately in a detailed takeoff. Do not assume that a labour rate for fixing sheets also includes fabrication of every flashing.",
+                "sources": []
+              }
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Already have areas and flashing lengths?",
+            "text": "The detailed tool lets you enter those quantities rather than guess a house-size category. Confirm every included and unpriced component before treating its result as a project budget.",
+            "label": "Use my measurements",
+            "href": "/tools/detailed-roof-estimator"
+          }
+        ]
+      },
+      {
+        "id": "projects",
+        "title": "What do real NZ projects show?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "These seven accounts come from six different publishers. They show decisions made on identifiable projects, not seven independently verified prices. None of the selected accounts supplies both a measured roof area and a final roof price, so we do not manufacture a cost per square metre. Photographs remain on the original publishers’ websites.",
+            "sources": []
+          },
+          {
+            "type": "projects",
+            "ids": [
+              "kennedys-bush",
+              "herne-bay"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "Five more examples: coastal, hillside and replacement work",
+            "blocks": [
+              {
+                "type": "projects",
+                "ids": [
+                  "tauranga-reroof",
+                  "kings-brooklyn",
+                  "island-bay",
+                  "element-brooklyn",
+                  "central-terrace"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "reroofing",
+        "title": "Repair it, replace it, or change the material?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "First establish whether the problem is an isolated detail, deterioration across the sheets, moisture from inside the roof, or work hidden underneath. A photo cannot establish all four. Obtain a roof assessment before comparing a local repair price with a replacement budget.",
+            "sources": []
+          },
+          {
+            "type": "details",
+            "title": "Replacement scope, consent and asbestos",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "MBIE’s guidance includes exempt replacement of old profiled metal roofing with a comparable assembly. It also gives a heavy-tile-to-metal example, while requiring uplift effects to be considered. Substantial structural work, premature durability failure and other exceptions can change the answer. Do not assume either that every reroof needs consent or that none does; confirm the actual scope with the council or designer.",
+                "sources": [
+                  "mbie"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Where older roofing or associated material may contain asbestos, arrange competent identification before disturbing it. Corrugated-looking material can be fibre cement rather than steel. Do not drill, cut, break or pressure-wash suspect material to work out what it is. Testing and specialist removal, where required, belong outside an ordinary metal-removal allowance.",
+                "sources": [
+                  "asbestos-trades"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Scaffolding and edge protection are site-safety arrangements, not just optional price add-ons. WorkSafe’s guidance covers fitness for purpose and safe design. Let a competent provider determine the arrangement for the actual pitch, height, ground conditions and work sequence.",
+                "sources": [
+                  "scaffold-safety"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Replacing an existing roof?",
+            "text": "Compare the covering, removal and access scopes separately before combining them.",
+            "label": "See reroof costs and inclusions",
+            "href": "/pricing/reroof-cost"
+          }
+        ]
+      },
+      {
+        "id": "life-maintenance",
+        "title": "How long will a corrugated roof last?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "There is no single lifespan established by the wave shape. NZMRM distinguishes Building Code durability requirements from useful life. A warranty has its own conditions too. Product choice, the environment, detailing and maintenance all need to be considered before attaching a lifespan to a particular roof.",
+            "sources": [
+              "durability",
+              "cs-care"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "What to check after installation and over time",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "A 15-year durability reference is not an instruction to replace every roof at year 15, nor a promise that all components last equally long. Hidden, difficult-to-replace elements can have different durability obligations. Check the actual assembly and product documents.",
+                "sources": [
+                  "durability"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "COLORSTEEL care guidance emphasises areas that rain does not wash, accumulated debris and ongoing maintenance. Arrange safe gutter and roof care and keep maintenance records; do not assume a coating makes the whole roof maintenance-free. Ask your installer how to check flashings, penetrations and later additions such as solar equipment without damaging the sheets.",
+                "sources": [
+                  "cs-care"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Treat online “40-year” or “50-year” claims as claims to investigate, not evidence that a coating warranty, a weather-tightness obligation and the building’s service life are all the same period.",
+                "sources": []
+              }
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Need the full distinction between service life and warranty?",
+            "text": "Use the lifespan guide to understand the questions to ask before accepting a long-life claim.",
+            "label": "Metal roof lifespan explained",
+            "href": "/guides/how-long-does-a-metal-roof-last"
+          }
+        ]
+      },
+      {
+        "id": "compare-quotes",
+        "title": "How do I compare corrugate with other options?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Compare the whole specification, not a universal ranking",
+            "heads": [
+              "Alternative",
+              "What is different",
+              "Compare on your roof"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Five-rib / trapezoidal",
+                  "Angular ribs and often different pitch and drainage capabilities. Names and cover widths differ by maker.",
+                  "Match coating, grade, BMT and effective cover. Include flashing and cutting labour, not just sheet prices."
+                ],
+                "sources": [
+                  "hi-five",
+                  "trs-corr",
+                  "mrm-pitch"
+                ]
+              },
+              {
+                "cells": [
+                  "Pressed metal tile",
+                  "Smaller overlapping panels with a different support and accessory system.",
+                  "Compare a complete roof-system quote. A historical tile price and a current corrugate sheet price are not a valid cheapest-roof test."
+                ],
+                "sources": [
+                  "tiles-cop",
+                  "arcline"
+                ]
+              },
+              {
+                "cells": [
+                  "Architectural tray / standing seam",
+                  "A different seam, fixing and detailing system rather than simply a wider corrugation.",
+                  "Check substrate/support and installation scope against the selected system."
+                ],
+                "sources": [
+                  "eurotray"
                 ]
               }
             ]
           },
           {
             "type": "paragraph",
-            "text": "These dimensions are product-specific references, not fabrication instructions. Confirm current product information and ordering tolerances with the supplying branch. Effective cover excludes the side-lap portion; overall sheet width does not.",
+            "text": "Send the same project brief to each contractor: the same area basis, product, access assumptions, removal scope and repair allowances. RoofHub’s tools help you organise that brief; the written site-specific quotation is where those assumptions are confirmed.",
             "sources": []
           },
           {
-            "type": "notice",
-            "text": "Not every corrugated product shares the same pitch limit. The Herne Bay True Oak case study illustrates a different profile-specific solution. Do not substitute a general “corrugate” label for the actual specification.",
-            "sources": [
-              "herne"
-            ]
+            "type": "action",
+            "title": "Ready to turn research into a quote request?",
+            "text": "Send your measurements or questions to the RoofHub team. An enquiry is not an accepted price or a guarantee that every location has a matching partner.",
+            "label": "Ask about my corrugated roof",
+            "href": "/contact?topic=Roofing%20quote%20enquiry&page=%2Froofing%2Fcorrugated"
           }
         ]
       },
       {
-        "id": "price",
-        "title": "What does the public material price tell you?",
+        "id": "method",
+        "title": "How was this guide checked?",
         "blocks": [
           {
-            "type": "prices",
-            "ids": [
-              "lr-18"
-            ]
-          },
-          {
             "type": "paragraph",
-            "text": "The supplier describes a gauge but does not establish that this is BMT or the same product as another manufacturer’s offering. Its steel listing and polycarbonate listing also share a price: select the steel line when recording material evidence.",
-            "sources": [
-              "bitz"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "Before converting a price to square metres, obtain the effective cover for that exact sheet. We have not borrowed a manufacturer’s cover dimension for an unrelated retailer’s product.",
+            "text": "We use manufacturer and NZMRM information for technical comparisons, supplier listings for material observations, and attributed contractor accounts for project context. A check establishes what a source states; it does not independently certify the product, inspect the project or verify a transaction.",
             "sources": []
           },
           {
-            "type": "calculator",
-            "mode": "sheet"
-          }
-        ]
-      },
-      {
-        "id": "installed",
-        "title": "How do you get to a supply-and-install cost?",
-        "blocks": [
-          {
-            "type": "checklist",
-            "items": [
-              "Specify sheet material, thickness, coating and lengths.",
-              "Measure actual roof area, not total house floor area.",
-              "Include compatible ridges, hips, valleys, barges and penetration flashings.",
-              "Include underlay and fixing scope without double counting labour.",
-              "Add removal and site access only if not already in the rate."
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "The detailed estimator uses a separate rate card for planning. These public listings do not automatically overwrite it: doing so would mix retail and trade assumptions and could change the meaning of its installed range.",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "id": "examples",
-        "title": "What can we learn from real corrugated reroofs?",
-        "blocks": [
-          {
-            "type": "projects",
-            "ids": [
-              "herne-bay",
-              "tauranga-reroof"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "One example centres on a roofline constraint; the other includes associated upgrades. Neither contains a usable billed cost per square metre. The evidence helps define the work, not manufacture a universal installed rate.",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "id": "alternatives",
-        "title": "When should you compare five-rib or tray?",
-        "blocks": [
-          {
-            "type": "paragraph",
-            "text": "Where the geometry, pitch or desired appearance suggests another profile, compare exact products rather than categories. Some trapezoidal and tray profiles have lower stated starting minima than the corrugated examples above, but suitability still needs product-level assessment.",
-            "sources": [
-              "mc760",
-              "espan"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "For the same roof, ask for the reason behind any installed-price difference. It may come from accessories and detailing rather than the sheet price alone.",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "id": "purchase",
-        "title": "What should be confirmed before ordering?",
-        "blocks": [
-          {
-            "type": "checklist",
-            "items": [
-              "Approved profile for the lowest-pitch section.",
-              "Current coating suited to the actual site.",
-              "Effective cover and order lengths confirmed by the supplier.",
-              "Consistent colours and compatible flashing/fixing specification.",
-              "Delivery, unloading and safe access arrangements.",
-              "Who verifies quantities before sheets are cut to length."
+            "type": "details",
+            "title": "Read the calculation and evidence rules",
+            "blocks": [
+              {
+                "type": "checklist",
+                "items": [
+                  "Each price retains its original unit, tax basis, source and check date. Unknown does not become zero or “included”.",
+                  "Per-sheet prices are divided only by their stated length. Per-m² conversion also requires source-specific effective cover.",
+                  "GST is added at 15% only to a price explicitly excluding GST. Unknown tax basis is not silently converted.",
+                  "Archived seller dimensions and approximate cover are labelled. Conditional conversions do not become certified specifications.",
+                  "Historical installed guides are not inflation-adjusted or blended with material-only listings. No national average or median is inferred.",
+                  "Supplier variants count as listings, not independent suppliers. Sources owned by related organisations are not assumed independent corroboration.",
+                  "Seconds, recycled stock and Musgroves restocking prices are excluded from this new-roof review. Ambiguous current listings remain visible as unresolved checks, not cheap offers.",
+                  "None of this changes the estimator’s numeric rate card. No imagery, measured roof area, price or outcome is invented for the project accounts."
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "For a quoted price R per lineal metre and confirmed cover W millimetres, sheet coverage rate = R ÷ (W ÷ 1,000). For one roof pitch θ, sloping area = horizontal projected roof area ÷ cos θ. The projection must include roof overhangs. These are geometric conversions, not allowances for cuts, end laps or complex roof intersections.",
+                "sources": []
+              },
+              {
+                "type": "paragraph",
+                "text": "A review date is not a supplier’s guarantee that a price is still available. Confirm the selected specification, quantity, delivery and validity when requesting a written quote. Sources below give you a direct route to check or challenge our interpretation.",
+                "sources": []
+              }
             ]
           }
         ]
@@ -2180,12 +2770,57 @@
     ],
     "related": [
       "corrugate-vs-five",
-      "colorsteel-zincalume",
+      "roofing-costs",
+      "cost-200",
       "roof-area",
-      "lifespan"
+      "colorsteel-zincalume",
+      "reroof-cost"
     ],
-    "faqs": [],
-    "editor": "RoofHub editorial team"
+    "faqs": [
+      {
+        "q": "Is corrugated roofing the same as COLORSTEEL?",
+        "a": "No. Corrugated identifies the shape; COLORSTEEL identifies a branded prepainted steel product. A corrugated sheet can use different substrates and coatings. Ask for both the profile and the exact material.",
+        "sources": [
+          "maxam",
+          "mc-corr"
+        ]
+      },
+      {
+        "q": "How much does a 200 m² corrugated roof cost?",
+        "a": "Sheet supply, new-roof installation and a complete reroof are different budgets. Use the size examples above, keeping their source date and inclusions attached. The measured sloping roof area, not automatically the home’s floor area, is the relevant quantity for a surface-area rate.",
+        "sources": []
+      },
+      {
+        "q": "Can I use corrugated roofing at 5°?",
+        "a": "Do not assume an ordinary 8° product is suitable. A deeper, specifically designed corrugated profile may have a different limit. Obtain the selected product’s current pitch and runoff requirements for the actual roof.",
+        "sources": [
+          "mrm-pitch",
+          "herne"
+        ]
+      },
+      {
+        "q": "Is 0.55 mm always better than 0.40 mm?",
+        "a": "It is not a substitute for a correct design. Compare base metal thickness and grade, loading, purlin spacing, fixings and coating. NZMRM identifies circumstances where greater thickness is useful, including greater expected roof traffic.",
+        "sources": [
+          "mrm-profiles"
+        ]
+      },
+      {
+        "q": "Can I order by dividing roof area by sheet width?",
+        "a": "Not reliably. Use effective cover to estimate total lineal length, then measure each roof plane to establish full sheet counts and cut lengths. Areas alone cannot determine hips, valleys, offcuts or a manufacturable order.",
+        "sources": []
+      },
+      {
+        "q": "Are the project examples RoofHub jobs?",
+        "a": "No. They are attributed publisher accounts linked to the original businesses. We have not independently inspected them or verified an invoice. Missing prices and measured areas remain unpublished.",
+        "sources": []
+      },
+      {
+        "q": "Can I get an estimate without giving my contact details?",
+        "a": "Yes. The on-page arithmetic and detailed estimator are available before an enquiry. Entering your details is a separate step when you want to ask about your project.",
+        "sources": []
+      }
+    ]
   },
   "five-rib": {
     "id": "five-rib",

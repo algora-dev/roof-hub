@@ -35,8 +35,9 @@ for (const file of pageFiles) {
 }
 if (existsSync("data/research/articles.json")) {
   const articles = JSON.parse(readFileSync("data/research/articles.json", "utf8"));
-  for (const article of Object.values(articles)) for (const section of article.sections) for (const block of section.blocks) {
-    if (block.type !== "prices") continue;
+  const flatten = blocks => blocks.flatMap(b => b.type === 'details' ? [b,...flatten(b.blocks)] : [b]);
+  for (const article of Object.values(articles)) for (const section of article.sections) for (const block of flatten(section.blocks)) {
+    if (!["prices", "corrugated-prices", "corrugated-examples"].includes(block.type)) continue;
     for (const id of block.ids) { evidenceRefs++; if (statusById.get(id) !== "verified") fail(`${article.path} publishes unverified ${id}`); }
   }
 }

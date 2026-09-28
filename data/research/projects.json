@@ -89,5 +89,70 @@
     "areaM2": null,
     "evidence": "Publisher-reported project",
     "imagePermission": "not-obtained"
+  },
+  "kennedys-bush": {
+    "id": "kennedys-bush",
+    "sourceId": "kennedys-orb",
+    "title": "Different roofs on one new home",
+    "location": "Kennedys Bush, Canterbury",
+    "system": "Custom Orb + membrane",
+    "summary": "Steel & Tube describes Coughlan Homes using Sandstone Grey Custom Orb on pitched areas and a membrane system on flat areas. The account also identifies extra-high-wind detailing.",
+    "lesson": "A single house can need multiple systems. Do not apply a corrugated rate to every surface without checking the roof plan.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "kings-brooklyn": {
+    "id": "kings-brooklyn",
+    "sourceId": "kings-brooklyn",
+    "title": "Working around a hillside site",
+    "location": "Brooklyn, Wellington",
+    "system": "Corrugated steel reroof",
+    "summary": "Kings Roofing reports a June 2025 reroof involving difficult access, scaffolding, removal and new flashings as well as the roof sheets.",
+    "lesson": "The new covering is only part of the cost. Compare access and flashing scope before comparing total prices.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "island-bay": {
+    "id": "island-bay",
+    "sourceId": "element-island",
+    "title": "A coastal specification in context",
+    "location": "Island Bay, Wellington",
+    "system": "0.55 mm MAXX corrugate, historical specification",
+    "summary": "Element Roofing identifies an Ebony corrugated reroof close to the coast in its 2021 account. Redundant rooftop items were removed during the work.",
+    "lesson": "A dated project helps explain exposure-driven specification. Obtain current coating and warranty advice rather than copying an old product name.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "element-brooklyn": {
+    "id": "element-brooklyn",
+    "sourceId": "element-brooklyn",
+    "title": "Corrugate above, another profile below",
+    "location": "Brooklyn, Wellington",
+    "system": "Corrugate + MC760",
+    "summary": "Element Roofing describes replacing an asbestos-cement roof in 2021. Corrugate was used on the upper roof and MC760 on the shallower lower section.",
+    "lesson": "Roof material identification and pitch both affect the scope. An attractive corrugated upper roof does not establish suitability on its low-pitch extension.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "central-terrace": {
+    "id": "central-terrace",
+    "sourceId": "wlr-kelburn",
+    "title": "Coordinating roof and exterior work",
+    "location": "Kelburn, Wellington",
+    "system": "0.55 mm MAXX corrugate, historical specification",
+    "summary": "The Central Terrace account describes corrugated roofing with rainwater work and scaffolding also used for painting.",
+    "lesson": "A shared scaffold package can blur the apparent roof price. Ask how common access costs are allocated between trades.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
   }
 }

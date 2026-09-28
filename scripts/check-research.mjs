@@ -14,6 +14,7 @@ const validDate = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.te
 const validPublicationDate = value => validDate(value) || (typeof value === 'string' && /^\d{4}$/.test(value) && value <= new Date().toISOString().slice(0,4));
 const has = (object, key) => Object.prototype.hasOwnProperty.call(object, key);
 const checkSources = (ids, where) => {assert(Array.isArray(ids), `Missing source list: ${where}`);for(const id of ids ?? [])assert(has(sources,id),`Unknown source ${id}: ${where}`);};
+const flatten = blocks => blocks.flatMap(block => block.type === 'details' ? [block, ...flatten(block.blocks ?? [])] : [block]);
 const paths = new Set(); const titles = new Set(); const used = new Set();
 for(const [id,a] of Object.entries(articles)){
  assert(a.id === id, `Article key mismatch ${id}`);
@@ -29,12 +30,14 @@ for(const [id,a] of Object.entries(articles)){
  for(const section of a.sections){
   assert(/^[a-z][a-z0-9-]*$/.test(section.id),`Invalid anchor ${section.id}`);
   assert(!anchors.has(section.id),`Duplicate anchor ${id}/${section.id}`); anchors.add(section.id);
-  for(const block of section.blocks){
-   assert(['paragraph','notice','table','prices','projects','calculator','checklist'].includes(block.type),`Unknown block ${id}`);
+  for(const block of flatten(section.blocks)){
+   assert(['paragraph','notice','table','prices','projects','calculator','checklist','details','action','corrugated-prices','corrugated-examples','corrugated-budget','corrugated-cover'].includes(block.type),`Unknown block ${id}`);
    if('sources' in block)checkSources(block.sources,id);
    if(block.type==='table')for(const row of block.rows){assert(row.cells.length===block.heads.length,`Table mismatch ${id}`);checkSources(row.sources,id);}
    if(block.type==='projects')for(const pid of block.ids)assert(has(projects,pid),`Unknown project ${pid}`);
-   if(block.type==='prices')for(const oid of block.ids){used.add(oid);const o=byId.get(oid);assert(o?.status==='verified',`Unverified price ${oid}`);assert(validDate(o?.lastCheckedAt) && o.lastCheckedAt <= a.updatedAt,`Missing or inconsistent price review date ${oid}`);}
+   if(['prices','corrugated-prices','corrugated-examples'].includes(block.type))for(const oid of block.ids){used.add(oid);const o=byId.get(oid);assert(o?.status==='verified',`Unverified price ${oid}`);assert(validDate(o?.lastCheckedAt) && o.lastCheckedAt <= a.updatedAt,`Missing or inconsistent price review date ${oid}`);}
+   if(block.type==='details')assert(typeof block.title==='string' && Array.isArray(block.blocks) && block.blocks.length>0,`Empty disclosure ${id}`);
+   if(block.type==='action'){assert(block.href.startsWith('/')&&!block.href.startsWith('//'),`Unsafe action ${id}`);assert(existsSync(`app${block.href.split('?')[0]}/page.tsx`),`Broken action ${block.href}`);}
    if(block.type==='calculator')assert(['area','pitch','sheet','budget'].includes(block.mode),`Bad calculator ${id}`);
   }
  }
@@ -51,6 +54,31 @@ for(const [id,p] of Object.entries(projects)){
  assert(p.price===null && p.areaM2===null,`Unsourced project metric ${id}`);
  assert(p.imagePermission==='not-obtained',`Unexpected image permission ${id}`);
 }
+// Source-specific corrugated review: full conversion prerequisites, no hidden rate injection.
+const market=json('data/research/corrugated.json');
+assert(validDate(market.reviewedAt),'Invalid corrugated review date');
+assert(new Set(market.retail.map(row=>row.observationId)).size===market.retail.length,'Duplicate corrugated listing');
+for(const row of market.retail){
+ const o=byId.get(row.observationId);
+ assert(o?.status==='verified' && o.priceBasis==='material-only',`Invalid material observation ${row.observationId}`);
+ assert(validDate(o?.lastCheckedAt) && o.lastCheckedAt<=market.reviewedAt,`Unreviewed listing ${row.observationId}`);
+ checkSources(row.sourceIds,row.observationId);
+ assert(['confirmed','approximate','archived-seller','unknown'].includes(row.coverBasis),`Bad cover basis ${row.observationId}`);
+ assert(row.coverBasis==='unknown' ? row.coverMm===null : Number.isFinite(row.coverMm)&&row.coverMm>0,`Missing cover ${row.observationId}`);
+ assert(o?.unit==='lm' || (o?.unit==='each' && row.fixedLengthM>0),`Missing sheet length ${row.observationId}`);
+ if(row.observationId!=='lr-18')assert(o?.rangeEligible===false,`New retail rate entered pooled range ${row.observationId}`);
+}
+for(const row of market.held){checkSources(row.sourceIds,row.name);assert(row.reason.length>30,`Missing exclusion reason ${row.name}`);}
+const corrBlocks=articles.corrugated.sections.flatMap(s=>flatten(s.blocks));
+const ledger=corrBlocks.find(b=>b.type==='corrugated-prices');
+assert(JSON.stringify(ledger?.ids)===JSON.stringify(market.retail.map(r=>r.observationId)),'Corrugated ledger incomplete');
+assert(corrBlocks.filter(b=>b.type==='corrugated-budget').length===1,'Missing or duplicate sheet calculator');
+const example=corrBlocks.find(b=>b.type==='corrugated-examples');
+assert(JSON.stringify(example?.ids)===JSON.stringify(['lr-18','corr-rc-maxam-20260928','rr-02']),'Size example provenance mismatch');
+const corrProjects=[...new Set(corrBlocks.filter(b=>b.type==='projects').flatMap(b=>b.ids))];
+assert(corrProjects.length===7,'Corrugated project account count needs reviewing');
+assert(new Set(corrProjects.map(id=>sources[projects[id].sourceId].publisher)).size===6,'Corrugated publisher count needs reviewing');
+assert(!read('components/content/CorrugatedEvidence.tsx').includes('deriveRate'),'Corrugated listings must not be pooled into a market range');
 assert(byId.get('tt-02')?.sourceDate==='2024-02-10','Historical Arcline date regressed');
 assert(byId.get('rr-13')?.unit==='hour','Hourly labour unit regressed');
 assert(byId.get('access-upwell-setup-20260928')?.rangeEligible===false,'Conflicting scaffold rate admitted to derived range');
