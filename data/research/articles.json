@@ -103,6 +103,13 @@
             "sources": [
               "hi-five"
             ]
+          },
+          {
+            "type": "action",
+            "title": "Need the full NZ profile comparison?",
+            "text": "Compare eight profile entries, supplier listings and project accounts with their source conditions.",
+            "label": "Open the five-rib reference guide",
+            "href": "/roofing/five-rib"
           }
         ]
       },
@@ -123,48 +130,13 @@
             "sources": []
           },
           {
-            "type": "table",
-            "caption": "Hypothetical example: same lineal price, different usable cover",
-            "heads": [
-              "Input",
-              "Sheet A",
-              "Sheet B"
-            ],
-            "rows": [
-              {
-                "cells": [
-                  "Price used for the example, not a supplier offer",
-                  "$25/lm",
-                  "$25/lm"
-                ],
-                "sources": []
-              },
-              {
-                "cells": [
-                  "Assumed effective cover",
-                  "0.760 m",
-                  "0.840 m"
-                ],
-                "sources": []
-              },
-              {
-                "cells": [
-                  "Calculated sheet-only cost",
-                  "$32.89/m²",
-                  "$29.76/m²"
-                ],
-                "sources": []
-              }
-            ]
-          },
-          {
             "type": "paragraph",
             "text": "The arithmetic shows why a material ranking should not be forced to match an expected installed ranking. It says nothing about whether these two hypothetical sheets have equivalent coatings, warranties or structural performance.",
             "sources": []
           },
           {
-            "type": "calculator",
-            "mode": "sheet"
+            "type": "sheet-quote-compare",
+            "sources": []
           }
         ]
       },
@@ -172,6 +144,14 @@
         "id": "labour",
         "title": "Where can the installed difference come from?",
         "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Do not assume all five-rib ridges must be hand-notched. NZMRM includes soft-edge treatment for low trapezoidal profiles, and Trimrib has both soft-edge and scribed/notched ridge drawings. Compare the actual specified detail.",
+            "sources": [
+              "mrm-flashings",
+              "ri-trimrib-details"
+            ]
+          },
           {
             "type": "paragraph",
             "text": "Installation differences should be explained in the quote rather than assumed from a profile name. Ask whether angled cuts and profile-matched ridge and hip work change the labour on your particular roof. The useful comparison is the finished scope, not a universal five-rib surcharge.",
@@ -2825,36 +2805,251 @@
   "five-rib": {
     "id": "five-rib",
     "path": "/roofing/five-rib",
-    "title": "Five-rib roofing NZ: names, costs and specifications",
-    "description": "Understand MC760, T-Rib and Hi Five, resolve effective-cover differences and compare five-rib roofing material and installation costs on a consistent scope.",
-    "answer": "Five-rib or trapezoidal roofing uses raised angular ribs with flatter pans between them. NZ manufacturers use different product names, so a quote should name the actual profile. Do not assume that every five-rib sheet has the same cover, pitch requirements or locally available specification.",
+    "title": "Five-rib roofing NZ: prices, profiles and real projects",
+    "description": "Compare eight NZ five-rib profile entries, five supplier listings and seven projects. Check cover, pitch and flashing differences, then calculate a sheet budget.",
+    "answer": "Five-rib roofing is a family of angular, ribbed metal profiles, not one standard sheet. NZ examples include MC760, T-Rib, Plumbdek, Hi Five, Veedek, Trimrib and TRS5. Start with the exact profile and its roof-specific requirements, then compare effective cover, coating, thickness and installed scope. The supplier prices below are for sheets only, not a complete roof.",
     "answerSources": [
       "mc760",
-      "t-rib",
-      "hi-five"
+      "st-plumbdek",
+      "dim-veedek",
+      "ri-trimrib-library",
+      "trs-five"
     ],
-    "category": "Roofing systems",
+    "category": "Roofing reference guide",
     "publishedAt": "2026-09-26",
     "updatedAt": "2026-09-28",
+    "editor": "RoofHub editorial team",
+    "presentation": "reference-guide",
     "sections": [
       {
-        "id": "names",
-        "title": "What are common NZ five-rib names?",
+        "id": "prices",
+        "title": "What does five-rib roofing cost?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The useful starting point is a named product, not one national five-rib rate. This review records five sheet listings from four businesses. Prices have different finishes, thickness descriptions and units. Only one currently supports a GST-inclusive area conversion, and even that cover measurement needs confirming against the seller’s current stock.",
+            "sources": []
+          },
+          {
+            "type": "five-rib-prices",
+            "ids": [
+              "lr-18",
+              "five-bunnings-20260928",
+              "five-mitre-colour-20260928",
+              "five-mitre-unpainted-20260928",
+              "five-renovation-sheet-20260928"
+            ],
+            "sources": [
+              "bitz",
+              "bitz-cover",
+              "bunnings-five",
+              "bunnings-gst",
+              "mitre-five-colour",
+              "mitre-gst",
+              "mitre-five-unpainted",
+              "renovation-five",
+              "roofcrowd-plumbdek",
+              "rc-five-held",
+              "diy-five-archive"
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Looking for the whole roof, not just the sheets?",
+            "text": "Add labour, matched flashings, underlay, removal and access in the detailed estimator. Its planning rate card is separate from these source-specific retail observations.",
+            "label": "Build a project estimate",
+            "href": "/tools/detailed-roof-estimator"
+          },
+          {
+            "type": "details",
+            "title": "Why these listings are not a national supply-and-install range",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "We have not pooled the lowest and highest prices into a “typical” range. A painted sheet and an unpainted sheet are not the same specification. Nor are five listings from four businesses five independent confirmations of one price.",
+                "sources": []
+              },
+              {
+                "type": "paragraph",
+                "text": "Bitz & Piecez appears in both our corrugate and five-rib reviews because its listing offers both profiles. It is still one business and one shared price observation, not two independently collected market samples.",
+                "sources": [
+                  "bitz"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "The new-sheet listing at Renovation Warehouse is included because it explicitly describes new stock. Clearance, used, damaged or seconds stock is not a normal first-quality benchmark. Listing review dates do not guarantee today’s checkout price or availability.",
+                "sources": [
+                  "renovation-five"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "your-budget",
+        "title": "What would the sheets cost for my roof?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Use a quoted price with confirmed effective cover, or inspect the conditional supplier example below. Enter actual sloping area when you have it. A horizontal roof projection needs a pitch adjustment; a total floor-area figure across two storeys is not a roof measurement.",
+            "sources": []
+          },
+          {
+            "type": "five-rib-budget",
+            "sources": [
+              "bitz",
+              "bitz-cover"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "Read the calculation before using the result",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Sheet-only allowance = actual roof area ÷ effective cover in metres × price per lineal metre. For one uniform pitch, actual roof area = horizontal roof projection ÷ cos(pitch). Enter the roof outline including eaves, not an unadjusted internal floor area.",
+                "sources": []
+              },
+              {
+                "type": "paragraph",
+                "text": "The extra-material input is your allowance. Side laps are already reflected in effective cover. End laps, angled cuts and stock-length offcuts still need a plane-by-plane takeoff. A continuous-length allowance is not a count of whole sheets or a purchase order.",
+                "sources": []
+              },
+              {
+                "type": "action",
+                "title": "Need ridges, hips, valleys and more?",
+                "text": "The measurement guide explains which quantities belong in each part of the estimate.",
+                "label": "Understand the measurements",
+                "href": "/guides/roof-area"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sizes",
+        "title": "100, 150, 200 and 250 m²: source-specific examples",
+        "blocks": [
+          {
+            "type": "five-rib-examples",
+            "ids": [
+              "lr-18"
+            ],
+            "sources": [
+              "bitz",
+              "bitz-cover"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These are calculation examples, not completed-job prices. A full roof total also depends on junction lengths, the chosen installation details and project scope. We do not turn a sheet-only subtotal into a whole-roof headline.",
+            "sources": []
+          },
+          {
+            "type": "action",
+            "title": "Working with a 200 m² roof?",
+            "text": "Compare the new-roof and reroof cost layers before requesting like-for-like quotations.",
+            "label": "Read the 200 m² cost guide",
+            "href": "/pricing/200m2-roof-cost"
+          }
+        ]
+      },
+      {
+        "id": "profiles",
+        "title": "Which NZ profiles belong in this comparison?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Compare named profile entries rather than treating every five-rib sheet as interchangeable. The table contains eight entries from six manufacturers; some entries are families with branch-dependent variants. A swage is an additional pan stiffener, not necessarily another major rib.",
+            "sources": [
+              "ri-trimrib-library",
+              "freeman-five"
+            ]
+          },
+          {
+            "type": "five-rib-profiles",
+            "sources": [
+              "mc760",
+              "t-rib",
+              "st-plumbdek",
+              "roofcrowd-plumbdek",
+              "st-plumbdek-machine",
+              "hi-five",
+              "dim-veedek",
+              "ri-trimrib",
+              "ri-trimrib-library",
+              "freeman-five",
+              "trs-five"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "Hi Five needs a width check: Dimond’s page gives 765 mm in its overview and 755 mm in its performance table. We preserve the conflict rather than choosing the smaller price per square metre. Confirm the ordering dimension with the supplying branch.",
+            "sources": [
+              "hi-five"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "Five-rib, six-rib, T-Rib, Trimrib and tray are not interchangeable names",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Freeman lists Five Rib and Six Rib as different profiles. Rib count alone does not identify matching sheet geometry, accessories or an allowable span. If replacing one damaged sheet, provide the actual profile drawing or matching dimensions, not just “five-rib”.",
+                "sources": [
+                  "freeman-five",
+                  "freeman-six"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Trimrib S, TS and V describe different pan-stiffener arrangements in the same family. MC760 and T-Rib are Metalcraft product names. Similar names on a quote do not establish identical manufacturing dimensions.",
+                "sources": [
+                  "ri-trimrib-library",
+                  "mc760",
+                  "t-rib"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Architectural tray and standing-seam systems belong in a separate specification and pricing comparison. Do not confuse a five-rib roof profile with the coating brand or with a concealed-fix system.",
+                "sources": [
+                  "mrm-profiles"
+                ]
+              },
+              {
+                "type": "action",
+                "title": "Looking for the wide-pan architectural finish?",
+                "text": "Compare tray and standing seam separately from conventional ribbed long-run sheets.",
+                "label": "Explore tray and standing seam",
+                "href": "/roofing/tray-standing-seam"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cover",
+        "title": "Why effective cover matters more than advertised width",
         "blocks": [
           {
             "type": "table",
-            "caption": "Manufacturer naming and ordering context",
+            "caption": "Example dimensions from named products, not interchangeable ordering sizes",
             "heads": [
-              "Manufacturer / profile",
-              "Cover reference",
-              "Published pitch reference"
+              "Profile",
+              "Overall sheet width",
+              "Effective cover",
+              "What enters an area calculation"
             ],
             "rows": [
               {
                 "cells": [
                   "Metalcraft MC760",
-                  "760 mm effective cover",
-                  "3° starting minimum"
+                  "810 mm",
+                  "760 mm",
+                  "Divide lineal price by 0.760"
                 ],
                 "sources": [
                   "mc760"
@@ -2863,8 +3058,9 @@
               {
                 "cells": [
                   "Metalcraft T-Rib",
-                  "760 mm effective cover",
-                  "3° starting minimum"
+                  "810 mm",
+                  "760 mm",
+                  "Divide lineal price by 0.760"
                 ],
                 "sources": [
                   "t-rib"
@@ -2872,124 +3068,469 @@
               },
               {
                 "cells": [
-                  "Dimond Hi Five",
-                  "Page conflict: 765 mm overview, 755 mm performance table",
-                  "3° starting minimum"
+                  "Dimond Veedek",
+                  "810 mm",
+                  "755 mm",
+                  "Divide lineal price by 0.755"
                 ],
                 "sources": [
-                  "hi-five"
+                  "dim-veedek"
+                ]
+              },
+              {
+                "cells": [
+                  "Steel & Tube Plumbdek",
+                  "Not confirmed here",
+                  "765 mm",
+                  "Divide lineal price by 0.765"
+                ],
+                "sources": [
+                  "roofcrowd-plumbdek"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "An illustrative $25/lm quote at 760 mm cover gives $32.89 per covered square metre on the same GST basis. Using 810 mm overall width instead would give $30.86, understating that sheet-area cost by about 6.2%. This is arithmetic, not a published offer.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "Two sheets with the same lineal rate can have different covered-area rates. That does not establish equivalent strength, coating, warranty or installed labour. Confirm both specifications before comparing their totals.",
+            "sources": []
+          },
+          {
+            "type": "action",
+            "title": "Already have two material quotes?",
+            "text": "Use the side-by-side worksheet to put confirmed cover and GST on the same basis.",
+            "label": "Compare corrugate and five-rib quotes",
+            "href": "/guides/corrugated-vs-five-rib"
+          }
+        ]
+      },
+      {
+        "id": "pitch",
+        "title": "Can five-rib go on a 3° roof?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Several named products publish a 3° starting minimum, but the number is conditional. Metalcraft specifically warns that its minimum increases with sheet length. A general “low-pitch” description cannot replace the current product manual and project design.",
+            "sources": [
+              "mc760",
+              "t-rib",
+              "trs-five"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "Freeman distinguishes a 3° starting minimum from a 10° condition for its end-lapped Five Rib roofing. That is a product-specific warning against assuming that a low-pitch rating also permits every lap arrangement.",
+            "sources": [
+              "freeman-five"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Roof drainage must account for the actual finished slope. Ponding is not solved simply by selecting a different paint or corrosion-resistant coating. Confirm drainage and support design before ordering.",
+            "sources": [
+              "mrm-ponding"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "Useful information to give the supplier or designer",
+            "blocks": [
+              {
+                "type": "checklist",
+                "items": [
+                  "Pitch of each plane, including the lowest-pitch section.",
+                  "Sheet run length and whether end laps or changes of pitch are proposed.",
+                  "Purlin spacing, design loads and wind exposure, assessed by the appropriate professional.",
+                  "Upstream catchments, gutters, penetrations and roof junctions.",
+                  "Exact profile, metal, BMT and coating proposed."
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "This guide is a comparison aid, not an installation specification or structural approval. Follow the current manufacturer’s design information and the project’s applicable compliance requirements.",
+                "sources": [
+                  "mrm-profiles"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Do you know your roof pitch?",
+            "text": "Convert rise and run, or see how pitch affects a plan-area measurement.",
+            "label": "Use the pitch guide and calculator",
+            "href": "/guides/roof-pitch"
+          }
+        ]
+      },
+      {
+        "id": "thickness",
+        "title": "0.40, 0.55 or 0.5 mm: what are you actually comparing?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "BMT means base metal thickness, before coatings. A retailer’s “0.5 mm gauge” is not automatically a 0.55 mm BMT product. Ask whether the dimension is base metal, total coated thickness or an unspecified listing description.",
+            "sources": [
+              "mrm-bmt"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Plumbdek and TRS5 publish 0.40 and 0.55 mm BMT options. Their availability does not mean the thinner or thicker choice is correct for every support spacing and load. Use the selected product’s design tables and the project specification.",
+            "sources": [
+              "st-plumbdek-machine",
+              "trs-five"
+            ]
+          },
+          {
+            "type": "table",
+            "caption": "Keep these specification decisions separate",
+            "heads": [
+              "Decision",
+              "Ask the quote to identify"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Profile",
+                  "Manufacturer, profile and variant"
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Thickness",
+                  "BMT where specified, rather than an unexplained gauge"
+                ],
+                "sources": [
+                  "mrm-bmt"
+                ]
+              },
+              {
+                "cells": [
+                  "Metal and coating",
+                  "Named substrate/coating, finish and colour"
+                ],
+                "sources": [
+                  "maxam",
+                  "cc-magnaflow"
+                ]
+              },
+              {
+                "cells": [
+                  "Site suitability",
+                  "Exposure, compatibility, warranty conditions and maintenance"
+                ],
+                "sources": [
+                  "cc-warranty",
+                  "cs-care"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "details",
+            "title": "A colour or brand name is not a complete specification",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "COLORSTEEL MAXAM and ColorCote MagnaFlow describe coating/material systems rather than a five-rib shape. Ask for the profile and coating separately. A project using a black low-gloss finish is an appearance example, not proof that every black roof has that specification.",
+                "sources": [
+                  "maxam",
+                  "cc-magnaflow"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Coastal suitability needs a site-specific material decision. Warranty conditions and maintenance requirements are not the same thing as a guaranteed roof lifespan.",
+                "sources": [
+                  "cc-warranty",
+                  "cs-care"
+                ]
+              },
+              {
+                "type": "action",
+                "title": "Choosing between coated and unpainted steel?",
+                "text": "The material comparison separates profile, substrate, paint and maintenance.",
+                "label": "Compare COLORSTEEL and ZINCALUME",
+                "href": "/guides/colorsteel-vs-zincalume"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Does five-rib always need more expensive flashing work?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Not automatically. NZMRM’s flashing guidance allows soft-edge options on low trapezoidal profiles and prefers notched treatment for taller ribs over 30 mm. Roofing Industries’ Trimrib drawing directory includes soft-edge and scribed/notched ridge details. The actual specified detail matters more than a blanket rule that every five-rib roof must be hand-notched.",
+            "sources": [
+              "mrm-flashings",
+              "ri-trimrib-details"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Where a chosen detail needs notching, angled cutting or complex intersections, ask the roofer to identify that work in the quote. The research here does not establish a universal labour percentage. RoofHub’s existing contributor-supplied estimator allowances remain model inputs, not a newly verified market tariff.",
+            "sources": []
+          },
+          {
+            "type": "details",
+            "title": "Compare components without charging the same work twice",
+            "blocks": [
+              {
+                "type": "table",
+                "caption": "A useful component breakdown for like-for-like quotes",
+                "heads": [
+                  "Item",
+                  "Useful quantity / scope"
+                ],
+                "rows": [
+                  {
+                    "cells": [
+                      "Roof covering",
+                      "Actual roof area plus the stated material-order allowance"
+                    ],
+                    "sources": []
+                  },
+                  {
+                    "cells": [
+                      "Ridge and hip",
+                      "Lengths, developed widths and the specified profile-matching detail"
+                    ],
+                    "sources": [
+                      "ri-trimrib-details"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Valley, barge and apron",
+                      "Lengths and dimensions, with special junctions identified"
+                    ],
+                    "sources": []
+                  },
+                  {
+                    "cells": [
+                      "Underlay and fixings",
+                      "What is included in covering labour and what is separate"
+                    ],
+                    "sources": []
+                  },
+                  {
+                    "cells": [
+                      "Penetrations",
+                      "Skylight, chimney and pipe details rather than a generic roof-area multiplier"
+                    ],
+                    "sources": []
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "A flashing labour line and a complexity multiplier should not both charge for exactly the same work. Ask which assumptions are already included before comparing totals.",
+                "sources": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "projects",
+        "title": "Seven published projects, seven useful scope lessons",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "These are accounts by the named businesses, not RoofHub site inspections. Six publishers describe seven projects. None supplies a verified standalone roof price and measured roof area suitable for an installed $/m² comparison. Photographs remain with the original publishers.",
+            "sources": []
+          },
+          {
+            "type": "projects",
+            "ids": [
+              "point-wells",
+              "hibiscus-coast",
+              "splash-hut"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "See four more examples: renovations, development and rural roofing",
+            "blocks": [
+              {
+                "type": "projects",
+                "ids": [
+                  "eastern-beach",
+                  "garnet-road",
+                  "aspect-no-swage",
+                  "canterbury-rural"
                 ]
               }
             ]
           },
           {
             "type": "notice",
-            "text": "Ask Dimond to resolve its Hi Five cover discrepancy before ordering. Picking whichever figure gives the lower price would create false precision. Manufacturing location and delivery availability also need checking.",
+            "text": "Aspect’s project page has a broader budget band that is not identified as the roofing contract. The Canterbury shed gives building dimensions, not a measured roof surface. Neither number is converted into roof-cost evidence.",
             "sources": [
-              "hi-five"
+              "aspect-trimrib",
+              "canterbury-t-rib"
             ]
           }
         ]
       },
       {
-        "id": "labour",
-        "title": "Is the installation more expensive than corrugate?",
+        "id": "reroof",
+        "title": "What changes when this is a reroof?",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "RoofHub’s contributor-supplied labour model allows a small difference, especially in detailed ridge/hip work. That is a model input, not proof of a fixed national surcharge. Your roof’s edge lengths and junctions determine how much of that work exists.",
-            "sources": []
-          },
-          {
-            "type": "paragraph",
-            "text": "For a simple roof with few junctions, a small difference per square metre can mean only a modest total difference. For a cut-up roof, compare the separately priced flashings and cut details. Do not charge the same complexity in both a flashing rate and an unexplained blanket multiplier.",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "id": "material",
-        "title": "Are the sheets themselves necessarily dearer?",
-        "blocks": [
-          {
-            "type": "prices",
-            "ids": [
-              "lr-18"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "The retail observation offers corrugated and five-rib steel at one lineal rate. A meaningful comparison still needs the exact cover and specification. A wider covering sheet can reduce material cost per square metre without proving the entire installed roof is cheaper.",
-            "sources": []
-          },
-          {
-            "type": "calculator",
-            "mode": "sheet"
-          }
-        ]
-      },
-      {
-        "id": "pitch",
-        "title": "Can it be used on a low-pitch roof?",
-        "blocks": [
-          {
-            "type": "paragraph",
-            "text": "The named examples publish 3° starting minima. They are not permission to use any five-rib product on any 3° roof. Check the length-dependent and design conditions in the current manual, including the actual finished pitch.",
+            "text": "Keep the proposed new covering separate from the old roof’s removal and any support or junction changes. Mastercraft’s metal-tile replacement and the Splash Hut’s corrugated replacement illustrate different starting systems, not interchangeable fixed-price packages.",
             "sources": [
-              "mc760",
-              "t-rib"
+              "eastern-beach-trimrib",
+              "splash-hut-plumbdek"
             ]
           },
-          {
-            "type": "paragraph",
-            "text": "If your roof has several slopes, record the lowest pitch and each plane separately. A house described as “low pitch” is not precise enough to order a roof.",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "id": "project",
-        "title": "What does a real five-rib-type reroof involve?",
-        "blocks": [
-          {
-            "type": "projects",
-            "ids": [
-              "hibiscus-coast"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "Trim Rib is the profile named in this contractor’s account. We do not relabel it as a specific competitor’s five-rib product or assume that its two-day duration applies to another geometry.",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "id": "quote",
-        "title": "What makes a comparison quote useful?",
-        "blocks": [
           {
             "type": "checklist",
             "items": [
-              "Full manufacturer/profile name and confirmed cover.",
-              "Metal, coating and thickness basis.",
-              "Roof-plane areas and ridge, hip, valley and barge lengths.",
-              "Underlay, fixings and flashing scope.",
-              "Any labour premium explained as actual work.",
-              "Removal, access and GST shown consistently."
+              "Identify the existing roofing material and whether asbestos assessment is needed.",
+              "Record the existing roof’s actual area and pitch.",
+              "Separate removal/disposal, support repairs and the new covering.",
+              "Clarify scaffold or edge-protection scope, hire duration and access.",
+              "Compare the same flashing, underlay, rainwater and penetration scope.",
+              "State GST, exclusions, provisional sums and the quote’s validity period."
             ]
+          },
+          {
+            "type": "notice",
+            "text": "Older suspect roofing cannot be cleared of asbestos by its product name or appearance. Get appropriate assessment before disturbing it; a positive result requires a separate removal scope rather than an ordinary metal-roof allowance.",
+            "sources": [
+              "asbestos"
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Replacing an existing roof?",
+            "text": "See how new covering, removal and access combine without hiding a reroof allowance inside the sheet price.",
+            "label": "Understand reroof costs",
+            "href": "/pricing/reroof-cost"
+          }
+        ]
+      },
+      {
+        "id": "method",
+        "title": "How this five-rib review was checked",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Source pages were reviewed on 28 September 2026. Where a merchant blocked direct retrieval, its indexed product text was used and that limitation is retained in the source record. The review date is not the price’s effective date or a stock confirmation.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "The profile comparison uses manufacturer pages and manufacturer-authored technical listings. Retail rows preserve original units and tax status. Project stories are counted by account and publisher, not by photographs, units in a development or syndicated copies.",
+            "sources": []
+          },
+          {
+            "type": "details",
+            "title": "What we deliberately leave unresolved",
+            "blocks": [
+              {
+                "type": "checklist",
+                "items": [
+                  "Hi Five: conflicting cover dimensions on the manufacturer page.",
+                  "R&C: a five-rib title with a corrugated product description.",
+                  "Roof Crowd: specification recovered, no unambiguous selected public price.",
+                  "Mitre 10 unpainted listing: malformed width field.",
+                  "Renovation Warehouse: GST basis not established.",
+                  "Bitz: current product price paired with archived seller cover, so area conversion remains conditional.",
+                  "Project examples: unknown roof price and measured area remain unknown."
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Source pages are evidence to inspect, not independent votes. Multiple profiles from one manufacturer and different colours from one retailer do not multiply the number of independent organisations. These observations do not overwrite the estimator rate card.",
+                "sources": []
+              }
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Have a newer price or a corrected specification?",
+            "text": "Send the original source, exact product and scope so the evidence can be checked.",
+            "label": "Report a source or correction",
+            "href": "/contact?topic=Report%20a%20correction&page=%2Froofing%2Ffive-rib"
           }
         ]
       }
     ],
     "related": [
       "corrugate-vs-five",
-      "long-run",
+      "corrugated",
+      "roofing-costs",
       "roof-pitch",
-      "roofing-costs"
+      "tile-to-metal",
+      "roof-area"
     ],
-    "faqs": [],
-    "editor": "RoofHub editorial team"
+    "faqs": [
+      {
+        "q": "Is five-rib more expensive than corrugate?",
+        "a": "Not inevitably. Bitz & Piecez lists both profiles at one lineal rate. Compare confirmed effective cover and equivalent specification first, then compare the labour and accessory scope. That listing is not a national installed-price study.",
+        "sources": [
+          "bitz"
+        ]
+      },
+      {
+        "q": "Is five-rib the same as fibreglass roofing?",
+        "a": "No. This guide covers metal five-rib profiles. A similar rib pattern does not make a translucent sheet and a steel sheet the same product or structural specification.",
+        "sources": [
+          "mc760"
+        ]
+      },
+      {
+        "q": "Is Trimrib the same as T-Rib?",
+        "a": "No. They are names used by different manufacturers. Confirm the exact profile, cover and matching details rather than ordering on a similar-sounding name.",
+        "sources": [
+          "ri-trimrib-library",
+          "t-rib"
+        ]
+      },
+      {
+        "q": "How wide is five-rib roofing?",
+        "a": "There is no single usable width for the family. Examples here include 755 mm Veedek, 760 mm MC760 and 765 mm Plumbdek. Use confirmed effective cover, not total sheet width.",
+        "sources": [
+          "dim-veedek",
+          "mc760",
+          "roofcrowd-plumbdek"
+        ]
+      },
+      {
+        "q": "Do six-rib sheets use the same measurements?",
+        "a": "Do not assume so. Freeman publishes Five Rib and Six Rib separately. Match the actual profile drawing and accessories.",
+        "sources": [
+          "freeman-five",
+          "freeman-six"
+        ]
+      },
+      {
+        "q": "Does a 3° product rating approve my low-pitch roof?",
+        "a": "No. Length, laps, drainage, support and installation conditions still apply. Confirm the selected product against the actual roof design.",
+        "sources": [
+          "t-rib",
+          "freeman-five"
+        ]
+      },
+      {
+        "q": "Can the page give me a complete installed price?",
+        "a": "The worksheet is sheet-only arithmetic. The detailed estimator adds project components using its separate planning assumptions. A supplier or roofer still needs to confirm measurements, specifications and scope for a proper quote.",
+        "sources": []
+      }
+    ]
   },
   "pressed-tile": {
     "id": "pressed-tile",

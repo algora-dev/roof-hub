@@ -31,11 +31,11 @@ for(const [id,a] of Object.entries(articles)){
   assert(/^[a-z][a-z0-9-]*$/.test(section.id),`Invalid anchor ${section.id}`);
   assert(!anchors.has(section.id),`Duplicate anchor ${id}/${section.id}`); anchors.add(section.id);
   for(const block of flatten(section.blocks)){
-   assert(['paragraph','notice','table','prices','projects','calculator','checklist','details','action','corrugated-prices','corrugated-examples','corrugated-budget','corrugated-cover'].includes(block.type),`Unknown block ${id}`);
+   assert(['paragraph','notice','table','prices','projects','calculator','checklist','details','action','corrugated-prices','corrugated-examples','corrugated-budget','corrugated-cover','five-rib-prices','five-rib-profiles','five-rib-examples','five-rib-budget','sheet-quote-compare'].includes(block.type),`Unknown block ${id}`);
    if('sources' in block)checkSources(block.sources,id);
    if(block.type==='table')for(const row of block.rows){assert(row.cells.length===block.heads.length,`Table mismatch ${id}`);checkSources(row.sources,id);}
    if(block.type==='projects')for(const pid of block.ids)assert(has(projects,pid),`Unknown project ${pid}`);
-   if(['prices','corrugated-prices','corrugated-examples'].includes(block.type))for(const oid of block.ids){used.add(oid);const o=byId.get(oid);assert(o?.status==='verified',`Unverified price ${oid}`);assert(validDate(o?.lastCheckedAt) && o.lastCheckedAt <= a.updatedAt,`Missing or inconsistent price review date ${oid}`);}
+   if(['prices','corrugated-prices','corrugated-examples','five-rib-prices','five-rib-examples'].includes(block.type))for(const oid of block.ids){used.add(oid);const o=byId.get(oid);assert(o?.status==='verified',`Unverified price ${oid}`);assert(validDate(o?.lastCheckedAt) && o.lastCheckedAt <= a.updatedAt,`Missing or inconsistent price review date ${oid}`);}
    if(block.type==='details')assert(typeof block.title==='string' && Array.isArray(block.blocks) && block.blocks.length>0,`Empty disclosure ${id}`);
    if(block.type==='action'){assert(block.href.startsWith('/')&&!block.href.startsWith('//'),`Unsafe action ${id}`);assert(existsSync(`app${block.href.split('?')[0]}/page.tsx`),`Broken action ${block.href}`);}
    if(block.type==='calculator')assert(['area','pitch','sheet','budget'].includes(block.mode),`Bad calculator ${id}`);
@@ -79,6 +79,43 @@ const corrProjects=[...new Set(corrBlocks.filter(b=>b.type==='projects').flatMap
 assert(corrProjects.length===7,'Corrugated project account count needs reviewing');
 assert(new Set(corrProjects.map(id=>sources[projects[id].sourceId].publisher)).size===6,'Corrugated publisher count needs reviewing');
 assert(!read('components/content/CorrugatedEvidence.tsx').includes('deriveRate'),'Corrugated listings must not be pooled into a market range');
+
+// Five-rib source audit is parallel to corrugate, not a second price engine.
+const five=json('data/research/five-rib.json');
+assert(validDate(five.reviewedAt),'Invalid five-rib review date');
+assert(new Set(five.retail.map(row=>row.observationId)).size===five.retail.length,'Duplicate five-rib listing');
+assert(new Set(five.retail.map(row=>row.supplierKey)).size===4,'Five-rib supplier count needs reviewing');
+for(const row of five.retail){
+ const o=byId.get(row.observationId);
+ assert(o?.status==='verified' && o.priceBasis==='material-only',`Invalid five-rib observation ${row.observationId}`);
+ assert(o?.lastCheckedAt===five.reviewedAt,`Five-rib listing review mismatch ${row.observationId}`);
+ checkSources(row.sourceIds,row.observationId);
+ assert(row.coverBasis==='unknown' ? row.coverMm===null : Number.isFinite(row.coverMm)&&row.coverMm>0,`Invalid five-rib cover ${row.observationId}`);
+ assert(o?.unit==='lm' || (o?.unit==='each' && row.fixedLengthM>0),`Missing fixed sheet length ${row.observationId}`);
+ if(row.observationId!=='lr-18')assert(o?.rangeEligible===false,`Five-rib listing entered national range ${row.observationId}`);
+}
+for(const row of five.held){checkSources(row.sourceIds,row.name);assert(row.reason.length>30,`Missing five-rib exclusion reason ${row.name}`);}
+for(const row of five.profiles){checkSources(row.sources,row.id);for(const k of ['cover','overall','thickness','pitch','note'])assert(typeof row[k]==='string' && row[k].length>2,`Incomplete profile ${row.id}/${k}`);}
+assert(five.profiles.length===8 && new Set(five.profiles.map(row=>row.manufacturer)).size===6,'Five-rib manufacturer coverage mismatch');
+assert(five.profiles.find(row=>row.id==='hi-five')?.cover.includes('Conflict'),'Hi Five discrepancy was hidden');
+assert(five.profiles.find(row=>row.id==='freeman')?.pitch.includes('10°'),'Freeman end-lap condition was removed');
+const fiveBlocks=articles['five-rib'].sections.flatMap(section=>flatten(section.blocks));
+const fiveLedger=fiveBlocks.find(b=>b.type==='five-rib-prices');
+assert(JSON.stringify(fiveLedger?.ids)===JSON.stringify(five.retail.map(row=>row.observationId)),'Incomplete five-rib ledger');
+const fiveProjects=[...new Set(fiveBlocks.filter(b=>b.type==='projects').flatMap(b=>b.ids))];
+assert(fiveProjects.length===7,'Five-rib project count needs reviewing');
+assert(new Set(fiveProjects.map(id=>sources[projects[id].sourceId].publisher)).size===6,'Five-rib project publisher count needs reviewing');
+assert(fiveBlocks.filter(b=>b.type==='five-rib-budget').length===1,'Missing or duplicate five-rib sheet calculator');
+assert(fiveBlocks.some(b=>b.type==='paragraph' && b.sources.includes('mrm-flashings') && b.text.includes('soft-edge')),'Flashing qualification missing');
+assert(!read('components/content/FiveRibEvidence.tsx').includes('deriveRate'),'Five-rib ledger must not imply a national range');
+assert(byId.get('five-renovation-sheet-20260928')?.gstBasis==='unknown','Unknown Renovation Warehouse GST was assumed');
+assert(five.retail.find(row=>row.observationId==='five-bunnings-20260928')?.coverMm===null,'Nominal Bunnings width became effective cover');
+assert(five.retail.find(row=>row.observationId==='lr-18')?.coverBasis==='archived-seller','Conditional Bitz cover became confirmed');
+assert(articles['corrugate-vs-five'].sections.flatMap(s=>flatten(s.blocks)).filter(b=>b.type==='sheet-quote-compare').length===1,'Quote-comparison worksheet missing or duplicated');
+assert(read('components/content/ResearchArticle.tsx').includes("article.id === 'five-rib'"),'Five-rib shortcut routing missing');
+assert(read('components/content/ResearchArticle.tsx').includes("article.id === 'corrugated'"),'Corrugate shortcut routing regressed');
+assert(read('app/sources/page.tsx').includes('<ResearchLibraryStats/>') && read('app/methodology/page.tsx').includes('<ResearchLibraryStats/>'),'Library signature missing');
+
 assert(byId.get('tt-02')?.sourceDate==='2024-02-10','Historical Arcline date regressed');
 assert(byId.get('rr-13')?.unit==='hour','Hourly labour unit regressed');
 assert(byId.get('access-upwell-setup-20260928')?.rangeEligible===false,'Conflicting scaffold rate admitted to derived range');

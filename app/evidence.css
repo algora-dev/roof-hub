@@ -201,3 +201,37 @@
 .rh-reference-guide .rh-toc-mobile{display:none}
 .rh-reference-guide .rh-toc-desktop>strong{font-size:.95rem}
 @media(max-width:760px){.rh-reference-guide .rh-toc-mobile{display:block}.rh-reference-guide .rh-toc-desktop{display:none}}
+
+/* Five-rib source review and reader-owned quote arithmetic. Scoped to evidence content. */
+.rh-profile-table { min-width: 720px; }
+.rh-profile-table th:first-child { min-width: 155px; }
+.rh-profile-table td { min-width: 140px; }
+.rh-profile-table th small { display: block; margin-top: 6px; font-weight: 400; }
+.rh-quote-mode { display: flex; align-items: flex-start; gap: 20px; justify-content: space-between; margin: 20px 0; }
+.rh-quote-mode p { margin: 0; max-width: 60ch; }
+.rh-quote-mode .button { flex-shrink: 0; }
+.rh-quote-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 24px 0; }
+.rh-quote-inputs { margin: 0; padding: 18px; border: 1px solid var(--neutral-200); border-radius: 12px; min-width: 0; }
+.rh-quote-inputs legend { font-weight: 700; padding: 0 6px; }
+.rh-quote-inputs label { display: flex; flex-direction: column; gap: 7px; margin: 12px 0; font-size: 14px; font-weight: 600; }
+.rh-quote-inputs input, .rh-quote-inputs select { width: 100%; min-height: 46px; padding: 10px 12px; background: var(--white, #fff); color: inherit; border: 1px solid var(--neutral-200); border-radius: 8px; font: inherit; }
+.rh-quote-inputs input:focus-visible, .rh-quote-inputs select:focus-visible { outline: 3px solid var(--sage-500); outline-offset: 2px; }
+.rh-quote-output { border-radius: 12px; padding: 20px; background: var(--sage-50, #f1f4f0); border: 1px solid var(--neutral-200); }
+.rh-quote-output > p:first-child { margin-top: 0; }
+.rh-quote-totals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.rh-quote-totals > div { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.rh-quote-totals strong { font-size: clamp(24px, 4vw, 34px); line-height: 1.2; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.rh-quote-totals small { font-size: 13px; line-height: 1.6; }
+.rh-library-stats { padding: 26px; border: 1px solid var(--neutral-200); border-radius: 16px; background: var(--off-white, #f7f6f2); }
+.rh-library-stats dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin: 20px 0; }
+.rh-library-stats dl div { display: flex; flex-direction: column-reverse; gap: 7px; }
+.rh-library-stats dt { font-size: 14px; line-height: 1.5; }
+.rh-library-stats dd { font-size: clamp(24px, 4vw, 36px); font-weight: 700; margin: 0; line-height: 1.2; }
+.rh-library-stats > p:last-child { font-size: 14px; line-height: 1.7; max-width: 85ch; margin-bottom: 0; }
+@media (max-width: 640px) {
+  .rh-quote-mode { flex-direction: column; gap: 12px; }
+  .rh-quote-columns { grid-template-columns: 1fr; }
+  .rh-quote-totals { gap: 16px; }
+  .rh-library-stats { padding: 20px; }
+  .rh-library-stats dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

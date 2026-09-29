@@ -17,8 +17,8 @@ export type ResearchBlock = ParagraphBlock | TableBlock
   | { type: 'calculator'; mode: 'area' | 'pitch' | 'sheet' | 'budget' }
   | { type: 'details'; title: string; blocks: ResearchBlock[] }
   | { type: 'action'; title: string; text: string; label: string; href: string }
-  | { type: 'corrugated-prices' | 'corrugated-examples'; ids: string[]; sources: string[] }
-  | { type: 'corrugated-budget' | 'corrugated-cover'; sources: string[] };
+  | { type: 'corrugated-prices' | 'corrugated-examples' | 'five-rib-prices' | 'five-rib-examples'; ids: string[]; sources: string[] }
+  | { type: 'corrugated-budget' | 'corrugated-cover' | 'five-rib-budget' | 'five-rib-profiles' | 'sheet-quote-compare'; sources: string[] };
 export type ResearchArticle = {
   id: string; path: string; title: string; description: string; answer: string;
   answerSources: string[]; category: string; publishedAt: string; updatedAt: string;

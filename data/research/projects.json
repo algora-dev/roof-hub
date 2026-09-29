@@ -154,5 +154,83 @@
     "areaM2": null,
     "evidence": "Publisher-reported project",
     "imagePermission": "not-obtained"
+  },
+  "point-wells": {
+    "id": "point-wells",
+    "sourceId": "point-wells-trimrib",
+    "title": "Trimrib within a multi-system home",
+    "location": "Point Wells",
+    "system": "Trimrib 760, 0.55 mm, MAXAM FlaxPod",
+    "summary": "Metalhartt identifies the single-swage Trimrib roof alongside membrane work, rainwater systems and skylight flashings.",
+    "lesson": "A quoted roof area alone does not describe a job with multiple roof systems. Separate each covering and its junctions.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "garnet-road": {
+    "id": "garnet-road",
+    "sourceId": "garnet-trimrib",
+    "title": "One development, different roof and wall systems",
+    "location": "Westmere, Auckland",
+    "system": "Trimrib roof and Spanlok wall cladding",
+    "summary": "Metalhartt describes Trimrib 760 roofing in 0.55 mm MAXAM Titania on the Garnet Road units, with a separate Spanlok cladding specification.",
+    "lesson": "A roof profile and a wall-cladding profile can be on the same project. Do not count their areas or line items as interchangeable roofing quantities.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "eastern-beach": {
+    "id": "eastern-beach",
+    "sourceId": "eastern-beach-trimrib",
+    "title": "Metal tiles replaced during a renovation",
+    "location": "Eastern Beach",
+    "system": "Trimrib replacement roof",
+    "summary": "Mastercraft reports replacing the existing metal-tile roof with Trimrib as part of a broader renovation, including skylight changes.",
+    "lesson": "A change of roof system may sit inside a larger building project. Ask which roof, support and opening changes the roofing quotation actually includes.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "splash-hut": {
+    "id": "splash-hut",
+    "sourceId": "splash-hut-plumbdek",
+    "title": "A Christchurch bach reroofed in Plumbdek",
+    "location": "Christchurch",
+    "system": "Plumbdek in Thunder Grey",
+    "summary": "Steel & Tube describes JD Homes replacing the ageing corrugated roof of the Splash Hut with Plumbdek. The account was published in 2023.",
+    "lesson": "A named replacement profile gives useful design context, but this story does not disclose a roof price, measured area or exact minimum pitch for another property.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "aspect-no-swage": {
+    "id": "aspect-no-swage",
+    "sourceId": "aspect-trimrib",
+    "title": "No-swage Trimrib with detailed roof junctions",
+    "location": "Location not stated",
+    "system": "Trimrib, MagnaFlow low-gloss black",
+    "summary": "Aspect Roofing’s 2025 account identifies the finish and highlights chimney and skylight-backtray work.",
+    "lesson": "A listing-level development budget is not necessarily the roof contract price. Detailed penetrations also make a sheet-only comparison incomplete.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
+  },
+  "canterbury-rural": {
+    "id": "canterbury-rural",
+    "sourceId": "canterbury-t-rib",
+    "title": "T-Rib on a multi-purpose rural building",
+    "location": "Canterbury",
+    "system": "T-Rib roof and wall cladding",
+    "summary": "Wide Span Sheds describes T-Rib on a rural building with published 12 m by 25 m dimensions.",
+    "lesson": "Those dimensions give a building footprint, not a measured sloping roof area. A rural-building example is not automatic approval for a house specification.",
+    "price": null,
+    "areaM2": null,
+    "evidence": "Publisher-reported project",
+    "imagePermission": "not-obtained"
   }
 }

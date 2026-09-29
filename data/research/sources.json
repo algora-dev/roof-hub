@@ -637,5 +637,285 @@
     "reviewedAt": "2026-09-28",
     "publishedAt": null,
     "note": "Multiple projects share this page. Only the named Central Terrace account is used; no price or measured roof area is disclosed."
+  },
+  "st-plumbdek": {
+    "id": "st-plumbdek",
+    "publisher": "Steel & Tube",
+    "title": "Plumbdek profile",
+    "url": "https://steelandtube.co.nz/specifiers/plumbdek",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Manufacturer profile identity and published 3° starting pitch. Confirm the current specification for the supplying branch."
+  },
+  "roofcrowd-plumbdek": {
+    "id": "roofcrowd-plumbdek",
+    "publisher": "Roof Crowd",
+    "title": "Plumbdek product specification",
+    "url": "https://roofcrowd.co.nz/product/plumbdek/",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "765 mm cover and 0.40/0.55 mm BMT references. No unambiguous public price was recovered in this review; specification evidence only."
+  },
+  "st-plumbdek-machine": {
+    "id": "st-plumbdek-machine",
+    "publisher": "Steel & Tube",
+    "title": "Plumbdek production in Christchurch",
+    "url": "https://promos.steelandtube.co.nz/new-plumbdek-machine-for-christchurch",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": "2023-04-06",
+    "note": "Dated manufacturer account confirms the Christchurch production investment and 0.40/0.55 mm steel options. It is not a current stock guarantee."
+  },
+  "dim-veedek": {
+    "id": "dim-veedek",
+    "publisher": "Dimond Roofing",
+    "title": "Veedek roofing profile",
+    "url": "https://www.dimond.co.nz/products/veedek",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Manufacturer lists 755 mm cover, 810 mm sheet width and a 3° starting minimum. The performance table supports 0.40 and 0.55 mm; an N/A column is not treated as an available thickness."
+  },
+  "ri-trimrib": {
+    "id": "ri-trimrib",
+    "publisher": "Roofing Industries",
+    "title": "Trimrib product family",
+    "url": "https://www.roof.co.nz/product/trimrib",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Use the named Trimrib family and local variants. Unrelated Eurostyle boilerplate on the page is not evidence that Trimrib is a concealed-fix tray."
+  },
+  "ri-trimrib-library": {
+    "id": "ri-trimrib-library",
+    "publisher": "Roofing Industries via EBOSS",
+    "title": "Trimrib S, TS and V specification listing",
+    "url": "https://www.eboss.co.nz/library/roofing-industries/roofing-industries-trimrib",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Manufacturer-authored library entry describes the swage variants and a 3° starting minimum. It does not justify assigning one universal cover to every Trimrib variant."
+  },
+  "ri-trimrib-details": {
+    "id": "ri-trimrib-details",
+    "publisher": "Roofing Industries via EBOSS",
+    "title": "Trimrib CAD and flashing details directory",
+    "url": "https://www.eboss.co.nz/library/roofing-industries/roofing-industries-trimrib/cad",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "The directory lists both soft-edge and scribed/notched ridge details. Listing a detail is not approval for every roof; use the matching current drawing and specification."
+  },
+  "freeman-five": {
+    "id": "freeman-five",
+    "publisher": "Freeman Roofing",
+    "title": "Five Rib roofing profile",
+    "url": "https://www.freemanroofing.co.nz/roofing-profiles/five-rib-roofing/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "The stated family varies from 754 to 765 mm cover and 25 to 29 mm rib height. Its own guidance distinguishes the 3° starting minimum from a 10° end-lapped condition."
+  },
+  "freeman-six": {
+    "id": "freeman-six",
+    "publisher": "Freeman Roofing",
+    "title": "Six Rib roofing profile",
+    "url": "https://www.freemanroofing.co.nz/roofing-profiles/six-rib-roofing/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Six Rib is a separate product geometry. Do not substitute five-rib order dimensions or accessories based only on visual similarity."
+  },
+  "trs-five": {
+    "id": "trs-five",
+    "publisher": "The Roofing Store",
+    "title": "TRS5 longrun profile",
+    "url": "https://www.theroofingstore.co.nz/steel-roofing-cladding-products/longrun-profile/trs5/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Manufacturer lists a maximum effective cover of 760 mm, 0.40/0.55 mm BMT and a 3° starting minimum. Roof-specific load and drainage conditions remain relevant."
+  },
+  "mrm-flashings": {
+    "id": "mrm-flashings",
+    "publisher": "NZ Metal Roofing Manufacturers",
+    "title": "Code of Practice: flashings",
+    "url": "https://www.metalroofing.org.nz/copfull/flashings",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Sections 8.8.1 and 8.8.2 distinguish soft-edge and notched options. Low trapezoidal profiles are not universally required to use notched flashing. Read the current online Code of Practice; a web summary is not installation design."
+  },
+  "mrm-bmt": {
+    "id": "mrm-bmt",
+    "publisher": "NZ Metal Roofing Manufacturers",
+    "title": "Base metal thickness definition",
+    "url": "https://www.metalroofing.org.nz/node/3996",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "BMT refers to metal thickness before coatings. An unexplained merchant gauge is not automatically a BMT specification."
+  },
+  "mrm-ponding": {
+    "id": "mrm-ponding",
+    "publisher": "NZ Metal Roofing Manufacturers",
+    "title": "Code of Practice: ponding",
+    "url": "https://www.metalroofing.org.nz/cop/durability/ponding",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Drainage and ponding context. A profile label or coating does not replace roof-specific pitch and drainage design."
+  },
+  "bunnings-five": {
+    "id": "bunnings-five",
+    "publisher": "Bunnings New Zealand",
+    "title": "Armorsteel 830 mm Big 5, 0.4 mm, Thunder Grey",
+    "url": "https://www.bunnings.co.nz/armorsteel-830mm-big-5-0-4mm-thunder-grey-steel-roofing_p0084424",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Indexed product text lists $30.35/lm. 830 mm is not accepted as confirmed effective cover. Colour, order length, local availability and current checkout price need confirmation."
+  },
+  "bunnings-gst": {
+    "id": "bunnings-gst",
+    "publisher": "Bunnings New Zealand",
+    "title": "Online and special-order terms",
+    "url": "https://www.bunnings.co.nz/terms-conditions/online-and-special-order",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "NZ online and special-order terms establish the GST-inclusive price convention. Terms are evidence of tax basis, not another independent price observation."
+  },
+  "mitre-five-colour": {
+    "id": "mitre-five-colour",
+    "publisher": "Mitre 10",
+    "title": "Roofing Industries roofing iron, colour",
+    "url": "https://www.mitre10.co.nz/shop/roofing-industries-roofing-iron-colour/p/166985",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Indexed product listing gives $31.28/lm and a 0.40 mm Trimrib option. Confirm the actual selected variant and branch; no effective cover is assigned from this listing."
+  },
+  "mitre-five-unpainted": {
+    "id": "mitre-five-unpainted",
+    "publisher": "Mitre 10",
+    "title": "Roofing Industries roofing iron, unpainted",
+    "url": "https://www.mitre10.co.nz/shop/roofing-industries-roofing-iron-unpainted-silver/grey-tone/p/166983",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Indexed product listing gives $23.38/lm. A malformed width field is excluded, not silently corrected into an effective-cover measurement."
+  },
+  "renovation-five": {
+    "id": "renovation-five",
+    "publisher": "Renovation Warehouse",
+    "title": "New 5 Rib zinc roofing, 3.6 m",
+    "url": "https://renovationwarehouse.co.nz/products/iron-new-5-rib-zinc-3-6m",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Indexed listing: $73 per 3.6 m sheet, new Armorsteel Zenium, 0.4 BMT, 760 mm coverage. GST basis was not established. This is new stock as described, not a recycled-sheet benchmark."
+  },
+  "rc-five-held": {
+    "id": "rc-five-held",
+    "publisher": "Residential & Commercial Roofing",
+    "title": "5 Rib MAXAM 0.55 listing with conflicting description",
+    "url": "https://residentialroofing.co.nz/product/5-rib-sheets-colorsteel-maxam-0-55-gauge-coloursteel-gull-grey/",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Held out of the five-rib price ledger: the title says 5 Rib but the descriptive text says corrugate. Do not republish its price as a verified five-rib offer until the seller resolves the profile."
+  },
+  "diy-five-archive": {
+    "id": "diy-five-archive",
+    "publisher": "DIY Supply via Trade Me",
+    "title": "Closed new five-rib sheet listing",
+    "url": "https://www.trademe.co.nz/a/marketplace/building-renovation/building-supplies/roofing/roofing-iron/listing/6121820750",
+    "kind": "supplier",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Closed seller listing, not a current offer. Excluded from the current price ledger; the original listing can provide historical context only."
+  },
+  "cc-magnaflow": {
+    "id": "cc-magnaflow",
+    "publisher": "ColorCote",
+    "title": "MagnaFlow coating system",
+    "url": "https://www.colorcote.co.nz/product-range/magnaflow/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Manufacturer description of the coating system. The finish name does not establish profile dimensions or approve a site."
+  },
+  "cc-warranty": {
+    "id": "cc-warranty",
+    "publisher": "ColorCote",
+    "title": "Warranty assessment and conditions",
+    "url": "https://www.colorcote.co.nz/warranties/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Location, environment and maintenance conditions matter. No universal distance-from-the-sea rule or guaranteed service life is inferred."
+  },
+  "point-wells-trimrib": {
+    "id": "point-wells-trimrib",
+    "publisher": "Metalhartt",
+    "title": "Point Wells residential roofing project",
+    "url": "https://www.metalhartt.nz/residential/point-wells",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Contractor-reported project combines a named Trimrib roof with other roof systems and detailed skylight work. No standalone roof price or measured roof area established."
+  },
+  "garnet-trimrib": {
+    "id": "garnet-trimrib",
+    "publisher": "Metalhartt",
+    "title": "Garnet Road residential project",
+    "url": "https://www.metalhartt.nz/residential/garnet-road",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "The account identifies Trimrib roofing and a separate Spanlok wall-cladding system. Roof and cladding dimensions must not be merged into one roof-area allowance."
+  },
+  "eastern-beach-trimrib": {
+    "id": "eastern-beach-trimrib",
+    "publisher": "Mastercraft Construction",
+    "title": "Eastern Beach renovation",
+    "url": "https://mastercraftconstruction.co.nz/eastern-beach/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Builder-reported renovation includes replacing metal tiles with Trimrib and updating skylights. The wider renovation is not a priced roofing case study."
+  },
+  "splash-hut-plumbdek": {
+    "id": "splash-hut-plumbdek",
+    "publisher": "Steel & Tube via EBOSS",
+    "title": "Plumbdek at the Splash Hut, Christchurch",
+    "url": "https://www.eboss.co.nz/ebossnow/steel-and-tube-plumbdek-low-rib-roofing-sustainable",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": "2023",
+    "note": "Manufacturer-authored April 2023 project account. The same story syndicated elsewhere is one account, not another independent project. Roof price and measured area not disclosed."
+  },
+  "aspect-trimrib": {
+    "id": "aspect-trimrib",
+    "publisher": "Aspect Roofing via ArchiPro",
+    "title": "Trimrib No-Swage project",
+    "url": "https://archipro.co.nz/project/trimrib-no-aspect-roofing",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": "2025",
+    "note": "Contractor-authored project listing. Its $1m-$2m budget field is not identified as the roofing contract price and is not used as roof-cost evidence. Project location is not inferred from the contractor address."
+  },
+  "canterbury-t-rib": {
+    "id": "canterbury-t-rib",
+    "publisher": "Wide Span Sheds",
+    "title": "The multi-purpose rural solution, Canterbury",
+    "url": "https://sheds.co.nz/our-projects/the-multi-purpose-rural-solution-canterbury/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-28",
+    "publishedAt": null,
+    "note": "Supplier-reported T-Rib roof and cladding project. 12 m by 25 m building dimensions are not a measured roof-surface area. A malformed thickness unit is not used in RoofHub specifications."
   }
 }

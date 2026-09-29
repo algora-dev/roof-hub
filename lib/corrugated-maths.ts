@@ -61,3 +61,19 @@ export function sheetCount(widthMetres: number, coverMm: number): number {
   if (!Number.isSafeInteger(count)) throw new Error('Sheet count exceeds the supported numeric range.');
   return count;
 }
+
+export type SheetQuote = Pick<SheetBudgetInput, 'pricePerLm' | 'gstBasis' | 'coverMm' | 'minimumOrderLm'>;
+export type SheetComparisonInput = Pick<SheetBudgetInput, 'area' | 'basis' | 'pitchDegrees' | 'extraPercent'> & {
+  quoteA: SheetQuote; quoteB: SheetQuote;
+};
+/** Compare only confirmed sheet inputs. These totals never rank complete roof systems. */
+export function compareSheetQuotes(input: SheetComparisonInput) {
+  const common = { area: input.area, basis: input.basis, pitchDegrees: input.pitchDegrees, extraPercent: input.extraPercent };
+  const a = sheetBudget({ ...common, ...input.quoteA });
+  const b = sheetBudget({ ...common, ...input.quoteB });
+  const deltaInclGst = b.totalInclGst - a.totalInclGst;
+  const aPerCoveredM2 = a.inclGstPerLm / (input.quoteA.coverMm / 1000);
+  const bPerCoveredM2 = b.inclGstPerLm / (input.quoteB.coverMm / 1000);
+  if (![deltaInclGst, aPerCoveredM2, bPerCoveredM2].every(Number.isFinite)) throw new Error('Comparison exceeds the supported numeric range.');
+  return { a, b, deltaInclGst, aPerCoveredM2, bPerCoveredM2 };
+}

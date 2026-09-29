@@ -1,3 +1,4 @@
+import { ResearchLibraryStats } from '@/components/content/ResearchLibraryStats';
 import Link from "next/link";
 import { ArrowRight, Check } from "@/components/Icons";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -18,6 +19,8 @@ const pipeline=[
 ];
 export default function MethodologyPage(){return <>
 <section className="page-intro page-intro--sage"><div className="container page-intro__grid"><div><p className="eyebrow">Methodology</p><h1>How RoofHub roofing data is built.</h1></div><div className="page-intro__aside"><p>RoofHub publishes research and planning estimates, not binding quotes. A number is useful only when you know where it came from and what it includes.</p></div></div></section>
+<section className="section section--white"><div className="container"><ResearchLibraryStats/></div></section>
+
 <section className="section section--white"><div className="container"><div className="three-col"><article className="info-card"><span>01</span><h3>Price bases stay separate</h3><p>Material-only, labour, supply/install and complete reroof figures are never silently blended.</p></article><article className="info-card"><span>02</span><h3>Unknown GST stays unknown</h3><p>An individual source can still be shown with “GST not stated”, but it does not feed a normalised GST-specific RoofHub range.</p></article><article className="info-card"><span>03</span><h3>Estimate ≠ quote</h3><p>Tools support planning. Site conditions and product details still need a contractor to confirm the final scope.</p></article></div></div></section>
 <section className="section"><div className="container"><SectionHeading eyebrow="Evidence policy" title="Three evidence tiers, chosen for the claim being made." copy={<p>Ten pages repeating one claim are not ten independent sources. Technical claims favour primary evidence; real-world pricing benefits from market evidence.</p>}/><div className="principle-grid">{evidenceTiers.map(t=><article key={t.rank}><span>{t.rank}</span><h3>{t.title}</h3><p>{t.copy}</p></article>)}</div></div></section>
 <section className="section section--sage"><div className="container feature-split"><div className="feature-copy"><p className="eyebrow">Provenance</p><h2>What RoofHub keeps for important observations.</h2><p>Enough context is stored to re-check a number later and to understand why two apparently similar prices should not be averaged together.</p></div><ul className="check-list check-list--large">{provenance.map(x=><li key={x}><Check/> {x}</li>)}</ul></div></section>

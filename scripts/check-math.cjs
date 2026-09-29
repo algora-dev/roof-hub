@@ -88,4 +88,32 @@ test('sheet count rounds up',()=>assert.equal(corr.sheetCount(10,760),14));
 test('exact sheet count',()=>assert.equal(corr.sheetCount(7.6,760),10));
 test('invalid sheet count rejects',()=>assert.throws(()=>corr.sheetCount(-10,760)));
 test('unsafe sheet count rejects',()=>assert.throws(()=>corr.sheetCount(Number.MAX_VALUE,1)));
+
+// Same mathematical primitives, separate five-rib listing metadata.
+const fiveMeta=JSON.parse(fs.readFileSync('data/research/five-rib.json','utf8'));
+const fiveListed=id=>corr.normaliseListing(obs.find(row=>row.id===id),fiveMeta.retail.find(row=>row.observationId===id));
+test('five-rib Bitz cover does not change corrugate cover',()=>{near(fiveListed('lr-18').inclGstPerM2,17.49/.840);near(listed('lr-18').inclGstPerM2,17.49/.780);});
+test('five-rib archived cover remains conditional',()=>assert.equal(fiveListed('lr-18').conditionalCover,true));
+test('Bunnings GST known but five-rib cover unknown',()=>{near(fiveListed('five-bunnings-20260928').inclGstPerLm,30.35);assert.equal(fiveListed('five-bunnings-20260928').inclGstPerM2,null);});
+test('Mitre 10 painted five-rib cover unknown',()=>assert.equal(fiveListed('five-mitre-colour-20260928').inclGstPerM2,null));
+test('Mitre 10 malformed unpainted width excluded',()=>assert.equal(fiveListed('five-mitre-unpainted-20260928').inclGstPerM2,null));
+test('Renovation sheet price divided by 3.6 once',()=>near(fiveListed('five-renovation-sheet-20260928').originalPerLm,73/3.6));
+test('Renovation unknown GST blocks inclusive conversions',()=>{const c=fiveListed('five-renovation-sheet-20260928');assert.equal(c.inclGstPerLm,null);assert.equal(c.inclGstPerM2,null);});
+const qa={pricePerLm:25,gstBasis:'incl',coverMm:760,minimumOrderLm:0};
+const qb={...qa,coverMm:840};
+const compare={area:200,basis:'actual',pitchDegrees:25,extraPercent:0,quoteA:qa,quoteB:qb};
+test('comparison equivalent basis totals',()=>{const c=corr.compareSheetQuotes(compare);near(c.a.totalInclGst,200*25/.760);near(c.b.totalInclGst,200*25/.840);near(c.deltaInclGst,200*25/.840-200*25/.760);});
+test('comparison exact rates before material allowance',()=>{const c=corr.compareSheetQuotes({...compare,extraPercent:10});near(c.aPerCoveredM2,25/.760);near(c.a.totalInclGst,200*25/.760*1.1);});
+test('comparison actual area not pitch adjusted',()=>near(corr.compareSheetQuotes({...compare,pitchDegrees:NaN}).a.surfaceM2,200));
+test('comparison plan area converted once for each quote',()=>{const c=corr.compareSheetQuotes({...compare,basis:'plan'});near(c.a.surfaceM2,maths.roofSurfaceArea(200,25,'plan'));near(c.a.surfaceM2,c.b.surfaceM2);});
+test('equal quotes have zero difference',()=>near(corr.compareSheetQuotes({...compare,quoteB:qa}).deltaInclGst,0));
+test('GST inclusive/exclusive equivalent prices compare equally',()=>near(corr.compareSheetQuotes({...compare,quoteA:{...qa,pricePerLm:20,gstBasis:'excl'},quoteB:{...qa,pricePerLm:23,gstBasis:'incl'}}).deltaInclGst,0));
+test('minimum order applies independently',()=>{const c=corr.compareSheetQuotes({...compare,quoteA:{...qa,minimumOrderLm:500}});assert.equal(c.a.minimumApplies,true);assert.equal(c.b.minimumApplies,false);near(c.a.totalInclGst,12500);});
+for(const which of ['quoteA','quoteB']){
+ for(const [field,value] of [['gstBasis','unknown'],['pricePerLm',0],['pricePerLm',NaN],['coverMm',0],['coverMm',-760],['minimumOrderLm',-1]])test(`comparison rejects ${which} ${field} ${value}`,()=>assert.throws(()=>corr.compareSheetQuotes({...compare,[which]:{...qa,[field]:value}})));
+}
+test('comparison rejects bad pitch',()=>assert.throws(()=>corr.compareSheetQuotes({...compare,basis:'plan',pitchDegrees:90})));
+test('comparison rejects excessive allowance',()=>assert.throws(()=>corr.compareSheetQuotes({...compare,extraPercent:101})));
+test('comparison rejects overflow in unit-area rate',()=>assert.throws(()=>corr.compareSheetQuotes({...compare,area:1e-300,quoteA:{...qa,pricePerLm:1e30,coverMm:1e-300}})));
+
 console.log(`${cases} math and rate-integrity cases passed.`);

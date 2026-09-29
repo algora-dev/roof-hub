@@ -9,6 +9,9 @@ import type { ResearchBlock, ResearchSource } from '@/data/research/types';
 import { QuantityCalculator } from './QuantityCalculator';
 import { CorrugatedBudget } from './CorrugatedBudget';
 import { CorrugatedGuideStart, CorrugatedPriceLedger, CorrugatedSizeExamples, CorrugatedCoverDiagram } from './CorrugatedEvidence';
+import { FiveRibGuideStart, FiveRibPriceLedger, FiveRibProfiles, FiveRibSizeExamples } from './FiveRibEvidence';
+import { fiveRibBudgetPresets } from '@/data/research/five-rib';
+import { SheetQuoteComparison } from './SheetQuoteComparison';
 import { corrugatedBudgetPresets } from '@/data/research/corrugated';
 
 function reviewDate(iso: string): string {
@@ -39,6 +42,11 @@ function ContentBlock({ block }: { block: ResearchBlock }) {
     case 'corrugated-examples': return <CorrugatedSizeExamples/>;
     case 'corrugated-budget': return <CorrugatedBudget presets={corrugatedBudgetPresets()}/>;
     case 'corrugated-cover': return <CorrugatedCoverDiagram/>;
+    case 'five-rib-prices': return <FiveRibPriceLedger ids={block.ids}/>;
+    case 'five-rib-profiles': return <FiveRibProfiles/>;
+    case 'five-rib-examples': return <FiveRibSizeExamples/>;
+    case 'five-rib-budget': return <CorrugatedBudget presets={fiveRibBudgetPresets()} systemLabel="five-rib"/>;
+    case 'sheet-quote-compare': return <SheetQuoteComparison/>;
     case 'paragraph': return <p>{block.text}<InlineSources ids={block.sources} /></p>;
     case 'notice': return <aside className="rh-article-note"><p>{block.text}<InlineSources ids={block.sources} /></p></aside>;
     case 'checklist': return <ul className="rh-article-checklist">{block.items.map(item => <li key={item}>{item}</li>)}</ul>;
@@ -90,7 +98,8 @@ export function ResearchArticlePage({ articleId }: { articleId: string }) {
       eyebrow={article.category} title={article.title}
       answer={<p>{article.answer}<InlineSources ids={article.answerSources} /></p>}
       facts={[{ label: 'Applies to', value: 'New Zealand' }, { label: 'Reviewed', value: reviewDate(article.updatedAt) }, { label: 'Evidence', value: `${sources.length} linked source pages` }, { label: 'Price convention', value: 'NZD; GST shown by source' }]} />
-    {referenceGuide && <CorrugatedGuideStart/>}
+    {referenceGuide && article.id === 'corrugated' && <CorrugatedGuideStart/>}
+    {referenceGuide && article.id === 'five-rib' && <FiveRibGuideStart/>}
     <div className="container rh-reading-layout">
       <aside className="rh-toc">{referenceGuide ? <><div className="rh-toc-desktop"><strong>On this page</strong>{contents}</div><details className="rh-toc-mobile"><summary>Jump to a section</summary>{contents}</details></> : <details open><summary>On this page</summary>{contents}</details>}<p>Read the evidence first. Use a tool when you have measurements.</p><Link className="text-link" href="/tools/detailed-roof-estimator">Open detailed estimator →</Link></aside>
       <article className="rh-reading-body" aria-label={article.title}>

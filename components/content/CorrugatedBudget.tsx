@@ -10,7 +10,7 @@ const money = (n: number) => n.toLocaleString('en-NZ', { style: 'currency', curr
 const decimal = (n: number) => n.toLocaleString('en-NZ', { maximumFractionDigits: 2 });
 
 /** Arithmetic from a selected observation or the reader's quote, never a market-rate model. */
-export function CorrugatedBudget({ presets }: { presets: SheetBudgetPreset[] }) {
+export function CorrugatedBudget({ presets, systemLabel = 'corrugated' }: { presets: SheetBudgetPreset[]; systemLabel?: string }) {
   const uid = useId();
   const [selected, setSelected] = useState(presets[0]?.id ?? 'custom');
   const [area, setArea] = useState('200');
@@ -46,7 +46,7 @@ export function CorrugatedBudget({ presets }: { presets: SheetBudgetPreset[] }) 
     if (!result) return;
     try {
       const text = [
-        'RoofHub corrugated sheet calculation', 'Planning arithmetic only. Not an installed quote.',
+        `RoofHub ${systemLabel} sheet calculation`, 'Planning arithmetic only. Not an installed quote.',
         `Source: ${preset?.label ?? 'Reader-provided quote'}`, ...(preset ? [`Source page: ${preset.sourceUrl}`, `Source checked: ${preset.reviewedAt}`, `Source note: ${preset.note}`] : []),
         `Input area: ${area} m² (${basis})`, ...(basis === 'plan' ? [`Pitch: ${pitch} degrees`] : []),
         `Input rate: NZD ${preset?.pricePerLm ?? customPrice}/lm, ${preset?.gstBasis ?? customGst} GST`,

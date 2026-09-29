@@ -1,0 +1,220 @@
+{
+  "reviewedAt": "2026-09-28",
+  "methodologyVersion": "five-rib-source-specific-1",
+  "profiles": [
+    {
+      "id": "mc760",
+      "manufacturer": "Metalcraft",
+      "profile": "MC760",
+      "cover": "760 mm",
+      "overall": "810 mm",
+      "thickness": "Confirm current load/span specification",
+      "pitch": "3° starting minimum; increases with sheet length",
+      "note": "Five-rib profile. Manufacturing branch and delivery availability are not the same thing.",
+      "sources": [
+        "mc760"
+      ]
+    },
+    {
+      "id": "t-rib",
+      "manufacturer": "Metalcraft",
+      "profile": "T-Rib",
+      "cover": "760 mm",
+      "overall": "810 mm",
+      "thickness": "Confirm current load/span specification",
+      "pitch": "3° starting minimum; length conditions apply",
+      "note": "Separate product name and branch network from MC760; specify the actual profile supplied.",
+      "sources": [
+        "t-rib"
+      ]
+    },
+    {
+      "id": "plumbdek",
+      "manufacturer": "Steel & Tube",
+      "profile": "Plumbdek",
+      "cover": "765 mm",
+      "overall": "Not confirmed in this review",
+      "thickness": "0.40 / 0.55 mm BMT",
+      "pitch": "3° starting minimum",
+      "note": "Source-specific Plumbdek cover is not a generic five-rib dimension. Christchurch manufacture is documented in a dated 2023 account.",
+      "sources": [
+        "st-plumbdek",
+        "roofcrowd-plumbdek",
+        "st-plumbdek-machine"
+      ]
+    },
+    {
+      "id": "hi-five",
+      "manufacturer": "Dimond Roofing",
+      "profile": "Hi Five",
+      "cover": "Conflict: 765 mm overview / 755 mm performance table",
+      "overall": "810 mm",
+      "thickness": "0.40 / 0.55 mm supported in table",
+      "pitch": "3° starting minimum",
+      "note": "South Island supply reference. The contradictory cover stays unresolved; a table column marked N/A is not an available gauge.",
+      "sources": [
+        "hi-five"
+      ]
+    },
+    {
+      "id": "veedek",
+      "manufacturer": "Dimond Roofing",
+      "profile": "Veedek",
+      "cover": "755 mm",
+      "overall": "810 mm",
+      "thickness": "0.40 / 0.55 mm supported in table",
+      "pitch": "3° starting minimum",
+      "note": "Do not copy its consistent 755 mm value into Hi Five simply because both are Dimond products.",
+      "sources": [
+        "dim-veedek"
+      ]
+    },
+    {
+      "id": "trimrib",
+      "manufacturer": "Roofing Industries",
+      "profile": "Trimrib S / TS / V family",
+      "cover": "Confirm the selected variant and branch",
+      "overall": "Confirm selected variant",
+      "thickness": "Confirm current steel BMT options with the branch",
+      "pitch": "3° starting minimum",
+      "note": "Single, twin or V-shaped pan stiffeners are family variants. Project-specific 760 mm references are not universal order dimensions.",
+      "sources": [
+        "ri-trimrib",
+        "ri-trimrib-library"
+      ]
+    },
+    {
+      "id": "freeman",
+      "manufacturer": "Freeman Roofing",
+      "profile": "Five Rib family",
+      "cover": "754 to 765 mm, variant-dependent",
+      "overall": "Confirm selected variant",
+      "thickness": "Confirm profile, metal and load/span option",
+      "pitch": "3° starting minimum; 10° for its end-lapped condition",
+      "note": "Published rib heights vary from 25 to 29 mm. The end-lap requirement belongs to this source, not every five-rib product.",
+      "sources": [
+        "freeman-five"
+      ]
+    },
+    {
+      "id": "trs5",
+      "manufacturer": "The Roofing Store",
+      "profile": "TRS5",
+      "cover": "760 mm maximum effective",
+      "overall": "Not confirmed in this review",
+      "thickness": "0.40 / 0.55 mm BMT",
+      "pitch": "3° starting minimum",
+      "note": "Use the current product loading and drainage conditions, not the profile name alone.",
+      "sources": [
+        "trs-five"
+      ]
+    }
+  ],
+  "retail": [
+    {
+      "observationId": "lr-18",
+      "supplierKey": "bitz",
+      "sourceIds": [
+        "bitz",
+        "bitz-cover"
+      ],
+      "thickness": "0.5 mm stated gauge; BMT not established",
+      "finish": "Painted five-rib steel",
+      "coverMm": 840,
+      "coverBasis": "archived-seller",
+      "coverNote": "840 mm cover is from an archived listing by the same seller. Confirm it matches the sheet being ordered; this is a conditional conversion.",
+      "minimumOrderLm": null,
+      "fixedLengthM": null,
+      "note": "The supplier offers corrugate and five-rib at the same $17.49/lm including GST. Coating/substrate equivalence with other brands is not established. Published stock lengths are not a cutting schedule."
+    },
+    {
+      "observationId": "five-bunnings-20260928",
+      "supplierKey": "bunnings",
+      "sourceIds": [
+        "bunnings-five",
+        "bunnings-gst"
+      ],
+      "thickness": "0.4 mm BMT as listed",
+      "finish": "Armorsteel Big 5, Thunder Grey",
+      "coverMm": null,
+      "coverBasis": "unknown",
+      "coverNote": "830 mm in the product name is not confirmed effective cover. Cover from a different Big 5 SKU is not substituted.",
+      "minimumOrderLm": null,
+      "fixedLengthM": null,
+      "note": "Special-order product. The Bunnings NZ online/special-order terms establish the inclusive GST basis. Confirm the selected colour, specification and local availability."
+    },
+    {
+      "observationId": "five-mitre-colour-20260928",
+      "supplierKey": "mitre10",
+      "sourceIds": [
+        "mitre-five-colour",
+        "mitre-gst"
+      ],
+      "thickness": "0.40 mm option; confirm BMT and selection",
+      "finish": "Roofing Industries Trimrib, colour",
+      "coverMm": null,
+      "coverBasis": "unknown",
+      "coverNote": "No usable cover dimension is established for the selected listing.",
+      "minimumOrderLm": null,
+      "fixedLengthM": null,
+      "note": "Mitre 10’s price convention includes GST. Variant and branch selection may affect price and availability."
+    },
+    {
+      "observationId": "five-mitre-unpainted-20260928",
+      "supplierKey": "mitre10",
+      "sourceIds": [
+        "mitre-five-unpainted",
+        "mitre-gst"
+      ],
+      "thickness": "Confirm the selected gauge and substrate",
+      "finish": "Roofing Industries Trimrib, unpainted",
+      "coverMm": null,
+      "coverBasis": "unknown",
+      "coverNote": "A malformed width field is not silently treated as either overall width or effective cover.",
+      "minimumOrderLm": null,
+      "fixedLengthM": null,
+      "note": "Same retailer as the painted observation, not another independent business. A different finish is not an equivalent specification."
+    },
+    {
+      "observationId": "five-renovation-sheet-20260928",
+      "supplierKey": "renovationwarehouse",
+      "sourceIds": [
+        "renovation-five"
+      ],
+      "thickness": "0.4 BMT as listed",
+      "finish": "New Armorsteel Zenium 3.6 m sheet",
+      "coverMm": 760,
+      "coverBasis": "confirmed",
+      "coverNote": "760 mm usable coverage is seller-listed. The missing GST basis prevents an inclusive-GST area comparison.",
+      "minimumOrderLm": null,
+      "fixedLengthM": 3.6,
+      "note": "This is $73 per sheet, not $73/lm. Division by 3.6 gives the equivalent lineal rate on the original, unconfirmed tax basis. Fixed-sheet purchases require whole-sheet quantities."
+    }
+  ],
+  "held": [
+    {
+      "supplierKey": "roofcrowd",
+      "name": "Roof Crowd Plumbdek",
+      "sourceIds": [
+        "roofcrowd-plumbdek"
+      ],
+      "reason": "Useful product specifications, but no unambiguous public price was recovered. We do not reuse an old catalogue range as a current selected price."
+    },
+    {
+      "supplierKey": "rc",
+      "name": "R&C five-rib MAXAM listing",
+      "sourceIds": [
+        "rc-five-held"
+      ],
+      "reason": "The title names five-rib while the description names corrugate. Pricing is held out until the seller resolves which profile is being offered."
+    },
+    {
+      "supplierKey": "diysupply",
+      "name": "DIY Supply closed Trade Me listing",
+      "sourceIds": [
+        "diy-five-archive"
+      ],
+      "reason": "A closed listing is not a current offer. It is retained as an exclusion record rather than presented as another available supplier price."
+    }
+  ]
+}
