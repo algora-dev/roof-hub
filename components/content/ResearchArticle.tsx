@@ -6,6 +6,9 @@ import { Sources, type SourceEntry } from '@/components/evidence/Sources';
 import { evidenceRows, observationSourceEntries } from '@/data/content';
 import { articleObservationIds, articleSourceIds, getArticle, getProject, getSource } from '@/data/research';
 import type { ResearchBlock, ResearchSource } from '@/data/research/types';
+import { PressedTileBudget } from './PressedTileBudget';
+import { PressedTileGuideStart, PressedTilePriceLedger, PressedTileProfiles, PressedTileSizeExamples } from './PressedTileEvidence';
+import { tileWorksheetProfiles } from '@/data/research/pressed-tile';
 import { QuantityCalculator } from './QuantityCalculator';
 import { CorrugatedBudget } from './CorrugatedBudget';
 import { CorrugatedGuideStart, CorrugatedPriceLedger, CorrugatedSizeExamples, CorrugatedCoverDiagram } from './CorrugatedEvidence';
@@ -46,6 +49,10 @@ function ContentBlock({ block }: { block: ResearchBlock }) {
     case 'five-rib-profiles': return <FiveRibProfiles/>;
     case 'five-rib-examples': return <FiveRibSizeExamples/>;
     case 'five-rib-budget': return <CorrugatedBudget presets={fiveRibBudgetPresets()} systemLabel="five-rib"/>;
+    case 'pressed-tile-prices': return <PressedTilePriceLedger ids={block.ids}/>;
+    case 'pressed-tile-profiles': return <PressedTileProfiles/>;
+    case 'pressed-tile-examples': return <PressedTileSizeExamples/>;
+    case 'pressed-tile-budget': return <PressedTileBudget profiles={tileWorksheetProfiles()}/>;
     case 'sheet-quote-compare': return <SheetQuoteComparison/>;
     case 'paragraph': return <p>{block.text}<InlineSources ids={block.sources} /></p>;
     case 'notice': return <aside className="rh-article-note"><p>{block.text}<InlineSources ids={block.sources} /></p></aside>;
@@ -100,6 +107,7 @@ export function ResearchArticlePage({ articleId }: { articleId: string }) {
       facts={[{ label: 'Applies to', value: 'New Zealand' }, { label: 'Reviewed', value: reviewDate(article.updatedAt) }, { label: 'Evidence', value: `${sources.length} linked source pages` }, { label: 'Price convention', value: 'NZD; GST shown by source' }]} />
     {referenceGuide && article.id === 'corrugated' && <CorrugatedGuideStart/>}
     {referenceGuide && article.id === 'five-rib' && <FiveRibGuideStart/>}
+    {referenceGuide && article.id === 'pressed-tile' && <PressedTileGuideStart/>}
     <div className="container rh-reading-layout">
       <aside className="rh-toc">{referenceGuide ? <><div className="rh-toc-desktop"><strong>On this page</strong>{contents}</div><details className="rh-toc-mobile"><summary>Jump to a section</summary>{contents}</details></> : <details open><summary>On this page</summary>{contents}</details>}<p>Read the evidence first. Use a tool when you have measurements.</p><Link className="text-link" href="/tools/detailed-roof-estimator">Open detailed estimator →</Link></aside>
       <article className="rh-reading-body" aria-label={article.title}>

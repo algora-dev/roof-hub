@@ -1,0 +1,198 @@
+{
+  "reviewedAt": "2026-09-29",
+  "methodologyVersion": "pressed-tile-v1",
+  "profiles": [
+    {
+      "id": "bond",
+      "name": "Bond",
+      "sourceId": "bond",
+      "coverLengthMm": 1265,
+      "coverWidthMm": 368,
+      "panelsPerM2": 2.15,
+      "minimumPitch": 12,
+      "finish": "Satin or textured",
+      "weight": "4.5 satin / 6.4 textured kg/m²",
+      "support": "Profile-specific battens",
+      "presetEligible": true,
+      "note": ""
+    },
+    {
+      "id": "classic",
+      "name": "Classic",
+      "sourceId": "gerard-classic",
+      "coverLengthMm": 1262,
+      "coverWidthMm": 368,
+      "panelsPerM2": 2.15,
+      "minimumPitch": 12,
+      "finish": "Satin or textured",
+      "weight": "4.5 satin / 6.5 textured kg/m²",
+      "support": "Profile-specific battens",
+      "presetEligible": true,
+      "note": ""
+    },
+    {
+      "id": "shake",
+      "name": "Shake",
+      "sourceId": "gerard-shake",
+      "coverLengthMm": 1250,
+      "coverWidthMm": 368,
+      "panelsPerM2": 2.2,
+      "minimumPitch": 15,
+      "finish": "Satin or textured",
+      "weight": "4.7 satin / 6.6 textured kg/m²",
+      "support": "Profile-specific battens",
+      "presetEligible": true,
+      "note": "Confirm made-to-order finish availability and lead time."
+    },
+    {
+      "id": "senator",
+      "name": "Senator",
+      "sourceId": "gerard-senator",
+      "coverLengthMm": 1250,
+      "coverWidthMm": 368,
+      "panelsPerM2": 2.2,
+      "minimumPitch": 15,
+      "finish": "Textured",
+      "weight": "6.4 kg/m²",
+      "support": "Profile-specific battens",
+      "presetEligible": true,
+      "note": ""
+    },
+    {
+      "id": "milano",
+      "name": "Milano",
+      "sourceId": "gerard-milano",
+      "coverLengthMm": 1210,
+      "coverWidthMm": 368,
+      "panelsPerM2": 2.2,
+      "minimumPitch": 12,
+      "finish": "Textured",
+      "weight": "6.4 kg/m²",
+      "support": "Profile-specific battens",
+      "presetEligible": true,
+      "note": "Density is the published rounded 2.2 panels/m². Confirm a project cutting schedule; do not substitute 1 ÷ rounded cover area."
+    },
+    {
+      "id": "cf-shake",
+      "name": "CF Shake",
+      "sourceId": "gerard-cf-shake",
+      "coverLengthMm": 1260,
+      "coverWidthMm": 370,
+      "panelsPerM2": 2.15,
+      "minimumPitch": 15,
+      "finish": "Textured; concealed fix",
+      "weight": "7.5 kg/m²",
+      "support": "Plywood or approved batten arrangement",
+      "presetEligible": true,
+      "note": ""
+    },
+    {
+      "id": "cf-shingle",
+      "name": "CF Shingle",
+      "sourceId": "gerard-cf-shingle",
+      "coverLengthMm": 1260,
+      "coverWidthMm": 370,
+      "panelsPerM2": 2.15,
+      "minimumPitch": 15,
+      "finish": "Textured; concealed fix",
+      "weight": "7.5 kg/m²",
+      "support": "Plywood or approved batten arrangement",
+      "presetEligible": true,
+      "note": ""
+    },
+    {
+      "id": "cf-slate",
+      "name": "CF Slate",
+      "sourceId": "gerard-cf-slate",
+      "coverLengthMm": 1250,
+      "coverWidthMm": 255,
+      "panelsPerM2": 3.2,
+      "minimumPitch": 15,
+      "finish": "Textured; concealed fix",
+      "weight": "6.4 kg/m²",
+      "support": "Plywood or approved batten arrangement",
+      "presetEligible": false,
+      "note": "Confirmation needed: 1250 × 255 mm implies about 3.14 panels/m², while the page states 3.20. Ask for the current set-out; no automatic quantity preset."
+    },
+    {
+      "id": "calibre",
+      "name": "Calibre",
+      "sourceId": "gerard-calibre",
+      "coverLengthMm": 1250,
+      "coverWidthMm": 250,
+      "panelsPerM2": 3.12,
+      "minimumPitch": 10,
+      "finish": "Concealed fix; confirm finish",
+      "weight": "6.5 kg/m²",
+      "support": "Plywood in the cited CF appraisal description",
+      "presetEligible": false,
+      "note": "Confirmation needed: 1250 × 250 mm implies 3.20 panels/m², while the page states 3.12 and 0.32 m² cover. The density field also has a unit typo. No automatic quantity preset."
+    }
+  ],
+  "priceRows": [
+    {
+      "observationId": "tt-02",
+      "sourceIds": [
+        "arcline"
+      ],
+      "label": "Satin metal tile",
+      "scope": "Historical new-home guide, 10 February 2024",
+      "note": "Includes material and installation. GST and exact accessory scope are not stated. Not a current material quote."
+    },
+    {
+      "observationId": "tt-03",
+      "sourceIds": [
+        "arcline"
+      ],
+      "label": "Textured metal tile",
+      "scope": "Historical new-home guide, 10 February 2024",
+      "note": "Same publisher and date as the satin figure, not a second independent business. Do not average these into a current market rate."
+    },
+    {
+      "observationId": "tile-rs-20260929",
+      "sourceIds": [
+        "tile-roofingsystems-2026"
+      ],
+      "label": "Metal tiles, generic system",
+      "scope": "Undated installed budgeting guide, re-observed 29 September 2026",
+      "note": "Installation and GST explicitly included. Profile, roof-area basis, battens, trims, access and removal inclusions need confirmation."
+    },
+    {
+      "observationId": "rr-05",
+      "sourceIds": [
+        "delta"
+      ],
+      "label": "Metrotile / stone-chip metal",
+      "scope": "Historical complete-replacement guide, 2025",
+      "note": "Includes GST, scaffolding, removal and disposal. Not comparable with panel-only supply or a clean new-build roof-covering allowance."
+    }
+  ],
+  "held": [
+    {
+      "name": "Material-only figures in general cost guides",
+      "sourceIds": [
+        "tile-sa-guide"
+      ],
+      "reason": "A $/m² material category is not an identifiable retail panel quotation. Exact product, covered area, pack quantity, tax and accessory scope are not verified together, so it does not seed the worksheet or a material range."
+    },
+    {
+      "name": "Manufacturer product pages",
+      "sourceIds": [
+        "bond",
+        "gerard-classic",
+        "gerard-calibre"
+      ],
+      "reason": "Usable panel specifications, but no public NZ per-panel purchase price verified on these pages. A quote button is not a price."
+    }
+  ],
+  "newProjectIds": [
+    "tile-huapai",
+    "tile-brookfield",
+    "tile-telfer",
+    "tile-kumeu"
+  ],
+  "replacementProjectIds": [
+    "eastern-beach",
+    "tamahere-house"
+  ]
+}

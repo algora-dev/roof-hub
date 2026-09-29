@@ -1,0 +1,38 @@
+{
+  "release": "0.9",
+  "reviewedAt": "2026-09-29",
+  "baseline": "roof-hub-main-cf6343f-2026-09-28.zip plus v0.8 overlay",
+  "existingObservationsPreserved": 71,
+  "newObservationIds": [
+    "tile-rs-20260929"
+  ],
+  "protectedFilesUnchanged": 57,
+  "changedArticleRecords": {
+    "pressed-tile": "Expanded guide",
+    "five-rib": "Review date only, because its shared Eastern Beach project record was corrected from Trimrib to builder-described T-rib"
+  },
+  "otherArticleRecordsUnchanged": 15,
+  "counts": {
+    "site": {
+      "articles": 17,
+      "sourcePages": 114,
+      "priceObservations": 23,
+      "projectAccounts": 22
+    },
+    "page": {
+      "sourceRecords": 37,
+      "sourcePages": 37,
+      "publishers": 15,
+      "projectAccounts": 6,
+      "projectPublishers": 4,
+      "priceObservationIds": [
+        "tt-02",
+        "tt-03",
+        "tile-rs-20260929",
+        "rr-05"
+      ],
+      "sections": 11,
+      "faqs": 8
+    }
+  }
+}

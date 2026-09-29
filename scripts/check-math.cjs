@@ -8,7 +8,16 @@ let cases = 0;
 function load(file){
   const filename=path.resolve(file);
   const output=ts.transpileModule(fs.readFileSync(filename,'utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2020,module:ts.ModuleKind.CommonJS}}).outputText;
-  const loaded=new Module(filename); loaded.filename=filename; loaded.paths=Module._nodeModulePaths(path.dirname(filename)); loaded._compile(output,filename);return loaded.exports;
+  const loaded=new Module(filename); loaded.filename=filename; loaded.paths=Module._nodeModulePaths(path.dirname(filename));
+  const nativeRequire=loaded.require.bind(loaded);
+  loaded.require=(id)=>{
+    if(id.startsWith('.')){
+      const dependency=path.resolve(path.dirname(filename),id+'.ts');
+      if(fs.existsSync(dependency))return load(dependency);
+    }
+    return nativeRequire(id);
+  };
+  loaded._compile(output,filename);return loaded.exports;
 }
 // Type-only imports in these modules do not create runtime framework dependencies.
 const maths=load('lib/roof-maths.ts');
@@ -116,4 +125,46 @@ test('comparison rejects bad pitch',()=>assert.throws(()=>corr.compareSheetQuote
 test('comparison rejects excessive allowance',()=>assert.throws(()=>corr.compareSheetQuotes({...compare,extraPercent:101})));
 test('comparison rejects overflow in unit-area rate',()=>assert.throws(()=>corr.compareSheetQuotes({...compare,area:1e-300,quoteA:{...qa,pricePerLm:1e30,coverMm:1e-300}})));
 
+// Pressed tile quantities are separate from market pricing and the estimator rate card.
+const tile=load('lib/pressed-tile-maths.ts');
+const tq={area:200,basis:'actual',pitchDegrees:25,panelsPerM2:2.15,extraPercent:0,packSize:1,minimumPanels:0};
+test('tile baseline 430 panels',()=>assert.equal(tile.panelQuantity(tq).purchasePanels,430));
+test('tile 2.2 density uses 440 panels',()=>assert.equal(tile.panelQuantity({...tq,panelsPerM2:2.2}).purchasePanels,440));
+test('tile fractions round up after allowance',()=>assert.equal(tile.panelQuantity({...tq,extraPercent:5}).purchasePanels,452));
+test('tile floating boundary is not an extra panel',()=>assert.equal(tile.panelQuantity({...tq,extraPercent:10}).purchasePanels,473));
+test('tile actual area ignores unused pitch',()=>assert.equal(tile.panelQuantity({...tq,pitchDegrees:NaN}).surfaceM2,200));
+test('tile actual area ignores an impossible unused pitch',()=>assert.equal(tile.panelQuantity({...tq,pitchDegrees:100}).surfaceM2,200));
+test('tile plan area is converted once',()=>{const r=tile.panelQuantity({...tq,basis:'plan'});near(r.surfaceM2,maths.roofSurfaceArea(200,25,'plan'));assert.equal(r.requiredPanels,475);});
+test('tile 0-degree plan area unchanged',()=>assert.equal(tile.panelQuantity({...tq,basis:'plan',pitchDegrees:0}).requiredPanels,430));
+test('tile allowance leaves geometry unchanged',()=>assert.equal(tile.panelQuantity({...tq,extraPercent:20}).surfaceM2,200));
+test('tile 150m2 rounds up half-panel',()=>assert.equal(tile.panelQuantity({...tq,area:150}).requiredPanels,323));
+test('tile no minimum unless it exceeds requirement',()=>assert.equal(tile.panelQuantity({...tq,minimumPanels:430}).minimumApplies,false));
+test('tile minimum applied before pack rounding',()=>{const r=tile.panelQuantity({...tq,minimumPanels:451,packSize:20});assert.equal(r.requiredPanels,430);assert.equal(r.purchasePanels,460);assert.equal(r.packs,23);assert.equal(r.packExtraPanels,9);assert.equal(r.minimumApplies,true);});
+test('tile pack rounding alone',()=>{const r=tile.panelQuantity({...tq,packSize:12});assert.equal(r.purchasePanels,432);assert.equal(r.packExtraPanels,2);assert.equal(r.minimumApplies,false);});
+test('tile exact pack does not round twice',()=>assert.equal(tile.panelQuantity({...tq,packSize:10}).purchasePanels,430));
+test('tile very small positive roof still needs a whole panel',()=>assert.equal(tile.panelQuantity({...tq,area:.01}).requiredPanels,1));
+for(const [field,value] of [['area',0],['area',NaN],['area',Infinity],['area',1000001],['panelsPerM2',0],['panelsPerM2',NaN],['panelsPerM2',1001],['extraPercent',-1],['extraPercent',101],['extraPercent',NaN],['packSize',0],['packSize',1.5],['packSize',NaN],['packSize',1000001],['minimumPanels',-1],['minimumPanels',1.5],['minimumPanels',Infinity],['minimumPanels',1000000001],['basis','unknown']])test(`tile quantity rejects ${field} ${value}`,()=>assert.throws(()=>tile.panelQuantity({...tq,[field]:value})));
+for(const pitch of [-1,90,NaN,Infinity])test(`tile plan rejects pitch ${pitch}`,()=>assert.throws(()=>tile.panelQuantity({...tq,basis:'plan',pitchDegrees:pitch})));
+test('tile oversized converted area rejected',()=>assert.throws(()=>tile.panelQuantity({...tq,area:1000000,basis:'plan'})));
+test('tile epsilon round preserves exact integer',()=>assert.equal(tile.wholePanels(473.00000000000006),473));
+test('tile real fractional panel is never rounded down',()=>assert.equal(tile.wholePanels(473.00001),474));
+test('tile invalid large quantity rejected',()=>assert.throws(()=>tile.wholePanels(Number.MAX_SAFE_INTEGER)));
+test('tile negative quantity rejected',()=>assert.throws(()=>tile.wholePanels(-1)));
+test('tile unknown GST keeps quoted basis',()=>assert.deepEqual(tile.panelSubtotal(430,12,'unknown'),{quotedSubtotal:5160,inclGst:null,gst:'unknown'}));
+test('tile excluding GST converts once',()=>near(tile.panelSubtotal(430,12,'excl').inclGst,5934));
+test('tile including GST is not taxed again',()=>near(tile.panelSubtotal(430,12,'incl').inclGst,5160));
+test('tile original rate not prematurely rounded',()=>near(tile.panelSubtotal(431,12.3456,'excl').inclGst,431*12.3456*1.15));
+for(const n of [0,-1,1.5,Infinity,2000000001])test(`tile subtotal invalid quantity ${n}`,()=>assert.throws(()=>tile.panelSubtotal(n,12,'incl')));
+for(const price of [0,-1,NaN,Infinity,10000001])test(`tile subtotal invalid price ${price}`,()=>assert.throws(()=>tile.panelSubtotal(430,price,'incl')));
+test('tile subtotal invalid GST rejected',()=>assert.throws(()=>tile.panelSubtotal(430,12,'invalid')));
+test('tile subtotal unsafe monetary precision rejected',()=>assert.throws(()=>tile.panelSubtotal(2000000000,10000000,'incl')));
+test('tile separate batten check',()=>near(tile.battenAllowance(200,368),200/.368));
+for(const [area,gauge] of [[0,368],[200,0],[NaN,368],[200,NaN],[200,5001]])test(`tile batten check rejects ${area}/${gauge}`,()=>assert.throws(()=>tile.battenAllowance(area,gauge)));
+test('tile batten check does not alter panel count',()=>{tile.battenAllowance(200,400);assert.equal(tile.panelQuantity(tq).purchasePanels,430);});
+test('tile quantities monotonic with allowance',()=>{let old=0;for(let p=0;p<=100;p++){const q=tile.panelQuantity({...tq,extraPercent:p});assert.ok(q.purchasePanels>=old);assert.ok(q.purchasePanels>=q.allowancePanelEquivalent-1e-10);old=q.purchasePanels;}});
+test('tile pack rules always provide enough panels',()=>{for(const size of [1,2,7,12,20,100]){const q=tile.panelQuantity({...tq,packSize:size,minimumPanels:503});assert.equal(q.purchasePanels%size,0);assert.ok(q.purchasePanels>=Math.max(q.requiredPanels,503));}});
+
 console.log(`${cases} math and rate-integrity cases passed.`);
+
+// Keep the panel worksheet behaviour in the standard regression gate.
+require('./check-tile-ui.cjs');

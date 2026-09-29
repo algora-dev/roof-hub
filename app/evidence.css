@@ -235,3 +235,19 @@
   .rh-library-stats { padding: 20px; }
   .rh-library-stats dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* Pressed tile: planning quantities and source uncertainty, not a second rate card. */
+.rh-tile-profile-table { min-width: 800px; }
+.rh-tile-profile-table th:first-child { min-width: 125px; }
+.rh-tile-profile-table th small, .rh-tile-profile-table td small { display: block; margin-top: 7px; font-weight: 400; line-height: 1.6; }
+.rh-tile-profile-table td:last-child { min-width: 255px; }
+.rh-tile-confirm { color: var(--terra-800); font-weight: 650 !important; }
+.rh-tile-warning { padding: 15px 18px; border-left: 3px solid var(--terra-500); background: var(--off-white, #f7f6f2); border-radius: 0 8px 8px 0; font-size: .88rem; line-height: 1.7; }
+.rh-tile-tool label.rh-tile-checkbox { display: flex; flex-direction: row; align-items: flex-start; gap: 12px; margin: 20px 0; font-weight: 500; }
+.rh-tile-tool .rh-tile-checkbox input { width: 20px; height: 20px; min-height: 20px; flex: 0 0 20px; margin-top: 3px; accent-color: var(--sage-800); }
+.rh-tile-cost { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--sage-200); }
+.rh-tile-cost > span, .rh-tile-cost > small { display: block; font-size: .85rem; }
+.rh-tile-cost > strong { display: block; font-size: clamp(1.65rem, 3vw, 2.15rem); font-variant-numeric: tabular-nums; color: var(--sage-900); line-height: 1.3; overflow-wrap: anywhere; }
+.rh-tile-cost p { font-size: .85rem; line-height: 1.6; margin-bottom: 0; }
+.rh-tile-options .rh-sheet-tool__fields { margin-top: 4px; }
+@media (max-width: 420px) { .rh-tile-tool .rh-sheet-result { padding: 16px; } }

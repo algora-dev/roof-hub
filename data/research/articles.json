@@ -2817,7 +2817,7 @@
     ],
     "category": "Roofing reference guide",
     "publishedAt": "2026-09-26",
-    "updatedAt": "2026-09-28",
+    "updatedAt": "2026-09-29",
     "editor": "RoofHub editorial team",
     "presentation": "reference-guide",
     "sections": [
@@ -3535,179 +3535,710 @@
   "pressed-tile": {
     "id": "pressed-tile",
     "path": "/roofing/pressed-metal-tile",
-    "title": "Pressed metal tile roofing NZ: cost, build-up and examples",
-    "description": "Understand pressed steel roof tiles, battens, product-specific cover and pitch, historical pricing and the distinction from older suspect textured roofing.",
-    "answer": "Pressed metal tile roofing uses formed metal panels rather than long-run sheets or heavy concrete tiles. Compare it as a complete system, including the support, underlay, accessories and labour. Historical low installed prices do not establish a current material rate or prove that pressed tile is always the cheapest metal roof.",
+    "title": "Pressed metal tile roofing NZ: prices, profiles and new-home examples",
+    "description": "Compare modern pressed-metal tile profiles, published NZ installed prices and complete-system costs. Calculate panel quantities, inspect new-home examples and plan a replacement.",
+    "answer": "Pressed metal tile is a lightweight steel-panel roof system for new homes as well as replacements, with smooth, stone-coated and concealed-fix choices. Price the whole system, not just the panels: underlay, battens or decking, matching trims, fixings and installation all matter. The published prices below have different dates and inclusions, so they are shown separately rather than presented as one current NZ price range.",
     "answerSources": [
-      "tiles-cop"
+      "tiles-cop",
+      "gerard-new-build",
+      "tile-appraisal",
+      "cf-appraisal"
     ],
-    "category": "Roofing systems",
+    "category": "Roofing system reference",
     "publishedAt": "2026-09-26",
-    "updatedAt": "2026-09-28",
+    "updatedAt": "2026-09-29",
+    "editor": "RoofHub research desk",
+    "presentation": "reference-guide",
     "sections": [
       {
-        "id": "system",
-        "title": "How does the system differ from long-run?",
+        "id": "prices",
+        "title": "How much does pressed metal tile roofing cost?",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "NZMRM’s Code of Practice describes pressed metal tiles as a panel roofing system with product-specific support and fixing requirements. The panel covering, batten layout and installation method need to be considered together.",
+            "text": "Start with three different questions: what are the panels worth, what is the complete new-roof package, and what does replacing an old roof add? A published installed price does not answer all three. These are attributed budget observations, not live quotes or a national average.",
+            "sources": [
+              "arcline",
+              "tile-roofingsystems-2026",
+              "delta"
+            ]
+          },
+          {
+            "type": "pressed-tile-prices",
+            "ids": [
+              "tt-02",
+              "tt-03",
+              "tile-rs-20260929",
+              "rr-05"
+            ],
+            "sources": [
+              "arcline",
+              "tile-roofingsystems-2026",
+              "delta",
+              "tile-sa-guide"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "Material-only price gap: this review did not verify a current, new first-quality NZ retail panel price with a matching product, unit, GST basis and coverage. The worksheet therefore starts with no price. Enter a real supplier quote to calculate a panel subtotal. Do not subtract an assumed labour rate from these guides to invent a supply price.",
             "sources": [
               "tiles-cop"
             ]
           },
           {
-            "type": "paragraph",
-            "text": "In RoofHub’s current labour model, pressed-tile installation includes tasks that may sit elsewhere in a long-run quote. Make the scope explicit before comparing the labour endpoints. Underlay installation must not be added a second time when it is already included.",
-            "sources": []
+            "type": "details",
+            "title": "Why there is no single “cheapest roof” verdict",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Roofing Systems lists metal tiles and long-run at the same installed budgeting figure. Arcline’s 2024 guide gives different figures and leaves some scope questions open; Delta’s 2025 figures include roof replacement work. That is evidence of differing scopes and assumptions, not a reliable national ranking. Ask suppliers to price the same roof, finish and inclusions.",
+                "sources": [
+                  "tile-roofingsystems-2026",
+                  "arcline",
+                  "delta"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "The NZMRM code describes manufacturer-appointed, trained installers and notes that tiles are not normally supplied to other installers. That helps explain the lack of retail panel prices, but does not establish any particular supplier margin.",
+                "sources": [
+                  "tiles-cop"
+                ]
+              }
+            ]
           }
         ]
       },
       {
-        "id": "example-product",
-        "title": "What are the dimensions of a real product?",
+        "id": "panel-calculator",
+        "title": "How many metal roof panels do I need?",
         "blocks": [
           {
+            "type": "paragraph",
+            "text": "Use the actual sloping roof area and the published panel density for the selected profile. A panel contains several visual tile shapes, so counting those shapes is not the same as ordering panels. Rounded cover-area figures are not used to recalculate the manufacturer’s stated density.",
+            "sources": [
+              "bond",
+              "gerard-classic"
+            ]
+          },
+          {
+            "type": "pressed-tile-budget",
+            "sources": [
+              "bond",
+              "gerard-classic",
+              "gerard-shake",
+              "gerard-senator",
+              "gerard-milano",
+              "gerard-cf-shake",
+              "gerard-cf-shingle",
+              "gerard-cf-slate",
+              "gerard-calibre",
+              "ird-gst"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "What this worksheet can and cannot tell you",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "RoofHub calculates planning quantities from your inputs. It does not lay out individual roof faces or optimise cut panels, hips, valleys and short courses. Confirm the order with the installer’s panel schedule. An allowance is your assumption, not a manufacturer-approved waste percentage.",
+                "sources": []
+              },
+              {
+                "type": "paragraph",
+                "text": "A panel price only prices the panels. A separate batten worksheet, when enabled, divides area by an installer-provided gauge as a rough quantity check. It does not select a batten size, fixing, support span or installation design.",
+                "sources": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "new-homes",
+        "title": "What does metal tile look like on a new home?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "These builder and manufacturer accounts show metal tiles used in new-home specifications and residential designs, rather than treating the product only as an old roof to remove. They are not a survey of market share, and we have not inspected the homes. No separate roofing invoice is published for these examples.",
+            "sources": [
+              "tile-huapai",
+              "tile-brookfield",
+              "tile-telfer",
+              "tile-kumeu"
+            ]
+          },
+          {
+            "type": "projects",
+            "ids": [
+              "tile-huapai",
+              "tile-brookfield"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "See an architectural new build and a Kumeu residential gallery",
+            "blocks": [
+              {
+                "type": "projects",
+                "ids": [
+                  "tile-telfer",
+                  "tile-kumeu"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Compare the same roof, not different house prices",
+            "text": "Choose a profile and calculate your panel quantity. Ask for a written whole-system quote using the same dimensions and scope.",
+            "label": "Use the panel worksheet",
+            "href": "/roofing/pressed-metal-tile#panel-calculator"
+          }
+        ]
+      },
+      {
+        "id": "profiles",
+        "title": "Which modern metal-tile profile should I compare?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Gerard’s current NZ site says Metrotile is now Gerard. Older project pages and quotes can retain former brand and profile names. Do not count nine profiles from the same product family as nine independent manufacturers, or assume an old profile name is an exact match for a current replacement.",
+            "sources": [
+              "gerard-brand",
+              "tile-brookfield"
+            ]
+          },
+          {
+            "type": "pressed-tile-profiles",
+            "sources": [
+              "bond",
+              "gerard-classic",
+              "gerard-shake",
+              "gerard-senator",
+              "gerard-milano",
+              "gerard-cf-shake",
+              "gerard-cf-shingle",
+              "gerard-cf-slate",
+              "gerard-calibre",
+              "tile-appraisal",
+              "cf-appraisal"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "Satin, stone-chip and concealed fixing are different decisions",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Satin describes a smooth finish and textured describes a stone-coated finish. Bond and Classic publish both finish types. Concealed fastening describes the fixing arrangement, not a guarantee that all such panels share the same cover or support design. Compare a physical colour sample and the exact panel specification.",
+                "sources": [
+                  "bond",
+                  "gerard-classic",
+                  "gerard-cf-shake",
+                  "gerard-cf-shingle"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Do not compare a tile’s decorative coating thickness or finished weight directly with a long-run sheet’s base metal thickness. Calibre, for example, describes a 0.55 mm steel core, but that does not make every tile a 0.55 mm product or prove a generic strength ranking.",
+                "sources": [
+                  "gerard-calibre",
+                  "mrm-bmt"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "system",
+        "title": "What should a complete new-roof quote include?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Conventional metal tiles and concealed-fix systems do not all use the same support assembly. The conventional Gerard appraisal describes tiles and flashings above roofing underlay and battens. The CF appraisal describes plywood sheathing, with a batten alternative identified for CF Shake, CF Shingle and CF Slate. Confirm Calibre’s support specification separately.",
+            "sources": [
+              "tile-appraisal",
+              "cf-appraisal"
+            ]
+          },
+          {
             "type": "table",
-            "caption": "Gerard Bond manufacturer example",
+            "caption": "A quote scope checklist, not a priced bill of materials",
             "heads": [
-              "Specification",
-              "Published value"
+              "Component",
+              "What to confirm"
             ],
             "rows": [
               {
                 "cells": [
-                  "Cover length × cover width",
-                  "1265 × 368 mm"
+                  "Main panels",
+                  "Profile, finish, covered quantity, cuts, spares and whether the price is per panel, pack or m²."
                 ],
                 "sources": [
-                  "bond"
+                  "bond",
+                  "gerard-classic"
                 ]
               },
               {
                 "cells": [
-                  "Stated coverage",
-                  "0.47m² per panel; 2.15 panels/m²"
+                  "Underlay",
+                  "Specified product, coverage including laps, support requirements and installation responsibility."
                 ],
                 "sources": [
-                  "bond"
+                  "tile-appraisal",
+                  "cf-appraisal"
                 ]
               },
               {
                 "cells": [
-                  "Minimum pitch",
-                  "12°"
+                  "Battens or plywood",
+                  "Which support system, timber/decking supply and labour, plus any strengthening or extra supports."
                 ],
                 "sources": [
-                  "bond"
+                  "tile-appraisal",
+                  "cf-appraisal"
+                ]
+              },
+              {
+                "cells": [
+                  "Ridges, hips and barges",
+                  "The matching trim type, measured lengths and overlaps. Do not reuse a long-run ridge price for a tile accessory."
+                ],
+                "sources": [
+                  "gerard-accessories"
+                ]
+              },
+              {
+                "cells": [
+                  "Valleys and penetrations",
+                  "Valley material, supporting work, apron details and flashing around every pipe or skylight."
+                ],
+                "sources": [
+                  "tiles-cop",
+                  "gerard-accessories"
+                ]
+              },
+              {
+                "cells": [
+                  "Fixings and ventilation",
+                  "System-approved fixings, vents and any selected solar-mounting details."
+                ],
+                "sources": [
+                  "gerard-accessories"
+                ]
+              },
+              {
+                "cells": [
+                  "Access and completion",
+                  "Delivery, safe access, waste handling, GST, installation warranty and the exclusions schedule."
+                ],
+                "sources": []
+              }
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "Avoid counting underlay labour twice. Ask whether the installer’s tile rate already includes underlay and batten installation; keep the cost of supplying those materials separate. The panel worksheet does not add installation labour.",
+            "sources": [
+              "tiles-cop"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "Support checks matter more than a low panel price",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Do not treat one generic batten spacing as an installation instruction. Layout, attachments, loads and perimeter details must follow the selected system. Nor should the area-based panel total be treated as proof of weather resistance or structural compliance.",
+                "sources": [
+                  "tiles-cop",
+                  "tile-appraisal",
+                  "cf-appraisal"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "size-examples",
+        "title": "Panel quantities for 100, 150, 200 and 250 m² roofs",
+        "blocks": [
+          {
+            "type": "pressed-tile-examples",
+            "sources": [
+              "bond",
+              "gerard-classic",
+              "gerard-shake"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "To turn this into a panel-only budget, multiply the purchase quantity by a genuine per-panel quote and keep its GST convention visible. Pack rounding and minimum quantities can change the purchased amount. None of these counts includes trims, fixings, underlay, supports, labour, delivery or removal.",
+            "sources": []
+          },
+          {
+            "type": "action",
+            "title": "Need hips, ridges, valleys and a project range?",
+            "text": "The detailed estimator accepts measured component lengths and separates new-roof and replacement work. Its planning-rate assumptions remain visible; this worksheet does not update that rate card.",
+            "label": "Open the detailed estimator",
+            "href": "/tools/detailed-roof-estimator"
+          }
+        ]
+      },
+      {
+        "id": "pitch",
+        "title": "What roof pitch and support does metal tile need?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The product minima in this comparison range from 10° for Calibre to 12° for Bond, Classic and Milano, and 15° for Shake, Senator and the other CF profiles shown. They are product-specific starting points, not permission to use every metal tile at 10°.",
+            "sources": [
+              "gerard-calibre",
+              "bond",
+              "gerard-classic",
+              "gerard-milano",
+              "gerard-shake",
+              "gerard-senator",
+              "gerard-cf-shake",
+              "gerard-cf-shingle",
+              "gerard-cf-slate"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "Conditions to take to your designer or installer",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The appraisal scope includes limits on geometry, wind exposure, supporting construction and pitch. Long roof runs can introduce additional pitch requirements. Use the full current appraisal and installation manual for the selected roof; a short product table cannot replace those conditions.",
+                "sources": [
+                  "tile-appraisal",
+                  "cf-appraisal"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Roof pitch means the roof structure’s slope, not the local angle of one stepped panel surface. Measure it from plans or a safe location; there is no need to climb onto the roof to use these tools.",
+                "sources": [
+                  "tiles-cop"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Not sure whether your area includes pitch?",
+            "text": "Check plan area versus actual roof area before multiplying quantities. A two-storey home’s total floor area is not its roof footprint.",
+            "label": "Read the roof-area guide",
+            "href": "/guides/roof-area"
+          }
+        ]
+      },
+      {
+        "id": "compare",
+        "title": "Pressed tile, corrugate or five-rib for a new build?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Compare equivalent systems before comparing the totals",
+            "heads": [
+              "Question",
+              "Pressed metal tile",
+              "Corrugate / five-rib"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "What quantity is quoted?",
+                  "Panels, packs or covered m²; use the selected panel density.",
+                  "Lineal metres or sheets; use effective cover, not overall width."
+                ],
+                "sources": [
+                  "bond",
+                  "st-corr",
+                  "st-plumbdek"
+                ]
+              },
+              {
+                "cells": [
+                  "What supports are included?",
+                  "Specified battens or approved decking; confirm the installer’s scope.",
+                  "A profile-specific purlin arrangement; support supply can sit in the builder’s scope."
+                ],
+                "sources": [
+                  "tile-appraisal",
+                  "cf-appraisal",
+                  "tiles-cop"
+                ]
+              },
+              {
+                "cells": [
+                  "Which pitch fits?",
+                  "Different products have different minima and scope.",
+                  "Use the exact corrugate or trapezoidal product limit."
+                ],
+                "sources": [
+                  "bond",
+                  "gerard-calibre",
+                  "st-corr",
+                  "st-plumbdek"
+                ]
+              },
+              {
+                "cells": [
+                  "Which is cheaper?",
+                  "Published guide prices do not establish a universal winner.",
+                  "Price the same roof geometry, coating, accessories and access."
+                ],
+                "sources": [
+                  "tile-roofingsystems-2026",
+                  "arcline"
                 ]
               }
             ]
           },
           {
             "type": "paragraph",
-            "text": "Use the manufacturer’s panel-per-area schedule and installation details for ordering. Rounded published panel coverage is not an exact wastage-free ordering quantity. Cut pieces, roof geometry and accessory quantities still matter.",
+            "text": "A useful comparison keeps the roof area, finish class, accessory lengths and site assumptions fixed. Do not force all concealed-fix tiles into the same price tier as a basic satin panel, or compare a bare sheet price with a fully installed tile package.",
             "sources": []
           },
           {
-            "type": "notice",
-            "text": "This is one product example. It is not a universal pitch or cover specification for every pressed metal tile.",
+            "type": "action",
+            "title": "Already comparing two long-run quotes?",
+            "text": "Our corrugate versus five-rib guide includes an effective-cover quote comparison.",
+            "label": "Compare corrugate and five-rib",
+            "href": "/guides/corrugated-vs-five-rib"
+          }
+        ]
+      },
+      {
+        "id": "replacement",
+        "title": "Replacing old metal tiles: tile again or long-run?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Both choices are possible. Riggall Roofing describes converting metal tiles to long-run with new purlins. A new tile system also needs its own compatible support arrangement. The choice should follow roof condition, desired appearance and the complete replacement quote, not a presumption that every old tile roof must stay tiled.",
             "sources": [
-              "tiles-cop"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "cost",
-        "title": "Why do online pressed-tile prices differ so much?",
-        "blocks": [
-          {
-            "type": "prices",
-            "ids": [
-              "tt-02",
-              "tt-03",
-              "rr-05"
+              "tile-riggall",
+              "tile-appraisal"
             ]
           },
-          {
-            "type": "paragraph",
-            "text": "The lower figures are from Arcline’s February 2024 budgeting article, with GST unspecified. Delta’s 2025 reroof guide uses a broader scope. Those observations do not support subtracting RoofHub labour from one figure to infer a verified current wholesale tile price.",
-            "sources": []
-          },
-          {
-            "type": "paragraph",
-            "text": "Ask for a matched contemporary quote for the same roof. Retain any historical comparison as context, not as the rate you promise a visitor can buy today.",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "id": "unknowns",
-        "title": "What must a complete tile quote include?",
-        "blocks": [
-          {
-            "type": "checklist",
-            "items": [
-              "Exact panel, finish and applicable warranty.",
-              "Batten/support and underlay scope.",
-              "Ridge, hip, valley, barge and penetration details.",
-              "Panel cutting/order allowance and fixings.",
-              "Removal and access for a reroof.",
-              "Any work required because of the existing structure."
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "Do not hide missing tile-specific accessory prices inside a complete-looking total. If a component is unpriced, identify it as unresolved and make clear that the shown figure is only a subtotal.",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "id": "project",
-        "title": "What does an actual replacement example show?",
-        "blocks": [
           {
             "type": "projects",
             "ids": [
-              "tamahere-house"
+              "eastern-beach"
             ]
           },
           {
-            "type": "paragraph",
-            "text": "The project provides evidence about the replacement process and hidden work. Its publisher does not provide a final price or measured area, so RoofHub does not use it to claim a typical installed tile rate.",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "id": "old-roof",
-        "title": "Are new metal tiles the same as older Decramastic?",
-        "blocks": [
+            "type": "details",
+            "title": "Why removing the covering can reveal another scope of work",
+            "blocks": [
+              {
+                "type": "projects",
+                "ids": [
+                  "tamahere-house"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "The Tamahere example replaced asphalt shingles, not old metal tiles. It is included to illustrate damaged plywood and framing discovered during replacement, not to imply how often tile roofs are affected. Sagging, decay and damaged framing must be assessed and addressed; a different covering is not a structural repair.",
+                "sources": [
+                  "tamahere"
+                ]
+              }
+            ]
+          },
           {
-            "type": "paragraph",
-            "text": "Do not conflate a current specified tile product with unidentified older textured material. Older roofing can require asbestos identification before disturbance. Keep that uncertainty separate from selecting a new metal-tile roof.",
+            "type": "details",
+            "title": "What about laying new tiles over an existing roof?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Gerard describes a CF Shake overlay option for certain Decramastic roofs. This is a separate specified system, not an automatic substitute for removal. Have the existing structure, substrate, moisture condition, asbestos risk and warranty eligibility assessed first. An ordinary removal quote and an overlay quote have different scopes.",
+                "sources": [
+                  "tile-overlay",
+                  "gerard-warranty-2026",
+                  "asbestos-trades"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "Older textured metal tiles may contain asbestos in their coating. Do not identify asbestos from appearance alone, scrape a sample yourself or start abrasive cleaning. Arrange competent assessment and appropriate testing before work that could disturb suspect material. Any asbestos work needs a separate scope and price.",
             "sources": [
               "asbestos-trades"
             ]
           },
           {
             "type": "paragraph",
-            "text": "A homeowner who cannot identify the existing product should be able to select “unknown”, obtain an estimate for the proposed new covering, and see the unresolved removal issue clearly.",
+            "text": "Consent is not determined only by calling a job a reroof. MBIE’s repair and replacement exemption has conditions and exclusions. Ask the designer or council to check the actual changes, especially damaged structural work; do not rely on a general contractor cost guide as legal approval.",
+            "sources": [
+              "mbie"
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Working with an older stone-chip roof?",
+            "text": "Read the testing and replacement considerations before choosing a removal allowance.",
+            "label": "Read the Decramastic answer",
+            "href": "/guides/does-decramastic-contain-asbestos"
+          }
+        ]
+      },
+      {
+        "id": "care",
+        "title": "Maintenance, warranties and coastal conditions",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "A warranty term is not a measured service life. Obtain the current warranty for the exact finish, environment and installation type, plus the installer’s workmanship terms. Gerard’s current documents separate standard, corrosive-environment and overlay provisions and attach maintenance conditions.",
+            "sources": [
+              "gerard-warranty",
+              "gerard-warranty-2026"
+            ]
+          },
+          {
+            "type": "details",
+            "title": "What changes once the roof is in service?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Gerard’s roof-care guide says water blasting is not recommended for removing organic growth from its roof tiles. It calls for appropriate treatment and attention to corrosion; it does not promise a maintenance-free roof. Use a qualified roof-care contractor and the current product instructions. The separate wall-cladding pressure guidance is not a roof-cleaning instruction.",
+                "sources": [
+                  "gerard-care-2026"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Ask about coastal exposure, compatible flashings, runoff from other metals and any solar or skylight additions before purchase. Where roof water supplies a tank, obtain product and cleaning instructions covering drinking-water collection. Do not assume a roofing appraisal itself assesses potable-water suitability.",
+                "sources": [
+                  "gerard-care-2026",
+                  "gerard-accessories",
+                  "tile-appraisal"
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Modern stone-coated metal tiles should not be called Decramastic as a catch-all. NZMRM explains the historical change from bituminous to acrylic-based coatings; an old article’s brand list or warranty period is not today’s product specification.",
+                "sources": [
+                  "tile-history"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "method",
+        "title": "How to use this evidence to get a comparable quote",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This review separates manufacturer specifications, published guide prices, project accounts and RoofHub calculations. Multiple pages from one manufacturer do not provide independent confirmation. Reading an undated price today does not make it a quotation for today’s roof.",
             "sources": []
+          },
+          {
+            "type": "checklist",
+            "items": [
+              "Send the same measured roof area and plan/actual basis to each quoting installer.",
+              "Name the exact panel profile, finish and colour, not just “metal tile”.",
+              "Request panel quantities or a schedule, with the allowance and pack/minimum terms identified.",
+              "Confirm underlay, battens or decking, trims, valleys, fixings and installation scope.",
+              "For replacement, separate removal, disposal, asbestos assessment and timber repair allowances.",
+              "State access/scaffolding, delivery, GST, warranty and quote validity explicitly."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Prices remain in their source’s stated unit and tax basis. Historical guides keep their dates; missing panel rates are not imputed. Where published coverage numbers disagree, this page flags them and disables the affected automatic preset. RoofHub does not sell the listed panels or certify an installation.",
+            "sources": []
+          },
+          {
+            "type": "action",
+            "title": "Bring the same brief to your roofing quotes",
+            "text": "Send RoofHub your question and the roof system you are considering. Include the scope you need checked, not just a target total.",
+            "label": "Ask about a pressed-tile roof",
+            "href": "/contact?topic=Pressed%20metal%20tile%20roof&page=%2Froofing%2Fpressed-metal-tile"
           }
         ]
       }
     ],
     "related": [
-      "decramastic",
-      "tile-to-metal",
+      "corrugated",
+      "five-rib",
       "roofing-costs",
-      "corrugate-vs-five"
+      "reroof-cost",
+      "decramastic",
+      "roof-area"
     ],
-    "faqs": [],
-    "editor": "RoofHub editorial team"
+    "faqs": [
+      {
+        "q": "Is pressed metal tile still used on new homes?",
+        "a": "Yes. The Fowler Huapai and Abron Brookfield showhomes document metal-tile roofs, and Gerard has a dedicated new-build range. These are examples, not a measured national market share.",
+        "sources": [
+          "tile-huapai",
+          "tile-brookfield",
+          "gerard-new-build"
+        ]
+      },
+      {
+        "q": "Is Metrotile a separate current NZ manufacturer comparison?",
+        "a": "Gerard’s NZ site says Metrotile is now Gerard. Keep legacy names on historical observations, but do not count both brands as independent current pricing samples.",
+        "sources": [
+          "gerard-brand"
+        ]
+      },
+      {
+        "q": "Can I buy panels at the prices shown above?",
+        "a": "No. Those are installed budgeting observations, some historical and one undated. This review has not established a verified current per-panel NZ retail rate; use a written supplier quote for the worksheet.",
+        "sources": [
+          "arcline",
+          "tile-roofingsystems-2026"
+        ]
+      },
+      {
+        "q": "How many panels cover a 200 m² roof?",
+        "a": "At a published density of 2.15 panels/m², 200 m² of actual roof area gives 430 panels before extra allowance and pack rounding. A 2.2-panel profile gives 440. These are planning quantities, not a roof-face cutting schedule.",
+        "sources": [
+          "bond",
+          "gerard-shake"
+        ]
+      },
+      {
+        "q": "Do all metal tiles use the same battens?",
+        "a": "No. The support system is profile-specific, and some concealed-fix systems involve plywood. Confirm the selected system’s appraisal and installation details before pricing or ordering supports.",
+        "sources": [
+          "tile-appraisal",
+          "cf-appraisal"
+        ]
+      },
+      {
+        "q": "Does a stone-chip roof automatically contain asbestos?",
+        "a": "No. Age and appearance cannot establish asbestos content. Suspect older material needs competent assessment and appropriate testing before disturbance. Modern product specifications and an old roof’s test result are different kinds of evidence.",
+        "sources": [
+          "tile-history",
+          "asbestos-trades"
+        ]
+      },
+      {
+        "q": "Can an old metal-tile roof become a long-run roof?",
+        "a": "Yes, subject to the condition and design of the roof. The installer may need to replace or reconfigure supports for the selected long-run system. Structural defects are not solved simply by changing the covering.",
+        "sources": [
+          "tile-riggall",
+          "eastern-beach-trimrib",
+          "tamahere"
+        ]
+      },
+      {
+        "q": "Does the worksheet provide a full installed quote?",
+        "a": "No. It estimates panel quantities and, only when you enter a price, a panel-only subtotal. The detailed estimator and an installer’s project quote are the next steps for accessories, labour and site work.",
+        "sources": []
+      }
+    ]
   },
   "tray": {
     "id": "tray",

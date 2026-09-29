@@ -881,12 +881,12 @@
   "eastern-beach-trimrib": {
     "id": "eastern-beach-trimrib",
     "publisher": "Mastercraft Construction",
-    "title": "Eastern Beach renovation",
+    "title": "Eastern Beach renovation and metal-tile replacement",
     "url": "https://mastercraftconstruction.co.nz/eastern-beach/",
     "kind": "contractor",
-    "reviewedAt": "2026-09-28",
+    "reviewedAt": "2026-09-29",
     "publishedAt": null,
-    "note": "Builder-reported renovation includes replacing metal tiles with Trimrib and updating skylights. The wider renovation is not a priced roofing case study."
+    "note": "Fresh read names the replacement as T-rib colour steel, not Trimrib. Project identity retained to avoid duplicate counting. The wider renovation is not a priced roofing case study."
   },
   "splash-hut-plumbdek": {
     "id": "splash-hut-plumbdek",
@@ -917,5 +917,265 @@
     "reviewedAt": "2026-09-28",
     "publishedAt": null,
     "note": "Supplier-reported T-Rib roof and cladding project. 12 m by 25 m building dimensions are not a measured roof-surface area. A malformed thickness unit is not used in RoofHub specifications."
+  },
+  "gerard-brand": {
+    "id": "gerard-brand",
+    "publisher": "Gerard",
+    "title": "Metrotile is now Gerard",
+    "url": "https://www.gerardroofs.co.nz/metrotile-is-now-gerard/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Manufacturer notice. Metrotile and Gerard are not counted as separate current NZ manufacturer price samples."
+  },
+  "gerard-classic": {
+    "id": "gerard-classic",
+    "publisher": "Gerard",
+    "title": "Classic product specifications",
+    "url": "https://www.gerardroofs.co.nz/our-products/classic/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Published NZ product schedule, not a supplier quote or design approval. Panel density is used as published, not calculated from a rounded cover area.",
+    "shortLabel": "Gerard Classic"
+  },
+  "gerard-shake": {
+    "id": "gerard-shake",
+    "publisher": "Gerard",
+    "title": "Shake product specifications",
+    "url": "https://www.gerardroofs.co.nz/our-products/shake/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Published NZ product schedule, not a supplier quote or design approval. Panel density is used as published, not calculated from a rounded cover area.",
+    "shortLabel": "Gerard Shake"
+  },
+  "gerard-senator": {
+    "id": "gerard-senator",
+    "publisher": "Gerard",
+    "title": "Senator product specifications",
+    "url": "https://www.gerardroofs.co.nz/our-products/senator/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Published NZ product schedule, not a supplier quote or design approval. Panel density is used as published, not calculated from a rounded cover area.",
+    "shortLabel": "Gerard Senator"
+  },
+  "gerard-milano": {
+    "id": "gerard-milano",
+    "publisher": "Gerard",
+    "title": "Milano product specifications",
+    "url": "https://www.gerardroofs.co.nz/our-products/milano/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Published NZ product schedule, not a supplier quote or design approval. Panel density is used as published, not calculated from a rounded cover area.",
+    "shortLabel": "Gerard Milano"
+  },
+  "gerard-cf-shake": {
+    "id": "gerard-cf-shake",
+    "publisher": "Gerard",
+    "title": "CF Shake product specifications",
+    "url": "https://www.gerardroofs.co.nz/our-products/cf-shake/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Published NZ product schedule, not a supplier quote or design approval. Panel density is used as published, not calculated from a rounded cover area.",
+    "shortLabel": "Gerard CF Shake"
+  },
+  "gerard-cf-shingle": {
+    "id": "gerard-cf-shingle",
+    "publisher": "Gerard",
+    "title": "CF Shingle product specifications",
+    "url": "https://www.gerardroofs.co.nz/our-products/cf-shingle/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Published NZ product schedule, not a supplier quote or design approval. Panel density is used as published, not calculated from a rounded cover area.",
+    "shortLabel": "Gerard CF Shingle"
+  },
+  "gerard-cf-slate": {
+    "id": "gerard-cf-slate",
+    "publisher": "Gerard",
+    "title": "CF Slate product specifications",
+    "url": "https://www.gerardroofs.co.nz/our-products/cf-slate/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Published NZ product schedule, not a supplier quote or design approval. Cover dimensions and stated panel density do not reconcile; automatic quantity preset withheld.",
+    "shortLabel": "Gerard CF Slate"
+  },
+  "gerard-calibre": {
+    "id": "gerard-calibre",
+    "publisher": "Gerard",
+    "title": "Calibre product specifications",
+    "url": "https://www.gerardroofs.co.nz/our-products/calibre/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Published NZ product schedule, not a supplier quote or design approval. Cover dimensions and stated panel density do not reconcile; automatic quantity preset withheld.",
+    "shortLabel": "Gerard Calibre"
+  },
+  "gerard-new-build": {
+    "id": "gerard-new-build",
+    "publisher": "Gerard",
+    "title": "New build roofing",
+    "url": "https://www.gerardroofs.co.nz/gerard-benefits/home-owners/new-build/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Manufacturer new-build information; marketing statements are not independent comparative tests."
+  },
+  "gerard-accessories": {
+    "id": "gerard-accessories",
+    "publisher": "Gerard",
+    "title": "Roofing accessories",
+    "url": "https://www.gerardroofs.co.nz/our-products/accessories/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Matched trims, vents and solar accessories. No material prices verified."
+  },
+  "tile-appraisal": {
+    "id": "tile-appraisal",
+    "publisher": "BRANZ via MBIE Building CodeHub",
+    "title": "Gerard Roofing Systems, Appraisal 1096 (2024)",
+    "url": "https://codehub.building.govt.nz/resources/appraisal-number-1096-2024",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": "2024-08-21",
+    "note": "System scope checked against the CodeHub summary and parsed appraisal. Follow the full current appraisal and installation manual for the specific design.",
+    "shortLabel": "BRANZ tile appraisal"
+  },
+  "cf-appraisal": {
+    "id": "cf-appraisal",
+    "publisher": "BRANZ via MBIE Building CodeHub",
+    "title": "Gerard Concealed Fastening Roofing Systems, Appraisal 1089 (2025)",
+    "url": "https://codehub.building.govt.nz/resources/appraisal-number-1089-2025",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": "2025-07-31",
+    "note": "CodeHub summary identifies plywood sheathing and a batten alternative for CF Shingle, CF Shake and CF Slate only. It must not be treated as a batten approval for every CF profile.",
+    "shortLabel": "BRANZ CF appraisal"
+  },
+  "gerard-warranty": {
+    "id": "gerard-warranty",
+    "publisher": "Gerard",
+    "title": "Warranty documents",
+    "url": "https://www.gerardroofs.co.nz/warranty/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Obtain the actual finish-, site- and installation-specific warranty. A warranty is not an expected service life."
+  },
+  "gerard-warranty-2026": {
+    "id": "gerard-warranty-2026",
+    "publisher": "Gerard",
+    "title": "Warranty flyer, GER0084 v3 0226",
+    "url": "https://www.gerardroofs.co.nz/media/k3adicom/ger0084-gerard-warranty-flyer-nz-v3-0226.pdf",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "February 2026 version label. Parsed conditions checked; graphical duration tables were not relied upon because PDF screenshot retrieval failed. Separate standard, corrosive-environment and overlay provisions."
+  },
+  "gerard-care-2026": {
+    "id": "gerard-care-2026",
+    "publisher": "Gerard",
+    "title": "Roof care and maintenance, GER0038 v4 0226",
+    "url": "https://www.gerardroofs.co.nz/media/yc3bgnyq/ger0038-ger-roof-maintenance-guide-v4-0226.pdf",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "February 2026 version label. Narrative roof-care guidance checked. Do not apply the separate wall-cladding pressure limits to roofing."
+  },
+  "tile-history": {
+    "id": "tile-history",
+    "publisher": "NZ Metal Roofing Manufacturers",
+    "title": "Today’s metal tiles are not Decramastic",
+    "url": "https://www.metalroofing.org.nz/feature-articles/todays-metal-tiles-are-not-decramastic",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": "2016-05-09",
+    "note": "Historical explanation of coating changes. Its old supplier list and warranty references are not used as current market facts."
+  },
+  "tile-roofingsystems-2026": {
+    "id": "tile-roofingsystems-2026",
+    "publisher": "Roofing Systems",
+    "title": "Metal tile roofing and installed budget prices",
+    "url": "https://roofingsystems.co.nz/products/detail/metal-tile-roofing",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "NZ$90/m² metal tiles and NZ$90/m² long-run, installation and GST included. Source publication date, accessory scope and area basis are not stated. Re-observed 29 September 2026; not a dated current quotation."
+  },
+  "tile-sa-guide": {
+    "id": "tile-sa-guide",
+    "publisher": "South Auckland Roofing Company",
+    "title": "South Auckland roofing cost guide",
+    "url": "https://southaucklandroofingcompany.co.nz/cost-of-roofing-south-auckland/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "General guide includes a material-only category, but not an identifiable pressed-tile SKU or a quoted full-system supply schedule. Kept out of material-rate calculations."
+  },
+  "tile-riggall": {
+    "id": "tile-riggall",
+    "publisher": "Riggall Roofing",
+    "title": "Roofing FAQs: converting metal tiles to long-run",
+    "url": "https://www.riggallroofing.co.nz/faqs/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Installer explicitly describes removing metal tiles and fitting new purlins for long-run. Does not establish the nationwide frequency of that choice."
+  },
+  "tile-overlay": {
+    "id": "tile-overlay",
+    "publisher": "Gerard",
+    "title": "Re-roofing over Decramastic tiles",
+    "url": "https://www.gerardroofs.co.nz/gerard-benefits/home-owners/re-roofing/re-roofing-over-decramastic-tiles/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Manufacturer describes a CF Shake overlay option. This is not blanket approval to disturb asbestos or cover a damaged structure."
+  },
+  "tile-huapai": {
+    "id": "tile-huapai",
+    "publisher": "Fowler Homes",
+    "title": "Huapai, Auckland showhome",
+    "url": "https://www.fowlerhomes.co.nz/our-work/auckland-huapai/",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Builder specifies a Gerard textured tile roof. The 268.5 m² figure describes the home, not the measured roof area; exact tile profile and roofing price are not disclosed."
+  },
+  "tile-brookfield": {
+    "id": "tile-brookfield",
+    "publisher": "Abron Group via ArchiPro",
+    "title": "Brookfield Show Home",
+    "url": "https://archipro.co.nz/project/brookfield-show-home-abron-group",
+    "kind": "contractor",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Builder-authored project description, not the platform-generated summary. Uses the historical Stratos Smooth product name. The 182 m² figure is house size, not roof area."
+  },
+  "tile-telfer": {
+    "id": "tile-telfer",
+    "publisher": "Gerard",
+    "title": "Architecturally designed home with CF Shake",
+    "url": "https://www.gerardroofs.co.nz/inspiration/architecturally-designed-home-with-cf-shake/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Kerikeri new-build gallery linked to Telfer House. Counted as one project, not separate gallery and case-study jobs."
+  },
+  "tile-kumeu": {
+    "id": "tile-kumeu",
+    "publisher": "Gerard",
+    "title": "Transforming Kumeu with Shake",
+    "url": "https://www.gerardroofs.co.nz/inspiration/transforming-kumeu-with-shake/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-09-29",
+    "publishedAt": null,
+    "note": "Manufacturer gallery confirms Kumeu location, Shake and Charcoal. Limited project specification; no roof area or price. Presented as a residential application, not a priced new-build case study."
   }
 }

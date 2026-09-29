@@ -31,13 +31,13 @@ for(const [id,a] of Object.entries(articles)){
   assert(/^[a-z][a-z0-9-]*$/.test(section.id),`Invalid anchor ${section.id}`);
   assert(!anchors.has(section.id),`Duplicate anchor ${id}/${section.id}`); anchors.add(section.id);
   for(const block of flatten(section.blocks)){
-   assert(['paragraph','notice','table','prices','projects','calculator','checklist','details','action','corrugated-prices','corrugated-examples','corrugated-budget','corrugated-cover','five-rib-prices','five-rib-profiles','five-rib-examples','five-rib-budget','sheet-quote-compare'].includes(block.type),`Unknown block ${id}`);
+   assert(['paragraph','notice','table','prices','projects','calculator','checklist','details','action','corrugated-prices','corrugated-examples','corrugated-budget','corrugated-cover','five-rib-prices','five-rib-profiles','five-rib-examples','five-rib-budget','sheet-quote-compare','pressed-tile-prices','pressed-tile-profiles','pressed-tile-budget','pressed-tile-examples'].includes(block.type),`Unknown block ${id}`);
    if('sources' in block)checkSources(block.sources,id);
    if(block.type==='table')for(const row of block.rows){assert(row.cells.length===block.heads.length,`Table mismatch ${id}`);checkSources(row.sources,id);}
    if(block.type==='projects')for(const pid of block.ids)assert(has(projects,pid),`Unknown project ${pid}`);
-   if(['prices','corrugated-prices','corrugated-examples','five-rib-prices','five-rib-examples'].includes(block.type))for(const oid of block.ids){used.add(oid);const o=byId.get(oid);assert(o?.status==='verified',`Unverified price ${oid}`);assert(validDate(o?.lastCheckedAt) && o.lastCheckedAt <= a.updatedAt,`Missing or inconsistent price review date ${oid}`);}
+   if(['prices','corrugated-prices','corrugated-examples','five-rib-prices','five-rib-examples','pressed-tile-prices'].includes(block.type))for(const oid of block.ids){used.add(oid);const o=byId.get(oid);assert(o?.status==='verified',`Unverified price ${oid}`);assert(validDate(o?.lastCheckedAt) && o.lastCheckedAt <= a.updatedAt,`Missing or inconsistent price review date ${oid}`);}
    if(block.type==='details')assert(typeof block.title==='string' && Array.isArray(block.blocks) && block.blocks.length>0,`Empty disclosure ${id}`);
-   if(block.type==='action'){assert(block.href.startsWith('/')&&!block.href.startsWith('//'),`Unsafe action ${id}`);assert(existsSync(`app${block.href.split('?')[0]}/page.tsx`),`Broken action ${block.href}`);}
+   if(block.type==='action'){assert(block.href.startsWith('/')&&!block.href.startsWith('//'),`Unsafe action ${id}`);assert(existsSync(`app${block.href.split(/[?#]/)[0]}/page.tsx`),`Broken action ${block.href}`);}
    if(block.type==='calculator')assert(['area','pitch','sheet','budget'].includes(block.mode),`Bad calculator ${id}`);
   }
  }
@@ -115,6 +115,46 @@ assert(articles['corrugate-vs-five'].sections.flatMap(s=>flatten(s.blocks)).filt
 assert(read('components/content/ResearchArticle.tsx').includes("article.id === 'five-rib'"),'Five-rib shortcut routing missing');
 assert(read('components/content/ResearchArticle.tsx').includes("article.id === 'corrugated'"),'Corrugate shortcut routing regressed');
 assert(read('app/sources/page.tsx').includes('<ResearchLibraryStats/>') && read('app/methodology/page.tsx').includes('<ResearchLibraryStats/>'),'Library signature missing');
+
+// Pressed tiles: source figures, support scope and supplier-owned arithmetic.
+const tiles=json('data/research/pressed-tile.json');
+assert(validDate(tiles.reviewedAt),'Invalid tile review date');
+assert(tiles.profiles.length===9,'Pressed tile profile count needs review');
+assert(new Set(tiles.profiles.map(p=>p.id)).size===tiles.profiles.length,'Duplicate tile profile');
+for(const p of tiles.profiles){
+ checkSources([p.sourceId],p.id);
+ for(const field of ['coverLengthMm','coverWidthMm','panelsPerM2','minimumPitch'])assert(Number.isFinite(p[field]) && p[field]>0,`Missing panel figure ${p.id}/${field}`);
+ assert(typeof p.presetEligible==='boolean',`Missing preset decision ${p.id}`);
+ assert(p.support.length>5,`Missing support scope ${p.id}`);
+ if(!p.presetEligible)assert(p.note.includes('Confirmation needed'),'A blocked panel preset must explain its discrepancy');
+}
+assert(tiles.profiles.filter(p=>p.presetEligible).length===7,'Unexpected automatic density presets');
+for(const id of ['cf-slate','calibre'])assert(tiles.profiles.find(p=>p.id===id)?.presetEligible===false,`Disputed ${id} quantity was auto-filled`);
+const tileBlocks=articles['pressed-tile'].sections.flatMap(s=>flatten(s.blocks));
+assert(tileBlocks.filter(b=>b.type==='pressed-tile-budget').length===1,'Tile worksheet missing or duplicated');
+assert(tileBlocks.filter(b=>b.type==='pressed-tile-profiles').length===1,'Tile profile table missing or duplicated');
+assert(JSON.stringify(tileBlocks.find(b=>b.type==='pressed-tile-prices')?.ids)===JSON.stringify(tiles.priceRows.map(r=>r.observationId)),'Tile price ledger mismatch');
+for(const row of tiles.priceRows){
+ const o=byId.get(row.observationId);checkSources(row.sourceIds,row.observationId);
+ assert(o?.status==='verified' && ['supply-install','complete-project'].includes(o.priceBasis),`Wrong tile price scope ${row.observationId}`);
+ assert(o?.unit==='m2',`Wrong tile price unit ${row.observationId}`);
+ assert(row.scope.length>20 && row.note.length>30,`Incomplete tile scope ${row.observationId}`);
+}
+assert(byId.get('tile-rs-20260929')?.rangeEligible===false,'Undated tile guide entered pooled pricing');
+assert(byId.get('tile-rs-20260929')?.gstBasis==='incl','Roofing Systems explicit tax basis lost');
+assert(byId.get('tt-01')?.status==='provisional','Historical provisional record was silently overwritten');
+assert(new Set(tiles.priceRows.flatMap(r=>r.sourceIds.map(id=>sources[id].publisher))).size===3,'Independent tile price-publisher count mismatch');
+for(const row of tiles.held){checkSources(row.sourceIds,row.name);assert(row.reason.length>30,'Missing tile exclusion reason');}
+const tileProjects=[...tiles.newProjectIds,...tiles.replacementProjectIds];
+for(const id of tileProjects)assert(tileBlocks.some(b=>b.type==='projects' && b.ids.includes(id)),`Missing tile project ${id}`);
+assert(new Set(tileProjects.map(id=>sources[projects[id].sourceId].publisher)).size===4,'Tile project-publisher count mismatch');
+assert(projects['tile-kumeu'].lesson.includes('does not establish'),'Kumeu gallery became a verified new-build record');
+assert(projects['eastern-beach'].system.includes('T-rib') && !projects['eastern-beach'].system.includes('Trimrib'),'Builder project profile misattributed');
+assert(articles['pressed-tile'].answer.toLowerCase().includes('new'),'New-roof emphasis missing');
+assert(read('components/content/ResearchArticle.tsx').includes("article.id === 'pressed-tile'"),'Tile shortcut routing missing');
+assert(read('components/content/PressedTileBudget.tsx').includes("useState('')"),'Panel price should start empty');
+assert(!read('components/content/PressedTileBudget.tsx').includes('RoofHubRate'),'Panel worksheet imports estimator rates');
+assert(!read('components/content/PressedTileEvidence.tsx').includes('deriveRate'),'Tile ledger pooled incompatible guides');
 
 assert(byId.get('tt-02')?.sourceDate==='2024-02-10','Historical Arcline date regressed');
 assert(byId.get('rr-13')?.unit==='hour','Hourly labour unit regressed');

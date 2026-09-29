@@ -1407,5 +1407,27 @@ export const OBSERVATIONS: PricingObservation[] = [
     "priceContext": "retail-listing",
     "rangeEligible": false,
     "notes": "New 3.6 m sheet. Original sheet unit retained; GST-inclusive area price intentionally withheld. Observed in indexed primary product text; not stock or checkout confirmation."
+  },
+  {
+    "id": "tile-rs-20260929",
+    "category": "roof-covering",
+    "roofSystem": "pressed-metal-tile",
+    "item": "Metal tiles, generic installed budget, undated Roofing Systems page",
+    "amountExact": 90,
+    "unit": "m2",
+    "priceBasis": "supply-install",
+    "gstBasis": "incl",
+    "region": "Bay of Plenty supplier guide",
+    "observedAt": "2026-09-29",
+    "lastCheckedAt": "2026-09-29",
+    "sourceUrl": "https://roofingsystems.co.nz/products/detail/metal-tile-roofing",
+    "sourceName": "Roofing Systems - installed budgeting guide",
+    "sourceType": "roofer",
+    "evidenceTier": "market",
+    "status": "verified",
+    "areaBasis": "unknown",
+    "priceContext": "published-guide",
+    "rangeEligible": false,
+    "notes": "Public page re-observed at NZ$90/m² including installation and GST. Publication date and accessory/removal/access scope unknown. New observation does not alter the earlier provisional tt-01 record and is not a fresh quote or eligible national range input."
   }
 ];

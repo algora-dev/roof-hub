@@ -38,5 +38,5 @@ export function articleSourceIds(article: ResearchArticle): string[] {
 }
 export function articleObservationIds(article: ResearchArticle): string[] {
   return [...new Set(article.sections.flatMap(s => flattenBlocks(s.blocks).flatMap(b =>
-    b.type === 'prices' || b.type === 'corrugated-prices' || b.type === 'corrugated-examples' || b.type === 'five-rib-prices' || b.type === 'five-rib-examples' ? b.ids : [])))];
+    b.type === 'prices' || b.type === 'corrugated-prices' || b.type === 'corrugated-examples' || b.type === 'five-rib-prices' || b.type === 'five-rib-examples' || b.type === 'pressed-tile-prices' ? b.ids : [])))];
 }

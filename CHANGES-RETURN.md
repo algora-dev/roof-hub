@@ -1,67 +1,46 @@
-# RoofHub Five-Rib Reference Guide v0.8
+# RoofHub Pressed Metal Tile Reference Guide v0.9
 
-## Apply this as an overlay, not a replacement repository
+**Changed/additional files only. Apply over the current repository; do not replace the repository with this ZIP.**
 
-This package contains changed and added files only, based on `roof-hub-main-cf6343f-2026-09-28.zip`. Keep every unlisted file. Preserve production environment variables and live indexing. Nothing in this package requires another redesign, estimator rewrite, change of canonical host or email reconfiguration.
+Baseline: `roof-hub-main-cf6343f-2026-09-28.zip` plus the v0.8 five-rib overlay. No fresher post-v0.8 source export was supplied. Compare the baseline hashes in `V09-OVERLAY-MANIFEST.json` with your current files and reconcile any intervening edits before applying a shared file.
 
-Read `V08-OVERLAY-MANIFEST.json` before applying. It lists before/after hashes and additions. If a current file differs from the baseline hash, reconcile that file's changes rather than overwriting newer work blindly.
+## Purpose
 
-## What this release does
+Expand the existing `/roofing/pressed-metal-tile` into a source-backed modern new-roof guide, with separate replacement coverage. Add a practical panel-quantity worksheet, reader-supplied panel prices and an optional installer-gauge batten check. Do not change the estimator's pricing or launch configuration.
 
-- Replaces the existing `/roofing/five-rib` article with a source-led reference guide, not a new competing route.
-- Adds eight profile entries from six manufacturers, five priced listings from four businesses, three held/excluded listings, and seven attributed project accounts from six publishers.
-- Cites 39 unique source pages on the five-rib guide. Twenty-eight source records and six project records are new to the platform.
-- Adds source-specific 100/150/200/250 m² sheet examples and reuses the existing budget maths with five-rib metadata.
-- Strengthens `/guides/corrugated-vs-five-rib` and adds a reader-editable two-quote sheet comparison. The example prices are explicitly hypothetical, not new market rates.
-- Adds dynamic research-library coverage to `/sources` and `/methodology`: 89 cited source pages, 22 referenced price records, 18 attributed project accounts and 17 research articles in this snapshot.
-- Preserves the short-answer / deep-evidence pattern. Technical notes, excluded prices and additional projects use native disclosures. Their content remains part of the rendered HTML.
-- Extends source validation and maths regression coverage.
+## What is implemented
 
-## Boundaries
+- Eleven sections, eight FAQs and 37 linked source pages.
+- Nine selected Gerard-family profiles. Metrotile's legacy name is not counted as an independent current manufacturer.
+- Four installed/replacement guide-price observations from three publishers, with dates, GST and scope attached. No pooled national range.
+- Six project accounts from four publishers, including new-home examples. Undisclosed roof area and cost stay undisclosed.
+- Panel quantities for actual area or pitch-adjusted horizontal roof projection, whole panels, optional user allowance, minimum orders and pack rounding.
+- Optional per-panel quote and GST basis. No supplier price is pre-filled. Unknown GST stays unknown.
+- CF Slate and Calibre published coverage conflicts are displayed; their automatic presets are disabled.
+- Separate optional batten arithmetic requires an installer-provided gauge and is not a design or purchase schedule. Not offered for Calibre's cited plywood system.
+- A text worksheet download, with inputs, provenance and exclusions. No automatic transfer into the detailed estimator is claimed.
+- Dynamic source/methodology counts now consume the new evidence block type.
 
-Do not change:
+## Intentional corrections and boundaries
 
-- Live `ALLOW_INDEXING` or existing canonical/redirect/sitemap settings.
-- Clarity, Search Console setup or analytics identifiers.
-- The private enquiry API or destination email configuration.
-- Any detailed-estimator file, numeric rate, permission model or current `noindex`.
-- RoofHub fonts, colours, logos, global styles or other page designs.
-- Any of the other 15 article records.
+The existing Eastern Beach project said Trimrib. The actual builder page describes **T-rib**. Its record and source note are corrected, keeping IDs intact so existing links continue working. The five-rib article's review date advances because it uses that shared project record; its prose and pricing are unchanged.
 
-All 67 pre-existing price observations remain unchanged. Four retail records are appended with `rangeEligible: false`. The original shared Bitz record is reused with separate profile cover metadata. This is not a rate-card migration.
+All 71 previous pricing-observation objects are unchanged. `tt-01` remains provisional. A new observation, `tile-rs-20260929`, records the currently displayed but undated Roofing Systems $90/m² installed/GST-inclusive guide, with `rangeEligible: false`. It is not promoted into a current materials rate.
 
-## Data and implementation map
+Fifty-seven protected files are byte-identical, including the detailed estimator, indexing/canonical configuration, analytics, forms/API, brand assets and deployment files. Fifteen other article records are unchanged. No new dependency or font asset is included.
 
-| File / area | Purpose |
-|---|---|
-| `data/research/five-rib.json` | Profile comparison, retail metadata and exclusion reasons. |
-| `data/research/five-rib.ts` | Typed access and conditional budget preset. |
-| `data/research/articles.json` | Only five-rib and corrugate-vs-five records change. |
-| `data/research/sources.json`, `projects.json` | Append-only evidence records. |
-| `data/observations.ts` | Four appended source-specific listings; no prior rate changes. |
-| `FiveRibEvidence.tsx` | Guide shortcuts, supplier ledger, profile table and area examples. |
-| `SheetQuoteComparison.tsx` | Side-by-side reader-owned quote arithmetic with explicit GST. |
-| `CorrugatedBudget.tsx` | Optional system label for the downloaded heading; default corrugated behaviour remains intact. |
-| `lib/corrugated-maths.ts` | Existing shared primitives retained; additive two-quote comparison function. The legacy filename does not imply a second pricing engine. |
-| `ResearchArticle.tsx`, research types/index | New block rendering/traversal and article-specific guide shortcuts. |
-| `data/research/stats.ts`, `ResearchLibraryStats.tsx` | Counts actually referenced evidence, deduplicating URLs and record IDs. Source pages are not independent organisations. |
-| `app/evidence.css` | Scoped comparison/profile/statistics styles using current RoofHub tokens. |
-| `scripts/check-research.mjs`, `check-math.cjs` | Extended regression checks. |
+## Pricing gap, deliberately not hidden
 
-## Important research qualifications
+This research did not verify a current NZ per-panel material price with all necessary purchase conditions. The public worksheet uses a price only when the reader enters one. Do not derive panel prices by subtracting the owner's labour allowance from an installed guide. Do not force the public evidence into a universal “pressed tile is cheapest” claim.
 
-Read `docs/research/FIVE-RIB-RESEARCH-2026-09-28.md` before editing the evidence.
+The owner's $8 to $10.50/m² labour input remains internal and unchanged. A current, scoped supplier or installer rate sheet is the next useful input for improving the market rate card. The current release still delivers useful planning quantities, complete-system quote checklists and dated source prices without fabricating that missing figure.
 
-- Hi Five cover conflict remains visible, not guessed.
-- Bunnings and Mitre 10 listings do not acquire an invented effective cover.
-- Renovation Warehouse's unknown GST prevents an inclusive-GST area price.
-- Bitz cover is conditional on an archived same-seller listing matching current stock.
-- R&C's five-rib title/corrugated description conflict stays out of priced evidence.
-- The researched guidance does not support saying every five-rib ridge must be hand-notched. The article explains specified details without changing the estimator's existing labour allowances.
-- Project accounts are not RoofHub-inspected jobs or invoice samples. Missing roof prices/areas stay missing. Do not substitute overall development budgets or plan dimensions.
-- Do not copy photographs from the linked contractor pages without permission.
+## Integration instructions
 
-## Build and deployment
+1. Commit or back up the current repository.
+2. Read the overlay manifest. Keep all files not listed in it. Resolve hash conflicts, especially shared JSON, renderer and test files, rather than blindly overwriting newer work.
+3. Apply all payload files, including new maths/data/components and the new test harness together.
+4. Run:
 
 ```bash
 npm ci
@@ -70,21 +49,21 @@ npm run typecheck
 npm run build
 ```
 
-Then use a preview deployment and work through `docs/research/FIVE-RIB-QA-2026-09-28.md`. The complete Next build and React hydration could not be verified in the offline editing environment; local data/maths types, content tests, callback-harness checks and static layouts were checked separately.
+5. Follow `docs/pressed-tile-v09/QA.md` in a preview deployment. Test the worksheet with the real React runtime, source disclosures, mobile layouts, text download and contextual enquiry links.
+6. Preserve live environment variables and currently enabled indexing. This is a content/tool update to an already-live site, not the original pre-launch procedure. Do not revert production to `ALLOW_INDEXING=false` just because an older handoff described a staged launch.
+7. Deploy only after the dependency-resolved checks pass. Use the existing production checker against the deployed canonical host.
 
-After successful preview QA, deploy using existing production settings. Do not switch indexing off to apply this content update. Use the repository's production checker normally. Article dates are already 28 September 2026; do not fabricate fresher dates for unchanged pages.
+## What was and was not tested here
 
-## Acceptance criteria
+Pass: repository tests (3,032 research assertions, 183 mathematics/rate cases and 23 component-state harness scenarios), strict data/maths TypeScript, syntax transpilation of 82 TS/TSX files, and 170 offline article layout states. Evidence assertions validate structure and provenance, not independent invoice accuracy.
 
-- Five-rib and comparison routes load, with correct unique metadata and unchanged canonical paths.
-- Supplier prices retain GST/unit/scope conditions. No national price range is inferred from mismatched listings.
-- Profiles and project accounts are attributed; source counts are accurate and not called independent confirmations.
-- Both worksheets calculate and validate; no accidental double pitch or GST conversion.
-- All source/disclosure content is present in initial rendered HTML.
-- Corrugated page and estimator pass regression checks.
-- Public content contains no em dashes or private destination address.
-- Existing analytics, enquiry handling and indexing remain unchanged.
+Not certified: a full Next build or actual React hydration. Dependency installation failed in this environment. Offline screenshots use the real component/CSS output and fallback fonts, not a running production Next application. No deployment or live email transmission was performed.
 
-## Agent return report
+## Documents
 
-Report the commit and preview/production URL, test/typecheck/build results, worksheet/phone-layout checks, any changed integration files, and whether source/canonical checks passed. Do not shorten or remove evidence qualifications merely to make the page look more confident.
+- `docs/pressed-tile-v09/RESEARCH.md`: claims, exclusions, source URLs, conflicts and scope decisions.
+- `docs/pressed-tile-v09/QA.md`: completed tests, limitations and preview acceptance checklist.
+- `docs/pressed-tile-v09/INTEGRITY.json`: recorded preservation checks and derived counts.
+- `V09-OVERLAY-MANIFEST.json`: per-file baseline/output hashes.
+
+Keep the research qualifiers during integration. They are part of the answer, not development notes to delete.
