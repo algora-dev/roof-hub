@@ -10,7 +10,7 @@ export type ObservationCategory =
   | "labour"
   | "other";
 
-export type RoofSystem = "pressed-metal-tile" | "corrugate" | "five-rib" | "tray-standing-seam";
+export type RoofSystem = "pressed-metal-tile" | "corrugate" | "five-rib" | "tray-standing-seam" | "membrane";
 
 export type PriceUnit = "m2" | "lm" | "each" | "week" | "job" | "hour" | "m2-week";
 export type PriceBasis = "material-only" | "labour-only" | "supply-install" | "complete-project";
@@ -102,5 +102,6 @@ export const SYSTEM_LABELS: Record<RoofSystem, string> = {
   corrugate: "Corrugated steel",
   "five-rib": "Five-rib / trapezoidal",
   "pressed-metal-tile": "Pressed metal tile",
-  "tray-standing-seam": "Tray / standing seam"
+  "tray-standing-seam": "Tray / standing seam",
+  membrane: "Membrane roofing"
 };

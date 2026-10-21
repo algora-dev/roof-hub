@@ -163,6 +163,7 @@ export const OBSERVATIONS: PricingObservation[] = [
   {
     "id": "bm-09",
     "category": "roof-covering",
+    "roofSystem": "membrane",
     "item": "Re-roof, membrane (flat roof), per square metre",
     "amountLow": 120,
     "amountHigh": 200,

@@ -1,0 +1,357 @@
+{
+  "generatedAt": "2026-10-20T19:43:03.993Z",
+  "warning": "Calibration reference only. Current RoofHub estimator rate card is draft and source GST treatment is not fully confirmed.",
+  "cases": [
+    {
+      "name": "Small gable new corrugate",
+      "input": {
+        "projectType": "new",
+        "existingRoof": "unknown",
+        "roofShape": "gable",
+        "sizeBand": "small",
+        "areaInputM2": null,
+        "areaSource": "unknown",
+        "pitchBand": "typical",
+        "exactPitchDegrees": null,
+        "desiredRoof": "corrugate",
+        "storeys": 1,
+        "complexities": []
+      },
+      "modelledRoofAreaM2": {
+        "low": 62.1,
+        "high": 115.5
+      },
+      "pricing": {
+        "status": "complete",
+        "lowInclAssumedGst": 5519,
+        "highInclAssumedGst": 12822,
+        "approved": false,
+        "rateCardId": "roofhub-nz-draft-2026-09-22",
+        "missing": []
+      }
+    },
+    {
+      "name": "Medium hip concrete-tile reroof corrugate",
+      "input": {
+        "projectType": "reroof",
+        "existingRoof": "concrete-tile",
+        "roofShape": "hip",
+        "sizeBand": "medium",
+        "areaInputM2": null,
+        "areaSource": "unknown",
+        "pitchBand": "typical",
+        "exactPitchDegrees": null,
+        "desiredRoof": "corrugate",
+        "storeys": 1,
+        "complexities": []
+      },
+      "modelledRoofAreaM2": {
+        "low": 150.1,
+        "high": 219.4
+      },
+      "pricing": {
+        "status": "complete",
+        "lowInclAssumedGst": 12064,
+        "highInclAssumedGst": 24156,
+        "approved": false,
+        "rateCardId": "roofhub-nz-draft-2026-09-22",
+        "missing": []
+      }
+    },
+    {
+      "name": "Medium hip concrete-tile reroof five-rib",
+      "input": {
+        "projectType": "reroof",
+        "existingRoof": "concrete-tile",
+        "roofShape": "hip",
+        "sizeBand": "medium",
+        "areaInputM2": null,
+        "areaSource": "unknown",
+        "pitchBand": "typical",
+        "exactPitchDegrees": null,
+        "desiredRoof": "five-rib",
+        "storeys": 1,
+        "complexities": []
+      },
+      "modelledRoofAreaM2": {
+        "low": 150.1,
+        "high": 219.4
+      },
+      "pricing": {
+        "status": "complete",
+        "lowInclAssumedGst": 12249,
+        "highInclAssumedGst": 24564,
+        "approved": false,
+        "rateCardId": "roofhub-nz-draft-2026-09-22",
+        "missing": []
+      }
+    },
+    {
+      "name": "Medium gable long-run reroof corrugate",
+      "input": {
+        "projectType": "reroof",
+        "existingRoof": "long-run-metal",
+        "roofShape": "gable",
+        "sizeBand": "medium",
+        "areaInputM2": null,
+        "areaSource": "unknown",
+        "pitchBand": "typical",
+        "exactPitchDegrees": null,
+        "desiredRoof": "corrugate",
+        "storeys": 1,
+        "complexities": []
+      },
+      "modelledRoofAreaM2": {
+        "low": 150.1,
+        "high": 219.4
+      },
+      "pricing": {
+        "status": "complete",
+        "lowInclAssumedGst": 11698,
+        "highInclAssumedGst": 23588,
+        "approved": false,
+        "rateCardId": "roofhub-nz-draft-2026-09-22",
+        "missing": []
+      }
+    },
+    {
+      "name": "Large hip-valley two-storey corrugate",
+      "input": {
+        "projectType": "new",
+        "existingRoof": "unknown",
+        "roofShape": "hip-valley",
+        "sizeBand": "large",
+        "areaInputM2": null,
+        "areaSource": "unknown",
+        "pitchBand": "typical",
+        "exactPitchDegrees": null,
+        "desiredRoof": "corrugate",
+        "storeys": 2,
+        "complexities": [
+          "two-storey"
+        ]
+      },
+      "modelledRoofAreaM2": {
+        "low": 248.5,
+        "high": 346.4
+      },
+      "pricing": {
+        "status": "complete",
+        "lowInclAssumedGst": 19895,
+        "highInclAssumedGst": 37227,
+        "approved": false,
+        "rateCardId": "roofhub-nz-draft-2026-09-22",
+        "missing": []
+      }
+    },
+    {
+      "name": "Low-pitch gable corrugate",
+      "input": {
+        "projectType": "new",
+        "existingRoof": "unknown",
+        "roofShape": "gable",
+        "sizeBand": "medium",
+        "areaInputM2": null,
+        "areaSource": "unknown",
+        "pitchBand": "low",
+        "exactPitchDegrees": null,
+        "desiredRoof": "corrugate",
+        "storeys": 1,
+        "complexities": []
+      },
+      "modelledRoofAreaM2": {
+        "low": 145.6,
+        "high": 196.7
+      },
+      "pricing": {
+        "status": "partial",
+        "lowInclAssumedGst": 10793,
+        "highInclAssumedGst": 19756,
+        "approved": false,
+        "rateCardId": "roofhub-nz-draft-2026-09-22",
+        "missing": [
+          "Actual roof pitch / product suitability"
+        ]
+      }
+    },
+    {
+      "name": "Medium hip pressed-metal-tile",
+      "input": {
+        "projectType": "new",
+        "existingRoof": "unknown",
+        "roofShape": "hip",
+        "sizeBand": "medium",
+        "areaInputM2": null,
+        "areaSource": "unknown",
+        "pitchBand": "typical",
+        "exactPitchDegrees": null,
+        "desiredRoof": "pressed-metal-tile",
+        "storeys": 1,
+        "complexities": []
+      },
+      "modelledRoofAreaM2": {
+        "low": 150.1,
+        "high": 219.4
+      },
+      "pricing": {
+        "status": "partial",
+        "lowInclAssumedGst": 8703,
+        "highInclAssumedGst": 15906,
+        "approved": false,
+        "rateCardId": "roofhub-nz-draft-2026-09-22",
+        "missing": [
+          "Tile batten materials",
+          "Metal tile ridges",
+          "Metal tile hips"
+        ]
+      }
+    },
+    {
+      "name": "Medium hip tray / standing seam",
+      "input": {
+        "projectType": "new",
+        "existingRoof": "unknown",
+        "roofShape": "hip",
+        "sizeBand": "medium",
+        "areaInputM2": null,
+        "areaSource": "unknown",
+        "pitchBand": "typical",
+        "exactPitchDegrees": null,
+        "desiredRoof": "tray-standing-seam",
+        "storeys": 1,
+        "complexities": []
+      },
+      "modelledRoofAreaM2": {
+        "low": 150.1,
+        "high": 219.4
+      },
+      "pricing": {
+        "status": "partial",
+        "lowInclAssumedGst": 24481,
+        "highInclAssumedGst": 69930,
+        "approved": false,
+        "rateCardId": "roofhub-nz-draft-2026-09-22",
+        "missing": [
+          "Tray ridges",
+          "Tray hips"
+        ]
+      }
+    },
+    {
+      "name": "Unknown shape and size corrugate",
+      "input": {
+        "projectType": "new",
+        "existingRoof": "unknown",
+        "roofShape": "unknown",
+        "sizeBand": "unknown",
+        "areaInputM2": null,
+        "areaSource": "unknown",
+        "pitchBand": "unknown",
+        "exactPitchDegrees": null,
+        "desiredRoof": "corrugate",
+        "storeys": null,
+        "complexities": []
+      },
+      "modelledRoofAreaM2": {
+        "low": 101,
+        "high": 366.2
+      },
+      "pricing": {
+        "status": "complete",
+        "lowInclAssumedGst": 8001,
+        "highInclAssumedGst": 41244,
+        "approved": false,
+        "rateCardId": "roofhub-nz-draft-2026-09-22",
+        "missing": []
+      }
+    },
+    {
+      "name": "Flat membrane roof",
+      "input": {
+        "projectType": "new",
+        "existingRoof": "unknown",
+        "roofShape": "flat-low-slope",
+        "sizeBand": "medium",
+        "areaInputM2": null,
+        "areaSource": "unknown",
+        "pitchBand": "unknown",
+        "exactPitchDegrees": null,
+        "desiredRoof": "membrane",
+        "storeys": 1,
+        "complexities": []
+      },
+      "modelledRoofAreaM2": {
+        "low": 145,
+        "high": 190
+      },
+      "pricing": {
+        "status": "unpriced",
+        "lowInclAssumedGst": null,
+        "highInclAssumedGst": null,
+        "approved": false,
+        "rateCardId": "",
+        "missing": [
+          "Approved membrane estimator pricing"
+        ]
+      }
+    },
+    {
+      "name": "180 m2 measured gable roof at 25 degrees",
+      "input": {
+        "projectType": "new",
+        "existingRoof": "unknown",
+        "roofShape": "gable",
+        "sizeBand": "medium",
+        "areaInputM2": 180,
+        "areaSource": "roof-area",
+        "pitchBand": "typical",
+        "exactPitchDegrees": 25,
+        "desiredRoof": "corrugate",
+        "storeys": 1,
+        "complexities": []
+      },
+      "modelledRoofAreaM2": {
+        "low": 180,
+        "high": 180
+      },
+      "pricing": {
+        "status": "complete",
+        "lowInclAssumedGst": 12765,
+        "highInclAssumedGst": 18342,
+        "approved": false,
+        "rateCardId": "roofhub-nz-draft-2026-09-22",
+        "missing": []
+      }
+    },
+    {
+      "name": "220 m2 total-floor-area two-storey reroof",
+      "input": {
+        "projectType": "reroof",
+        "existingRoof": "concrete-tile",
+        "roofShape": "gable",
+        "sizeBand": "medium",
+        "areaInputM2": 220,
+        "areaSource": "total-floor-area",
+        "pitchBand": "typical",
+        "exactPitchDegrees": null,
+        "desiredRoof": "corrugate",
+        "storeys": 2,
+        "complexities": [
+          "two-storey"
+        ]
+      },
+      "modelledRoofAreaM2": {
+        "low": 109.3,
+        "high": 157.5
+      },
+      "pricing": {
+        "status": "complete",
+        "lowInclAssumedGst": 10755,
+        "highInclAssumedGst": 21367,
+        "approved": false,
+        "rateCardId": "roofhub-nz-draft-2026-09-22",
+        "missing": []
+      }
+    }
+  ]
+}

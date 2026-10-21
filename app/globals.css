@@ -205,3 +205,5 @@ p{margin-bottom:18px}
 .contact-form__actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .contact-form__status{margin:0;color:var(--sage-800);font-size:.92rem}.contact-form__status.is-error{color:var(--terra-900)}
 @media(max-width:700px){.contact-form{padding:20px}.contact-form__grid{grid-template-columns:1fr}}
+
+.rh-quick-import{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;margin:20px auto;max-width:1180px;padding:14px 18px;border:1px solid #cfd9d1;border-radius:10px;background:#f5f8f4;color:#24362d}.rh-quick-import strong{font-size:14px}.rh-quick-import span{font-size:12px;line-height:1.5;color:#5d6862}

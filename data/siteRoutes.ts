@@ -23,6 +23,7 @@ export const SITE_ROUTES: SiteRoute[] = [
   { path: "/guides/roof-area", lastModified: "2026-09-28", priority: 0.85, changeFrequency: "monthly" },
   { path: "/guides/how-to-prepare-for-a-roofing-quote", lastModified: "2026-09-26", priority: 0.65, changeFrequency: "monthly" },
   { path: "/tools", lastModified: "2026-09-26", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/tools/roof-estimate", lastModified: "2026-10-20", priority: 0.2, changeFrequency: "monthly", indexable: false },
   { path: "/tools/detailed-roof-estimator", lastModified: "2026-09-26", priority: 0.2, changeFrequency: "monthly", indexable: false },
   { path: "/methodology", lastModified: "2026-09-29", priority: 0.7, changeFrequency: "monthly" },
   { path: "/sources", lastModified: "2026-09-29", priority: 0.6, changeFrequency: "monthly" },

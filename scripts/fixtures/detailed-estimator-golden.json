@@ -1,0 +1,55 @@
+{
+  "rateCardId": "roofhub-nz-draft-2026-09-22",
+  "scenarios": [
+    {
+      "name": "corrugate-new-200",
+      "input": { "roofSystem": "corrugate", "projectType": "new", "area": 200 },
+      "expected": {
+        "roofArea": 200,
+        "subtotal": { "min": 8120, "max": 11250 },
+        "tax": { "min": 1218, "max": 1687.5 },
+        "total": { "min": 9338, "max": 12937.5 },
+        "unpriced": []
+      }
+    },
+    {
+      "name": "five-rib-reroof-165",
+      "input": {
+        "roofSystem": "five-rib",
+        "projectType": "reroof",
+        "existingRoof": "concrete",
+        "asbestos": "negative",
+        "area": 165,
+        "components": [
+          { "group": "ridges", "value": 12 },
+          { "group": "valleys", "value": 8 }
+        ]
+      },
+      "expected": {
+        "roofArea": 165,
+        "subtotal": { "min": 8522.7, "max": 12434.05 },
+        "tax": { "min": 1278.41, "max": 1865.11 },
+        "total": { "min": 9801.11, "max": 14299.16 },
+        "unpriced": []
+      }
+    },
+    {
+      "name": "pressed-metal-reroof-145",
+      "input": {
+        "roofSystem": "pressed-metal",
+        "projectType": "reroof",
+        "existingRoof": "decramastic",
+        "asbestos": "negative",
+        "area": 145,
+        "battenMaterials": false
+      },
+      "expected": {
+        "roofArea": 145,
+        "subtotal": { "min": 5872.5, "max": 7811.88 },
+        "tax": { "min": 880.88, "max": 1171.78 },
+        "total": { "min": 6753.38, "max": 8983.66 },
+        "unpriced": []
+      }
+    }
+  ]
+}
