@@ -11,7 +11,7 @@ export function ContactForm() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const requestedTopic = params.get("topic");
-    const allowed = ["General enquiry", "Report a correction", "Suggest a source", "Roofing quote enquiry", "Tool feedback"];
+    const allowed = ["General enquiry", "Report a correction", "Suggest a source", "Roofing quote enquiry", "Roofing project help", "Pressed metal tile roof", "Tool feedback"];
     if (requestedTopic && allowed.includes(requestedTopic)) setTopic(requestedTopic);
     const path = params.get("page");
     // Only a same-site path is accepted as contextual metadata, never a redirect.
@@ -59,7 +59,7 @@ export function ContactForm() {
         <label><span>Email</span><input name="email" type="email" autoComplete="email" maxLength={254} required /></label>
       </div>
       <div className="contact-form__grid">
-        <label><span>What is this about?</span><select name="topic" value={topic} onChange={event => setTopic(event.target.value)}><option>General enquiry</option><option>Report a correction</option><option>Suggest a source</option><option>Roofing quote enquiry</option><option>Tool feedback</option></select></label>
+        <label><span>What is this about?</span><select name="topic" value={topic} onChange={event => setTopic(event.target.value)}><option>General enquiry</option><option>Report a correction</option><option>Suggest a source</option><option>Roofing quote enquiry</option><option>Roofing project help</option><option>Pressed metal tile roof</option><option>Tool feedback</option></select></label>
         <label><span>Page URL <small>(optional)</small></span><input name="pageUrl" value={pageUrl} onChange={event => setPageUrl(event.target.value)} type="url" inputMode="url" placeholder="https://www.roofhub.co.nz/..." maxLength={1000} /></label>
       </div>
       <label><span>Message</span><textarea name="message" rows={7} minLength={10} maxLength={8000} required placeholder="Tell us what you need, what looks wrong, or the source you want us to review." /></label>

@@ -1,18 +1,40 @@
 import Link from "next/link";
-import { ArrowRight, Calculator, Layers, Measure } from "@/components/Icons";
+import { ArrowRight, Calculator, Layers, Measure, Spark } from "@/components/Icons";
+import { AskRoofHubButton } from "@/components/assistant/AskRoofHubButton";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata=pageMetadata({title:"Roofing calculators & tools",description:"RoofHub tools for detailed roof estimating, plan measurement, roof pitch, roof area and project pricing in New Zealand.",path:"/tools"});
-const tools=[
-  {icon:Calculator,title:"Quick roof estimate",copy:"Start with roof shape, approximate size and pitch. Add measurements only if you have them, then refine the same project in the detailed estimator.",status:"New",href:"/tools/roof-estimate"},
-  {icon:Calculator,title:"Detailed roof estimator",copy:"Enter known quantities or measure from a plan/image, choose a roofing system and build a preliminary low/high estimate.",status:"Available",href:"/tools/detailed-roof-estimator"},
-  {icon:Measure,title:"Roof area & measurement",copy:"Understand plan area, actual area and the component measurements that feed a roofing estimate.",status:"Guide + estimator",href:"/guides/roof-area"},
-  {icon:Layers,title:"Roof pitch & quantities",copy:"Convert plan area using pitch and see how roofing system minimum pitches differ.",status:"Guide live",href:"/guides/roof-pitch"},
-  {icon:Calculator,title:"NZ roofing cost guide",copy:"Compare public market observations before applying them to your own measured project.",status:"Data guide",href:"/pricing/roofing-costs"}
+export const metadata = pageMetadata({
+  title: "Roofing calculators & tools",
+  description: "RoofHub tools for quick roof estimates, detailed measurement-to-price estimating, roof pitch, roof area and NZ roofing pricing.",
+  path: "/tools"
+});
+
+const quickTools = [
+  { icon: Calculator, title: "Estimate a roof", copy: "Start with roof shape, approximate size and pitch. Measurements are optional, and the same project can move into the detailed estimator.", status: "Quick", href: "/tools/roof-estimate", link: "Start estimate" },
+  { icon: Spark, title: "Ask RoofHub", copy: "Ask a roofing question, get help with a tool step, understand a product or let RoofHub point you to the right calculation.", status: "Assistant", assistant: true, link: "Ask a question" }
 ];
-export default function ToolsPage(){return <>
-<section className="page-intro"><div className="container page-intro__grid"><div><p className="eyebrow">RoofHub tools</p><h1>Calculations that keep the assumptions visible.</h1></div><div className="page-intro__aside"><p>Start with a quick ballpark when measurements are limited, or move straight into measured quantities. RoofHub keeps assumptions visible and separates an indicative estimate from a formal contractor quote.</p></div></div></section>
-<section className="section section--compact section--white"><div className="container"><div className="tool-grid">{tools.map(({icon:Icon,title,copy,status,href})=><article className="tool-card tool-card--active" key={title}><div className="tool-card__head"><span className="icon-tile"><Icon/></span><span className="status-pill status-pill--live">{status}</span></div><h2>{title}</h2><p>{copy}</p><Link className="text-link" href={href}>Open <ArrowRight/></Link></article>)}</div></div></section>
-<section className="section section--sage"><div className="container feature-split"><div className="feature-copy"><p className="eyebrow">One quantity model</p><h2>The same measurements should not need to be entered twice.</h2><p>Roof area, ridges, hips, valleys, barges, spouting and custom items can be carried from digital takeoff into pricing. Roof type then determines which compatible pricing components are applied.</p></div><div className="architecture-diagram"><span>Plan / image</span><span>Manual measurements</span><span className="architecture-core">Roof quantities</span><span>Roof system</span><span>Estimate range</span></div></div></section>
-<section className="section section--white"><div className="container cta-band"><div><p className="eyebrow">Detailed estimator</p><h2>Already know the measurements?</h2><p>Skip the broad questions. Enter actual quantities directly and use RoofHub as a measurement-to-price workflow.</p></div><Link className="button button--primary button--large" href="/tools/detailed-roof-estimator">Open detailed estimator <ArrowRight/></Link></div></section>
-</>}
+
+const advancedTools = [
+  { icon: Calculator, title: "Detailed roof estimator", copy: "Enter actual quantities or measure from a plan/image, choose a roofing system and build a transparent low/high estimate.", status: "Measured", href: "/tools/detailed-roof-estimator" },
+  { icon: Measure, title: "Roof area & measurement", copy: "Understand plan area, actual roof area and the component measurements that feed a roofing estimate.", status: "Guide + tool", href: "/guides/roof-area" },
+  { icon: Layers, title: "Roof pitch & quantities", copy: "Convert plan area using pitch and see how product minimum pitches and roof geometry affect the answer.", status: "Guide + tool", href: "/guides/roof-pitch" },
+  { icon: Calculator, title: "NZ roofing cost evidence", copy: "Compare published market observations and their scope before applying pricing to a measured project.", status: "Evidence", href: "/pricing/roofing-costs" }
+];
+
+export default function ToolsPage() {
+  return <>
+    <section className="page-intro"><div className="container page-intro__grid"><div><p className="eyebrow">RoofHub tools</p><h1>Start rough. Add detail when it earns its keep.</h1></div><div className="page-intro__aside"><p>Use a quick estimate when information is limited, move into measured quantities when you have them, or ask RoofHub which path fits what you are trying to do.</p></div></div></section>
+
+    <section className="section section--compact section--white"><div className="container">
+      <div className="tool-section-heading"><div><p className="eyebrow">Quick tools</p><h2>Useful without a full takeoff.</h2></div><p>Good for early budgets, first-pass pricing and projects where the measurements are not ready yet.</p></div>
+      <div className="tool-grid tool-grid--quick">{quickTools.map(({icon:Icon,title,copy,status,href,assistant,link}) => <article className="tool-card tool-card--active" key={title}><div className="tool-card__head"><span className="icon-tile"><Icon/></span><span className="status-pill status-pill--live">{status}</span></div><h2>{title}</h2><p>{copy}</p>{assistant ? <AskRoofHubButton label={link} prompt="Help me work out which RoofHub tool or roofing information I need." className="text-link tool-text-button" /> : <Link className="text-link" href={href!}>{link} <ArrowRight/></Link>}</article>)}</div>
+    </div></section>
+
+    <section className="section section--sage"><div className="container">
+      <div className="tool-section-heading"><div><p className="eyebrow">Advanced tools</p><h2>For measurements, plans and deeper estimating.</h2></div><p>Builders, roofers, estimators and technically confident users can move straight into quantities without completing the simple flow first.</p></div>
+      <div className="tool-grid">{advancedTools.map(({icon:Icon,title,copy,status,href}) => <article className="tool-card tool-card--active" key={title}><div className="tool-card__head"><span className="icon-tile"><Icon/></span><span className="status-pill status-pill--live">{status}</span></div><h2>{title}</h2><p>{copy}</p><Link className="text-link" href={href}>Open <ArrowRight/></Link></article>)}</div>
+    </div></section>
+
+    <section className="section section--white"><div className="container feature-split"><div className="feature-copy"><p className="eyebrow">One roof project</p><h2>Approximate and measured information should work together.</h2><p>Roof area, ridges, hips, valleys, barges and project selections can carry between RoofHub tools. Approximate quantities stay labelled as estimated until you replace them with real measurements.</p></div><div className="architecture-diagram"><span>Question / rough inputs</span><span>Plan / measurements</span><span className="architecture-core">Roof project</span><span>Roof system</span><span>Estimate range</span></div></div></section>
+  </>;
+}

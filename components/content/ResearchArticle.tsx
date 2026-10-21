@@ -16,6 +16,8 @@ import { FiveRibGuideStart, FiveRibPriceLedger, FiveRibProfiles, FiveRibSizeExam
 import { fiveRibBudgetPresets } from '@/data/research/five-rib';
 import { SheetQuoteComparison } from './SheetQuoteComparison';
 import { corrugatedBudgetPresets } from '@/data/research/corrugated';
+import { articleAction } from '@/lib/article-actions';
+import { AskRoofHubButton } from '@/components/assistant/AskRoofHubButton';
 
 function reviewDate(iso: string): string {
   const [year, month, day] = iso.split('-').map(Number);
@@ -96,6 +98,7 @@ export function ResearchArticlePage({ articleId }: { articleId: string }) {
   const parentPath = article.path.startsWith('/pricing/') ? '/pricing' : article.path.startsWith('/roofing/') ? '/roofing' : '/guides';
   const parentLabel = parentPath === '/pricing' ? 'Pricing' : parentPath === '/roofing' ? 'Roofing systems' : 'Guides & answers';
   const context = `?topic=${encodeURIComponent('Roofing quote enquiry')}&page=${encodeURIComponent(article.path)}`;
+  const action = articleAction(article);
   let questionId = 'questions';
   while (article.sections.some(section => section.id === questionId)) questionId = `related-${questionId}`;
   const contents = <nav aria-label="On this page"><ol>{article.sections.map(section => <li key={section.id}><a href={`#${section.id}`}>{section.title}</a></li>)}<li><a href="#sources">Sources and review notes</a></li></ol></nav>;
@@ -109,13 +112,14 @@ export function ResearchArticlePage({ articleId }: { articleId: string }) {
     {referenceGuide && article.id === 'five-rib' && <FiveRibGuideStart/>}
     {referenceGuide && article.id === 'pressed-tile' && <PressedTileGuideStart/>}
     <div className="container rh-reading-layout">
-      <aside className="rh-toc">{referenceGuide ? <><div className="rh-toc-desktop"><strong>On this page</strong>{contents}</div><details className="rh-toc-mobile"><summary>Jump to a section</summary>{contents}</details></> : <details open><summary>On this page</summary>{contents}</details>}<p>Read the evidence first. Use a tool when you have measurements.</p><Link className="text-link" href="/tools/detailed-roof-estimator">Open detailed estimator →</Link></aside>
+      <aside className="rh-toc">{referenceGuide ? <><div className="rh-toc-desktop"><strong>On this page</strong>{contents}</div><details className="rh-toc-mobile"><summary>Jump to a section</summary>{contents}</details></> : <details open><summary>On this page</summary>{contents}</details>}<p>Don't have measurements? That's fine. Start with what you know, or use the detailed tool if you already have quantities.</p><Link className="text-link" href={action.estimateHref}>Estimate a roof →</Link><br/><Link className="text-link" href="/tools/detailed-roof-estimator">Use measurements →</Link></aside>
       <article className="rh-reading-body" aria-label={article.title}>
+        <section className="rh-contextual-action"><div><p className="eyebrow">{action.eyebrow}</p><h2>{action.title}</h2><p>{action.copy}</p></div><div className="button-row"><Link className="button button--primary" href={action.estimateHref}>{action.estimateLabel}</Link><AskRoofHubButton prompt={action.assistantPrompt} label={action.assistantLabel} /></div></section>
         {article.sections.map(section => <section className="rh-article-section" id={section.id} key={section.id}><h2>{section.title}</h2>{section.blocks.map((block, i) => <ContentBlock block={block} key={i} />)}</section>)}
         {article.faqs.length > 0 && <section className="rh-article-section" id={questionId}><h2>Related questions</h2><div className="faq-list">{article.faqs.map(faq => <details key={faq.q}><summary>{faq.q}</summary><p>{faq.a}<InlineSources ids={faq.sources} /></p></details>)}</div></section>}
         <section className="rh-article-section" id="sources"><h2>Sources and review notes</h2><p className="rh-review-note">Prepared by {article.editor}. Reviewed <time dateTime={article.updatedAt}>{reviewDate(article.updatedAt)}</time>. A source check confirms what a page states, not an independent inspection or invoice audit. Published project accounts are attributed to their publishers.</p>{referenceGuide ? <details className="rh-evidence-detail"><summary>Open all {sources.length} source pages and review notes</summary><div><Sources sources={sources}/></div></details> : <Sources sources={sources} />}<p className="rh-review-note">Original calculations are labelled as examples. Historical prices stay dated, missing fields stay unknown, and conflicting specifications are flagged. Sources are not endorsements or paid rankings. <Link href="/methodology">Read our methodology</Link> or <Link href={`/contact?topic=${encodeURIComponent('Report a correction')}&page=${encodeURIComponent(article.path)}`}>report a correction</Link>.</p></section>
         <section className="rh-article-section"><h2>Keep exploring</h2><div className="rh-related-grid">{article.related.map(id => { const related = getArticle(id); return <Link key={id} href={related.path}><span>{related.category}</span><strong>{related.title}</strong><small>Read the answer →</small></Link>; })}</div></section>
-        <section className="rh-answer-cta"><p className="eyebrow">Apply this to your roof</p><h2>Have measurements or a project question?</h2><p>Use your dimensions in the detailed estimator, or send your question to the RoofHub team. A roofing contractor still needs to confirm the site, specification and final price.</p><div className="button-row"><Link className="button button--primary" href="/tools/detailed-roof-estimator">Use the detailed estimator</Link><Link className="button button--secondary" href={`/contact${context}`}>Ask about your project</Link></div></section>
+        <section className="rh-answer-cta"><p className="eyebrow">Next step</p><h2>Estimate it, refine it, or ask RoofHub.</h2><p>Start with approximate information, use actual measurements when you have them, or ask RoofHub to explain the decision. A roofing contractor still needs to confirm the site, specification and final quotation.</p><div className="button-row"><Link className="button button--primary" href={action.estimateHref}>{action.estimateLabel}</Link><Link className="button button--secondary" href="/tools/detailed-roof-estimator">Use measurements</Link><AskRoofHubButton prompt={action.assistantPrompt} label="Ask RoofHub" className="button button--secondary" /></div><p className="rh-review-note"><Link href={`/contact${context}`}>Prefer a person? Send the project to RoofHub.</Link></p></section>
       </article>
     </div>
   </div>;

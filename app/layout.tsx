@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PreviewBanner } from "@/components/PreviewBanner";
 import { Analytics } from "@/components/Analytics";
+import { AssistantLauncher } from "@/components/assistant/AssistantLauncher";
 import { DEFAULT_DESCRIPTION, SITE_NAME, SITE_TAGLINE, SITE_URL, isIndexingEnabled } from "@/lib/seo";
 
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         <main id="main-content" tabIndex={-1}>{children}</main>
         <Footer />
+        <AssistantLauncher />
         <Analytics />
       </body>
     </html>

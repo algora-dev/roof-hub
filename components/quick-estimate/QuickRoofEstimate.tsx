@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { trackRoofHubEvent } from "@/lib/client/analytics";
 import { getRoofProject, setRoofProject } from "@/lib/client/roof-project-store";
 import { registerToolContext, setToolContext } from "@/lib/client/tool-context-store";
@@ -111,7 +112,20 @@ function ResultCard({ result, reviewMode }: { result: QuickPriceResult; reviewMo
   </article>;
 }
 
+function applyUrlPreset(input: QuickEstimateInput, params: URLSearchParams): QuickEstimateInput {
+  const next = { ...input };
+  const project = params.get("project");
+  if (project === "new" || project === "reroof") next.projectType = project;
+  const product = params.get("product");
+  if (["corrugate", "five-rib", "pressed-metal-tile", "tray-standing-seam", "membrane", "undecided"].includes(product || "")) next.desiredRoof = product as QuickDesiredRoof;
+  const existing = params.get("existing");
+  if (["long-run-metal", "pressed-metal-tile", "decramastic", "concrete-tile", "membrane", "other", "unknown"].includes(existing || "")) next.existingRoof = existing as QuickEstimateInput["existingRoof"];
+  return next;
+}
+
 export default function QuickRoofEstimate() {
+  const searchParams = useSearchParams();
+  const presetApplied = useRef(false);
   const [input, setInput] = useState<QuickEstimateInput>(() => defaultQuickEstimateInput());
   const [current, setCurrent] = useState<StepId>("project");
   const [range, setRange] = useState<QuickMeasurementRange | null>(null);
@@ -125,8 +139,19 @@ export default function QuickRoofEstimate() {
   const progress = current === "result" ? 100 : Math.round((stepIndex / Math.max(order.length - 1, 1)) * 100);
 
   useEffect(() => {
+    if (presetApplied.current) return;
+    presetApplied.current = true;
     const existing = getRoofProject();
-    if (existing) setInput(quickInputFromRoofProject(existing));
+    const initial = applyUrlPreset(existing ? quickInputFromRoofProject(existing) : defaultQuickEstimateInput(), new URLSearchParams(searchParams.toString()));
+    setInput(initial);
+    try {
+      const initialRange = measureQuickRoof(initial);
+      const shared = applyQuickEstimateToRoofProject(initial, initialRange, null, existing, { originatingPath: searchParams.get("from") || "/tools/roof-estimate" });
+      if (searchParams.get("from")) shared.entryPoint = "content";
+      setRoofProject(shared);
+    } catch {
+      // A URL preset is optional context; invalid or incomplete combinations fall back to the normal flow.
+    }
     const unregister = registerToolContext("quick-estimate");
     trackRoofHubEvent("estimate_start", { tool: "quick-estimate", entryPoint: existing?.entryPoint ?? "direct" });
     return unregister;

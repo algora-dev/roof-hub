@@ -3,7 +3,7 @@ export const SITE_HOST = new URL(SITE_URL).host;
 export const SITE_NAME = "RoofHub NZ";
 export const SITE_TAGLINE = "Know more. Build brighter.";
 export const DEFAULT_DESCRIPTION =
-  "Independent New Zealand roofing pricing, guides and practical estimating tools for homeowners, roofers and building professionals.";
+  "Independent New Zealand roofing knowledge, pricing, guides and estimating tools for homeowners, builders, roofers and building professionals.";
 
 /**
  * One explicit switch controls search indexing across metadata, middleware,

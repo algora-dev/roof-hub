@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import QuickRoofEstimate from "@/components/quick-estimate/QuickRoofEstimate";
 import { pageMetadata } from "@/lib/seo";
 
@@ -9,5 +10,5 @@ export const metadata = pageMetadata({
 });
 
 export default function RoofEstimatePage() {
-  return <main className="section section--white"><QuickRoofEstimate /></main>;
+  return <div className="section section--white"><Suspense fallback={<div className="container"><p>Loading roof estimate...</p></div>}><QuickRoofEstimate /></Suspense></div>;
 }

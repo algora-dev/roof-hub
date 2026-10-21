@@ -15,6 +15,14 @@ const sections = [
     ]
   },
   {
+    h: "When you use Ask RoofHub",
+    body: [
+      "Ask RoofHub is an optional AI-assisted interface. When you send a message, the question, the current RoofHub page or tool step, and relevant non-sensitive project selections from the active browser tab may be sent to RoofHub's configured AI service so it can answer in context. RoofHub currently uses OpenAI for this processing. The assistant is instructed to rely on RoofHub knowledge and deterministic RoofHub tools for project pricing rather than inventing prices.",
+      "Assistant messages may be retained temporarily on RoofHub's server infrastructure so a conversation can continue within the same browser tab. The browser also keeps a tab-scoped assistant identifier and local conversation display state in session storage. RoofHub does not require you to provide your name, email address, phone number or exact street address in chat, and the assistant is instructed to move contact details into the project-enquiry form instead.",
+      "General analytics records coarse assistant events such as opening the assistant or completing an estimate. It is designed not to send the text of your assistant conversation, names, email addresses, phone numbers, exact addresses or uploaded documents into general analytics."
+    ]
+  },
+  {
     h: "When you contact us",
     body: [
       "If you use the contact, project or quote-enquiry form, RoofHub receives the details you choose to submit so we can handle that request. A project enquiry may include your contact details, location, roof selections, measurements, estimate context and any notes you provide. Detailed-estimator quote payloads do not include uploaded plan-image bytes or private custom rate overrides.",
@@ -24,7 +32,7 @@ const sections = [
   {
     h: "Analytics and third parties",
     body: [
-      "This site is hosted on Vercel. Microsoft Clarity provides session replay, heatmaps and usage analytics. Google Analytics may process aggregate usage data when it is enabled. Contact and quote-enquiry submissions are delivered through a transactional email provider so the message can reach the RoofHub team. These providers process information under their own terms and privacy obligations.",
+      "This site is hosted on Vercel. Microsoft Clarity provides session replay, heatmaps and usage analytics. Google Analytics may process aggregate usage data when it is enabled. Ask RoofHub may send assistant requests to OpenAI and may use server-side storage services for temporary conversation continuity. Contact and quote-enquiry submissions are delivered through a transactional email provider so the message can reach the RoofHub team. These providers process information under their own terms and privacy obligations.",
       "RoofHub does not sell form-submission data and does not use advertising trackers. General analytics events are designed to record coarse product usage, such as which tool was opened or completed, rather than names, email addresses, phone numbers, exact addresses, uploaded documents or conversation text."
     ]
   },

@@ -11,9 +11,9 @@ export type ToolContextSnapshot = {
 
 export function pageKindForPath(path: string): ToolContextSnapshot["pageKind"] {
   if (path === "/") return "home";
-  if (path.startsWith("/pricing/")) return "pricing";
-  if (path.startsWith("/roofing/")) return "roofing";
-  if (path.startsWith("/guides/")) return "guide";
-  if (path.startsWith("/tools/")) return "tool";
+  if (path === "/pricing" || path.startsWith("/pricing/")) return "pricing";
+  if (path === "/roofing" || path.startsWith("/roofing/")) return "roofing";
+  if (path === "/guides" || path.startsWith("/guides/")) return "guide";
+  if (path === "/tools" || path.startsWith("/tools/")) return "tool";
   return "other";
 }

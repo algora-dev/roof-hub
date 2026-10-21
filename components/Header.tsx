@@ -8,10 +8,9 @@ import { CloseIcon, MenuIcon } from "@/components/Icons";
 
 const links = [
   ["Pricing", "/pricing"],
-  ["Tools", "/tools"],
-  ["Answers", "/guides"],
-  ["Roofing", "/roofing"],
-  ["About", "/about"]
+  ["Roof types", "/roofing"],
+  ["Guides", "/guides"],
+  ["Tools", "/tools"]
 ] as const;
 
 export function Header() {
@@ -21,40 +20,33 @@ export function Header() {
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
     if (!open) return;
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
-    };
+    const onKey = (event: KeyboardEvent) => { if (event.key === "Escape") setOpen(false); };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  return (
-    <>
-      <header className="site-header">
-        <div className="container header-inner">
-          <Logo />
-          <nav className="desktop-nav" aria-label="Primary navigation">
-            {links.map(([label, href]) => (
-              <Link key={href} className={pathname === href || pathname.startsWith(`${href}/`) ? "is-active" : ""} href={href}>{label}</Link>
-            ))}
-          </nav>
-          <div className="header-actions">
-            <Link className="button button--primary button--small desktop-cta" href="/tools">Explore tools</Link>
-            <button className="icon-button mobile-menu-button" onClick={() => setOpen(true)} aria-label="Open menu" aria-expanded={open}><MenuIcon /></button>
-          </div>
+  return <>
+    <header className="site-header">
+      <div className="container header-inner">
+        <Logo />
+        <nav className="desktop-nav" aria-label="Primary navigation">
+          {links.map(([label, href]) => <Link key={href} className={pathname === href || pathname.startsWith(`${href}/`) ? "is-active" : ""} href={href}>{label}</Link>)}
+        </nav>
+        <div className="header-actions">
+          <Link className="button button--primary button--small desktop-cta" href="/tools/roof-estimate">Estimate a roof</Link>
+          <button className="icon-button mobile-menu-button" onClick={() => setOpen(true)} aria-label="Open menu" aria-expanded={open}><MenuIcon /></button>
         </div>
-      </header>
-      {open && (
-        <div className="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
-          <div className="container mobile-drawer__inner">
-            <div className="mobile-drawer__top"><Logo /><button className="icon-button" onClick={() => setOpen(false)} aria-label="Close menu"><CloseIcon /></button></div>
-            <nav className="mobile-nav">
-              {links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
-              <Link className="button button--primary button--large" href="/tools">Explore tools</Link>
-            </nav>
-          </div>
-        </div>
-      )}
-    </>
-  );
+      </div>
+    </header>
+    {open && <div className="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <div className="container mobile-drawer__inner">
+        <div className="mobile-drawer__top"><Logo /><button className="icon-button" onClick={() => setOpen(false)} aria-label="Close menu"><CloseIcon /></button></div>
+        <nav className="mobile-nav">
+          {links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
+          <Link className="button button--primary button--large" href="/tools/roof-estimate">Estimate a roof</Link>
+          <Link className="button button--secondary button--large" href="/tools/detailed-roof-estimator">Use measurements</Link>
+        </nav>
+      </div>
+    </div>}
+  </>;
 }

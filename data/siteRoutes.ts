@@ -7,7 +7,7 @@ export type SiteRoute = {
 };
 
 export const SITE_ROUTES: SiteRoute[] = [
-  { path: "/", lastModified: "2026-09-28", priority: 1, changeFrequency: "weekly" },
+  { path: "/", lastModified: "2026-10-20", priority: 1, changeFrequency: "weekly" },
   { path: "/pricing", lastModified: "2026-09-28", priority: 0.9, changeFrequency: "monthly" },
   { path: "/pricing/roofing-costs", lastModified: "2026-09-28", priority: 1, changeFrequency: "weekly" },
   { path: "/pricing/reroof-cost", lastModified: "2026-09-28", priority: 0.95, changeFrequency: "weekly" },
@@ -22,15 +22,15 @@ export const SITE_ROUTES: SiteRoute[] = [
   { path: "/guides/roof-pitch", lastModified: "2026-09-28", priority: 0.85, changeFrequency: "monthly" },
   { path: "/guides/roof-area", lastModified: "2026-09-28", priority: 0.85, changeFrequency: "monthly" },
   { path: "/guides/how-to-prepare-for-a-roofing-quote", lastModified: "2026-09-26", priority: 0.65, changeFrequency: "monthly" },
-  { path: "/tools", lastModified: "2026-09-26", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/tools", lastModified: "2026-10-20", priority: 0.8, changeFrequency: "monthly" },
   { path: "/tools/roof-estimate", lastModified: "2026-10-20", priority: 0.2, changeFrequency: "monthly", indexable: false },
   { path: "/tools/detailed-roof-estimator", lastModified: "2026-09-26", priority: 0.2, changeFrequency: "monthly", indexable: false },
   { path: "/methodology", lastModified: "2026-09-29", priority: 0.7, changeFrequency: "monthly" },
   { path: "/sources", lastModified: "2026-09-29", priority: 0.6, changeFrequency: "monthly" },
   { path: "/about", lastModified: "2026-09-26", priority: 0.55, changeFrequency: "monthly" },
-  { path: "/contact", lastModified: "2026-09-28", priority: 0.4, changeFrequency: "yearly" },
-  { path: "/privacy", lastModified: "2026-09-26", priority: 0.3, changeFrequency: "yearly" },
-  { path: "/terms", lastModified: "2026-09-26", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/contact", lastModified: "2026-10-20", priority: 0.4, changeFrequency: "yearly" },
+  { path: "/privacy", lastModified: "2026-10-20", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/terms", lastModified: "2026-10-20", priority: 0.3, changeFrequency: "yearly" },
   { path: "/guides/corrugated-vs-five-rib", lastModified: "2026-09-28", priority: 0.85, changeFrequency: "monthly" },
   { path: "/pricing/200m2-roof-cost", lastModified: "2026-09-28", priority: 0.85, changeFrequency: "monthly" },
   { path: "/guides/how-long-does-a-metal-roof-last", lastModified: "2026-09-28", priority: 0.85, changeFrequency: "monthly" },

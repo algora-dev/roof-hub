@@ -27,6 +27,13 @@ const sections = [
     ]
   },
   {
+    h: "Ask RoofHub and AI-assisted answers",
+    body: [
+      "Ask RoofHub is an optional AI-assisted interface designed to make RoofHub information and tools easier to use. AI-generated explanations can be incomplete or wrong. Check important product requirements, measurements, specifications and site decisions against the cited RoofHub material, manufacturer information and an appropriately qualified professional.",
+      "The assistant is not permitted to invent project prices. Where it provides a RoofHub project estimate, the numeric range is produced by RoofHub's deterministic estimating software and remains subject to the same assumptions, rate-card status and limitations as the underlying calculator. An assistant explanation does not turn an indicative RoofHub estimate into a contractor quote."
+    ]
+  },
+  {
     h: "No warranty",
     body: [
       "RoofHub content and tools are provided \"as is\" without warranty of completeness, accuracy or fitness for a particular purpose. To the maximum extent permitted by New Zealand law, RoofHub is not liable for loss arising from reliance on information or estimates published here."
@@ -56,7 +63,7 @@ export default function TermsPage() {
     </section>
     <section className="section section--white">
       <div className="container narrow">
-        <p><strong>Last updated: 26 September 2026.</strong></p>
+        <p><strong>Last updated: 20 October 2026.</strong></p>
         {sections.map((s) => <div key={s.h}><h2>{s.h}</h2>{s.body.map((p) => <p key={p.slice(0, 40)}>{p}</p>)}</div>)}
         <p>Questions about these terms? <Link className="text-link" href="/contact">Contact us</Link>.</p>
       </div>
