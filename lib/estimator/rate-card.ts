@@ -10,6 +10,11 @@ export type EstimatorRateCardRecord = {
   status: EstimatorRateCardStatus;
   reviewedAt: string;
   sourceTaxConfirmed: boolean;
+  /**
+   * Non-null while an approved card is published as a provisional version (e.g. "V1").
+   * Drives the visible "V1 RoofHub estimate" disclosure on public results.
+   */
+  publicationVersion: string | null;
   productCoverage: Record<RoofSystem, EstimatorProductCoverage>;
   evidenceObservationIds: string[];
   notes: string[];
@@ -19,9 +24,10 @@ const CURRENT_DETAILED_RATE_CARD: EstimatorRateCardRecord = {
   id: "roofhub-nz-draft-2026-09-22",
   schemaVersion: 1,
   methodologyVersion: "2026.10-foundation-v1",
-  status: "draft",
-  reviewedAt: "2026-10-20",
-  sourceTaxConfirmed: false,
+  status: "approved",
+  reviewedAt: "2026-10-21",
+  sourceTaxConfirmed: true,
+  publicationVersion: "V1",
   productCoverage: {
     corrugate: "configured",
     "five-rib": "configured",
@@ -32,8 +38,8 @@ const CURRENT_DETAILED_RATE_CARD: EstimatorRateCardRecord = {
   evidenceObservationIds: [],
   notes: [
     "This registry describes estimator approval state only. Price values remain owned by the deterministic estimator rate card.",
-    "The current detailed rate card remains a draft and is not approved for a public quick-estimate result.",
-    "Membrane requires an approved calculation pathway before it can be priced by a public RoofHub estimator."
+    "Published as V1 indicative pricing on 2026-10-21 (owner decision) ahead of full NZ pricing calibration. The deterministic rate values are unchanged from the 2026-09-22 draft; results must carry the V1 disclosure while calibration continues.",
+    "Membrane requires an approved calculation pathway before it can be priced by a public RoofHub estimator. Membrane stays unpriced; no membrane rate exists in the card."
   ]
 };
 
@@ -57,4 +63,14 @@ export function assertRateCardApprovedForPublicEstimate(id: string): EstimatorRa
     throw new Error(`RoofHub estimator rate card ${id} is not approved for public estimating.`);
   }
   return record;
+}
+
+/**
+ * Publication version label (e.g. "V1") for an approved-but-provisional rate card,
+ * or null for a fully calibrated card. UIs use this to render the V1 disclosure
+ * next to public estimates instead of hard-coding version state.
+ */
+export function rateCardPublicationVersion(id: string): string | null {
+  const record = getEstimatorRateCardRecord(id);
+  return record?.publicationVersion ?? null;
 }

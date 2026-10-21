@@ -53,7 +53,7 @@ function EstimateCard({ estimate }: { estimate: AssistantEstimateCard }) {
     <div className={styles.estimateHead}><strong>{estimate.productLabel}</strong><span className={styles.pill}>{estimate.status === "complete" ? "configured scope" : estimate.status}</span></div>
     {hasPrice ? <>
       <div className={styles.price}>{money(estimate.low!)} <span>to</span> {money(estimate.high!)}</div>
-      <p>{estimate.approved ? "Indicative RoofHub range, incl. GST." : estimate.reviewOnly ? "Calibration preview only. The current rate card is not approved for public pricing." : "Indicative range."}</p>
+      <p>{estimate.approved ? (estimate.publicationVersion ? `Indicative RoofHub ${estimate.publicationVersion} range, incl. GST.` : "Indicative RoofHub range, incl. GST.") : estimate.reviewOnly ? "Calibration preview only. The current rate card is not approved for public pricing." : "Indicative range."}</p>
     </> : <p>{estimate.compatibilityMessage || "RoofHub is not publishing a numeric price for this selection yet."}</p>}
     {estimate.missing.length > 0 && <details><summary>What still needs checking</summary><ul>{estimate.missing.slice(0, 8).map(item => <li key={item}>{item}</li>)}</ul></details>}
   </div>;

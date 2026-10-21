@@ -6,16 +6,18 @@ export type QuoteCheckerReference = {
   available: boolean;
   estimate: QuoteReferenceEstimate | null;
   reviewOnly: boolean;
+  publicationVersion: string | null;
   reason: string;
 };
 
 export function quoteCheckerReference(project: RoofProject | null, allowReviewPricing = false): QuoteCheckerReference {
-  if (!project?.estimate) return { available: false, estimate: null, reviewOnly: false, reason: "Build a RoofHub project estimate before comparing the headline price." };
+  if (!project?.estimate) return { available: false, estimate: null, reviewOnly: false, publicationVersion: null, reason: "Build a RoofHub project estimate before comparing the headline price." };
   const record = getEstimatorRateCardRecord(project.estimate.rateCardId);
-  if (!record) return { available: false, estimate: null, reviewOnly: false, reason: "The saved estimate uses an unregistered RoofHub rate card." };
+  if (!record) return { available: false, estimate: null, reviewOnly: false, publicationVersion: null, reason: "The saved estimate uses an unregistered RoofHub rate card." };
   const approved = isRateCardApprovedForPublicEstimate(project.estimate.rateCardId);
-  if (!approved && !allowReviewPricing) return { available: false, estimate: null, reviewOnly: false, reason: "RoofHub's current project rate card is still in calibration review, so public quote-price comparison is withheld." };
+  if (!approved && !allowReviewPricing) return { available: false, estimate: null, reviewOnly: false, publicationVersion: null, reason: "RoofHub's current project rate card is still in calibration review, so public quote-price comparison is withheld." };
   const multiplier = project.estimate.gstBasis === "incl" ? 1 : 1.15;
+  const publicationVersion = approved ? record.publicationVersion : null;
   return {
     available: true,
     estimate: {
@@ -27,7 +29,8 @@ export function quoteCheckerReference(project: RoofProject | null, allowReviewPr
       reviewOnly: !approved
     },
     reviewOnly: !approved,
-    reason: !approved ? "Calibration preview: draft RoofHub pricing is visible for review only." : "Approved RoofHub project range available."
+    publicationVersion,
+    reason: !approved ? "Calibration preview: draft RoofHub pricing is visible for review only." : publicationVersion ? `Based on RoofHub's ${publicationVersion} indicative pricing model.` : "Approved RoofHub project range available."
   };
 }
 

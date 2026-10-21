@@ -92,12 +92,15 @@ test('shared product taxonomy includes membrane', () => {
   assert.equal(dataTypes.SYSTEM_LABELS.membrane, 'Membrane roofing');
 });
 
-test('current detailed rate card stays blocked from public quick estimating', () => {
+test('current detailed rate card is published as V1 for public quick estimating', () => {
   const record = rateCards.getEstimatorRateCardRecord('roofhub-nz-draft-2026-09-22');
   assert.ok(record);
-  assert.equal(record.status, 'draft');
+  assert.equal(record.status, 'approved');
+  assert.equal(record.sourceTaxConfirmed, true);
+  assert.equal(record.publicationVersion, 'V1');
+  assert.equal(rateCards.isRateCardApprovedForPublicEstimate(record.id), true);
+  assert.equal(rateCards.rateCardPublicationVersion(record.id), 'V1');
   assert.equal(record.productCoverage.membrane, 'not-configured');
-  assert.equal(rateCards.isRateCardApprovedForPublicEstimate(record.id), false);
 });
 
 test('detailed adapter mapping excludes private custom rate data', () => {

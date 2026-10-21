@@ -32,12 +32,14 @@ const baseProject = {
 
 const guarded = estimateProjectForAssistant(baseProject, null, false);
 check(guarded.ok === true, 'Assistant deterministic estimate should return a structured result');
-check(guarded.result.low === null && guarded.result.high === null, 'Draft rate-card values must stay hidden from public assistant pricing');
-check(guarded.pricingAvailable === false, 'Public assistant pricing must report unavailable while the rate card is draft');
+check(Number.isFinite(guarded.result.low) && Number.isFinite(guarded.result.high), 'Published V1 rate-card values must be available through public assistant pricing');
+check(guarded.pricingAvailable === true, 'Public assistant pricing must expose the published V1 range');
+check(guarded.result.approved === true && guarded.result.reviewOnly === false, 'Published V1 pricing must be flagged approved, not review-only');
+check(guarded.result.publicationVersion === 'V1', 'Assistant estimate card must carry the V1 publication label');
 
 const review = estimateProjectForAssistant(baseProject, null, true);
-check(review.ok === true && Number.isFinite(review.result.low) && Number.isFinite(review.result.high), 'Review mode may expose deterministic calibration values');
-check(review.result.reviewOnly === true && review.result.approved === false, 'Calibration pricing must stay visibly review-only rather than approved');
+check(review.ok === true && Number.isFinite(review.result.low) && Number.isFinite(review.result.high), 'Review mode must not change deterministic values');
+check(review.result.approved === true && review.result.reviewOnly === false, 'Published V1 pricing must not be demoted to review-only');
 check(review.projectEstimate?.rateCardId === 'roofhub-nz-draft-2026-09-22', 'Assistant estimate must retain the deterministic rate-card id');
 
 const membrane = estimateProjectForAssistant({ ...baseProject, desiredRoof: 'membrane' }, null, true);

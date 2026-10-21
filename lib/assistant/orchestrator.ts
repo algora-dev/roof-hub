@@ -290,6 +290,7 @@ export async function runAssistantTurn(input: {
             high: priced.result.high,
             approved: priced.result.approved,
             reviewOnly: priced.result.reviewOnly,
+            publicationVersion: priced.result.publicationVersion ?? null,
             detailLevel: priced.result.detailLevel,
             missing: priced.result.missing,
             assumptions: priced.result.assumptions,

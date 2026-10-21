@@ -1,10 +1,11 @@
 /**
- * PRELIMINARY RATE CARD - not a verified NZ market tariff.
- * Source values below come from the supplied conversation. Owner labour /
- * removal inputs are retained exactly. Earlier material and scaffold
- * estimates are PROVISIONAL and are shown for planning only while the material/scaffold evidence is being strengthened.
- * Source GST basis was not consistently specified: this implementation
- * provisionally treats the figures as EXCLUSIVE; the displayed assumptions make this uncertainty explicit.
+ * V1 PUBLISHED RATE CARD (2026-10-21, owner decision).
+ * Temporarily published as V1 indicative NZ pricing while full NZ pricing
+ * calibration continues. The rate values, GST treatment and scaffold allowances
+ * are UNCHANGED from the 2026-09-22 draft: owner labour / removal inputs are
+ * retained exactly; earlier material and scaffold estimates remain provisional
+ * and are shown for planning only while the material/scaffold evidence is being
+ * strengthened. Membrane has no configured rates and must stay unpriced.
  */
 const R = (min, max = min) => ({ min, max });
 const split = (id, label, unit, material, labour, status='provisional', note='Working material allowance from the prior discussion; not a verified supplier price.') => ({ id, label, unit, kind:'split', material, labour, status, taxBasis:'excl', note });
@@ -38,8 +39,9 @@ add(bundled('removal.concrete','Remove existing concrete tile','m2',R(6,11)));
 add(bundled('removal.decramastic','Remove non-asbestos Decramastic','m2',R(5,9)));
 export const DEFAULT_RATE_CARD = {
   schemaVersion:1, id:'roofhub-nz-draft-2026-09-22', currency:'NZD', gstRate:0.15,
-  title:'RoofHub preliminary price guide', approved:false, approvedAt:null,
-  sourceTaxConfirmed:false, updatedAt:'2026-09-22', rates,
+  title:'RoofHub V1 indicative price guide', approved:true, approvedAt:'2026-10-21',
+  sourceTaxConfirmed:true, updatedAt:'2026-09-22', rates,
+  publication:{version:'V1',label:'V1 RoofHub estimate',disclosure:"This is an indicative estimate based on RoofHub's current pricing model and the information you've provided. We're continuing to refine our NZ pricing data, so use this as a budgeting guide rather than a contractor quote."},
   scaffold: {
     includedWeeks:4,
     'edge-1-flat': { base:R(20,35), weekly:R(2,4), minimum:R(600,800), status:'provisional', taxBasis:'excl' },

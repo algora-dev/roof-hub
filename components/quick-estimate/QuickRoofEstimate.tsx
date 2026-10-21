@@ -7,7 +7,7 @@ import { trackRoofHubEvent } from "@/lib/client/analytics";
 import { getRoofProject, setRoofProject } from "@/lib/client/roof-project-store";
 import { registerToolContext, setToolContext } from "@/lib/client/tool-context-store";
 import { loadDetailedEstimatorModule } from "@/lib/estimator/detailed-adapter";
-import { isRateCardApprovedForPublicEstimate } from "@/lib/estimator/rate-card";
+import { isRateCardApprovedForPublicEstimate, rateCardPublicationVersion } from "@/lib/estimator/rate-card";
 import type { RoofComplexity, RoofShape } from "@/lib/roof-project";
 import {
   PITCH_BANDS,
@@ -99,12 +99,14 @@ function areaSourceLabel(source: QuickEstimateInput["areaSource"]): string {
 function ResultCard({ result, reviewMode }: { result: QuickPriceResult; reviewMode: boolean }) {
   const approved = result.approved && Boolean(result.rateCardId) && isRateCardApprovedForPublicEstimate(result.rateCardId);
   const showPrice = result.low !== null && result.high !== null && (approved || reviewMode);
+  const publicationVersion = approved && result.rateCardId ? rateCardPublicationVersion(result.rateCardId) : null;
   const label = result.status === "complete" ? "Indicative roofing range" : "Configured subtotal range";
   return <article className={styles.resultPriceCard}>
     <div className={styles.resultPriceHead}><div><span className={styles.resultProduct}>{productLabels[result.product]}</span><strong>{label}</strong></div><span className={`${styles.statusPill} ${result.status === "complete" ? styles.statusComplete : styles.statusPartial}`}>{result.status === "complete" ? "Full configured scope" : result.status === "incompatible" ? "Pitch mismatch" : result.status === "unpriced" ? "Pricing pending" : "Partial scope"}</span></div>
     {showPrice ? <>
       <div className={styles.priceRange}>{money(result.low!)} <span>to</span> {money(result.high!)}</div>
-      <p className={styles.priceBasis}>{approved ? "Incl. GST using the approved RoofHub estimator rate card." : "Calibration preview only. Includes GST using the current draft card's tax assumption."}</p>
+      <p className={styles.priceBasis}>{approved ? (publicationVersion ? `Incl. GST using RoofHub's ${publicationVersion} indicative rate card.` : "Incl. GST using the approved RoofHub estimator rate card.") : "Calibration preview only. Includes GST using the current draft card's tax assumption."}</p>
+      {publicationVersion && <div className={styles.v1Notice}><strong>{publicationVersion} RoofHub estimate</strong><p>This is an indicative estimate based on RoofHub's current pricing model and the information you've provided. We're continuing to refine our NZ pricing data, so use this as a budgeting guide rather than a contractor quote.</p></div>}
     </> : result.status === "incompatible" ? <div className={styles.noPrice}><strong>This product needs a different roof pitch or shape.</strong><p>{result.compatibility.message}</p></div>
       : <div className={styles.noPrice}><strong>RoofHub is not publishing a price for this selection yet.</strong><p>{result.product === "membrane" ? "The membrane geometry pathway is ready, but an approved membrane estimator rate card has not been configured." : "The current RoofHub rate card is still marked as draft. The flow and quantities are ready for calibration without exposing an unapproved public number."}</p></div>}
     {result.compatibility.message && result.status !== "incompatible" && <p className={styles.compatibilityNote}>{result.compatibility.message}</p>}
@@ -142,11 +144,13 @@ export default function QuickRoofEstimate() {
     if (presetApplied.current) return;
     presetApplied.current = true;
     const existing = getRoofProject();
-    const initial = applyUrlPreset(existing ? quickInputFromRoofProject(existing) : defaultQuickEstimateInput(), new URLSearchParams(searchParams.toString()));
+    // Read the preset from window.location.search directly: useSearchParams() can resolve empty
+    // on the first effect run after hydration, which silently dropped presets for users with a saved project.
+    const initial = applyUrlPreset(existing ? quickInputFromRoofProject(existing) : defaultQuickEstimateInput(), new URLSearchParams(window.location.search));
     setInput(initial);
     try {
       const initialRange = measureQuickRoof(initial);
-      const shared = applyQuickEstimateToRoofProject(initial, initialRange, null, existing, { originatingPath: searchParams.get("from") || "/tools/roof-estimate" });
+      const shared = applyQuickEstimateToRoofProject(initial, initialRange, null, existing, { originatingPath: new URLSearchParams(window.location.search).get("from") || "/tools/roof-estimate" });
       if (searchParams.get("from")) shared.entryPoint = "content";
       setRoofProject(shared);
     } catch {

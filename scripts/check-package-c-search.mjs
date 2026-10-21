@@ -47,9 +47,9 @@ for (const id of ["cp-quotes-2026","comcom-quotes-2026","ird-gst-2026","building
 }
 assert(sources["tasman-new-roof-2026"].note.toLowerCase().includes("not a national survey"), "contractor cost guide lost source-specific caveat");
 
-assert(rates.includes('status: "draft"'), "Package C must not approve the estimator rate card");
+assert(rates.includes('status: "approved"') && rates.includes('publicationVersion: "V1"'), "V1 publication state must stay declared in the rate-card registry");
 assert(rates.includes('membrane: "not-configured"'), "Package C must not configure membrane estimator pricing");
-assert(/approved\s*:\s*false/.test(estimatorRates), "browser estimator draft approval guard changed");
+assert(/approved\s*:\s*true/.test(estimatorRates) && /approvedAt\s*:\s*'2026-10-21'/.test(estimatorRates), "browser estimator V1 publication guard changed");
 assert(!estimatorRates.includes("tasman-new-roof-2026"), "editorial cost guide leaked into estimator rate card");
 
 assert(routes.includes('path: "/tools/quote-checker", lastModified: "2026-10-20", priority: 0.2, changeFrequency: "monthly", indexable: false'), "Quote Checker indexing boundary changed");

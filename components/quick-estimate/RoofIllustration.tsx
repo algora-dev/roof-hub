@@ -35,9 +35,14 @@ export function RoofIllustration({ shape, pitch = 24 }: { shape: RoofShape; pitc
     <ellipse cx="100" cy="130" rx="66" ry="8" fill="currentColor" opacity="0.08" />
     {walls.map(wall => <polygon key={`wall-${wall.index}`} points={polygon(wall.points)} className={styles.roofWall} />)}
     {faces.map(face => <polygon key={`face-${face.index}`} points={polygon(face.points)} className={styles.roofFace} />)}
-    {mesh.edges.map((edge, index) => {
+    {mesh.edges.filter(edge => ["ridge", "hip", "valley", "verge"].includes(edge.kind)).map((edge, index) => {
       const [xA, yA] = xy(edge.start as Point3), [xB, yB] = xy(edge.end as Point3);
-      return <line key={index} x1={xA} y1={yA} x2={xB} y2={yB} className={edge.kind === "valley" ? styles.roofValley : styles.roofEdge} />;
+      const edgeClass = edge.kind === "valley"
+        ? styles.roofValley
+        : edge.kind === "verge"
+          ? styles.roofBarge
+          : styles.roofEdge;
+      return <line key={`${edge.kind}-${index}`} x1={xA} y1={yA} x2={xB} y2={yB} className={edgeClass} />;
     })}
   </svg>;
 }

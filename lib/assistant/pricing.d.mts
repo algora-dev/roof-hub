@@ -12,6 +12,7 @@ export type AssistantPricingResult = {
     high: number | null;
     approved: boolean;
     reviewOnly: boolean;
+    publicationVersion: string | null;
     detailLevel: 'basic' | 'improved' | 'detailed';
     missing: string[];
     assumptions: string[];

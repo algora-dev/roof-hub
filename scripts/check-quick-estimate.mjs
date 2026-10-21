@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import { measureQuickRoof, productPitchAssessment, SIZE_BANDS, PITCH_BANDS } from '../lib/quick-estimate/index.mjs';
 import { priceQuickEstimate } from '../lib/quick-estimate/pricing.mjs';
 import * as estimator from '../public/roofhub-estimator/src/index.mjs';
@@ -57,16 +58,19 @@ const pricedRange = measureQuickRoof(pricedInput);
 const corrugate = priceQuickEstimate(pricedInput, pricedRange, 'corrugate', estimator);
 check(corrugate.status === 'complete', 'Representative corrugate reroof should be fully configured');
 check(corrugate.low > 0 && corrugate.high > corrugate.low, 'Corrugate pricing range must be positive and ordered');
-check(corrugate.approved === false, 'Current draft detailed rate card must remain unapproved');
+check(corrugate.approved === true, 'Published V1 rate card must be approved for public quick estimating');
 
 const fiveRib = priceQuickEstimate({ ...pricedInput, desiredRoof:'five-rib' }, pricedRange, 'five-rib', estimator);
 check(fiveRib.status === 'complete' && fiveRib.low > 0, 'Representative five-rib reroof should calculate through the existing engine');
+check(fiveRib.approved === true, 'Five-rib quick estimate must publish through the approved V1 card');
 
 const tray = priceQuickEstimate({ ...pricedInput, desiredRoof:'tray-standing-seam' }, pricedRange, 'tray-standing-seam', estimator);
 check(tray.status === 'partial' && tray.missing.length > 0, 'Tray result must remain partial while component rates are missing');
+check(tray.approved === true && tray.low > 0 && tray.high > tray.low, 'Tray quick estimate must publish a V1 dollar range');
 
 const pressed = priceQuickEstimate({ ...pricedInput, desiredRoof:'pressed-metal-tile' }, pricedRange, 'pressed-metal-tile', estimator);
 check(pressed.status === 'partial' && pressed.missing.length > 0, 'Pressed metal tile result must remain partial while component/batten rates are missing');
+check(pressed.approved === true && pressed.low > 0 && pressed.high > pressed.low, 'Pressed metal tile quick estimate must publish a V1 dollar range');
 
 const membrane = priceQuickEstimate({ ...pricedInput, roofShape:'flat-low-slope', desiredRoof:'membrane' }, measureQuickRoof({ ...pricedInput, roofShape:'flat-low-slope', desiredRoof:'membrane' }), 'membrane', estimator);
 check(membrane.status === 'unpriced' && membrane.low === null, 'Membrane must not invent an estimator price');
@@ -115,5 +119,10 @@ check(lowPitchBand.assumptions.some(x => x.includes('representative product mini
 const unknownShapeRange = measureQuickRoof({ ...pricedInput, roofShape:'unknown' });
 check(unknownShapeRange.low.shape === 'gable' && unknownShapeRange.high.shape === 'multi-section', 'Unknown shape must widen from a simple to complex coherent roof template');
 check(unknownShapeRange.assumptions.some(x => x.includes('shape is unknown')), 'Unknown shape widening must be disclosed');
+
+const quickUi = fs.readFileSync('components/quick-estimate/QuickRoofEstimate.tsx', 'utf8');
+check(quickUi.includes('RoofHub estimate') && quickUi.includes('budgeting guide rather than a contractor quote'), 'V1 disclosure must appear with provisional-price quick-estimate results');
+check(quickUi.includes('not publishing a price for this selection yet'), 'Membrane/unpriced blocked message must remain for products without a configured rate');
+check(quickUi.includes('window.location.search'), 'URL presets must be read from window.location.search so saved-project users still get article CTA presets');
 
 console.log(`${passed} quick-estimate geometry, compatibility and pricing cases passed.`);
