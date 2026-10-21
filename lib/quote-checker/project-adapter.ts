@@ -43,6 +43,7 @@ export function applyQuoteCheckerState(input: {
   comparisonStatus: RoofProject["quoteCheck"]["comparisonStatus"];
   comparability: RoofProject["quoteCheck"]["comparability"];
   originatingPath?: string;
+  currentStep?: string;
 }): RoofProject {
   const project = input.project ? structuredClone(input.project) : createRoofProject("quote-checker");
   if (project.entryPoint === "unknown" || project.entryPoint === "direct") project.entryPoint = "quote-checker";
@@ -56,7 +57,7 @@ export function applyQuoteCheckerState(input: {
   };
   project.context = {
     currentTool: "quote-checker",
-    currentStep: "result",
+    currentStep: input.currentStep ?? "result",
     originatingPath: project.context.originatingPath || input.originatingPath || "/tools/quote-checker"
   };
   project.updatedAt = new Date().toISOString();

@@ -136,6 +136,7 @@ export default function QuickRoofEstimate() {
   const [pricingError, setPricingError] = useState("");
   const [enquiryOpen, setEnquiryOpen] = useState(false);
   const reviewMode = process.env.NEXT_PUBLIC_ROOFHUB_QUICK_ESTIMATE_REVIEW === "1";
+  const fromQuoteChecker = searchParams.get("from") === "quote-checker";
   const order = useMemo(() => steps(input), [input]);
   const stepIndex = Math.max(0, order.indexOf(current));
   const progress = current === "result" ? 100 : Math.round((stepIndex / Math.max(order.length - 1, 1)) * 100);
@@ -146,12 +147,15 @@ export default function QuickRoofEstimate() {
     const existing = getRoofProject();
     // Read the preset from window.location.search directly: useSearchParams() can resolve empty
     // on the first effect run after hydration, which silently dropped presets for users with a saved project.
-    const initial = applyUrlPreset(existing ? quickInputFromRoofProject(existing) : defaultQuickEstimateInput(), new URLSearchParams(window.location.search));
+    const presetParams = new URLSearchParams(window.location.search);
+    const initial = applyUrlPreset(existing ? quickInputFromRoofProject(existing) : defaultQuickEstimateInput(), presetParams);
     setInput(initial);
     try {
       const initialRange = measureQuickRoof(initial);
-      const shared = applyQuickEstimateToRoofProject(initial, initialRange, null, existing, { originatingPath: new URLSearchParams(window.location.search).get("from") || "/tools/roof-estimate" });
-      if (searchParams.get("from")) shared.entryPoint = "content";
+      const fromParam = presetParams.get("from");
+      const shared = applyQuickEstimateToRoofProject(initial, initialRange, null, existing, { originatingPath: fromParam || "/tools/roof-estimate" });
+      if (fromParam === "quote-checker") shared.entryPoint = "quote-checker";
+      else if (fromParam) shared.entryPoint = "content";
       setRoofProject(shared);
     } catch {
       // A URL preset is optional context; invalid or incomplete combinations fall back to the normal flow.
@@ -297,7 +301,7 @@ export default function QuickRoofEstimate() {
         {range && <>
           <div className={styles.resultSummary}><div><span>Modelled roof area</span><strong><RoofAreaRange low={range.low} high={range.high} /></strong></div><div><span>Estimate detail</span><strong>{estimateDetailLevel(input)[0].toUpperCase() + estimateDetailLevel(input).slice(1)}</strong></div><div><span>Area basis</span><strong>{areaSourceLabel(input.areaSource)}</strong></div><div><span>Roof shape</span><strong>{input.roofShape === "unknown" ? "Unknown, widened range" : ROOF_TEMPLATES[input.roofShape].label}</strong></div></div>
           <div className={styles.priceStack}>{prices.map(result => <ResultCard key={result.product} result={result} reviewMode={reviewMode} />)}</div>
-          <div className={styles.primaryActions}><button type="button" className={styles.primaryButton} onClick={() => { setEnquiryOpen(true); trackRoofHubEvent("cta_click", { tool: "quick-estimate", ctaLocation: "quick-result-enquiry", projectType: input.projectType, roofSystem: input.desiredRoof }); }}>Get help with a written quote</button><Link className={styles.secondaryButton} href="/tools/detailed-roof-estimator?from=quick-estimate" onClick={() => trackRoofHubEvent("estimate_refine", { tool: "quick-estimate", projectType: input.projectType, roofSystem: input.desiredRoof })}>Make this estimate more accurate</Link></div>
+          <div className={styles.primaryActions}>{fromQuoteChecker && <Link className={styles.primaryButton} href="/tools/quote-checker">Use this estimate in Quote Checker</Link>}<button type="button" className={fromQuoteChecker ? styles.secondaryButton : styles.primaryButton} onClick={() => { setEnquiryOpen(true); trackRoofHubEvent("cta_click", { tool: "quick-estimate", ctaLocation: "quick-result-enquiry", projectType: input.projectType, roofSystem: input.desiredRoof }); }}>Get help with a written quote</button><Link className={styles.secondaryButton} href={`/tools/detailed-roof-estimator?from=${fromQuoteChecker ? "quote-checker" : "quick-estimate"}`} onClick={() => trackRoofHubEvent("estimate_refine", { tool: "quick-estimate", projectType: input.projectType, roofSystem: input.desiredRoof })}>Make this estimate more accurate</Link></div>
           <details className={styles.assumptionDetails}><summary>How RoofHub built this range</summary><ul>{range.assumptions.map(item => <li key={item}>{item}</li>)}</ul><strong>Not automatically included</strong><ul>{range.exclusions.map(item => <li key={item}>{item}</li>)}</ul></details>
           {enquiryOpen && <QuickEstimateEnquiry onClose={() => setEnquiryOpen(false)} />}
         </>}

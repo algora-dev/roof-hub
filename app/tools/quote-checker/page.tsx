@@ -1,5 +1,6 @@
 import QuoteChecker from "@/components/quote-checker/QuoteChecker";
 import { pageMetadata } from "@/lib/seo";
+import "./print.css";
 
 export const metadata = pageMetadata({
   title: "Roofing Quote Checker NZ",

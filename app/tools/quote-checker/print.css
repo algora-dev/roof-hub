@@ -1,0 +1,13 @@
+/* Quote Checker print output: keep the printed report clean of site chrome.
+   Lives as page-level global CSS because the header/footer/drawer/assistant are
+   rendered outside the QuoteChecker component tree, so CSS-module selectors cannot
+   reach them (pure selectors must contain a local class). */
+@media print {
+  .site-header,
+  .site-footer,
+  .mobile-drawer,
+  [aria-label="Open Ask RoofHub"],
+  [aria-label="Ask RoofHub"] {
+    display: none !important;
+  }
+}

@@ -27,6 +27,7 @@ export default function RoofHubEstimator({
   latest.current = { options, onReady };
   const [error, setError] = useState('');
   const [quickImport, setQuickImport] = useState(false);
+  const [quoteCheckerReturn, setQuoteCheckerReturn] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -63,7 +64,9 @@ export default function RoofHubEstimator({
           hostOnProjectChange?.(project);
         };
         const sharedBeforeMount = getRoofProject();
-        const importRequested = new URL(window.location.href).searchParams.get('from') === 'quick-estimate';
+        const source = new URL(window.location.href).searchParams.get('from');
+        const importRequested = source === 'quick-estimate' || source === 'quote-checker';
+        if (source === 'quote-checker') setQuoteCheckerReturn(true);
         const quickInitialProject = importRequested && sharedBeforeMount
           ? detailedProjectFromQuickProject(sharedBeforeMount, module)
           : null;
@@ -91,6 +94,7 @@ export default function RoofHubEstimator({
 
   return (
     <section className={className} aria-label="RoofHub detailed estimator">
+      {quoteCheckerReturn && <div className="rh-quick-import"><strong>Building a detailed baseline for Quote Checker.</strong><span>Complete enough project and measurement detail to produce a RoofHub range, then return to the checker. Your quote answers remain saved in this tab.</span><a href="/tools/quote-checker">Return to Quote Checker</a></div>}
       {quickImport && <div className="rh-quick-import"><strong>Approximate Quick Estimate measurements loaded.</strong><span>Review and replace them with actual measurements wherever you can. They are marked as estimated and are not a measured takeoff.</span></div>}
       {error && <p role="alert">The estimator could not start. {error}</p>}
       <div ref={host} />
