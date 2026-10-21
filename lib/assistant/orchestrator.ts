@@ -8,7 +8,9 @@ import { applyAssistantProjectPatch, normaliseAssistantProjectPatch } from "@/li
 import { estimateProjectForAssistant } from "@/lib/assistant/pricing.mjs";
 
 const API_URL = "https://api.openai.com/v1/responses";
-const DEFAULT_MODEL = "gpt-5.4-mini";
+const DEFAULT_MODEL = "gpt-6-luna";
+// Owner decision 2026-10-21: GPT-6 Luna on low reasoning effort (cheaper/faster), matches quotecore scan-assist routing.
+const REASONING_EFFORT = "low";
 const MAX_TOOL_ROUNDS = 4;
 
 type ResponseOutputItem = {
@@ -188,7 +190,7 @@ async function callOpenAI(body: Record<string, unknown>): Promise<OpenAIResponse
     const response = await fetch(API_URL, {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-      body: JSON.stringify(body),
+      body: JSON.stringify({ ...body, reasoning: { effort: REASONING_EFFORT } }),
       signal: controller.signal,
       cache: "no-store"
     });
