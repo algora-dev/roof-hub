@@ -1399,14 +1399,15 @@
     "id": "roofing-costs",
     "path": "/pricing/roofing-costs",
     "title": "How much does roofing cost in New Zealand?",
-    "description": "Compare NZ roof prices by scope, with dated supplier and contractor observations, visible GST, roof-area examples and practical quoting tools.",
-    "answer": "For broad planning, Edwards & Hardy’s March 2026 NZ guide lists long-run roof replacement at $15,000–$35,000 per job and metal tile at $17,000–$45,000. These are publisher estimates, not prices for one fixed roof size, and GST treatment is not stated. A new-build roof or a sheet-only price has a different scope: compare area, products, removal and access before comparing totals.",
+    "description": "Compare NZ roofing cost evidence by scope, separate new-build from reroof pricing, keep GST visible, and move from source-specific market guides to a project estimate or quote check.",
+    "answer": "Roofing cost in New Zealand has no single trustworthy $/m² number because new-build roofs, reroofs, material-only listings and complete projects cover different work. Edwards & Hardy's March 2026 guide lists broad replacement totals, while Tasman Roofing's July 2026 guide publishes its own new-roof and installed long-run ranges. RoofHub records those as source-specific market observations, then asks you to match area, product, GST and scope before using them.",
     "answerSources": [
-      "eh"
+      "eh",
+      "tasman-new-roof-2026"
     ],
     "category": "Pricing",
     "publishedAt": "2026-09-26",
-    "updatedAt": "2026-09-28",
+    "updatedAt": "2026-10-20",
     "sections": [
       {
         "id": "market",
@@ -1430,6 +1431,64 @@
             "type": "notice",
             "text": "A source can be correctly recorded and still be too broad or old for your quote. “Checked” means the quoted information was found, not that RoofHub independently verified the cost of a completed job.",
             "sources": []
+          }
+        ]
+      },
+      {
+        "id": "new-vs-replacement",
+        "title": "Is the price for a new roof or a roof replacement?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "A new-build roof and a reroof should not share one headline assumption. A reroof can add strip-out, disposal, temporary weather protection and unknown existing-condition work. A new build instead needs coordination with the structure and other trades but normally has no old covering to remove.",
+            "sources": [
+              "tasman-new-roof-2026"
+            ]
+          },
+          {
+            "type": "table",
+            "caption": "Choose the right cost page",
+            "heads": [
+              "If you are pricing...",
+              "Start here",
+              "Why"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "A roof on a new build or extension",
+                  "New roof cost NZ",
+                  "Keeps old-roof removal out of the default scope."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Replacing an existing roof",
+                  "Roof replacement / reroof cost",
+                  "Keeps removal, disposal and existing-condition risk visible."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "A contractor quote you already have",
+                  "Roofing Quote Checker",
+                  "Checks GST and scope comparability before the price position."
+                ],
+                "sources": [
+                  "cp-quotes-2026",
+                  "ranz-comparing-quotes"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Have a quote already?",
+            "text": "Do not force it into a generic cost-per-square-metre comparison. Check the GST basis and scope first.",
+            "label": "Open Quote Checker",
+            "href": "/tools/quote-checker"
           }
         ]
       },
@@ -1588,6 +1647,8 @@
       }
     ],
     "related": [
+      "new-roof-cost",
+      "compare-quotes",
       "cost-200",
       "reroof-cost",
       "corrugate-vs-five",
@@ -1610,15 +1671,16 @@
   "reroof-cost": {
     "id": "reroof-cost",
     "path": "/pricing/reroof-cost",
-    "title": "What does a reroof cost in New Zealand?",
-    "description": "Understand reroof pricing as replacement plus removal, access and defined extras, with NZ project examples, asbestos cautions and a like-for-like quote checklist.",
-    "answer": "Published reroof guides give useful starting points, not fixed offers. Delta’s 2025 guide puts corrugated replacements for a 150–200m² home at $18,000–$28,000 including GST, scaffold, old-roof removal, materials and labour. Keep that date and scope attached to the figure. Your budget still needs the existing material, actual roof area and any separately identified repairs or upgrades.",
+    "title": "Roof replacement cost NZ: what does a reroof cost?",
+    "description": "Understand NZ roof replacement cost as a reroof scope: new covering plus removal, disposal, access, underlay, flashings and defined extras, with current source context and quote checks.",
+    "answer": "Roof replacement cost depends on what must be removed, how the roof is accessed and what the written scope includes. Delta's 2025 guide gives $18,000-$28,000 including GST for a 150-200m² corrugated replacement with scaffold, removal, materials and labour; newer 2026 contractor guides publish their own ranges on different bases. RoofHub keeps each source's date and scope attached instead of turning unlike figures into one national “average”.",
     "answerSources": [
-      "delta"
+      "delta",
+      "solution-reroof-2026"
     ],
     "category": "Pricing",
     "publishedAt": "2026-09-26",
-    "updatedAt": "2026-09-28",
+    "updatedAt": "2026-10-20",
     "sections": [
       {
         "id": "cost-evidence",
@@ -1636,6 +1698,35 @@
             "type": "paragraph",
             "text": "These are contractor guide figures, not anonymised invoices. Compare their dates and GST treatment as carefully as their endpoints. A complete-reroof rate should not be used as a sheet-and-labour rate and then have removal and scaffold added a second time.",
             "sources": []
+          }
+        ]
+      },
+      {
+        "id": "current-guides",
+        "title": "What changed in 2026 cost guides?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Solution Roofing published a 2026 replacement-cost guide for Auckland, Hamilton and Wellington. It is useful as current contractor context, but its service-area assumptions should not be relabelled as a national tariff. Delta's older 2025 example remains useful because its stated scaffold, removal, materials, labour and GST scope is unusually explicit.",
+            "sources": [
+              "solution-reroof-2026",
+              "delta"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The useful comparison is not “which website has the newest range?” It is whether a published range and your quote cover the same roof area, product, access, removal, underlay, flashings and repairs.",
+            "sources": [
+              "cp-quotes-2026",
+              "ranz-comparing-quotes"
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Already have a reroof quote?",
+            "text": "Check GST and major scope before comparing its total with a RoofHub project range.",
+            "label": "Check the quote",
+            "href": "/tools/quote-checker"
           }
         ]
       },
@@ -1789,6 +1880,7 @@
       }
     ],
     "related": [
+      "compare-quotes",
       "tile-to-metal",
       "decramastic",
       "timeline",
@@ -1810,7 +1902,7 @@
     ],
     "category": "Roofing systems",
     "publishedAt": "2026-09-26",
-    "updatedAt": "2026-09-28",
+    "updatedAt": "2026-10-20",
     "sections": [
       {
         "id": "families",
@@ -1957,6 +2049,20 @@
             "type": "paragraph",
             "text": "That retail sheet listing does not describe a complete local roll-formed COLORSTEEL installation. For a project budget, use a written matched specification or the separate scope-based observations in the roofing-cost guide.",
             "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "A July 2026 Tasman Roofing contractor guide publishes $90-$180/m² for long-run steel described as fully installed. Treat that as one source-specific planning range, not a national rate: product specification, roof geometry, location, access and scope still need to match, and the guide does not make the GST basis of every displayed range explicit.",
+            "sources": [
+              "tasman-new-roof-2026"
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Apply long-run context to a roof",
+            "text": "Use the quick estimator for an early project range, or use measured quantities if you already have a takeoff.",
+            "label": "Estimate a roof",
+            "href": "/tools/roof-estimate?from=%2Froofing%2Flong-run"
           }
         ]
       },
@@ -1973,6 +2079,7 @@
       }
     ],
     "related": [
+      "new-roof-cost",
       "corrugate-vs-five",
       "colorsteel-zincalume",
       "roof-pitch",
@@ -4997,5 +5104,583 @@
       }
     ],
     "editor": "RoofHub editorial team"
+  },
+  "compare-quotes": {
+    "id": "compare-quotes",
+    "path": "/guides/compare-roofing-quotes",
+    "title": "How to compare roofing quotes in New Zealand",
+    "description": "Compare NZ roofing quotes on the same GST basis and scope, check products, access, removal, flashings and exclusions, and understand when two prices are not directly comparable.",
+    "answer": "Start by making the quotes comparable, not by choosing the lowest total. Put every quote on the same GST basis, confirm the same roofing product and major scope items, then compare exclusions, warranties, programme and contractor information. Consumer Protection and RANZ both warn that differences in price can reflect different scope, materials or approaches rather than a simple quality ranking.",
+    "answerSources": [
+      "cp-quotes-2026",
+      "ranz-comparing-quotes",
+      "comcom-quotes-2026"
+    ],
+    "category": "Quotes and decisions",
+    "publishedAt": "2026-10-20",
+    "updatedAt": "2026-10-20",
+    "editor": "RoofHub editorial team",
+    "sections": [
+      {
+        "id": "same-basis",
+        "title": "How do you make two roofing quotes comparable?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Confirm whether each total includes GST.",
+              "Confirm the proposed roofing system, profile, coating or finish and any stated thickness or grade.",
+              "Match removal and disposal of the existing roof.",
+              "Match scaffold, edge protection and difficult-access allowances.",
+              "Match underlay, flashings, penetrations and rainwater work.",
+              "Identify timber, substrate or structural repairs that are excluded or provisional.",
+              "Record warranties, programme, payment terms and the process for variations."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "New Zealand GST is 15%. RoofHub only normalises a quote when you tell us whether its amount includes or excludes GST. An unknown GST basis is a reason to stop the price comparison, not a reason to guess.",
+            "sources": [
+              "ird-gst-2026",
+              "comcom-quotes-2026"
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Check a quote you already have",
+            "text": "Enter the amount, GST basis and major scope items. RoofHub will show whether the quote is comparable with the project information you have supplied before showing a price-position label.",
+            "label": "Open Quote Checker",
+            "href": "/tools/quote-checker"
+          }
+        ]
+      },
+      {
+        "id": "quote-estimate",
+        "title": "What is the difference between a quote and an estimate?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Quote versus estimate",
+            "heads": [
+              "Document",
+              "What it means",
+              "What to clarify"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Quote",
+                  "An offer to do specified work for a stated price once accepted.",
+                  "Exact scope, exclusions and how variations will be agreed."
+                ],
+                "sources": [
+                  "cp-quotes-2026",
+                  "comcom-quotes-2026"
+                ]
+              },
+              {
+                "cells": [
+                  "Estimate",
+                  "A best estimate or range based on the information and assumptions available.",
+                  "Limits, assumptions and what could cause the final price to change."
+                ],
+                "sources": [
+                  "cp-quotes-2026",
+                  "comcom-quotes-2026"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Commerce Commission guidance says extra work outside an accepted quote needs customer agreement before the price changes. For estimates, significant possible variation and its conditions should be made clear.",
+            "sources": [
+              "comcom-quotes-2026"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "why-prices-differ",
+        "title": "Why can roofing quotes be far apart?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "RANZ notes that differences may come from what is included, which roofing material or system is proposed, and how the work will be carried out. Consumer Protection similarly recommends looking beyond price at experience, reliability, quality standards, references and past projects.",
+            "sources": [
+              "ranz-comparing-quotes",
+              "cp-quotes-2026"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "A quote sitting above or below a RoofHub indicative range is not proof that the contractor is expensive, cheap, good or bad. Different scope, access, specification, timing and site conditions can change the total.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "If the totals are far apart, ask each contractor to explain the scope in writing. A clearer quote is often more useful than a lower headline number with unresolved exclusions.",
+            "sources": [
+              "cp-quotes-2026"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "contract",
+        "title": "When does the written building contract threshold matter?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "For residential building work costing $30,000 or more including GST, Building Performance says a written contract is required. The contractor must also provide the consumer protection standard checklist and disclosure statement at that threshold, or if the homeowner asks for them.",
+            "sources": [
+              "building-contracts-2026"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A roofing quote and a building contract are related but not interchangeable documents. The accepted scope should flow into the contract, including payment, variations, responsibilities and any exclusions that matter to the project.",
+            "sources": [
+              "building-contracts-2026"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "decision",
+        "title": "What should you do before accepting a roofing quote?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Resolve any unknown GST basis.",
+              "Ask for the exact roof product or system where the description is vague.",
+              "Make major inclusions and exclusions explicit.",
+              "Ask what could become a variation and who approves it.",
+              "Check relevant experience, references and business information.",
+              "Read warranty conditions rather than comparing warranty years alone.",
+              "For residential building work at or above the statutory threshold, make sure the written contract and required disclosure information are in place."
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Still comparing the numbers?",
+            "text": "Use the Quote Checker for scope alignment, or estimate the same roof independently before deciding what questions to take back to the contractor.",
+            "label": "Check my roofing quote",
+            "href": "/tools/quote-checker"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "roofing-costs",
+      "reroof-cost",
+      "scaffolding",
+      "new-roof-cost"
+    ],
+    "faqs": [
+      {
+        "q": "Does the lowest roofing quote mean the best value?",
+        "a": "Not necessarily. Compare the same roof system and scope, then consider contractor experience, reliability, quality standards, references, warranties and the proposed way of carrying out the work.",
+        "sources": [
+          "cp-quotes-2026",
+          "ranz-comparing-quotes"
+        ]
+      },
+      {
+        "q": "Should a roofing quote include GST?",
+        "a": "Commerce Commission guidance says quotes or estimates should be inclusive of GST. If a document is unclear, ask the contractor before comparing totals.",
+        "sources": [
+          "comcom-quotes-2026"
+        ]
+      }
+    ]
+  },
+  "new-roof-cost": {
+    "id": "new-roof-cost",
+    "path": "/pricing/new-roof-cost",
+    "title": "New roof cost NZ: what should a new-build roof budget include?",
+    "description": "Plan a new-build roof budget in NZ without mixing in reroof removal costs. Compare roof area, profile, geometry, access, flashings, underlay, rainwater scope and current source-specific price guides.",
+    "answer": "A new-build roof should be budgeted separately from a reroof because there is no old roof to strip and dispose of. Current public guides can provide context, but they are not a national tariff. Tasman Roofing's July 2026 contractor guide publishes $90-$180/m² for long-run steel as a fully installed range and a $15,000-$55,000 headline new-roof range. RoofHub keeps those figures attached to that source and its Auckland-oriented context rather than turning them into an automatic estimator rate.",
+    "answerSources": [
+      "tasman-new-roof-2026"
+    ],
+    "category": "Pricing",
+    "publishedAt": "2026-10-20",
+    "updatedAt": "2026-10-20",
+    "editor": "RoofHub editorial team",
+    "sections": [
+      {
+        "id": "new-vs-reroof",
+        "title": "How is new-roof pricing different from reroof pricing?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "New build and reroof are different scopes",
+            "heads": [
+              "Scope item",
+              "New roof / new build",
+              "Reroof / replacement"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Existing roof removal",
+                  "Normally not part of the roofing scope.",
+                  "Often required and should be explicit."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Disposal",
+                  "Usually limited to installation waste.",
+                  "Old roofing and associated waste may be a major item."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Hidden existing-roof condition",
+                  "Not an old-roof strip-out risk.",
+                  "Battens, substrate or structure may only become fully visible after removal."
+                ],
+                "sources": []
+              },
+              {
+                "cells": [
+                  "Programme",
+                  "Coordinated with the new-build programme and other trades.",
+                  "Often coordinated around keeping an existing building weathertight."
+                ],
+                "sources": [
+                  "tasman-new-roof-2026"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Start with a new-build estimate",
+            "text": "Describe the roof you know now. RoofHub keeps the project as a new roof so removal uncertainty is not silently added.",
+            "label": "Estimate a new roof",
+            "href": "/tools/roof-estimate?project=new&from=%2Fpricing%2Fnew-roof-cost"
+          }
+        ]
+      },
+      {
+        "id": "published-guides",
+        "title": "What are NZ businesses publishing in 2026?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Tasman Roofing's July 2026 guide publishes a $15,000-$55,000 headline range for a new roof and $90-$180/m² for long-run steel described as fully installed. It also says roof size, material, pitch and access are major drivers. This is one contractor-authored guide, not a representative national survey.",
+            "sources": [
+              "tasman-new-roof-2026"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The guide does not make the GST treatment of every displayed range explicit. RoofHub therefore leaves its figures on their published basis instead of silently adding or removing GST. Use the source as market context, then price a real roof on a stated scope.",
+            "sources": [
+              "tasman-new-roof-2026",
+              "ird-gst-2026"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "RoofHub does not convert a contractor cost guide into the estimator rate card. Estimator rates stay behind a separate review and approval process.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "area-geometry",
+        "title": "Which measurements change a new-roof budget?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Actual sloping roof area or a clearly identified footprint/floor-area starting point.",
+              "Pitch for each roof plane where it differs.",
+              "Ridge, hip, valley and barge lengths for a detailed estimate.",
+              "Profile and effective cover for sheet quantities.",
+              "Flashings, penetrations, internal gutters and other custom details.",
+              "Storeys, edge protection, crane or delivery constraints and site access."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Floor area is not automatically roof area. A two-storey building is the clearest trap: total building floor area can be much larger than the roof footprint. RoofHub asks what an area measurement represents before using it.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "specification",
+        "title": "What should be defined before comparing new-roof prices?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "A useful comparison names the roofing system, profile, coating or finish, thickness or grade where relevant, underlay, flashings, penetrations, rainwater interfaces and who supplies each component. A generic “metal roof” allowance can hide specification differences before installation starts.",
+            "sources": []
+          },
+          {
+            "type": "paragraph",
+            "text": "Tasman's guide also separates new installation from reroofing and identifies roof shape, pitch, access and material selection as cost drivers. RoofHub treats those as project facts, not universal percentage multipliers.",
+            "sources": [
+              "tasman-new-roof-2026"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "allowance",
+        "title": "How should a builder or designer use an early roof allowance?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Use an allowance to make the uncertainty visible. Record the assumed roof area, system, pitch, access and major included components, then replace approximations with measured quantities as the design develops. That makes the allowance auditable instead of making an early number look more precise than the information supports.",
+            "sources": []
+          },
+          {
+            "type": "action",
+            "title": "Already have roof measurements?",
+            "text": "Move straight to the detailed estimator and replace approximate geometry with measured areas and component lengths.",
+            "label": "Use measured quantities",
+            "href": "/tools/detailed-roof-estimator"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "roofing-costs",
+      "cost-200",
+      "roof-area",
+      "roof-pitch"
+    ],
+    "faqs": [
+      {
+        "q": "Does a new-build roof budget include removing an old roof?",
+        "a": "Normally no. Removal and disposal belong to reroof/replacement scope unless there is an unusual existing structure or demolition item that has been explicitly included.",
+        "sources": []
+      },
+      {
+        "q": "Is $90-$180/m² a RoofHub estimator rate?",
+        "a": "No. It is a source-specific range published in a July 2026 Tasman Roofing guide. RoofHub does not automatically promote published market guides into its estimator rate card.",
+        "sources": [
+          "tasman-new-roof-2026"
+        ]
+      }
+    ]
+  },
+  "membrane": {
+    "id": "membrane",
+    "path": "/roofing/membrane",
+    "title": "Membrane roofing NZ: systems, falls, substrates and quote checks",
+    "description": "Understand NZ membrane roofing systems including TPO, EPDM/butyl, torch-on bitumen and liquid membranes, with design, substrate, drainage, appraisal and quote-check questions.",
+    "answer": "“Membrane roof” is not one product. New Zealand systems include TPO and other single-ply sheets, butyl or EPDM, torch-on modified bitumen and liquid-applied systems. The selected proprietary system determines compatible substrates, falls, details and installer requirements. BRANZ notes that membrane roofs can work at lower falls than many other roofing materials, but a generic minimum should not replace the requirements of the selected system or consent pathway.",
+    "answerSources": [
+      "branz-membranes-matter",
+      "codehub-rubco-2023",
+      "nuralite-membrane-options"
+    ],
+    "category": "Roofing systems",
+    "publishedAt": "2026-10-20",
+    "updatedAt": "2026-10-20",
+    "editor": "RoofHub editorial team",
+    "sections": [
+      {
+        "id": "systems",
+        "title": "Which membrane roof systems are used in New Zealand?",
+        "blocks": [
+          {
+            "type": "table",
+            "caption": "Common membrane families",
+            "heads": [
+              "Family",
+              "Typical form",
+              "What must be checked"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "TPO / other thermoplastic single-ply",
+                  "Sheet membrane with welded seams.",
+                  "Named system, membrane thickness, attachment, compatible substrate, details and approved accessories."
+                ],
+                "sources": [
+                  "ardex-tpo",
+                  "nuralite-membrane-options"
+                ]
+              },
+              {
+                "cells": [
+                  "Butyl / EPDM",
+                  "Flexible synthetic-rubber sheet systems.",
+                  "System appraisal or technical literature, substrate, adhesive/joints, falls and installer requirements."
+                ],
+                "sources": [
+                  "branz-membranes-matter",
+                  "codehub-rubco-2023"
+                ]
+              },
+              {
+                "cells": [
+                  "Torch-on modified bitumen",
+                  "Bituminous membrane, commonly multi-layered.",
+                  "Layer build-up, substrate, fire-safe installation process, outlets and detailing."
+                ],
+                "sources": [
+                  "branz-membranes-matter",
+                  "nuralite-membrane-options"
+                ]
+              },
+              {
+                "cells": [
+                  "Liquid-applied",
+                  "Applied coating built to a specified membrane thickness.",
+                  "Substrate preparation, application thickness, curing/site conditions and compatible details."
+                ],
+                "sources": [
+                  "branz-membranes-matter",
+                  "nuralite-membrane-options"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "A membrane family is not a specification. The quote should name the proprietary system and build-up, not only say “membrane roofing”.",
+            "sources": []
+          }
+        ]
+      },
+      {
+        "id": "falls",
+        "title": "How much fall does a membrane roof need?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "BRANZ explains that roofs designed to E2/AS1 have a minimum fall of 2 degrees and recommends 3 degrees in its general membrane article to preserve drainage as buildings and substrates move over time. That is general guidance, not permission to substitute one system for another.",
+            "sources": [
+              "branz-membranes-matter"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Product-specific evidence can use different ways of expressing fall. For example, the Rubco Butyl BRANZ appraisal lists a minimum roof fall of 1:30 within its stated scope and also specifies substrate and wind limitations. Always check the current document for the exact system being proposed.",
+            "sources": [
+              "codehub-rubco-2023"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Falls, outlets, overflows, internal gutters and junctions work as one drainage design. A low-slope roof cannot be assessed from membrane brand alone.",
+            "sources": [
+              "branz-membranes-matter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "substrate",
+        "title": "Why does the substrate matter so much?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Membranes rely on a continuous substrate and detailed junctions. The accepted substrate varies by system and may include treated plywood, proprietary roof sarking or concrete within stated conditions. Movement joints, penetrations and transitions need system-compatible detailing.",
+            "sources": [
+              "codehub-rubco-2023",
+              "ardex-tpo"
+            ]
+          },
+          {
+            "type": "checklist",
+            "items": [
+              "Identify the exact substrate and treatment/specification.",
+              "Confirm the membrane system is approved or supported for that substrate.",
+              "Check falls before the membrane is installed, not only after.",
+              "Coordinate outlets, overflows, parapets, penetrations and internal gutters.",
+              "Confirm protection where later trades or maintenance traffic could damage the membrane.",
+              "Use the system supplier's current details and required installer pathway."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pricing",
+        "title": "How should membrane roofing be priced?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Membrane pricing is unusually sensitive to substrate preparation, perimeter and upstand detailing, outlets, penetrations, insulation or warm-roof build-up, protection and the selected proprietary system. An area-only rate can hide too much of the job.",
+            "sources": [
+              "nuralite-membrane-options",
+              "ardex-tpo"
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "RoofHub does not currently publish a membrane result from its estimator. The shared project taxonomy supports membrane roofing, but there is no approved membrane estimator rate path yet. That is deliberate: the tool will not invent a price to fill the gap.",
+            "sources": []
+          },
+          {
+            "type": "action",
+            "title": "Describe the roof without inventing a price",
+            "text": "You can still save membrane as the desired roof system and capture shape, size and project context. RoofHub will show that pricing is not configured rather than substituting a metal-roof rate.",
+            "label": "Start a membrane roof project",
+            "href": "/tools/roof-estimate?product=membrane&from=%2Froofing%2Fmembrane"
+          }
+        ]
+      },
+      {
+        "id": "quote",
+        "title": "What should you look for in a membrane roofing quote?",
+        "blocks": [
+          {
+            "type": "checklist",
+            "items": [
+              "Exact proprietary membrane system and membrane thickness/build-up.",
+              "Substrate and any preparation, replacement or levelling allowance.",
+              "Designed falls and drainage outlets/overflows.",
+              "Perimeters, upstands, parapets, penetrations and internal gutter details.",
+              "Insulation or warm-roof components if applicable.",
+              "Required approved or trained installer status.",
+              "Warranty documents, maintenance conditions and excluded traffic/protection work.",
+              "Scaffold/access and any separately priced building work."
+            ]
+          },
+          {
+            "type": "action",
+            "title": "Compare the scope before the headline price",
+            "text": "If you already have a membrane quote, use Quote Checker to record GST and major project scope. Treat the result as a scope/comparability check, not a substitute for membrane-specific technical review.",
+            "label": "Check my quote",
+            "href": "/tools/quote-checker"
+          }
+        ]
+      }
+    ],
+    "related": [
+      "roofing-costs",
+      "roof-pitch",
+      "compare-quotes",
+      "long-run"
+    ],
+    "faqs": [
+      {
+        "q": "Is TPO the same as every membrane roof?",
+        "a": "No. TPO is one membrane family. Butyl/EPDM, modified-bitumen torch-on, PVC/KEE and liquid-applied systems have different products and build-ups.",
+        "sources": [
+          "branz-membranes-matter",
+          "nuralite-membrane-options"
+        ]
+      },
+      {
+        "q": "Why does RoofHub not show a membrane estimate yet?",
+        "a": "The current RoofHub estimator has no approved membrane rate pathway. Rather than map membrane work onto a metal-roof model or an unsupported market average, RoofHub leaves the price unconfigured until the calculation method and evidence are reviewed.",
+        "sources": []
+      }
+    ]
   }
 }

@@ -26,12 +26,14 @@ export function articleAction(article: ResearchArticle): ArticleAction {
   let estimateLabel = "Estimate a roof";
 
   if (["reroof-cost", "timeline", "tile-to-metal", "decramastic"].includes(article.id)) project = "reroof";
+  if (article.id === "new-roof-cost") project = "new";
   if (article.id === "tile-to-metal") existing = "concrete-tile";
   if (article.id === "decramastic") existing = "decramastic";
   if (["corrugated"].includes(article.id)) product = "corrugate";
   if (["five-rib"].includes(article.id)) product = "five-rib";
   if (article.id === "pressed-tile") product = "pressed-metal-tile";
   if (article.id === "tray") product = "tray-standing-seam";
+  if (article.id === "membrane") product = "membrane";
   if (article.id === "corrugate-vs-five") {
     title = "Compare the options on a roof like yours.";
     copy = "Start a roof estimate, then compare common metal roofing choices using the same project information.";
@@ -41,12 +43,24 @@ export function articleAction(article: ResearchArticle): ArticleAction {
     title = "Use what you know, even if it is approximate.";
     copy = "A rough size or pitch is enough to start. If you have real measurements, carry them into the detailed estimator.";
   }
-  if (article.id === "roofing-costs" || article.id === "cost-200") {
+  if (["roofing-costs", "cost-200", "new-roof-cost"].includes(article.id)) {
     title = "Turn market pricing into a project range.";
     copy = "Published market evidence is useful context. The estimator applies RoofHub's calculation model to a roof you describe.";
   }
+  if (article.id === "compare-quotes") {
+    title = "Check the scope before judging the price.";
+    copy = "Put GST, product and major inclusions on the same basis first. RoofHub will tell you when the comparison is incomplete rather than forcing a verdict.";
+    estimateLabel = "Check a roofing quote";
+  }
+  if (article.id === "membrane") {
+    title = "Capture the roof without inventing membrane pricing.";
+    copy = "Save the membrane system choice and roof geometry now. RoofHub will keep pricing unconfigured until an approved membrane rate path exists.";
+    estimateLabel = "Start a membrane project";
+  }
 
-  const estimateHref = `/tools/roof-estimate${query({ project, product, existing, from: article.path })}`;
+  const estimateHref = article.id === "compare-quotes"
+    ? "/tools/quote-checker"
+    : `/tools/roof-estimate${query({ project, product, existing, from: article.path })}`;
   return {
     estimateHref,
     estimateLabel,

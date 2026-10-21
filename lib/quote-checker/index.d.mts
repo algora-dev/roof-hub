@@ -1,0 +1,16 @@
+export type QuoteScopeState = "included" | "excluded" | "unknown";
+export type QuoteProductMatch = "same" | "different" | "unknown";
+export type QuoteGstBasis = "incl" | "excl" | "unknown";
+export type QuoteComparability = "good" | "partial" | "not-directly-comparable";
+export type QuoteComparisonStatus = "within-range" | "below-range" | "above-range" | "not-comparable";
+export type QuoteReferenceEstimate = { low: number; high: number; gstBasis: "incl"; detailLevel?: string; rateCardId?: string; reviewOnly?: boolean };
+export type QuoteScopeItem = { id: string; label: string; applies: string[]; reference: "included" | "excluded" };
+export const NZ_GST_RATE: number;
+export const QUOTE_SCOPE_ITEMS: readonly QuoteScopeItem[];
+export function normalizeQuoteAmount(amount: number | null, gstBasis: QuoteGstBasis): number | null;
+export function scopeState(itemId: string, knownInclusions?: string[], knownExclusions?: string[]): QuoteScopeState;
+export function applicableScope(projectType?: string): QuoteScopeItem[];
+export function expectedReferenceScope(projectType?: string): Record<string,string>;
+export function scopeAssessment(input: { projectType?: string; knownInclusions?: string[]; knownExclusions?: string[] }): { expected: Record<string,string>; differences: Array<{id:string;quote:string;reference:string}>; unknown:string[]; matched:string[] };
+export function compareRoofingQuote(input: { quotedAmount:number|null; gstBasis:QuoteGstBasis; productMatch:QuoteProductMatch; projectType?:string; knownInclusions?:string[]; knownExclusions?:string[]; referenceEstimate:QuoteReferenceEstimate|null }): { quotedAmount:number|null; gstBasis:QuoteGstBasis; amountInclGst:number|null; productMatch:QuoteProductMatch; projectType:string; comparability:QuoteComparability; comparisonStatus:QuoteComparisonStatus; reasons:string[]; scope:{expected:Record<string,string>;differences:Array<{id:string;quote:string;reference:string}>;unknown:string[];matched:string[]}; referenceEstimate:QuoteReferenceEstimate|null };
+export function formatNzd(value: number | null): string;

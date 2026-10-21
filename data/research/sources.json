@@ -1177,5 +1177,115 @@
     "reviewedAt": "2026-09-29",
     "publishedAt": null,
     "note": "Manufacturer gallery confirms Kumeu location, Shake and Charcoal. Limited project specification; no roof area or price. Presented as a residential application, not a priced new-build case study."
+  },
+  "cp-quotes-2026": {
+    "id": "cp-quotes-2026",
+    "publisher": "Consumer Protection",
+    "title": "Quotes and estimates",
+    "url": "https://www.consumerprotection.govt.nz/general-help/guide-to-buying-smart/quotes-and-estimates",
+    "kind": "government",
+    "reviewedAt": "2026-10-20",
+    "publishedAt": null,
+    "note": "NZ government consumer guidance reviewed 20 October 2026. Distinguishes estimates from quotes, recommends several written quotes where practical, and says price should be compared alongside scope, experience, reliability, quality standards and references."
+  },
+  "comcom-quotes-2026": {
+    "id": "comcom-quotes-2026",
+    "publisher": "Commerce Commission",
+    "title": "Quotes, estimates and invoicing",
+    "url": "https://www.comcom.govt.nz/business/dealing-with-typical-situations/quotes-estimates-and-invoicing/",
+    "kind": "government",
+    "reviewedAt": "2026-10-20",
+    "publishedAt": null,
+    "note": "NZ Commerce Commission guidance reviewed 20 October 2026. Defines quotes and estimates, requires agreement for extra work outside an accepted quote, and states quotes or estimates should be inclusive of GST."
+  },
+  "ird-gst-2026": {
+    "id": "ird-gst-2026",
+    "publisher": "Inland Revenue",
+    "title": "What GST is",
+    "url": "https://www.ird.govt.nz/gst/what-gst-is",
+    "kind": "government",
+    "reviewedAt": "2026-10-20",
+    "publishedAt": "2026-04-01",
+    "note": "Inland Revenue page last updated 1 April 2026. Confirms the standard NZ GST rate is 15%. Used only to normalise explicitly GST-exclusive figures, not to guess whether an unstated source price includes GST."
+  },
+  "building-contracts-2026": {
+    "id": "building-contracts-2026",
+    "publisher": "Building Performance",
+    "title": "Contracts for your building project",
+    "url": "https://www.building.govt.nz/projects-and-consents/why-contracts-are-valuable/contracts-for-your-building-project",
+    "kind": "government",
+    "reviewedAt": "2026-10-20",
+    "publishedAt": "2026-01-15",
+    "note": "Building Performance guidance last updated 15 January 2026. Residential building work costing $30,000 or more including GST requires a written contract; disclosure and checklist requirements also apply at that threshold or when requested."
+  },
+  "ranz-comparing-quotes": {
+    "id": "ranz-comparing-quotes",
+    "publisher": "Roofing Association of New Zealand",
+    "title": "Comparing Quotes",
+    "url": "https://www.ranz.co.nz/roofing-guidance/comparing-quotes/",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-10-20",
+    "publishedAt": null,
+    "note": "RANZ guidance reviewed 20 October 2026. Explains that roofing quotes may differ because of scope, materials, systems and how work will be carried out, so a price difference alone is not a quality conclusion."
+  },
+  "tasman-new-roof-2026": {
+    "id": "tasman-new-roof-2026",
+    "publisher": "Tasman Roofing",
+    "title": "How Much Does a New Roof Cost in NZ? (2026 Price Guide)",
+    "url": "https://www.tasmanroofing.co.nz/post/how-much-does-a-new-roof-cost-in-nz-2026-price-guide",
+    "kind": "contractor",
+    "reviewedAt": "2026-10-20",
+    "publishedAt": "2026-07-24",
+    "note": "Contractor-authored 2026 guide. Publishes a $15,000-$55,000 headline new-roof range and $90-$180/m² long-run steel installed range, with Auckland context. The page is not a national survey and the displayed table does not explicitly state GST treatment, so RoofHub keeps those limitations attached."
+  },
+  "solution-reroof-2026": {
+    "id": "solution-reroof-2026",
+    "publisher": "Solution Roofing",
+    "title": "Roof Replacement Cost New Zealand",
+    "url": "https://solutionroofing.co.nz/blogs/roof-replacement-cost-new-zealand",
+    "kind": "contractor",
+    "reviewedAt": "2026-10-20",
+    "publishedAt": "2026-05-10",
+    "note": "Contractor-authored 2026 reroof cost guide serving Auckland, Hamilton and Wellington. Retained as source-specific market context rather than a national tariff or estimator rate card."
+  },
+  "branz-membranes-matter": {
+    "id": "branz-membranes-matter",
+    "publisher": "BRANZ",
+    "title": "Membranes do matter",
+    "url": "https://www.branz.co.nz/design-build/articles/membranes-do-matter",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-10-20",
+    "publishedAt": null,
+    "note": "BRANZ technical overview reviewed 20 October 2026. Covers torch-on bitumen, butyl/EPDM, liquid-applied, TPO and PVC membrane families and explains low-slope design and consent considerations. Its general fall guidance is not substituted for the requirements of a selected proprietary system."
+  },
+  "codehub-rubco-2023": {
+    "id": "codehub-rubco-2023",
+    "publisher": "Building CodeHub / BRANZ",
+    "title": "Rubco Butyl Membrane Systems - Appraisal 1006 (2023)",
+    "url": "https://codehub.building.govt.nz/resources/appraisal-number-1006-2023",
+    "kind": "industry-technical",
+    "reviewedAt": "2026-10-20",
+    "publishedAt": "2023-08-21",
+    "note": "Product-specific BRANZ appraisal surfaced through Building CodeHub. Shows how substrate, roof/deck fall, wind scope and approved-applicator conditions belong to a named membrane system rather than a generic membrane rule."
+  },
+  "nuralite-membrane-options": {
+    "id": "nuralite-membrane-options",
+    "publisher": "Nuralite",
+    "title": "Waterproof Membrane Options",
+    "url": "https://www.nuralite.co.nz/learn-more/waterproof-membrane-options",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-10-20",
+    "publishedAt": null,
+    "note": "Manufacturer overview reviewed 20 October 2026. Compares single-ply TPO/EPDM/PVC-KEE, multi-layer bituminous and liquid-applied membrane families. Used for system-selection context, not independent performance ranking."
+  },
+  "ardex-tpo": {
+    "id": "ardex-tpo",
+    "publisher": "ARDEX New Zealand",
+    "title": "TPO Roofing Systems",
+    "url": "https://www.ardex.co.nz/products_category/waterproofing-systems/tpo-roofing-systems/",
+    "kind": "manufacturer",
+    "reviewedAt": "2026-10-20",
+    "publishedAt": null,
+    "note": "Manufacturer system page reviewed 20 October 2026. Confirms TPO is supplied as a complete roofing system with membranes and accessories. Product-specific technical literature remains the authority for installation and detailing."
   }
 }

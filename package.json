@@ -11,14 +11,16 @@
     "og:image": "node scripts/gen-og-image.mjs",
     "check:production": "node scripts/check-production.mjs",
     "check:content": "node scripts/check-content.mjs && npm run check:research",
-    "test": "npm run check:content && npm run check:math && npm run check:foundation && npm run check:quick-estimate && npm run check:assistant && npm run check:conversion",
+    "test": "npm run check:content && npm run check:math && npm run check:foundation && npm run check:quick-estimate && npm run check:assistant && npm run check:conversion && npm run check:quote-checker && npm run check:package-c-search",
     "check:research": "node scripts/check-research.mjs",
     "check:math": "node scripts/check-math.cjs",
     "check:foundation": "node scripts/check-foundation.cjs",
     "check:quick-estimate": "node scripts/check-quick-estimate.mjs",
     "quick:reference": "node scripts/quick-estimate-reference.mjs",
     "check:assistant": "node scripts/check-assistant.mjs",
-    "check:conversion": "node scripts/check-conversion.mjs"
+    "check:conversion": "node scripts/check-conversion.mjs",
+    "check:quote-checker": "node scripts/check-quote-checker.mjs",
+    "check:package-c-search": "node scripts/check-package-c-search.mjs"
   },
   "dependencies": {
     "next": "^15.2.4",

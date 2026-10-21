@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Calculator, Layers, Measure, Spark } from "@/components/Icons";
+import { ArrowRight, Calculator, Check, Layers, Measure, Spark } from "@/components/Icons";
 import { AskRoofHubButton } from "@/components/assistant/AskRoofHubButton";
 import { pageMetadata } from "@/lib/seo";
 
@@ -11,6 +11,7 @@ export const metadata = pageMetadata({
 
 const quickTools = [
   { icon: Calculator, title: "Estimate a roof", copy: "Start with roof shape, approximate size and pitch. Measurements are optional, and the same project can move into the detailed estimator.", status: "Quick", href: "/tools/roof-estimate", link: "Start estimate" },
+  { icon: Check, title: "Check a roofing quote", copy: "Already have a quote? Compare GST, product and major inclusions against the same RoofHub project before comparing headline price.", status: "Decision support", href: "/tools/quote-checker", link: "Check a quote" },
   { icon: Spark, title: "Ask RoofHub", copy: "Ask a roofing question, get help with a tool step, understand a product or let RoofHub point you to the right calculation.", status: "Assistant", assistant: true, link: "Ask a question" }
 ];
 

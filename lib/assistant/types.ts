@@ -33,7 +33,7 @@ export type AssistantEstimateCard = {
 
 export type AssistantAction =
   | { type: "navigate"; label: string; href: string }
-  | { type: "open-tool"; label: string; tool: "quick-estimate" | "detailed-estimate"; href: string }
+  | { type: "open-tool"; label: string; tool: "quick-estimate" | "detailed-estimate" | "quote-checker"; href: string }
   | { type: "open-enquiry"; label: string; href: string }
   | { type: "quick-reply"; label: string; message: string };
 

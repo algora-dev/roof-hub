@@ -4,13 +4,14 @@ import { pageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/evidence/Breadcrumbs";
 import { RelatedTool } from "@/components/evidence/RelatedTool";
 
-export const metadata = pageMetadata({ title: "Roofing systems NZ", description: "NZ roofing system guides for long-run steel, corrugated, five-rib, pressed metal tile and tray/standing seam roofing.", path: "/roofing" });
+export const metadata = pageMetadata({ title: "Roofing systems NZ", description: "NZ roofing system guides for long-run steel, corrugated, five-rib, pressed metal tile, tray/standing seam and membrane roofing.", path: "/roofing" });
 const systems=[
   ["Long-run roofing","Corrugate and trapezoidal profiles, pitch, pricing evidence and the difference between material and installed cost.","/roofing/long-run"],
   ["Corrugated roofing","The classic rounded long-run profile: cover width, minimum pitch, material pricing and reroof examples.","/roofing/corrugated"],
   ["Five-rib / trapezoidal","Five-rib manufacturer examples, low-pitch use and why installed labour can be slightly above corrugate.","/roofing/five-rib"],
   ["Pressed metal tile","Steel tile systems, battens, underlay, pricing evidence and Decramastic/asbestos considerations.","/roofing/pressed-metal-tile"],
-  ["Tray & standing seam","Architectural concealed-fix systems, common widths, low-pitch use and premium pricing.","/roofing/tray-standing-seam"]
+  ["Tray & standing seam","Architectural concealed-fix systems, common widths, low-pitch use and premium pricing.","/roofing/tray-standing-seam"],
+  ["Membrane roofing","TPO, butyl/EPDM, torch-on and liquid membrane systems, including falls, substrates, detailing and quote checks.","/roofing/membrane"]
 ] as const;
 export default function RoofingHubPage(){return <>
 <Breadcrumbs items={[{label:"Home",href:"/"},{label:"Roofing"}]}/><section className="page-intro"><div className="container page-intro__grid"><div><p className="eyebrow">Roofing systems</p><h1>NZ roofing systems, profile by profile.</h1></div><div className="page-intro__aside"><p>Each RoofHub system guide combines manufacturer specifications with public NZ market evidence, then links the information to measurement and pricing tools.</p></div></div></section>

@@ -99,10 +99,10 @@ function assistantTools() {
     {
       type: "function",
       name: "open_tool",
-      description: "Offer the user the appropriate RoofHub estimating tool.",
+      description: "Offer the user the appropriate RoofHub project tool, including the Quote Checker when they already have a roofing quote.",
       parameters: {
         type: "object",
-        properties: { tool: { type: "string", enum: ["quick-estimate", "detailed-estimate"] } },
+        properties: { tool: { type: "string", enum: ["quick-estimate", "detailed-estimate", "quote-checker"] } },
         required: ["tool"],
         additionalProperties: false
       }
@@ -147,7 +147,8 @@ AUTHORITY RULES
 8. Store only facts the user actually gave by calling update_project. Do not infer a house size, roof shape, pitch, product or existing material from silence.
 9. Keep answers concise and useful. Match explanation depth to the user: a roofer or builder may want technical language; an inexperienced user may need plain language.
 10. If the user is confused about the active tool step, explain that exact step using CURRENT PAGE/TOOL CONTEXT. Do not make them restart.
-11. When a click is more useful than more prose, use navigate or open_tool.
+11. When a click is more useful than more prose, use navigate or open_tool. If the user already has a roofing quote and wants to compare it, prefer the Quote Checker instead of judging the quote in chat.
+12. A Quote Checker result is about comparability and scope, not contractor quality. Never turn an above-range result into an accusation of overcharging.
 
 CURRENT PAGE/TOOL CONTEXT
 Path: ${context.path || "/"}
@@ -325,6 +326,9 @@ export async function runAssistantTurn(input: {
           result = { ok: true };
         } else if (args.tool === "detailed-estimate") {
           actions.push({ type: "open-tool", label: "Use measurements", tool: "detailed-estimate", href: "/tools/detailed-roof-estimator" });
+          result = { ok: true };
+        } else if (args.tool === "quote-checker") {
+          actions.push({ type: "open-tool", label: "Check a roofing quote", tool: "quote-checker", href: "/tools/quote-checker" });
           result = { ok: true };
         } else result = { ok: false, error: "Unknown tool." };
       }
