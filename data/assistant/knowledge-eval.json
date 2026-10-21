@@ -1,0 +1,2322 @@
+[
+  {
+    "id": "corrugate-vs-five-1",
+    "query": "compare corrugated five rib",
+    "expectedArticle": "corrugate-vs-five",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "corrugate-vs-five-2",
+    "query": "Tell me about corrugated vs five rib in NZ",
+    "expectedArticle": "corrugate-vs-five",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "corrugate-vs-five-3",
+    "query": "Is five-rib the same as COLORSTEEL?",
+    "expectedArticle": "corrugate-vs-five",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "corrugate-vs-five-4",
+    "query": "Corrugated vs five-rib roofing: what changes the choice?",
+    "expectedArticle": "corrugate-vs-five",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "cost-200-1",
+    "query": "Is the example a quote for my home?",
+    "expectedArticle": "cost-200",
+    "maxRank": 3,
+    "currentPath": "/pricing/200m2-roof-cost",
+    "domain": true
+  },
+  {
+    "id": "cost-200-2",
+    "query": "How much does a 200m² roof cost in New Zealand?",
+    "expectedArticle": "cost-200",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "cost-200-3",
+    "query": "Can you explain How much does a 200m² roof cost in New Zealand??",
+    "expectedArticle": "cost-200",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "cost-200-4",
+    "query": "What would a 200 square metre roof roughly cost?",
+    "expectedArticle": "cost-200",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "lifespan-1",
+    "query": "metal roof lifespan",
+    "expectedArticle": "lifespan",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "lifespan-2",
+    "query": "Tell me about metal roof life in NZ",
+    "expectedArticle": "lifespan",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "lifespan-3",
+    "query": "How long does a metal roof last in New Zealand?",
+    "expectedArticle": "lifespan",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "lifespan-4",
+    "query": "Can you explain How long does a metal roof last in New Zealand??",
+    "expectedArticle": "lifespan",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "tile-to-metal-1",
+    "query": "can i replace tiles with metal",
+    "expectedArticle": "tile-to-metal",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "tile-to-metal-2",
+    "query": "Tell me about tile to metal roof in NZ",
+    "expectedArticle": "tile-to-metal",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "tile-to-metal-3",
+    "query": "Can you replace a concrete tile roof with metal roofing?",
+    "expectedArticle": "tile-to-metal",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "tile-to-metal-4",
+    "query": "Can you explain Can you replace a concrete tile roof with metal roofing??",
+    "expectedArticle": "tile-to-metal",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "colorsteel-zincalume-1",
+    "query": "compare colorsteel zincalume",
+    "expectedArticle": "colorsteel-zincalume",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "colorsteel-zincalume-2",
+    "query": "Tell me about colorsteel vs zincalume in NZ",
+    "expectedArticle": "colorsteel-zincalume",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "colorsteel-zincalume-3",
+    "query": "COLORSTEEL vs ZINCALUME: what are you comparing?",
+    "expectedArticle": "colorsteel-zincalume",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "colorsteel-zincalume-4",
+    "query": "Can you explain COLORSTEEL vs ZINCALUME: what are you comparing??",
+    "expectedArticle": "colorsteel-zincalume",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "timeline-1",
+    "query": "how long does reroof take",
+    "expectedArticle": "timeline",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "timeline-2",
+    "query": "Tell me about reroof time in NZ",
+    "expectedArticle": "timeline",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "timeline-3",
+    "query": "How long does a reroof take in New Zealand?",
+    "expectedArticle": "timeline",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "timeline-4",
+    "query": "Can you explain How long does a reroof take in New Zealand??",
+    "expectedArticle": "timeline",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "decramastic-1",
+    "query": "does decramastic contain asbestos",
+    "expectedArticle": "decramastic",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "decramastic-2",
+    "query": "can i clean old decramastic roof",
+    "expectedArticle": "decramastic",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "decramastic-3",
+    "query": "Tell me about decramastic asbestos in NZ",
+    "expectedArticle": "decramastic",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "decramastic-4",
+    "query": "Can you tell from a roof photo whether it contains asbestos?",
+    "expectedArticle": "decramastic",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roofing-costs-1",
+    "query": "roof cost",
+    "expectedArticle": "roofing-costs",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roofing-costs-2",
+    "query": "roofing cost",
+    "expectedArticle": "roofing-costs",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roofing-costs-3",
+    "query": "Tell me about roof price in NZ",
+    "expectedArticle": "roofing-costs",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roofing-costs-4",
+    "query": "Does RoofHub quote the cheapest roof in NZ?",
+    "expectedArticle": "roofing-costs",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "reroof-cost-1",
+    "query": "replace my roof",
+    "expectedArticle": "reroof-cost",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "reroof-cost-2",
+    "query": "reroof price",
+    "expectedArticle": "reroof-cost",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "reroof-cost-3",
+    "query": "Tell me about reroof cost in NZ",
+    "expectedArticle": "reroof-cost",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "reroof-cost-4",
+    "query": "Roof replacement cost NZ: what does a reroof cost?",
+    "expectedArticle": "reroof-cost",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "long-run-1",
+    "query": "what is long run roofing",
+    "expectedArticle": "long-run",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "long-run-2",
+    "query": "long run roof",
+    "expectedArticle": "long-run",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "long-run-3",
+    "query": "Tell me about long run roofing in NZ",
+    "expectedArticle": "long-run",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "long-run-4",
+    "query": "What is long-run roofing, and which profile do you need?",
+    "expectedArticle": "long-run",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "corrugated-1",
+    "query": "corrugated roofing",
+    "expectedArticle": "corrugated",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "corrugated-2",
+    "query": "Tell me about corrugated iron in NZ",
+    "expectedArticle": "corrugated",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "corrugated-3",
+    "query": "Is corrugated roofing the same as COLORSTEEL?",
+    "expectedArticle": "corrugated",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "corrugated-4",
+    "query": "Corrugated roofing NZ: prices, profiles and real projects",
+    "expectedArticle": "corrugated",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "five-rib-1",
+    "query": "five rib roofing",
+    "expectedArticle": "five-rib",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "five-rib-2",
+    "query": "5 rib roof",
+    "expectedArticle": "five-rib",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "five-rib-3",
+    "query": "Tell me about 5 rib in NZ",
+    "expectedArticle": "five-rib",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "five-rib-4",
+    "query": "Is five-rib more expensive than corrugate?",
+    "expectedArticle": "five-rib",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "pressed-tile-1",
+    "query": "pressed metal tile roofing",
+    "expectedArticle": "pressed-tile",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "pressed-tile-2",
+    "query": "Tell me about metal tile in NZ",
+    "expectedArticle": "pressed-tile",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "pressed-tile-3",
+    "query": "Is pressed metal tile still used on new homes?",
+    "expectedArticle": "pressed-tile",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "pressed-tile-4",
+    "query": "Pressed metal tile roofing NZ: prices, profiles and new-home examples",
+    "expectedArticle": "pressed-tile",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "tray-1",
+    "query": "standing seam roofing",
+    "expectedArticle": "tray",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "tray-2",
+    "query": "tray roofing",
+    "expectedArticle": "tray",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "tray-3",
+    "query": "Tell me about standing seam in NZ",
+    "expectedArticle": "tray",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "tray-4",
+    "query": "Tray and standing-seam roofing NZ: what changes the cost?",
+    "expectedArticle": "tray",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-pitch-1",
+    "query": "calculate roof pitch",
+    "expectedArticle": "roof-pitch",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-pitch-2",
+    "query": "what is roof pitch",
+    "expectedArticle": "roof-pitch",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-pitch-3",
+    "query": "Tell me about roof angle in NZ",
+    "expectedArticle": "roof-pitch",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-pitch-4",
+    "query": "How do you calculate roof pitch and its effect on area?",
+    "expectedArticle": "roof-pitch",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-area-1",
+    "query": "calculate roof area",
+    "expectedArticle": "roof-area",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-area-2",
+    "query": "measure roof area",
+    "expectedArticle": "roof-area",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-area-3",
+    "query": "Tell me about roof area calculator in NZ",
+    "expectedArticle": "roof-area",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-area-4",
+    "query": "Is roof area the same as floor area?",
+    "expectedArticle": "roof-area",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "scaffolding-1",
+    "query": "scaffolding for reroof",
+    "expectedArticle": "scaffolding",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "scaffolding-2",
+    "query": "Tell me about roof scaffold in NZ",
+    "expectedArticle": "scaffolding",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "scaffolding-3",
+    "query": "Is the estimator’s four-week hire period an industry rule?",
+    "expectedArticle": "scaffolding",
+    "maxRank": 3,
+    "currentPath": "/pricing/scaffolding-cost",
+    "domain": true
+  },
+  {
+    "id": "scaffolding-4",
+    "query": "What does roof scaffolding cost in New Zealand?",
+    "expectedArticle": "scaffolding",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "compare-quotes-1",
+    "query": "compare roofing quotes",
+    "expectedArticle": "compare-quotes",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "compare-quotes-2",
+    "query": "check roofing quote",
+    "expectedArticle": "compare-quotes",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "compare-quotes-3",
+    "query": "Tell me about compare roof quotes in NZ",
+    "expectedArticle": "compare-quotes",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "compare-quotes-4",
+    "query": "Does the lowest roofing quote mean the best value?",
+    "expectedArticle": "compare-quotes",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "new-roof-cost-1",
+    "query": "new build roof budget",
+    "expectedArticle": "new-roof-cost",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "new-roof-cost-2",
+    "query": "new roof price",
+    "expectedArticle": "new-roof-cost",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "new-roof-cost-3",
+    "query": "Tell me about new roof cost in NZ",
+    "expectedArticle": "new-roof-cost",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "new-roof-cost-4",
+    "query": "Does a new-build roof budget include removing an old roof?",
+    "expectedArticle": "new-roof-cost",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "membrane-1",
+    "query": "membrane roof",
+    "expectedArticle": "membrane",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "membrane-2",
+    "query": "flat roof waterproofing",
+    "expectedArticle": "membrane",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "membrane-3",
+    "query": "Tell me about flat roof membrane in NZ",
+    "expectedArticle": "membrane",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "membrane-4",
+    "query": "Is TPO the same as every membrane roof?",
+    "expectedArticle": "membrane",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "reroof-consent-1",
+    "query": "do i need consent to reroof",
+    "expectedArticle": "reroof-consent",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "reroof-consent-2",
+    "query": "does roof replacement need council consent",
+    "expectedArticle": "reroof-consent",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "reroof-consent-3",
+    "query": "Tell me about roof consent nz in NZ",
+    "expectedArticle": "reroof-consent",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "reroof-consent-4",
+    "query": "Does replacing an old metal roof always need a building consent in NZ?",
+    "expectedArticle": "reroof-consent",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "repair-or-replace-1",
+    "query": "should i repair or replace my roof",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "repair-or-replace-2",
+    "query": "is my roof worth repairing",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "repair-or-replace-3",
+    "query": "Tell me about repair vs replace roof in NZ",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "repair-or-replace-4",
+    "query": "Should I replace my roof after one leak?",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "leak-condensation-1",
+    "query": "is my roof leaking or is it condensation",
+    "expectedArticle": "leak-condensation",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "leak-condensation-2",
+    "query": "why is underside of roof wet",
+    "expectedArticle": "leak-condensation",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "leak-condensation-3",
+    "query": "Tell me about roof leak vs condensation in NZ",
+    "expectedArticle": "leak-condensation",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "leak-condensation-4",
+    "query": "Can condensation look like a roof leak?",
+    "expectedArticle": "leak-condensation",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-underlay-1",
+    "query": "what does roof underlay do",
+    "expectedArticle": "roof-underlay",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-underlay-2",
+    "query": "do i need new underlay when reroofing",
+    "expectedArticle": "roof-underlay",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-underlay-3",
+    "query": "Tell me about roof underlay nz in NZ",
+    "expectedArticle": "roof-underlay",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-underlay-4",
+    "query": "Does roof underlay drain condensation into the gutter?",
+    "expectedArticle": "roof-underlay",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-flashings-1",
+    "query": "what is a roof valley",
+    "expectedArticle": "roof-flashings",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-flashings-2",
+    "query": "what is a barge flashing",
+    "expectedArticle": "roof-flashings",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-flashings-3",
+    "query": "Tell me about roof flashing types in NZ",
+    "expectedArticle": "roof-flashings",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-flashings-4",
+    "query": "Is a valley the same thing as a gutter?",
+    "expectedArticle": "roof-flashings",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "choose-roofer-1",
+    "query": "how do i choose a roofer",
+    "expectedArticle": "choose-roofer",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "choose-roofer-2",
+    "query": "how to check a roofing company",
+    "expectedArticle": "choose-roofer",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "choose-roofer-3",
+    "query": "Tell me about best roofer nz in NZ",
+    "expectedArticle": "choose-roofer",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "choose-roofer-4",
+    "query": "Should I only use a RANZ member roofer?",
+    "expectedArticle": "choose-roofer",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-warranties-1",
+    "query": "what warranty should a roofer give",
+    "expectedArticle": "roof-warranties",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-warranties-2",
+    "query": "how long is a roof warranty",
+    "expectedArticle": "roof-warranties",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-warranties-3",
+    "query": "Tell me about roof warranty nz in NZ",
+    "expectedArticle": "roof-warranties",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-warranties-4",
+    "query": "Is a 30-year product warranty the same as a 30-year workmanship warranty?",
+    "expectedArticle": "roof-warranties",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "metal-roof-maintenance-1",
+    "query": "how do i maintain a metal roof",
+    "expectedArticle": "metal-roof-maintenance",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "metal-roof-maintenance-2",
+    "query": "how often should i clean my roof",
+    "expectedArticle": "metal-roof-maintenance",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "metal-roof-maintenance-3",
+    "query": "Tell me about metal roof maintenance in NZ",
+    "expectedArticle": "metal-roof-maintenance",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "metal-roof-maintenance-4",
+    "query": "Can I waterblast a metal roof?",
+    "expectedArticle": "metal-roof-maintenance",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "coastal-roofing-1",
+    "query": "what roof is best near the coast",
+    "expectedArticle": "coastal-roofing",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "coastal-roofing-2",
+    "query": "how close to sea affects roof warranty",
+    "expectedArticle": "coastal-roofing",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "coastal-roofing-3",
+    "query": "Tell me about coastal roofing nz in NZ",
+    "expectedArticle": "coastal-roofing",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "coastal-roofing-4",
+    "query": "How close to the sea is considered coastal for roofing?",
+    "expectedArticle": "coastal-roofing",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "gutters-downpipes-1",
+    "query": "what size gutters do i need",
+    "expectedArticle": "gutters-downpipes",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "gutters-downpipes-2",
+    "query": "how many downpipes do i need",
+    "expectedArticle": "gutters-downpipes",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "gutters-downpipes-3",
+    "query": "Tell me about gutter sizing nz in NZ",
+    "expectedArticle": "gutters-downpipes",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "gutters-downpipes-4",
+    "query": "How many downpipes does my roof need?",
+    "expectedArticle": "gutters-downpipes",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "quote-prep-1",
+    "query": "what do i need before getting a roof quote",
+    "expectedArticle": "quote-prep",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "quote-prep-2",
+    "query": "what should a roofing quote include",
+    "expectedArticle": "quote-prep",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "quote-prep-3",
+    "query": "Tell me about prepare for roof quote in NZ",
+    "expectedArticle": "quote-prep",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "quote-prep-4",
+    "query": "Do I need roof measurements before getting a quote?",
+    "expectedArticle": "quote-prep",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-parts-1",
+    "query": "what are the parts of a roof",
+    "expectedArticle": "roof-parts",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-parts-2",
+    "query": "what is a roof ridge hip valley barge",
+    "expectedArticle": "roof-parts",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-parts-3",
+    "query": "Tell me about roof anatomy in NZ",
+    "expectedArticle": "roof-parts",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-parts-4",
+    "query": "Is a barge the same as a verge?",
+    "expectedArticle": "roof-parts",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "reroof-process-1",
+    "query": "what happens when a roof is replaced",
+    "expectedArticle": "reroof-process",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "reroof-process-2",
+    "query": "how does reroofing work nz",
+    "expectedArticle": "reroof-process",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "reroof-process-3",
+    "query": "Tell me about reroofing process in NZ",
+    "expectedArticle": "reroof-process",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "reroof-process-4",
+    "query": "Do roofers remove the whole old roof at once?",
+    "expectedArticle": "reroof-process",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roofing-contracts-1",
+    "query": "do i need a contract for a reroof",
+    "expectedArticle": "roofing-contracts",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roofing-contracts-2",
+    "query": "how much deposit should i pay a roofer",
+    "expectedArticle": "roofing-contracts",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roofing-contracts-3",
+    "query": "Tell me about roofing contract nz in NZ",
+    "expectedArticle": "roofing-contracts",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roofing-contracts-4",
+    "query": "Do I legally need a written contract for a $25,000 reroof?",
+    "expectedArticle": "roofing-contracts",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-penetrations-1",
+    "query": "how should a skylight be flashed",
+    "expectedArticle": "roof-penetrations",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-penetrations-2",
+    "query": "how do you flash a flue through metal roof",
+    "expectedArticle": "roof-penetrations",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-penetrations-3",
+    "query": "Tell me about roof penetration in NZ",
+    "expectedArticle": "roof-penetrations",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-penetrations-4",
+    "query": "Can a roofer just silicone around a leaking pipe?",
+    "expectedArticle": "roof-penetrations",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-painting-1",
+    "query": "should i paint or replace my roof",
+    "expectedArticle": "roof-painting",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-painting-2",
+    "query": "does roof paint stop leaks",
+    "expectedArticle": "roof-painting",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-painting-3",
+    "query": "Tell me about roof painting vs replacement in NZ",
+    "expectedArticle": "roof-painting",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-painting-4",
+    "query": "Does roof paint make an old roof waterproof again?",
+    "expectedArticle": "roof-painting",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-ventilation-1",
+    "query": "does my roof need ventilation",
+    "expectedArticle": "roof-ventilation",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-ventilation-2",
+    "query": "will roof vents stop condensation",
+    "expectedArticle": "roof-ventilation",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-ventilation-3",
+    "query": "Tell me about roof ventilation nz in NZ",
+    "expectedArticle": "roof-ventilation",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-ventilation-4",
+    "query": "Do all New Zealand roofs need added vents?",
+    "expectedArticle": "roof-ventilation",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-problems-1",
+    "query": "why is my roof leaking",
+    "expectedArticle": "roof-problems",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-problems-2",
+    "query": "why is my roof rusting",
+    "expectedArticle": "roof-problems",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-problems-3",
+    "query": "Tell me about roof problems nz in NZ",
+    "expectedArticle": "roof-problems",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-problems-4",
+    "query": "Why is my roof leaking only when it is windy?",
+    "expectedArticle": "roof-problems",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "solar-roof-1",
+    "query": "do solar panels need building consent nz",
+    "expectedArticle": "solar-roof",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "solar-roof-2",
+    "query": "should i reroof before solar panels",
+    "expectedArticle": "solar-roof",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "solar-roof-3",
+    "query": "Tell me about solar panels roof nz in NZ",
+    "expectedArticle": "solar-roof",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "solar-roof-4",
+    "query": "Do roof-mounted solar panels need building consent in NZ?",
+    "expectedArticle": "solar-roof",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-insulation-reroof-1",
+    "query": "should i add insulation when reroofing",
+    "expectedArticle": "roof-insulation-reroof",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-insulation-reroof-2",
+    "query": "do i have to insulate when replacing roof nz",
+    "expectedArticle": "roof-insulation-reroof",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-insulation-reroof-3",
+    "query": "Tell me about roof insulation reroof in NZ",
+    "expectedArticle": "roof-insulation-reroof",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-insulation-reroof-4",
+    "query": "Do I need building consent just to add ceiling insulation?",
+    "expectedArticle": "roof-insulation-reroof",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-insurance-1",
+    "query": "does insurance cover a leaking roof nz",
+    "expectedArticle": "roof-insurance",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-insurance-2",
+    "query": "does insurance cover rusted roof",
+    "expectedArticle": "roof-insurance",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-insurance-3",
+    "query": "Tell me about roof insurance nz in NZ",
+    "expectedArticle": "roof-insurance",
+    "maxRank": 4,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "roof-insurance-4",
+    "query": "Does house insurance cover a rusty leaking roof?",
+    "expectedArticle": "roof-insurance",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-barge",
+    "query": "What’s the sloping edge on the end of a gable called - barge or verge?",
+    "expectedArticle": "roof-parts",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-reroof-order",
+    "query": "What order does a reroof happen in once the scaffold is up?",
+    "expectedArticle": "reroof-process",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-deposit",
+    "query": "The roofer wants half up front as a deposit. Is that sensible in NZ?",
+    "expectedArticle": "roofing-contracts",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-skylight",
+    "query": "How should a skylight opening be weatherproofed in long-run metal?",
+    "expectedArticle": "roof-penetrations",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-paint",
+    "query": "My old iron roof is rusty in places. Should I repaint it or replace it?",
+    "expectedArticle": "roof-painting",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-vents",
+    "query": "Do I need roof vents because I keep getting moisture under the sheets?",
+    "expectedArticle": "roof-ventilation",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-stain",
+    "query": "There is a brown ceiling stain after cold nights but it has not rained. Leak or condensation?",
+    "expectedArticle": "leak-condensation",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-solar",
+    "query": "I am getting solar. Should I reroof first if the roof is getting old?",
+    "expectedArticle": "solar-roof",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-insulation",
+    "query": "Can I put insulation in while the metal roof is off a skillion roof?",
+    "expectedArticle": "roof-insulation-reroof",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-insurance",
+    "query": "A branch hit the roof in a storm but there is also old rust. What should I document for insurance?",
+    "expectedArticle": "roof-insurance",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-spouting",
+    "query": "Is spouting just another NZ word for an external gutter?",
+    "expectedArticle": "gutters-downpipes",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-underlay",
+    "query": "Can I leave the old building paper there when the roof sheets are replaced?",
+    "expectedArticle": "roof-underlay",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-coastal",
+    "query": "We are close to salt water. Does the environment change which metal roof coating is suitable?",
+    "expectedArticle": "coastal-roofing",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-warranty",
+    "query": "Who covers a bad roof installation - the sheet manufacturer or the roofer?",
+    "expectedArticle": "roof-warranties",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-choose",
+    "query": "How do I check whether the person doing restricted roofing work is actually licensed?",
+    "expectedArticle": "choose-roofer",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-consent",
+    "query": "Same metal profile, same roof shape: do I automatically need council consent to reroof?",
+    "expectedArticle": "reroof-consent",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-symptom",
+    "query": "Water is showing near a chimney. What should I check before assuming the roofing sheets failed?",
+    "expectedArticle": "roof-problems",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-quote",
+    "query": "Two reroof quotes are five grand apart. How do I tell whether the scope is actually the same?",
+    "expectedArticle": "compare-quotes",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-price",
+    "query": "Roughly what does roof replacement cost in New Zealand?",
+    "expectedArticle": "reroof-cost",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-area",
+    "query": "I know the building footprint and roof pitch. How do I estimate actual roof area?",
+    "expectedArticle": "roof-area",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-pitch",
+    "query": "What does a 25 degree roof pitch mean?",
+    "expectedArticle": "roof-pitch",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "context-underlay",
+    "query": "Can you explain that in plain English?",
+    "expectedArticle": "roof-underlay",
+    "maxRank": 1,
+    "currentPath": "/guides/roof-underlay",
+    "domain": true
+  },
+  {
+    "id": "context-contract",
+    "query": "What should I do about that?",
+    "expectedArticle": "roofing-contracts",
+    "maxRank": 1,
+    "currentPath": "/guides/roofing-contracts-deposits-variations",
+    "domain": true
+  },
+  {
+    "id": "context-vent",
+    "query": "Why does that matter?",
+    "expectedArticle": "roof-ventilation",
+    "maxRank": 1,
+    "currentPath": "/guides/roof-ventilation",
+    "domain": true
+  },
+  {
+    "id": "context-parts",
+    "query": "Which one is that?",
+    "expectedArticle": "roof-parts",
+    "maxRank": 1,
+    "currentPath": "/guides/roof-parts",
+    "domain": true
+  },
+  {
+    "id": "hard-water-ceiling",
+    "query": "I have water in the ceiling",
+    "expectedArticle": "leak-condensation",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "hard-soffit",
+    "query": "What is a soffit?",
+    "expectedArticle": "roof-parts",
+    "maxRank": 1,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "out-1",
+    "query": "Should I buy a blue car?",
+    "expectedArticle": null,
+    "maxRank": 0,
+    "currentPath": "",
+    "domain": false
+  },
+  {
+    "id": "out-2",
+    "query": "Give me a chicken curry recipe",
+    "expectedArticle": null,
+    "maxRank": 0,
+    "currentPath": "",
+    "domain": false
+  },
+  {
+    "id": "out-3",
+    "query": "Who won the rugby last night?",
+    "expectedArticle": null,
+    "maxRank": 0,
+    "currentPath": "",
+    "domain": false
+  },
+  {
+    "id": "out-4",
+    "query": "Help me choose a laptop for video editing",
+    "expectedArticle": null,
+    "maxRank": 0,
+    "currentPath": "",
+    "domain": false
+  },
+  {
+    "id": "out-5",
+    "query": "What is the capital of Peru?",
+    "expectedArticle": null,
+    "maxRank": 0,
+    "currentPath": "",
+    "domain": false
+  },
+  {
+    "id": "out-6",
+    "query": "Write a birthday message for my brother",
+    "expectedArticle": null,
+    "maxRank": 0,
+    "currentPath": "",
+    "domain": false
+  },
+  {
+    "id": "out-7",
+    "query": "How do I fix a bicycle chain?",
+    "expectedArticle": null,
+    "maxRank": 0,
+    "currentPath": "",
+    "domain": false
+  },
+  {
+    "id": "out-8",
+    "query": "What is the best camera for wildlife?",
+    "expectedArticle": null,
+    "maxRank": 0,
+    "currentPath": "",
+    "domain": false
+  },
+  {
+    "id": "out-9",
+    "query": "Explain compound interest",
+    "expectedArticle": null,
+    "maxRank": 0,
+    "currentPath": "",
+    "domain": false
+  },
+  {
+    "id": "out-10",
+    "query": "Can you translate hello into Japanese?",
+    "expectedArticle": null,
+    "maxRank": 0,
+    "currentPath": "",
+    "domain": false
+  },
+  {
+    "id": "persona-builder-allowance",
+    "query": "I'm a builder setting a reroof allowance. What changes the cost besides roof area?",
+    "expectedArticle": "reroof-cost",
+    "maxRank": 1,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "persona-roofer-lines",
+    "query": "Should I price ridges, hips and valleys separately from roof area?",
+    "expectedArticle": "roof-parts",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "persona-architect-low-pitch",
+    "query": "Which roofing systems can I use on a low-pitch roof?",
+    "expectedArticle": "roof-pitch",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "persona-pm-coastal-maintenance",
+    "query": "What maintenance should I schedule for a coastal metal roof?",
+    "expectedArticle": "coastal-roofing",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "persona-insurance-photos",
+    "query": "A storm damaged my roof. What should I photograph before repairs for insurance?",
+    "expectedArticle": "roof-insurance",
+    "maxRank": 1,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "persona-hidden-timber-variation",
+    "query": "We found rotten timber after stripping the roof. How should the extra work be handled?",
+    "expectedArticle": "roofing-contracts",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "persona-rental-insulation",
+    "query": "I'm reroofing a rental with inaccessible skillion insulation. Do I need to insulate while the roof is open?",
+    "expectedArticle": "roof-insulation-reroof",
+    "maxRank": 1,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "persona-old-roof-solar",
+    "query": "My roof is 25 years old and I'm adding solar. Should I reroof first?",
+    "expectedArticle": "solar-roof",
+    "maxRank": 1,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "persona-profiled-pipe",
+    "query": "How should a pipe penetration through profiled metal roofing be flashed?",
+    "expectedArticle": "roof-penetrations",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "persona-rust-paint-replace",
+    "query": "There's rust around my roof screws. Should I paint it or replace the roof?",
+    "expectedArticle": "roof-painting",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-condition-1",
+    "query": "Can RoofHub help me work out the condition of my roof?",
+    "expectedArticle": "roof-condition-assessment",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-condition-2",
+    "query": "How do I know whether my roof actually needs replacing?",
+    "expectedArticle": "roof-condition-assessment",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-condition-3",
+    "query": "What should a roof condition assessment check?",
+    "expectedArticle": "roof-condition-assessment",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-condition-4",
+    "query": "Can Google Earth tell me whether my roof needs a reroof?",
+    "expectedArticle": "roof-condition-assessment",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-condition-5",
+    "query": "Can satellite photos show if the roof is rusty enough to replace?",
+    "expectedArticle": "roof-condition-assessment",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-condition-6",
+    "query": "What roof photos do you need to judge repair versus replacement?",
+    "expectedArticle": "roof-condition-assessment",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-condition-7",
+    "query": "Can I send roof photos and get a neutral view on repair vs reroof?",
+    "expectedArticle": "roof-condition-assessment",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-condition-8",
+    "query": "I want a neutral roof inspection checklist before I call a roofer",
+    "expectedArticle": "roof-condition-assessment",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-condition-9",
+    "query": "What can you tell from aerial imagery of a roof?",
+    "expectedArticle": "roof-condition-assessment",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-condition-10",
+    "query": "I do not want to climb onto the roof. What can I check safely?",
+    "expectedArticle": "roof-condition-assessment",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-rust-1",
+    "query": "There is rust around two screws but the rest of the metal roof looks okay",
+    "expectedArticle": "rusting-metal-roof",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-rust-2",
+    "query": "I have rust holes across several sheets and three leaks",
+    "expectedArticle": "rusting-metal-roof",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-rust-3",
+    "query": "Does a rusty iron roof always need replacing?",
+    "expectedArticle": "rusting-metal-roof",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-rust-4",
+    "query": "Can I replace one rusty long run sheet instead of reroofing?",
+    "expectedArticle": "rusting-metal-roof",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-rust-5",
+    "query": "Should I paint or replace a rusty Colorsteel roof?",
+    "expectedArticle": "rusting-metal-roof",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-rust-6",
+    "query": "My corrugated roof has pinholes in one area, repair or reroof?",
+    "expectedArticle": "rusting-metal-roof",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-rust-7",
+    "query": "The coating is chalky and there is light surface rust but no leaks",
+    "expectedArticle": "rusting-metal-roof",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-rust-8",
+    "query": "How bad does corrosion need to be before reroofing?",
+    "expectedArticle": "rusting-metal-roof",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-rust-9",
+    "query": "Can local corrosion around fixings be repaired?",
+    "expectedArticle": "rusting-metal-roof",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-rust-10",
+    "query": "One roofer says paint the rust and another says replace the roof",
+    "expectedArticle": "rusting-metal-roof",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-leaks-1",
+    "query": "The same roof leak came back after a flashing repair",
+    "expectedArticle": "recurring-roof-leaks",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-leaks-2",
+    "query": "My roof keeps leaking after it was repaired twice",
+    "expectedArticle": "recurring-roof-leaks",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-leaks-3",
+    "query": "It only leaks when the wind blows rain from the south",
+    "expectedArticle": "recurring-roof-leaks",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-leaks-4",
+    "query": "Why is my ceiling wet again after the roofer fixed the leak?",
+    "expectedArticle": "recurring-roof-leaks",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-leaks-5",
+    "query": "Different parts of the roof have started leaking over the last year",
+    "expectedArticle": "recurring-roof-leaks",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-leaks-6",
+    "query": "The same valley has been patched twice and still leaks",
+    "expectedArticle": "recurring-roof-leaks",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-leaks-7",
+    "query": "Does a recurring leak mean I need a whole new roof?",
+    "expectedArticle": "recurring-roof-leaks",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-leaks-8",
+    "query": "The roofer sealed it but the water came back",
+    "expectedArticle": "recurring-roof-leaks",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-leaks-9",
+    "query": "Leak is in the same room but I am not sure water enters above it",
+    "expectedArticle": "recurring-roof-leaks",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-leaks-10",
+    "query": "What should be checked when roof repair did not stop the leak?",
+    "expectedArticle": "recurring-roof-leaks",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-tile-1",
+    "query": "I have three cracked concrete roof tiles, do I need a reroof?",
+    "expectedArticle": "concrete-tile-decision",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-tile-2",
+    "query": "The ridge mortar is falling out and a few tiles are cracked",
+    "expectedArticle": "concrete-tile-decision",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-tile-3",
+    "query": "Should I restore or replace an old concrete tile roof?",
+    "expectedArticle": "concrete-tile-decision",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-tile-4",
+    "query": "Can cracked concrete tiles just be replaced individually?",
+    "expectedArticle": "concrete-tile-decision",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-tile-5",
+    "query": "Is repainting concrete tiles enough or do I need replacement?",
+    "expectedArticle": "concrete-tile-decision",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-tile-6",
+    "query": "My concrete tile roof is faded but does not leak, what are the options?",
+    "expectedArticle": "concrete-tile-decision",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-tile-7",
+    "query": "What is repointing a concrete tile roof and when is it enough?",
+    "expectedArticle": "concrete-tile-decision",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-tile-8",
+    "query": "A roofer quoted tile restoration and another quoted long run replacement",
+    "expectedArticle": "concrete-tile-decision",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-tile-9",
+    "query": "How do I decide between concrete tile restoration and reroofing?",
+    "expectedArticle": "concrete-tile-decision",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-tile-10",
+    "query": "Do worn tile coatings mean the roof is no longer waterproof?",
+    "expectedArticle": "concrete-tile-decision",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-decramastic-1",
+    "query": "My old Decramastic roof is rusty, repair it or replace it?",
+    "expectedArticle": "decramastic-decision",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-decramastic-2",
+    "query": "Can an old Decromastic roof be restored instead of reroofed?",
+    "expectedArticle": "decramastic-decision",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-decramastic-3",
+    "query": "I have an old stone chip metal tile roof with several leaks",
+    "expectedArticle": "decramastic-decision",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-decramastic-4",
+    "query": "Can I pressure wash Decramastic to see how bad it is?",
+    "expectedArticle": "decramastic-decision",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-decramastic-5",
+    "query": "The Decramastic coating is worn off in lots of places and there are rust holes",
+    "expectedArticle": "decramastic-decision",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-decramastic-6",
+    "query": "Does every Decramastic roof need replacement?",
+    "expectedArticle": "decramastic-decision",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-decramastic-7",
+    "query": "One part of my Decramastic roof leaks, can it be patched?",
+    "expectedArticle": "decramastic-decision",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-decramastic-8",
+    "query": "Should asbestos be checked before repairing Decramastic?",
+    "expectedArticle": "decramastic-decision",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-decramastic-9",
+    "query": "Is repainting Decramastic safe?",
+    "expectedArticle": "decramastic-decision",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-decramastic-10",
+    "query": "How do I decide repair restore or replace for old textured metal tiles?",
+    "expectedArticle": "decramastic-decision",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-hidden-1",
+    "query": "What extra costs can appear after the old roof comes off?",
+    "expectedArticle": "hidden-reroof-problems",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-hidden-2",
+    "query": "The contractor found rotten purlins after stripping the roof",
+    "expectedArticle": "hidden-reroof-problems",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-hidden-3",
+    "query": "Should a reroof quote include an allowance for hidden timber damage?",
+    "expectedArticle": "hidden-reroof-problems",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-hidden-4",
+    "query": "What does opening up risk mean in a reroof quote?",
+    "expectedArticle": "hidden-reroof-problems",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-hidden-5",
+    "query": "Can the roofer know how much rotten timber there is before removing the roof?",
+    "expectedArticle": "hidden-reroof-problems",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-hidden-6",
+    "query": "Three parts of my house were built at different times, could hidden roof timber vary?",
+    "expectedArticle": "hidden-reroof-problems",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-hidden-7",
+    "query": "How should a variation be handled if rotten purlins are found?",
+    "expectedArticle": "hidden-reroof-problems",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-hidden-8",
+    "query": "The reroof quote says timber repairs extra if required, is that enough detail?",
+    "expectedArticle": "hidden-reroof-problems",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-hidden-9",
+    "query": "Can underlay and framing problems be hidden until reroofing starts?",
+    "expectedArticle": "hidden-reroof-problems",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-hidden-10",
+    "query": "Do you have examples of roofers finding concealed damage during reroofing?",
+    "expectedArticle": "hidden-reroof-problems",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-repair-1",
+    "query": "I want the cheapest sensible fix, not automatically a new roof",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-repair-2",
+    "query": "How do I choose between patching restoring and reroofing?",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-repair-3",
+    "query": "One roofer says repair and another says replacement, who do I believe?",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-repair-4",
+    "query": "Does roof age alone mean I need to replace it?",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-repair-5",
+    "query": "What is the lowest adequate intervention for a roof problem?",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-repair-6",
+    "query": "Should one leak make me replace the roof?",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-repair-7",
+    "query": "How do I tell if repeated roof patching is false economy?",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-repair-8",
+    "query": "Can RoofHub give me a neutral repair vs reroof decision?",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-repair-9",
+    "query": "What facts matter more than age when deciding to reroof?",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-repair-10",
+    "query": "Do I need a new roof if only one flashing has failed?",
+    "expectedArticle": "repair-or-replace",
+    "maxRank": 2,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-paint-1",
+    "query": "Is roof coating a real repair or just cosmetic?",
+    "expectedArticle": "roof-painting",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-paint-2",
+    "query": "When should a roof not be recoated?",
+    "expectedArticle": "roof-painting",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-paint-3",
+    "query": "Can roof painting hide a failing roof?",
+    "expectedArticle": "roof-painting",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-paint-4",
+    "query": "Is restoration worth it if the roof system is still sound?",
+    "expectedArticle": "roof-painting",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-paint-5",
+    "query": "Do roof restoration companies repair defects before painting?",
+    "expectedArticle": "roof-painting",
+    "maxRank": 3,
+    "currentPath": "",
+    "domain": true
+  },
+  {
+    "id": "v3-context-rust",
+    "query": "What would you do in my case?",
+    "expectedArticle": "rusting-metal-roof",
+    "maxRank": 1,
+    "currentPath": "/guides/rusting-metal-roof-repair-or-replace",
+    "domain": true
+  },
+  {
+    "id": "v3-context-tile",
+    "query": "So does that mean replace it?",
+    "expectedArticle": "concrete-tile-decision",
+    "maxRank": 1,
+    "currentPath": "/guides/concrete-tile-roof-repair-restoration-or-replace",
+    "domain": true
+  },
+  {
+    "id": "v3-context-hidden",
+    "query": "How should that be priced?",
+    "expectedArticle": "hidden-reroof-problems",
+    "maxRank": 1,
+    "currentPath": "/guides/hidden-problems-found-during-reroof",
+    "domain": true
+  },
+  {
+    "id": "v3-context-condition",
+    "query": "What should I tell you next?",
+    "expectedArticle": "roof-condition-assessment",
+    "maxRank": 1,
+    "currentPath": "/guides/roof-condition-assessment",
+    "domain": true
+  }
+]

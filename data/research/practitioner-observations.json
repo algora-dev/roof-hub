@@ -1,0 +1,381 @@
+{
+  "pract-localised-repair-pmr": {
+    "id": "pract-localised-repair-pmr",
+    "topic": "repair or replace",
+    "problem": "isolated defect on an otherwise sound roof",
+    "pathway": "repair",
+    "claim": "A contained defect such as a local flashing problem or small damaged area can justify a targeted repair when the surrounding roof still has useful life.",
+    "sourceId": "pmr-repair-restore-2026",
+    "evidenceType": "comparison-guide",
+    "roofSystem": [
+      "general"
+    ],
+    "region": "Waikato",
+    "projectSpecific": false,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-multiple",
+    "limitations": "Commercial contractor guidance. The surrounding roof still needs competent assessment; a local symptom can originate elsewhere.",
+    "corroboratingSourceIds": [
+      "rrs-repair-restore-reroof-2026",
+      "ranz-maintenance-2026"
+    ]
+  },
+  "pract-sound-tired-restore-pmr": {
+    "id": "pract-sound-tired-restore-pmr",
+    "topic": "restoration candidate",
+    "problem": "weathered surface with fundamentally sound roof",
+    "pathway": "restore",
+    "claim": "Restoration/recoating can be sensible when the roof system is fundamentally sound and the main issue is surface wear rather than widespread material failure.",
+    "sourceId": "pmr-repair-restore-2026",
+    "evidenceType": "comparison-guide",
+    "roofSystem": [
+      "metal",
+      "tile"
+    ],
+    "region": "Waikato",
+    "projectSpecific": false,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-multiple",
+    "limitations": "Commercial contractor guidance. Coating suitability is roof-system and product dependent and must not be used to hide perforation, structural deterioration or failed details.",
+    "corroboratingSourceIds": [
+      "willymarsh-restoration-2026",
+      "ranz-roof-coating-cop"
+    ]
+  },
+  "pract-widespread-replace-pmr": {
+    "id": "pract-widespread-replace-pmr",
+    "topic": "replacement candidate",
+    "problem": "widespread rust, failing sheets or persistent leaks",
+    "pathway": "replace",
+    "claim": "Widespread deterioration or recurring failures across a roof are practitioner signals that repeated local repairs may offer poor long-term value compared with replacement.",
+    "sourceId": "pmr-repair-restore-2026",
+    "evidenceType": "comparison-guide",
+    "roofSystem": [
+      "metal",
+      "general"
+    ],
+    "region": "Waikato",
+    "projectSpecific": false,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-multiple",
+    "limitations": "Commercial contractor guidance. Replacement still requires site-specific condition and scope assessment.",
+    "corroboratingSourceIds": [
+      "rrs-reroof-service-2026",
+      "ranz-reroof-guide-2026"
+    ]
+  },
+  "pract-rrs-local-flashing-repair": {
+    "id": "pract-rrs-local-flashing-repair",
+    "topic": "leak repair",
+    "problem": "single leak associated with flashings and valley",
+    "pathway": "repair",
+    "claim": "Roof Repair Specialists publishes a project example where one leak was treated by repairing two flashings and a valley rather than replacing the whole roof.",
+    "sourceId": "rrs-repair-restore-reroof-2026",
+    "evidenceType": "project-portfolio",
+    "roofSystem": [
+      "general"
+    ],
+    "region": "Auckland",
+    "projectSpecific": true,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-multiple",
+    "limitations": "Publisher-reported project summary without an independent inspection report; illustrates proportional scope, not a universal diagnosis.",
+    "corroboratingSourceIds": [
+      "ranz-maintenance-2026"
+    ]
+  },
+  "pract-rrs-sound-tile-repaint": {
+    "id": "pract-rrs-sound-tile-repaint",
+    "topic": "concrete tile restoration",
+    "problem": "sound concrete tile roof with tired coating",
+    "pathway": "restore",
+    "claim": "Roof Repair Specialists publishes a Papakura project example where the concrete tile roof was considered structurally sound and repainting was recommended instead of reroofing.",
+    "sourceId": "rrs-repair-restore-reroof-2026",
+    "evidenceType": "project-portfolio",
+    "roofSystem": [
+      "concrete-tile"
+    ],
+    "region": "Auckland",
+    "projectSpecific": true,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-multiple",
+    "limitations": "Publisher-reported project summary. The condition assessment and outcome have not been independently audited.",
+    "corroboratingSourceIds": [
+      "willymarsh-restoration-2026",
+      "cowperthwaite-tile-restoration-2026"
+    ]
+  },
+  "pract-decramastic-rust-through": {
+    "id": "pract-decramastic-rust-through",
+    "topic": "decramastic replacement",
+    "problem": "stone-chip loss, rust-through and multiple leaks",
+    "pathway": "replace",
+    "claim": "A Torbay case study reports an older Decramastic roof with widespread coating loss, rust-through and several leaks being stripped and replaced rather than patched.",
+    "sourceId": "rrs-decramastic-torbay-2026",
+    "evidenceType": "case-study",
+    "roofSystem": [
+      "pressed-metal-tile",
+      "decramastic"
+    ],
+    "region": "Auckland",
+    "projectSpecific": true,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-multiple",
+    "limitations": "Publisher-reported case study. Age/lifespan claims in the source are not adopted by RoofHub without separate evidence.",
+    "corroboratingSourceIds": [
+      "ranz-reroof-guide-2026",
+      "asbestos"
+    ]
+  },
+  "pract-willymarsh-restoration-limit": {
+    "id": "pract-willymarsh-restoration-limit",
+    "topic": "restoration limits",
+    "problem": "tile roof restoration candidate",
+    "pathway": "restore",
+    "claim": "Willy Marsh Roofing says restoration should follow inspection and repairs, and that underlay, fixings or overall roof condition can make replacement the better investment.",
+    "sourceId": "willymarsh-restoration-2026",
+    "evidenceType": "service-guide",
+    "roofSystem": [
+      "concrete-tile"
+    ],
+    "region": "Auckland",
+    "projectSpecific": false,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-multiple",
+    "limitations": "Commercial contractor guidance; suitable coating system and roof condition remain project-specific.",
+    "corroboratingSourceIds": [
+      "ranz-roof-coating-cop",
+      "homesmart-concrete-tile-2026"
+    ]
+  },
+  "pract-topline-hidden-purlins": {
+    "id": "pract-topline-hidden-purlins",
+    "topic": "hidden reroof work",
+    "problem": "concealed timber deterioration",
+    "pathway": "reroof-prep",
+    "claim": "Topline Roofing reports a Mt Eden bungalow reroof where significant purlin deterioration was found only after the existing roof was stripped, leading to about 35 linear metres of purlin replacement.",
+    "sourceId": "topline-mteden-reroof-2026",
+    "evidenceType": "case-study",
+    "roofSystem": [
+      "metal",
+      "reroof"
+    ],
+    "region": "Auckland",
+    "projectSpecific": true,
+    "reviewedAt": "2026-10-21",
+    "confidence": "high",
+    "commercialInterest": "sells-replacement",
+    "limitations": "Publisher-reported project quantity; useful to demonstrate opening-up risk, not to predict timber quantities on another roof.",
+    "corroboratingSourceIds": [
+      "eh-reroof-hidden-2026",
+      "hdk-kumeu-reroof-2026"
+    ]
+  },
+  "pract-eh-hidden-reroof": {
+    "id": "pract-eh-hidden-reroof",
+    "topic": "hidden reroof work",
+    "problem": "unknown conditions concealed by old roof",
+    "pathway": "reroof-prep",
+    "claim": "Edwards & Hardy highlights damaged timber, deteriorated underlay, poor flashings and moisture issues as examples of problems that can become visible only when an old roof is removed.",
+    "sourceId": "eh-reroof-hidden-2026",
+    "evidenceType": "service-guide",
+    "roofSystem": [
+      "general",
+      "reroof"
+    ],
+    "region": "New Zealand",
+    "projectSpecific": false,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-replacement",
+    "limitations": "Contractor interpretation of reroof risk. The underlying RANZ reroof guidance is preferred for industry-level requirements.",
+    "corroboratingSourceIds": [
+      "ranz-reroof-guide-2026",
+      "topline-mteden-reroof-2026"
+    ]
+  },
+  "pract-hdk-mixed-age-hidden-timber": {
+    "id": "pract-hdk-mixed-age-hidden-timber",
+    "topic": "hidden reroof work",
+    "problem": "roof sections of different ages with concealed timber deterioration",
+    "pathway": "reroof-prep",
+    "claim": "HDK reports a Kumeu reroof with three separately built roof sections where timber deterioration was discovered after opening the roof, requiring selective purlin replacement/refastening.",
+    "sourceId": "hdk-kumeu-reroof-2026",
+    "evidenceType": "case-study",
+    "roofSystem": [
+      "metal",
+      "reroof"
+    ],
+    "region": "Auckland",
+    "projectSpecific": true,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-replacement",
+    "limitations": "Publisher-reported project. Product-selection claims in the source are not treated as independent manufacturer evidence.",
+    "corroboratingSourceIds": [
+      "topline-mteden-reroof-2026"
+    ]
+  },
+  "pract-cowperthwaite-tile-restore": {
+    "id": "pract-cowperthwaite-tile-restore",
+    "topic": "concrete tile restoration",
+    "problem": "aged concrete tile roof with cracked tiles and ridge maintenance",
+    "pathway": "restore",
+    "claim": "Cowperthwaite publishes a concrete-tile restoration project involving replacement of cracked tiles, full repointing, cleaning, sealing and coating rather than complete reroofing.",
+    "sourceId": "cowperthwaite-tile-restoration-2026",
+    "evidenceType": "case-study",
+    "roofSystem": [
+      "concrete-tile"
+    ],
+    "region": "Auckland",
+    "projectSpecific": true,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-restoration",
+    "limitations": "Commercial restoration case study; warranty and longevity outcomes are provider-specific and are not generalised by RoofHub.",
+    "corroboratingSourceIds": [
+      "willymarsh-restoration-2026",
+      "branz-tile-repair-guide-2026"
+    ]
+  },
+  "pract-homesmart-tile-local-repair": {
+    "id": "pract-homesmart-tile-local-repair",
+    "topic": "concrete tile repair",
+    "problem": "cracked/displaced tiles or failed ridge/hip pointing",
+    "pathway": "repair",
+    "claim": "HomeSmart describes individual tile replacement and ridge/hip repointing as proportional repairs when deterioration is local rather than widespread.",
+    "sourceId": "homesmart-concrete-tile-2026",
+    "evidenceType": "service-guide",
+    "roofSystem": [
+      "concrete-tile"
+    ],
+    "region": "Auckland",
+    "projectSpecific": false,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-multiple",
+    "limitations": "Commercial contractor guidance. Matching tile availability, underlay condition and wider roof condition can change the viable scope.",
+    "corroboratingSourceIds": [
+      "branz-tile-repair-guide-2026",
+      "willymarsh-restoration-2026"
+    ]
+  },
+  "pract-homesmart-metal-partial-sheet": {
+    "id": "pract-homesmart-metal-partial-sheet",
+    "topic": "metal roof repair",
+    "problem": "isolated corroded sheets, fixings or flashings",
+    "pathway": "repair",
+    "claim": "HomeSmart describes replacing individual deteriorated metal sheets, correcting fixings and repairing ridges/flashings/valleys without automatically replacing the entire roof.",
+    "sourceId": "homesmart-metal-roof-2026",
+    "evidenceType": "service-guide",
+    "roofSystem": [
+      "metal"
+    ],
+    "region": "Auckland",
+    "projectSpecific": false,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-multiple",
+    "limitations": "Commercial practitioner guidance. Compatibility, remaining coating life and corrosion extent need on-site assessment.",
+    "corroboratingSourceIds": [
+      "mrm-overpainting-2026",
+      "ranz-maintenance-2026"
+    ]
+  },
+  "pract-advance-replacement-bias": {
+    "id": "pract-advance-replacement-bias",
+    "topic": "repair or replace",
+    "problem": "older roof with broad deterioration",
+    "pathway": "replace",
+    "claim": "Advance Roofing distinguishes isolated repairable defects from broader system deterioration, while also stating that its own business specialises in replacement rather than repairs.",
+    "sourceId": "advance-repair-replace-2026",
+    "evidenceType": "comparison-guide",
+    "roofSystem": [
+      "general"
+    ],
+    "region": "Auckland",
+    "projectSpecific": false,
+    "reviewedAt": "2026-10-21",
+    "confidence": "low",
+    "commercialInterest": "sells-replacement",
+    "limitations": "Commercial bias is explicit because the source does not offer repair work. RoofHub uses it only as a counter-perspective and does not adopt numeric age or repair-cost thresholds from the page.",
+    "corroboratingSourceIds": [
+      "pmr-repair-restore-2026",
+      "rrs-repair-restore-reroof-2026"
+    ]
+  },
+  "pract-roofprotect-metal-recoat": {
+    "id": "pract-roofprotect-metal-recoat",
+    "topic": "metal roof restoration",
+    "problem": "localised rust, loose fixings or worn coating",
+    "pathway": "restore",
+    "claim": "Roof Protect describes localised minor rust, loose fixings and worn coating as potential repair/recoat work where the roof structure remains in reasonable condition.",
+    "sourceId": "roofprotect-iron-2026",
+    "evidenceType": "service-guide",
+    "roofSystem": [
+      "metal"
+    ],
+    "region": "Wellington",
+    "projectSpecific": false,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-restoration",
+    "limitations": "Commercial restoration source. Coating cannot be assumed appropriate where corrosion has perforated the substrate or other roof-system failures remain.",
+    "corroboratingSourceIds": [
+      "ranz-roof-coating-cop",
+      "mrm-overpainting-2026"
+    ]
+  },
+  "pract-abovefocus-decramastic-local-repair": {
+    "id": "pract-abovefocus-decramastic-local-repair",
+    "topic": "Decramastic local leak repair",
+    "problem": "persistent local leak on an older textured metal tile roof",
+    "pathway": "repair",
+    "claim": "Above Focus Roofing reports a Decramastic project where a persistent leak that had resisted earlier repair attempts was identified and resolved using local roof work that included replacement tiles rather than a whole-roof replacement.",
+    "sourceId": "abovefocus-decramastic-leak-2026",
+    "evidenceType": "case-study",
+    "roofSystem": [
+      "pressed-metal-tile",
+      "decramastic"
+    ],
+    "region": "Wellington",
+    "projectSpecific": true,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-multiple",
+    "limitations": "Publisher-reported project with no independent diagnostic record. The page does not establish asbestos status, remaining system life or whether the same local-repair approach would be safe or suitable on another older textured metal tile roof.",
+    "corroboratingSourceIds": [
+      "asbestos",
+      "asbestos-trades"
+    ]
+  },
+  "pract-roofrestore-torbay-tile": {
+    "id": "pract-roofrestore-torbay-tile",
+    "topic": "concrete tile restoration",
+    "problem": "weathered concrete tile roof with local tile, flashing and pointing defects but reportedly sound substrate",
+    "pathway": "restore",
+    "claim": "Roof Restore reports a Torbay concrete-tile project where the substrate was considered structurally sound and cracked tiles, apron flashings and pointing were repaired before a restoration coating system was applied.",
+    "sourceId": "roofrestore-torbay-tile-2026",
+    "evidenceType": "case-study",
+    "roofSystem": [
+      "concrete-tile"
+    ],
+    "region": "Auckland",
+    "projectSpecific": true,
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium",
+    "commercialInterest": "sells-restoration",
+    "limitations": "Commercial restoration case study and publisher-reported condition assessment. RoofHub does not generalise the source's life-extension, cost-comparison, coating-performance or warranty claims; those need independent product/system evidence and roof-specific inspection.",
+    "corroboratingSourceIds": [
+      "branz-tile-repair-guide-2026",
+      "ranz-roof-coating-cop"
+    ]
+  }
+}

@@ -11,7 +11,7 @@
     "og:image": "node scripts/gen-og-image.mjs",
     "check:production": "node scripts/check-production.mjs",
     "check:content": "node scripts/check-content.mjs && npm run check:research",
-    "test": "npm run check:content && npm run check:math && npm run check:foundation && npm run check:quick-estimate && npm run check:assistant && npm run check:conversion && npm run check:quote-checker && npm run check:package-c-search",
+    "test": "npm run check:content && npm run check:math && npm run check:foundation && npm run check:quick-estimate && npm run check:assistant && npm run check:conversion && npm run check:quote-checker && npm run check:package-c-search && npm run check:knowledge-authority && npm run check:knowledge-authority-v2 && npm run check:knowledge-authority-v3",
     "check:research": "node scripts/check-research.mjs",
     "check:math": "node scripts/check-math.cjs",
     "check:foundation": "node scripts/check-foundation.cjs",
@@ -20,7 +20,10 @@
     "check:assistant": "node scripts/check-assistant.mjs",
     "check:conversion": "node scripts/check-conversion.mjs",
     "check:quote-checker": "node scripts/check-quote-checker.mjs",
-    "check:package-c-search": "node scripts/check-package-c-search.mjs"
+    "check:package-c-search": "node scripts/check-package-c-search.mjs",
+    "check:knowledge-authority": "node scripts/check-knowledge-authority.mjs",
+    "check:knowledge-authority-v2": "node scripts/check-knowledge-authority-v2.mjs",
+    "check:knowledge-authority-v3": "node scripts/check-knowledge-authority-v3.mjs"
   },
   "dependencies": {
     "next": "^15.2.4",

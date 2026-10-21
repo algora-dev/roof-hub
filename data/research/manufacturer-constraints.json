@@ -1,0 +1,102 @@
+{
+  "mfg-colorsteel-environment": {
+    "id": "mfg-colorsteel-environment",
+    "topic": "coastal product selection",
+    "system": "prepainted metal roofing",
+    "claim": "COLORSTEEL separates NZ environmental exposure into categories and changes product/warranty/maintenance recommendations with coastal severity.",
+    "sourceId": "colorsteel-warranty-2026",
+    "applicability": "COLORSTEEL products only. Site position, prevailing wind and local conditions can alter the environmental category; use the current warranty guide.",
+    "reviewedAt": "2026-10-21",
+    "confidence": "high"
+  },
+  "mfg-colorsteel-maintenance": {
+    "id": "mfg-colorsteel-maintenance",
+    "topic": "metal roof maintenance",
+    "system": "prepainted metal roofing",
+    "claim": "COLORSTEEL calls for regular cleaning/inspection, particularly for areas not naturally rain-washed and in more severe coastal environments.",
+    "sourceId": "colorsteel-warranty-2026",
+    "applicability": "COLORSTEEL products and the stated warranty conditions; maintenance frequency varies by environment.",
+    "reviewedAt": "2026-10-21",
+    "confidence": "high"
+  },
+  "mfg-dimond-dp955-pitch": {
+    "id": "mfg-dimond-dp955-pitch",
+    "topic": "minimum roof pitch",
+    "system": "Dimond DP955 trapezoidal profile",
+    "claim": "Dimond publishes a 3° minimum pitch and 955 mm nominal cover for DP955.",
+    "sourceId": "dimond-dp955-2026",
+    "applicability": "DP955 only; full span, fixing, flashing and long-sheet requirements still apply.",
+    "reviewedAt": "2026-10-21",
+    "confidence": "high"
+  },
+  "mfg-ri-trimrib-pitch": {
+    "id": "mfg-ri-trimrib-pitch",
+    "topic": "minimum roof pitch",
+    "system": "Roofing Industries Trimrib",
+    "claim": "Roofing Industries states a 3° minimum pitch for Trimrib.",
+    "sourceId": "ri-trimrib",
+    "applicability": "Trimrib family only; use the current manufacturer technical documents for the selected variant and project.",
+    "reviewedAt": "2026-10-21",
+    "confidence": "high"
+  },
+  "mfg-gerard-antica-pitch": {
+    "id": "mfg-gerard-antica-pitch",
+    "topic": "pressed metal tile pitch and cover",
+    "system": "Gerard Antica",
+    "claim": "Gerard publishes a 12° minimum roof pitch, 0.47 m² effective cover per tile and approximately 6.4 kg/m² for Antica.",
+    "sourceId": "gerard-antica-2026",
+    "applicability": "Antica only; other Gerard profiles have different pitch/coverage limits.",
+    "reviewedAt": "2026-10-21",
+    "confidence": "high"
+  },
+  "mfg-gerard-system-scope": {
+    "id": "mfg-gerard-system-scope",
+    "topic": "pressed metal tile scope",
+    "system": "Gerard pressed metal tile systems",
+    "claim": "The current BRANZ appraisal treats Gerard pressed-metal tiles as systems installed with underlay, battens, flashings and specified fixing conditions, not as a tile-only product decision.",
+    "sourceId": "tile-appraisal",
+    "applicability": "Gerard systems within the appraisal scope and current technical literature.",
+    "reviewedAt": "2026-10-21",
+    "confidence": "high"
+  },
+  "mfg-nuralite-tpo-falls": {
+    "id": "mfg-nuralite-tpo-falls",
+    "topic": "membrane roof falls",
+    "system": "Nuraply TPO",
+    "claim": "Nuralite states a 1:80 minimum fall for Nuraply TPO and recommends steeper falls of 1:40 on plywood and 1:60 on concrete or metal substrates to reduce ponding.",
+    "sourceId": "nuralite-tpo-2026",
+    "applicability": "Nuraply TPO system and its CodeMark/technical requirements; design drainage and substrate conditions still need project-specific confirmation.",
+    "reviewedAt": "2026-10-21",
+    "confidence": "high"
+  },
+  "mfg-viking-system-selection": {
+    "id": "mfg-viking-system-selection",
+    "topic": "membrane system selection",
+    "system": "Viking membrane roofing",
+    "claim": "Viking separates membrane systems by roof build-up and context, including cold roofs, insulated/warm roofs and retrofit situations.",
+    "sourceId": "viking-fit-purpose-2026",
+    "applicability": "Viking systems only; system selection must follow the relevant certification, substrate and applicator requirements.",
+    "reviewedAt": "2026-10-21",
+    "confidence": "medium"
+  },
+  "mfg-viking-torch-applicator": {
+    "id": "mfg-viking-torch-applicator",
+    "topic": "membrane installation",
+    "system": "Viking Torch-On",
+    "claim": "Viking states its Torch-On systems are complete proprietary systems installed by Viking Approved Applicators and supported by product-specific appraisal/CodeMark documentation.",
+    "sourceId": "viking-torchon-2026",
+    "applicability": "Viking Torch-On systems only; warranty and certification conditions apply.",
+    "reviewedAt": "2026-10-21",
+    "confidence": "high"
+  },
+  "mfg-colorsteel-product-choice": {
+    "id": "mfg-colorsteel-product-choice",
+    "topic": "product selection",
+    "system": "COLORSTEEL MAXAM / ALTIMATE",
+    "claim": "COLORSTEEL positions MAXAM for most NZ environments and ALTIMATE for more extreme marine, volcanic and highly corrosive conditions.",
+    "sourceId": "colorsteel-warranty-2026",
+    "applicability": "COLORSTEEL products only. Final selection depends on the current environment classification and warranty guide.",
+    "reviewedAt": "2026-10-21",
+    "confidence": "high"
+  }
+}

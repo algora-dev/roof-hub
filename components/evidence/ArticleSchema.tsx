@@ -6,7 +6,9 @@ export function ArticleSchema({
   path,
   datePublished = "2026-09-26",
   dateModified = "2026-09-26",
-  citations
+  citations,
+  about,
+  keywords
 }: {
   headline: string;
   description: string;
@@ -14,6 +16,8 @@ export function ArticleSchema({
   datePublished?: string;
   dateModified?: string;
   citations?: string[];
+  about?: string[];
+  keywords?: string[];
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -23,6 +27,8 @@ export function ArticleSchema({
     datePublished,
     dateModified,
     ...(citations?.length ? { citation: citations } : {}),
+    ...(about?.length ? { about: about.map(name => ({ "@type": "Thing", name })) } : {}),
+    ...(keywords?.length ? { keywords: keywords.join(", ") } : {}),
     inLanguage: "en-NZ",
     mainEntityOfPage: path === "/" ? SITE_URL : `${SITE_URL}${path}`,
     author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },

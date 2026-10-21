@@ -1,0 +1,13 @@
+import type { ResearchArticle, ResearchBlock } from "@/data/research/types";
+export function normalise(value: string): string;
+export function tokens(value: string, keepStopWords?: boolean): string[];
+export function expandedQueryTokens(value: string): string[];
+export function classifyKnowledgeTopic(value: string): string;
+export function isRoofingDomainQuery(value: string): boolean;
+export function isRoofingContextPath(path: string): boolean;
+export function textScore(queryTokens: string[], value: string, weight: number): number;
+export function articleScore(article: ResearchArticle, query: string, queryTokens: string[], blockText: (block: ResearchBlock) => string): number;
+export function rankArticles(articles: ResearchArticle[], query: string, currentPath: string, blockText: (block: ResearchBlock) => string, limit?: number): { article: ResearchArticle; score: number }[];
+export function retrievalDiagnostics(rankedArticles: { article: ResearchArticle; score: number }[], domainRelevant: boolean): { confidence: "strong" | "medium" | "weak" | "none"; matchArticleId: string | null; gapReason: "matched" | "no_match" | "weak_match" | "ambiguous" | "out_of_domain" };
+export function rankSections(article: ResearchArticle, queryTokens: string[], blockText: (block: ResearchBlock) => string, limit?: number): { section: ResearchArticle["sections"][number]; index: number; score: number }[];
+export function rankFaqs(article: ResearchArticle, queryTokens: string[], limit?: number): { faq: ResearchArticle["faqs"][number]; index: number; score: number }[];

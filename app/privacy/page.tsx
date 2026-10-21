@@ -19,7 +19,7 @@ const sections = [
     body: [
       "Ask RoofHub is an optional AI-assisted interface. When you send a message, the question, the current RoofHub page or tool step, and relevant non-sensitive project selections from the active browser tab may be sent to RoofHub's configured AI service so it can answer in context. RoofHub currently uses OpenAI for this processing. The assistant is instructed to rely on RoofHub knowledge and deterministic RoofHub tools for project pricing rather than inventing prices.",
       "Assistant messages may be retained temporarily on RoofHub's server infrastructure so a conversation can continue within the same browser tab. The browser also keeps a tab-scoped assistant identifier and local conversation display state in session storage. RoofHub does not require you to provide your name, email address, phone number or exact street address in chat, and the assistant is instructed to move contact details into the project-enquiry form instead.",
-      "General analytics records coarse assistant events such as opening the assistant or completing an estimate. It is designed not to send the text of your assistant conversation, names, email addresses, phone numbers, exact addresses or uploaded documents into general analytics."
+      "General analytics records coarse assistant events such as opening the assistant, a privacy-safe knowledge topic or retrieval outcome, feedback such as helpful/needs more detail, or completing an estimate. It is designed not to send the text of your assistant conversation, names, email addresses, phone numbers, exact addresses or uploaded documents into general analytics. The Ask RoofHub conversation panel is explicitly masked from Microsoft Clarity session replay so its message content is not uploaded as replay content."
     ]
   },
   {
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
     </section>
     <section className="section section--white">
       <div className="container narrow">
-        <p><strong>Last updated: 20 October 2026.</strong></p>
+        <p><strong>Last updated: 21 October 2026.</strong></p>
         {sections.map((s) => <div key={s.h}><h2>{s.h}</h2>{s.body.map((p) => <p key={p.slice(0, 40)}>{p}</p>)}</div>)}
       </div>
     </section>

@@ -69,6 +69,7 @@ export async function POST(request: Request) {
       sources: result.sources,
       estimate: result.estimate,
       projectPatch: result.projectPatch,
+      knowledgeDiagnostics: result.knowledgeDiagnostics,
       sessionId
     }, { headers: { "Cache-Control": "no-store" } });
   } catch (cause) {

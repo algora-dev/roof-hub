@@ -1,11 +1,12 @@
 import { createRoofProject, type RoofProject } from "@/lib/roof-project";
 import type { ToolContextSnapshot } from "@/lib/tool-context";
-import type { AssistantAction, AssistantEstimateCard, AssistantProjectPatch, AssistantSource } from "@/lib/assistant/types";
+import type { AssistantAction, AssistantEstimateCard, AssistantKnowledgeDiagnostics, AssistantProjectPatch, AssistantSource } from "@/lib/assistant/types";
 import type { AssistantSession } from "@/lib/assistant/session";
 import { retrieveAssistantKnowledge } from "@/lib/assistant/knowledge";
 import { approvedAssistantPath, commonAssistantDestinations } from "@/lib/assistant/navigation";
 import { applyAssistantProjectPatch, normaliseAssistantProjectPatch } from "@/lib/assistant/project-patch";
 import { estimateProjectForAssistant } from "@/lib/assistant/pricing.mjs";
+import { assessRoofCondition } from "@/lib/assistant/roof-condition-triage.mjs";
 
 const API_URL = "https://api.openai.com/v1/responses";
 const DEFAULT_MODEL = "gpt-6-luna";
@@ -33,6 +34,7 @@ type OrchestrationResult = {
   sources: AssistantSource[];
   estimate: AssistantEstimateCard | null;
   projectPatch: AssistantProjectPatch | null;
+  knowledgeDiagnostics: AssistantKnowledgeDiagnostics;
 };
 
 function mergeProjectPatch(current: AssistantProjectPatch | null, incoming: AssistantProjectPatch): AssistantProjectPatch {
@@ -89,6 +91,23 @@ function assistantTools() {
     },
     {
       type: "function",
+      name: "assess_roof_condition",
+      description: "Neutral directional triage for repair, restoration or replacement questions using condition facts the user supplied. It is not a roof inspection or diagnosis. Prefer asking one targeted missing question when spread, recurrence or visible condition is unknown. Never infer roof condition from age or aerial imagery.",
+      parameters: {
+        type: "object",
+        properties: {
+          roofSystem: { type: "string", enum: ["metal", "concrete-tile", "pressed-metal-tile", "membrane", "other", "unknown"] },
+          issueSpread: { type: "string", enum: ["localised", "multiple-areas", "widespread", "unknown"] },
+          recurrence: { type: "string", enum: ["first-time", "repeated-same-area", "repeated-different-areas", "unknown"] },
+          surfaceCondition: { type: "string", enum: ["surface-wear", "local-damage", "perforation-or-missing-material", "sagging-or-structural-movement", "unknown"] },
+          activeLeaks: { type: "string", enum: ["none", "one-area", "multiple-areas", "unknown"] },
+          suspectedAsbestos: { type: "string", enum: ["yes", "no", "unknown"] }
+        },
+        additionalProperties: false
+      }
+    },
+    {
+      type: "function",
       name: "navigate",
       description: `Create a navigation action to an approved RoofHub page. Common destinations:\n${commonAssistantDestinations()}`,
       parameters: {
@@ -135,7 +154,7 @@ function projectSummary(project: RoofProject): string {
   });
 }
 
-function systemInstructions(project: RoofProject, context: ToolContextSnapshot, knowledge: string): string {
+function systemInstructions(project: RoofProject, context: ToolContextSnapshot, knowledge: string, diagnostics: AssistantKnowledgeDiagnostics): string {
   return `You are Ask RoofHub, the conversational interface for RoofHub NZ, an independent New Zealand roofing knowledge, pricing and decision-support platform used by homeowners, builders, roofers and building professionals.
 
 AUTHORITY RULES
@@ -151,6 +170,9 @@ AUTHORITY RULES
 10. If the user is confused about the active tool step, explain that exact step using CURRENT PAGE/TOOL CONTEXT. Do not make them restart.
 11. When a click is more useful than more prose, use navigate or open_tool. If the user already has a roofing quote and wants to compare it, prefer the Quote Checker instead of judging the quote in chat.
 12. A Quote Checker result is about comparability and scope, not contractor quality. Never turn an above-range result into an accusation of overcharging.
+13. For repair / restore / replace questions, prefer the lowest adequate intervention supported by the condition facts rather than assuming a full reroof. Use assess_roof_condition when enough user-supplied condition facts are available; otherwise ask about spread, recurrence or visible condition before roof age. The result is directional, not a diagnosis.
+14. Never claim Google Earth, Street View, satellite or aerial imagery proves roof condition. Aerial imagery can help with rough geometry, roof sections and site context, but it cannot reliably establish corrosion, fixings, underlay, hidden timber or watertightness.
+15. Photos can support remote triage only when the user supplies them safely; do not ask a user to climb onto a roof. If imagery is insufficient, say an on-site inspection is needed.
 
 CURRENT PAGE/TOOL CONTEXT
 Path: ${context.path || "/"}
@@ -161,6 +183,13 @@ Active step: ${context.step || "none"}
 
 CURRENT NON-SENSITIVE ROOF PROJECT
 ${projectSummary(project)}
+
+KNOWLEDGE RETRIEVAL STATUS
+Confidence: ${diagnostics.confidence}
+Match: ${diagnostics.matchArticleId ?? "none"}
+Reason: ${diagnostics.gapReason}
+Topic bucket: ${diagnostics.topic}
+If the match is weak or ambiguous, use the approved excerpts only for what they actually support. Ask one targeted clarification only when it materially changes the answer. If there is no match, do not fill NZ-specific facts from memory.
 
 APPROVED ROOFHUB KNOWLEDGE
 ${knowledge || "No directly matching approved RoofHub excerpt was retrieved for this question."}
@@ -247,14 +276,15 @@ export async function runAssistantTurn(input: {
       ],
       sources: knowledge.sources.slice(0, 4),
       estimate: null,
-      projectPatch: null
+      projectPatch: null,
+      knowledgeDiagnostics: knowledge.diagnostics
     };
   }
 
   const history = input.session.messages.slice(-16).map(message => ({ role: message.role, content: message.text }));
   let response = await callOpenAI({
     model: process.env.ROOFHUB_ASSISTANT_MODEL || DEFAULT_MODEL,
-    instructions: systemInstructions(workingProject, input.context, knowledge.contextText),
+    instructions: systemInstructions(workingProject, input.context, knowledge.contextText, knowledge.diagnostics),
     input: [...history, { role: "user", content: input.message }],
     tools: assistantTools(),
     max_output_tokens: 900
@@ -314,6 +344,22 @@ export async function runAssistantTurn(input: {
         }
       }
 
+      if (call.name === "assess_roof_condition") {
+        const triage = assessRoofCondition({
+          roofSystem: typeof args.roofSystem === "string" ? args.roofSystem as never : "unknown",
+          issueSpread: typeof args.issueSpread === "string" ? args.issueSpread as never : "unknown",
+          recurrence: typeof args.recurrence === "string" ? args.recurrence as never : "unknown",
+          surfaceCondition: typeof args.surfaceCondition === "string" ? args.surfaceCondition as never : "unknown",
+          activeLeaks: typeof args.activeLeaks === "string" ? args.activeLeaks as never : "unknown",
+          suspectedAsbestos: typeof args.suspectedAsbestos === "string" ? args.suspectedAsbestos as never : "unknown"
+        });
+        result = {
+          ok: true,
+          triage,
+          instruction: "Explain this as neutral directional decision support. Do not present it as a diagnosis, remote inspection or guarantee. If nextQuestions are present, ask at most one that materially changes the next step."
+        };
+      }
+
       if (call.name === "navigate") {
         const path = approvedAssistantPath(args.path);
         if (path) {
@@ -366,6 +412,7 @@ export async function runAssistantTurn(input: {
     actions: actions.slice(0, 5),
     sources: knowledge.sources.slice(0, 6),
     estimate,
-    projectPatch
+    projectPatch,
+    knowledgeDiagnostics: knowledge.diagnostics
   };
 }

@@ -43,7 +43,7 @@ assert(actions.includes('article.id === "compare-quotes"') && actions.includes('
 
 for (const id of ["cp-quotes-2026","comcom-quotes-2026","ird-gst-2026","building-contracts-2026","ranz-comparing-quotes","tasman-new-roof-2026","branz-membranes-matter","codehub-rubco-2023","nuralite-membrane-options","ardex-tpo"]) {
   assert(Boolean(sources[id]), `Phase 6 source missing: ${id}`);
-  assert(sources[id]?.reviewedAt === "2026-10-20", `Phase 6 source not reviewed on release date: ${id}`);
+  assert(sources[id]?.reviewedAt >= "2026-10-20", `Phase 6 source has not been reviewed since release: ${id}`);
 }
 assert(sources["tasman-new-roof-2026"].note.toLowerCase().includes("not a national survey"), "contractor cost guide lost source-specific caveat");
 

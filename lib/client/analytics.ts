@@ -35,7 +35,12 @@ export function trackRoofHubEvent(event: RoofHubAnalyticsEvent, context: RoofHub
     project_type: context.projectType,
     roof_system: context.roofSystem,
     detail_level: context.detailLevel,
-    step: clean(context.step)
+    step: clean(context.step),
+    knowledge_confidence: context.knowledgeConfidence,
+    knowledge_match: clean(context.knowledgeMatch, 80),
+    gap_reason: context.gapReason,
+    knowledge_topic: context.knowledgeTopic,
+    feedback: context.feedback
   };
   for (const [key, value] of Object.entries(values)) if (value) params[key] = value;
 

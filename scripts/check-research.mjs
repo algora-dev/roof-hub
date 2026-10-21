@@ -31,7 +31,7 @@ for(const [id,a] of Object.entries(articles)){
   assert(/^[a-z][a-z0-9-]*$/.test(section.id),`Invalid anchor ${section.id}`);
   assert(!anchors.has(section.id),`Duplicate anchor ${id}/${section.id}`); anchors.add(section.id);
   for(const block of flatten(section.blocks)){
-   assert(['paragraph','notice','table','prices','projects','calculator','checklist','details','action','corrugated-prices','corrugated-examples','corrugated-budget','corrugated-cover','five-rib-prices','five-rib-profiles','five-rib-examples','five-rib-budget','sheet-quote-compare','pressed-tile-prices','pressed-tile-profiles','pressed-tile-budget','pressed-tile-examples'].includes(block.type),`Unknown block ${id}`);
+   assert(['paragraph','notice','table','prices','projects','calculator','checklist','details','action','corrugated-prices','corrugated-examples','corrugated-budget','corrugated-cover','five-rib-prices','five-rib-profiles','five-rib-examples','five-rib-budget','sheet-quote-compare','pressed-tile-prices','pressed-tile-profiles','pressed-tile-budget','pressed-tile-examples','evidence-lens'].includes(block.type),`Unknown block ${id}`);
    if('sources' in block)checkSources(block.sources,id);
    if(block.type==='table')for(const row of block.rows){assert(row.cells.length===block.heads.length,`Table mismatch ${id}`);checkSources(row.sources,id);}
    if(block.type==='projects')for(const pid of block.ids)assert(has(projects,pid),`Unknown project ${pid}`);

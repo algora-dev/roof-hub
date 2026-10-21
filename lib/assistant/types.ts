@@ -16,6 +16,21 @@ export type AssistantSource = {
   kind: "roofhub" | "external";
 };
 
+export type AssistantKnowledgeConfidence = "strong" | "medium" | "weak" | "none";
+export type AssistantKnowledgeGapReason = "matched" | "no_match" | "weak_match" | "ambiguous" | "out_of_domain";
+export type AssistantKnowledgeTopic =
+  | "cost-pricing" | "quotes-contracts" | "measurements-geometry" | "consent-compliance"
+  | "roofers-project-planning" | "leaks-moisture" | "drainage" | "flashings-penetrations"
+  | "materials-systems" | "maintenance-restoration" | "insulation-ventilation" | "solar"
+  | "insurance" | "warranties" | "safety-asbestos" | "unknown";
+
+export type AssistantKnowledgeDiagnostics = {
+  confidence: AssistantKnowledgeConfidence;
+  matchArticleId: string | null;
+  gapReason: AssistantKnowledgeGapReason;
+  topic: AssistantKnowledgeTopic;
+};
+
 export type AssistantEstimateCard = {
   product: string;
   productLabel: string;
@@ -57,6 +72,7 @@ export type AssistantTurnResponse = {
   sources: AssistantSource[];
   estimate: AssistantEstimateCard | null;
   projectPatch: AssistantProjectPatch | null;
+  knowledgeDiagnostics: AssistantKnowledgeDiagnostics;
   sessionId: string;
 };
 

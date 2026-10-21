@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { KeyboardEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { assistantSessionFetch, resetAssistantClientSession } from "@/lib/assistant/client-session";
 import { ASSISTANT_OPEN_EVENT, type AssistantOpenDetail } from "@/lib/assistant/events";
-import type { AssistantAction, AssistantEstimateCard, AssistantMessage, AssistantSource, AssistantTurnResponse } from "@/lib/assistant/types";
+import type { AssistantAction, AssistantEstimateCard, AssistantKnowledgeDiagnostics, AssistantMessage, AssistantSource, AssistantTurnResponse } from "@/lib/assistant/types";
 import { applyAssistantProjectPatch } from "@/lib/assistant/project-patch";
 import { getOrCreateRoofProject, getRoofProject, setRoofProject } from "@/lib/client/roof-project-store";
 import { trackRoofHubEvent } from "@/lib/client/analytics";
@@ -19,6 +19,7 @@ type Turn = {
   actions: AssistantAction[];
   sources: AssistantSource[];
   estimate: AssistantEstimateCard | null;
+  knowledgeDiagnostics?: AssistantKnowledgeDiagnostics;
 };
 
 const starters = [
@@ -68,6 +69,7 @@ export function AssistantLauncher() {
   const [draft, setDraft] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [feedbackByMessage, setFeedbackByMessage] = useState<Record<string, "helpful" | "needs_more_detail">>({});
   const [hydrated, setHydrated] = useState(false);
   const bottomRef = useRef<HTMLDivElement | null>(null);
   const pendingAutoSend = useRef<string | null>(null);
@@ -94,7 +96,7 @@ export function AssistantLauncher() {
     setError("");
     setDraft("");
     const userMessage: AssistantMessage = { id: `local-${Date.now()}`, role: "user", text: message, createdAt: new Date().toISOString() };
-    setTurns(current => [...current, { message: userMessage, actions: [], sources: [], estimate: null }]);
+    setTurns(current => [...current, { message: userMessage, actions: [], sources: [], estimate: null, knowledgeDiagnostics: undefined }]);
     trackRoofHubEvent("assistant_question", { tool: "assistant", path: pathname, step: context.step });
     try {
       const response = await assistantSessionFetch("/api/assistant", {
@@ -110,7 +112,18 @@ export function AssistantLauncher() {
         trackRoofHubEvent("assistant_project_update", { tool: "assistant", path: pathname });
       }
       if (payload.estimate) trackRoofHubEvent("assistant_estimate", { tool: "assistant", path: pathname, detailLevel: payload.estimate.detailLevel });
-      setTurns(current => [...current, { message: payload.message, actions: payload.actions, sources: payload.sources, estimate: payload.estimate }]);
+      const diagnostics = payload.knowledgeDiagnostics;
+      if (diagnostics && (diagnostics.confidence === "weak" || diagnostics.confidence === "none" || diagnostics.gapReason === "ambiguous")) {
+        trackRoofHubEvent("assistant_knowledge_gap", {
+          tool: "assistant",
+          path: pathname,
+          knowledgeConfidence: diagnostics.confidence,
+          knowledgeMatch: diagnostics.matchArticleId ?? undefined,
+          gapReason: diagnostics.gapReason,
+          knowledgeTopic: diagnostics.topic
+        });
+      }
+      setTurns(current => [...current, { message: payload.message, actions: payload.actions, sources: payload.sources, estimate: payload.estimate, knowledgeDiagnostics: diagnostics }]);
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Ask RoofHub could not respond.");
     } finally {
@@ -148,8 +161,23 @@ export function AssistantLauncher() {
     setTurns([]);
     setError("");
     setDraft("");
+    setFeedbackByMessage({});
     try { window.sessionStorage.removeItem(UI_STORAGE_KEY); } catch { /* optional */ }
     resetAssistantClientSession();
+  }
+
+  function recordFeedback(turn: Turn, feedback: "helpful" | "needs_more_detail") {
+    if (feedbackByMessage[turn.message.id]) return;
+    setFeedbackByMessage(current => ({ ...current, [turn.message.id]: feedback }));
+    trackRoofHubEvent("assistant_feedback", {
+      tool: "assistant",
+      path: pathname,
+      feedback,
+      knowledgeConfidence: turn.knowledgeDiagnostics?.confidence,
+      knowledgeMatch: turn.knowledgeDiagnostics?.matchArticleId ?? undefined,
+      gapReason: turn.knowledgeDiagnostics?.gapReason,
+      knowledgeTopic: turn.knowledgeDiagnostics?.topic
+    });
   }
 
   function actionClick(action: AssistantAction) {
@@ -172,7 +200,7 @@ export function AssistantLauncher() {
 
   return <>
     {open && <div className={styles.backdrop} onMouseDown={() => setOpen(false)} aria-hidden="true" />}
-    {open && <section className={styles.panel} role="dialog" aria-modal="true" aria-label="Ask RoofHub">
+    {open && <section className={styles.panel} role="dialog" aria-modal="true" aria-label="Ask RoofHub" data-clarity-mask="true">
       <header className={styles.header}>
         <div className={styles.headerTitle}><span className={styles.headerMark}>RH</span><div><strong>Ask RoofHub</strong><span>NZ roofing knowledge, pricing and tools</span></div></div>
         <div className={styles.headerActions}>
@@ -188,7 +216,13 @@ export function AssistantLauncher() {
         </div> : <div className={styles.thread}>
           {turns.map((turn, index) => turn.message.role === "user"
             ? <div key={`${turn.message.id}-${index}`} className={`${styles.message} ${styles.user}`}>{turn.message.text}</div>
-            : <div key={`${turn.message.id}-${index}`} className={`${styles.message} ${styles.assistant}`}><div className={styles.assistantCard}>{turn.message.text}{turn.estimate && <EstimateCard estimate={turn.estimate} />}{turn.actions.length > 0 && <div className={styles.actions}>{turn.actions.map((action, actionIndex) => <button key={`${action.type}-${actionIndex}`} type="button" className={`${styles.action} ${actionIndex === 0 ? styles.actionPrimary : ""}`} onClick={() => actionClick(action)}>{action.label}</button>)}</div>}{turn.sources.length > 0 && <details className={styles.sources}><summary>RoofHub sources used</summary><div className={styles.sourceLinks}>{turn.sources.map(source => source.kind === "external" ? <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer">{source.label} ↗</a> : <Link key={source.href} href={source.href} onClick={() => setOpen(false)}>{source.label}</Link>)}</div></details>}</div></div>)}
+            : <div key={`${turn.message.id}-${index}`} className={`${styles.message} ${styles.assistant}`}><div className={styles.assistantCard}>{turn.message.text}{turn.estimate && <EstimateCard estimate={turn.estimate} />}{turn.actions.length > 0 && <div className={styles.actions}>{turn.actions.map((action, actionIndex) => <button key={`${action.type}-${actionIndex}`} type="button" className={`${styles.action} ${actionIndex === 0 ? styles.actionPrimary : ""}`} onClick={() => actionClick(action)}>{action.label}</button>)}</div>}{turn.sources.length > 0 && <details className={styles.sources}><summary>Sources used</summary><div className={styles.sourceLinks}>{turn.sources.map(source => source.kind === "external" ? <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer">{source.label} ↗</a> : <Link key={source.href} href={source.href} onClick={() => setOpen(false)}>{source.label}</Link>)}</div></details>}
+              <div className={styles.feedback} aria-label="Rate this RoofHub answer">
+                {feedbackByMessage[turn.message.id]
+                  ? <span>Thanks - that helps improve RoofHub.</span>
+                  : <><span>Was this useful?</span><button type="button" onClick={() => recordFeedback(turn, "helpful")}>Helpful</button><button type="button" onClick={() => recordFeedback(turn, "needs_more_detail")}>Needs more detail</button></>}
+              </div>
+            </div></div>)}
           {busy && <div className={`${styles.message} ${styles.assistant}`}><div className={styles.assistantCard}><span className={styles.thinking}>Checking RoofHub knowledge and project context...</span></div></div>}
           {error && <div className={styles.error}>{error}</div>}
         </div>}

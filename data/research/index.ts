@@ -1,12 +1,16 @@
 import articleData from './articles.json';
 import sourceData from './sources.json';
 import projectData from './projects.json';
-import type { ResearchArticle, ResearchSource, ResearchProject, ResearchBlock } from './types';
+import practitionerData from './practitioner-observations.json';
+import manufacturerConstraintData from './manufacturer-constraints.json';
+import type { ResearchArticle, ResearchSource, ResearchProject, ResearchBlock, PractitionerObservation, ManufacturerConstraint } from './types';
 
 // JSON is validated in check:research before publication; it is never user input.
 export const ARTICLES = articleData as Record<string, ResearchArticle>;
 export const RESEARCH_SOURCES = sourceData as Record<string, ResearchSource>;
 export const RESEARCH_PROJECTS = projectData as Record<string, ResearchProject>;
+export const PRACTITIONER_OBSERVATIONS = practitionerData as Record<string, PractitionerObservation>;
+export const MANUFACTURER_CONSTRAINTS = manufacturerConstraintData as Record<string, ManufacturerConstraint>;
 export function getArticle(id: string): ResearchArticle {
   const article = ARTICLES[id];
   if (!article) throw new Error(`Unknown research article: ${id}`);
@@ -22,6 +26,17 @@ export function getProject(id: string): ResearchProject {
   if (!project) throw new Error(`Unknown research project: ${id}`);
   return project;
 }
+export function getPractitionerObservation(id: string): PractitionerObservation {
+  const observation = PRACTITIONER_OBSERVATIONS[id];
+  if (!observation) throw new Error(`Unknown practitioner observation: ${id}`);
+  return observation;
+}
+export function getManufacturerConstraint(id: string): ManufacturerConstraint {
+  const constraint = MANUFACTURER_CONSTRAINTS[id];
+  if (!constraint) throw new Error(`Unknown manufacturer constraint: ${id}`);
+  return constraint;
+}
+
 /** Traverse disclosures too: hidden-by-default content remains first-class evidence. */
 export function flattenBlocks(blocks: ResearchBlock[]): ResearchBlock[] {
   return blocks.flatMap(block => block.type === 'details' ? [block, ...flattenBlocks(block.blocks)] : [block]);
@@ -32,6 +47,14 @@ export function articleSourceIds(article: ResearchArticle): string[] {
     if ('sources' in block) block.sources.forEach(id => ids.add(id));
     if (block.type === 'table') block.rows.forEach(row => row.sources.forEach(id => ids.add(id)));
     if (block.type === 'projects') block.ids.forEach(id => ids.add(getProject(id).sourceId));
+    if (block.type === 'evidence-lens') {
+      block.practitionerIds.forEach(id => {
+        const observation = getPractitionerObservation(id);
+        ids.add(observation.sourceId);
+        (observation.corroboratingSourceIds ?? []).forEach(sourceId => ids.add(sourceId));
+      });
+      (block.manufacturerIds ?? []).forEach(id => ids.add(getManufacturerConstraint(id).sourceId));
+    }
   }
   article.faqs.forEach(faq => faq.sources.forEach(id => ids.add(id)));
   return [...ids];
