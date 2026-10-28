@@ -30,11 +30,8 @@ p{margin-bottom:18px}
 .preview-banner{background:var(--charcoal-900);color:#fff;text-align:center;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:8px 16px}
 .site-header{position:sticky;top:0;z-index:50;background:rgba(247,246,242,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(213,215,218,.75)}
 .header-inner{height:76px;display:flex;align-items:center;gap:32px}
-.brand-logo{display:inline-flex;align-items:center;gap:10px;min-width:max-content}
-.brand-logo img{width:38px;height:38px;object-fit:contain}
-.brand-wordmark{font-size:1.42rem;line-height:1;letter-spacing:-.055em;color:var(--charcoal-900)}
-.brand-wordmark strong{font-weight:700}.brand-wordmark span{font-weight:450}
-.brand-logo--inverse .brand-wordmark{color:#fff}
+.brand-logo{display:inline-flex;align-items:center;min-width:max-content}
+.brand-logo img{height:36px;width:auto;object-fit:contain}
 .desktop-nav{display:flex;align-items:center;gap:30px;margin-left:auto}
 .desktop-nav a{position:relative;font-size:14px;font-weight:600;color:#4a4a4a;padding:26px 0 25px}
 .desktop-nav a:hover,.desktop-nav a.is-active{color:var(--charcoal-900)}
@@ -120,7 +117,7 @@ p{margin-bottom:18px}
 .method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}.method-grid article{padding:26px;border:1px solid #343434;border-radius:var(--radius-lg);background:#202020}.method-grid span{font-size:11px;font-weight:700;color:var(--sage-300)}.method-grid h3{margin-top:32px}.method-grid p{font-size:14px;margin-bottom:0}
 
 /* Editorial / CTAs */
-.editorial-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}.editorial-list{display:grid;border-top:1px solid var(--neutral-200)}.editorial-list>a,.editorial-list>div{display:grid;grid-template-columns:90px 1fr auto;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid var(--neutral-200)}.editorial-list>a:hover strong{color:var(--terra-600)}.editorial-list span,.editorial-list small{font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.06em}.editorial-list strong{color:var(--charcoal-900);transition:color .16s ease}
+.editorial-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}.editorial-list{display:grid;border-top:1px solid var(--neutral-200)}.editorial-list>a,.editorial-list>div{display:grid;grid-template-columns:90px 1fr auto;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid var(--neutral-200)}.editorial-list>a>div{display:grid;gap:5px}.editorial-list>a:hover strong{color:var(--terra-600)}.editorial-list span,.editorial-list small{font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.06em}.editorial-list strong{color:var(--charcoal-900);transition:color .16s ease}
 .cta-band{display:flex;align-items:center;justify-content:space-between;gap:48px}.cta-band>div{max-width:730px}.cta-band p:not(.eyebrow){margin-bottom:0;color:#66534d}.cta-band--dark p:not(.eyebrow){color:#bcbcbc}
 
 /* Generic page intro */
@@ -179,7 +176,7 @@ p{margin-bottom:18px}
 }
 
 @media(max-width:680px){
-  .container{width:min(calc(100% - 32px),var(--container))}.header-inner{height:66px}.brand-logo img{width:34px;height:34px}.brand-wordmark{font-size:1.25rem}
+  .container{width:min(calc(100% - 32px),var(--container))}.header-inner{height:66px}.brand-logo img{height:30px}
   h1{font-size:2.55rem}h2{font-size:2rem}.section{padding:60px 0}.section--compact{padding:42px 0}
   .photo-hero{min-height:620px;align-items:flex-end}.photo-hero__content{min-height:620px;padding-top:84px;padding-bottom:42px}.photo-hero--inner,.photo-hero__content--inner{min-height:560px}.photo-hero__image{object-position:60% center}.photo-hero h1{font-size:3.05rem}.photo-hero--inner h1{font-size:2.55rem}.photo-hero__shade{background:linear-gradient(0deg,rgba(16,18,16,.86) 0%,rgba(16,18,16,.65) 52%,rgba(16,18,16,.18) 100%)}
   .hero-proof{display:grid;gap:8px}.scenic-band{min-height:560px}.scenic-band__shade{background:linear-gradient(0deg,rgba(19,22,19,.82),rgba(19,22,19,.42) 72%,rgba(19,22,19,.15))}.scenic-band__content{padding:64px 0}

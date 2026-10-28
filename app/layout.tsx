@@ -42,7 +42,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "RoofHub NZ",
   url: SITE_URL,
-  logo: `${SITE_URL}/brand/roofhub-mark-black.png`,
+  logo: `${SITE_URL}/brand/roofhub-logo-dark.png`,
   description: DEFAULT_DESCRIPTION
 };
 

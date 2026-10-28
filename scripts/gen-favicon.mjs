@@ -1,21 +1,21 @@
-// Favicon v2: white rounded square, black mark, maximised (~92% width).
-// The black-bg version read optically small; white lets the mark own the space.
+// Favicon v3 (2026-10-28): black rounded square + white/colour v2 mark (owner direction).
+// v2 was white square + black mark; owner chose black tile with the white+colour mark.
 import sharp from "sharp";
 import path from "node:path";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const markSrc = path.join(root, "public/brand/roofhub-mark-black.png");
+const markSrc = path.join(root, "public/brand/roofhub-mark-colour.png");
 const iconOut = path.join(root, "public/brand/roofhub-icon.png");
 const icoOut = path.join(root, "app/favicon.ico");
 
 const SIZE = 512;
 const RADIUS = 92;
-const MARK_WIDTH = 470;
+const MARK_WIDTH = 440;
 
 const roundedSquare = Buffer.from(
-  `<svg width="${SIZE}" height="${SIZE}"><rect x="0" y="0" width="${SIZE}" height="${SIZE}" rx="${RADIUS}" ry="${RADIUS}" fill="#FFFFFF"/></svg>`
+  `<svg width="${SIZE}" height="${SIZE}"><rect x="0" y="0" width="${SIZE}" height="${SIZE}" rx="${RADIUS}" ry="${RADIUS}" fill="#000000"/></svg>`
 );
 
 const mark = await sharp(markSrc).resize({ width: MARK_WIDTH }).png().toBuffer();
@@ -50,4 +50,4 @@ for (const { s, png } of frames) {
   offset += png.length;
 }
 fs.writeFileSync(icoOut, Buffer.concat(parts));
-console.log("favicon v2 written");
+console.log("favicon v3 written (black rounded square + colour mark)");

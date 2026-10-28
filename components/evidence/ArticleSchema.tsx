@@ -36,7 +36,7 @@ export function ArticleSchema({
       "@type": "Organization",
       name: SITE_NAME,
       url: SITE_URL,
-      logo: { "@type": "ImageObject", url: `${SITE_URL}/brand/roofhub-mark-black.png` }
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/brand/roofhub-logo-dark.png` }
     }
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />;
