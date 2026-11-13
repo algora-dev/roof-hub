@@ -6,6 +6,7 @@ function file(path) { return fs.readFileSync(path, 'utf8'); }
 function check(condition, message) { assert.ok(condition, message); passed += 1; }
 
 const home = file('app/page.tsx');
+const layout = file('app/layout.tsx');
 const header = file('components/Header.tsx');
 const tools = file('app/tools/page.tsx');
 const article = file('components/content/ResearchArticle.tsx');
@@ -19,7 +20,8 @@ const css = file('app/globals.css');
 const routes = file('data/siteRoutes.ts');
 
 check(home.includes('New Zealand roofing answers, pricing and tools in one place.'), 'Homepage must use the inclusive NZ roofing-platform proposition');
-check(home.includes('<AssistantHeroPrompt />'), 'Homepage must surface Ask RoofHub prominently');
+check(layout.includes('<AssistantLauncher />'), 'Ask RoofHub must be available on every page via the floating launcher');
+check(!home.includes('AssistantHeroPrompt'), 'Homepage must not duplicate the floating launcher with a fixed hero Ask RoofHub prompt (removed 2026-11-13)');
 check(home.includes('Estimate a roof') && home.includes('Use measurements'), 'Homepage must expose simple and advanced estimating paths');
 check(!home.includes('Questions homeowners are asking'), 'Homepage must not frame RoofHub as homeowner-only');
 check(header.includes('["Pricing", "/pricing"]') && header.includes('["Tools", "/tools"]'), 'Primary navigation must keep the simplified four-section architecture');
@@ -36,7 +38,7 @@ check(projectForm.includes('project: currentProject'), 'Project enquiry must car
 check(contactForm.includes('Pressed metal tile roof'), 'Existing pressed-metal-tile contact links must remain a valid contact topic');
 check(quickPage.includes('Suspense'), 'Quick Estimate URL preset handling must be wrapped for static Next.js rendering');
 check(footer.includes('The roofing website for New Zealanders.'), 'Footer must reinforce inclusive platform positioning');
-check(css.includes('.home-hero-grid') && css.includes('.rh-contextual-action') && css.includes('.project-help-layout'), 'Package B conversion surfaces must have responsive production styles');
-check(routes.includes('{ path: "/", lastModified: "2026-10-20"') && routes.includes('{ path: "/tools", lastModified: "2026-10-20"'), 'Modified indexable product routes must carry updated sitemap dates');
+check(css.includes('.rh-contextual-action') && css.includes('.project-help-layout'), 'Package B conversion surfaces must have responsive production styles');
+check(routes.includes('{ path: "/", lastModified: "2026-11-13"') && routes.includes('{ path: "/tools", lastModified: "2026-10-20"'), 'Modified indexable product routes must carry updated sitemap dates');
 
 console.log(`${passed} site-conversion and contextual-journey cases passed.`);

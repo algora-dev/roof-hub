@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowRight, Calculator, Check, Layers, Measure, Shield, Spark } from "@/components/Icons";
 import { SectionHeading } from "@/components/SectionHeading";
 import { QuestionLinks } from "@/components/content/QuestionLinks";
-import { AssistantHeroPrompt } from "@/components/assistant/AssistantHeroPrompt";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -31,7 +30,7 @@ export default function HomePage() {
     <section className="photo-hero photo-hero--product">
       <Image className="photo-hero__image" src="/media/hero-home.webp" alt="New Zealand residential roofs" fill priority sizes="100vw" />
       <div className="photo-hero__shade" />
-      <div className="container photo-hero__content home-hero-grid">
+      <div className="container photo-hero__content">
         <div className="photo-hero__copy">
           <p className="eyebrow eyebrow--light">Independent New Zealand roofing platform</p>
           <h1>New Zealand roofing answers, pricing and tools in one place.</h1>
@@ -39,7 +38,6 @@ export default function HomePage() {
           <div className="button-row"><Link className="button button--primary button--large" href="/tools/roof-estimate">Estimate a roof <ArrowRight /></Link><Link className="button button--glass button--large" href="/tools/quote-checker">Check a quote</Link></div>
           <div className="hero-proof hero-proof--light"><span><Check /> No measurements required to start</span><span><Check /> NZ source-backed evidence</span><span><Check /> Simple through to detailed tools</span></div>
         </div>
-        <div className="home-hero-assistant"><AssistantHeroPrompt /></div>
       </div>
     </section>
 

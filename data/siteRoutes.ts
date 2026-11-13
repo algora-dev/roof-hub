@@ -7,7 +7,7 @@ export type SiteRoute = {
 };
 
 export const SITE_ROUTES: SiteRoute[] = [
-  { path: "/", lastModified: "2026-10-20", priority: 1, changeFrequency: "weekly" },
+  { path: "/", lastModified: "2026-11-13", priority: 1, changeFrequency: "weekly" },
   { path: "/pricing", lastModified: "2026-10-20", priority: 0.9, changeFrequency: "monthly" },
   { path: "/pricing/roofing-costs", lastModified: "2026-10-20", priority: 1, changeFrequency: "weekly" },
   { path: "/pricing/reroof-cost", lastModified: "2026-10-20", priority: 0.95, changeFrequency: "weekly" },

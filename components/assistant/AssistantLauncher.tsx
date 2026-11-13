@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { KeyboardEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -202,7 +203,7 @@ export function AssistantLauncher() {
     {open && <div className={styles.backdrop} onMouseDown={() => setOpen(false)} aria-hidden="true" />}
     {open && <section className={styles.panel} role="dialog" aria-modal="true" aria-label="Ask RoofHub" data-clarity-mask="true">
       <header className={styles.header}>
-        <div className={styles.headerTitle}><span className={styles.headerMark}>RH</span><div><strong>Ask RoofHub</strong><span>NZ roofing knowledge, pricing and tools</span></div></div>
+        <div className={styles.headerTitle}><span className={styles.headerMark}><Image src="/brand/roofhub-mark-ink.png" alt="" width={24} height={16} className={styles.headerMarkImg} /></span><div><strong>Ask RoofHub</strong><span>NZ roofing knowledge, pricing and tools</span></div></div>
         <div className={styles.headerActions}>
           <button className={styles.iconButton} type="button" onClick={startFresh} title="Start a new conversation" aria-label="Start a new conversation">↻</button>
           <button className={styles.iconButton} type="button" onClick={() => setOpen(false)} aria-label="Close Ask RoofHub">✕</button>
@@ -237,7 +238,7 @@ export function AssistantLauncher() {
       </div>
     </section>}
     <button className={styles.launcher} type="button" onClick={() => { setOpen(true); trackRoofHubEvent("assistant_open", { tool: "assistant", path: pathname, ctaLocation: "launcher" }); }} aria-label="Open Ask RoofHub">
-      <span className={styles.launcherMark}>RH</span><span className={styles.launcherCopy}><strong>Ask RoofHub</strong><span>Roofing answers &amp; pricing help</span></span>
+      <span className={styles.launcherMark}><Image src="/brand/roofhub-mark-ink.png" alt="" width={27} height={18} className={styles.launcherMarkImg} /></span><span className={styles.launcherCopy}><strong>Ask RoofHub</strong><span>Roofing answers &amp; pricing help</span></span>
     </button>
   </>;
 }
